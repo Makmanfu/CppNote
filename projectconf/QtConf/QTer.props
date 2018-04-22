@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <QTINLINE>$(SolutionDir)Note\3rdparty\QT4</QTINLINE>
+    <QT4PATH>D:\Develop\QT\Qt4.8.6\4.8\msvc12</QT4PATH>
+    <QT4PATH64>D:\Develop\QT\Qt4.8.6\4.8\msvc12_64</QT4PATH64>
+    <QT5PATH>D:\Develop\QT\Qt5.8.0\5.8\msvc12</QT5PATH>
+    <QT5PATH64>D:\Develop\QT\Qt5.8.0\5.8\msvc12_64</QT5PATH64>
+    <QTDIR>$(QT4PATH)</QTDIR>
+    <QTDIR64>$(QT4PATH64)</QTDIR64>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <PreBuildEvent>
+      <Command>rd /s /q ..\\moc 
+mkdir ..\\moc 
+if exist $(QTDIR)\\bin\\rcc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\Res\\*.qrc') do ($(QTDIR)\\bin\\rcc.exe ..\\Res\\%%~ni.qrc -o ..\\moc\\qrc_%%~ni.cpp) ) 
+if exist $(QTDIR)\\bin\\moc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\src\\*.h') do ($(QTDIR)\\bin\\moc.exe ..\\src\\%%~ni.h -o ..\\moc\\moc_%%~ni.cpp) ) 
+if exist $(QTDIR)\\bin\\uic.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\src\\*.ui') do ($(QTDIR)\\bin\\uic.exe ..\\src\\%%~ni.ui -o ..\\moc\\ui_%%~ni.h) ) 
+
+rem rd /s /q .\\GeneratedFiles
+rem mkdir .\\GeneratedFiles
+rem if exist $(QTDIR)\\bin\\rcc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b .\\*.qrc') do ($(QTDIR)\\bin\\rcc.exe .\\%%~ni.qrc -o .\\GeneratedFiles\\qrc_%%~ni.cpp) ) 
+rem if exist $(QTDIR)\\bin\\moc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b .\\*.h') do ($(QTDIR)\\bin\\moc.exe .\\%%~ni.h -o .\\GeneratedFiles\\moc_%%~ni.cpp) ) 
+rem if exist $(QTDIR)\\bin\\uic.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b .\\*.ui') do ($(QTDIR)\\bin\\uic.exe .\\%%~ni.ui -o .\\GeneratedFiles\\ui_%%~ni.h) )</Command>
+    </PreBuildEvent>
+    <PostBuildEvent />
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>./;../;moc;../moc/;$(SolutionDir)Note\libQt;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="QTINLINE">
+      <Value>$(QTINLINE)</Value>
+    </BuildMacro>
+    <BuildMacro Include="QT4PATH">
+      <Value>$(QT4PATH)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="QT4PATH64">
+      <Value>$(QT4PATH64)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="QT5PATH">
+      <Value>$(QT5PATH)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="QT5PATH64">
+      <Value>$(QT5PATH64)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="QTDIR">
+      <Value>$(QTDIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="QTDIR64">
+      <Value>$(QTDIR64)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

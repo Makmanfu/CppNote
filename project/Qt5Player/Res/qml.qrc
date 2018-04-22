@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>play.svg</file>
+        <file>forward.svg</file>
+        <file>backward.svg</file>
+        <file>cd.png</file>
+        <file>pause.svg</file>
+        <file>handle.png</file>
+        <file>menu.svg</file>
+        <file>lrc.svg</file>
+    </qresource>
+</RCC>

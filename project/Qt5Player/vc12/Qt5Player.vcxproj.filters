@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="UI">
+      <UniqueIdentifier>{372053f7-6d26-43e5-8b4d-ee9900f0c512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Start">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Start\Res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Quick">
+      <UniqueIdentifier>{654035c8-1aa0-41c3-b107-6e0d243f5080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Start\libQt">
+      <UniqueIdentifier>{159c440f-d937-4b91-ae7b-310998677844}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\stdafx.h">
+      <Filter>Start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QtConfig.h">
+      <Filter>Start\libQt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QPublic.h">
+      <Filter>Start\libQt</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdafx.cpp">
+      <Filter>Start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\QtConfig.cpp">
+      <Filter>Start\libQt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\QPublic.cpp">
+      <Filter>Start\libQt</Filter>
+    </ClCompile>
+    <ClCompile Include="QtConfig_moc.cpp">
+      <Filter>Start\libQt</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Res\JavaSfun.js">
+      <Filter>Quick</Filter>
+    </None>
+    <None Include="..\Res\main.qml">
+      <Filter>Quick</Filter>
+    </None>
+    <None Include="..\Res\MainForm.ui.qml">
+      <Filter>Quick</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Res\RunICO.rc">
+      <Filter>Start\Res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

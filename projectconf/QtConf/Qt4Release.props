@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\CppConf\CppRelease.props" />
+    <Import Project="QTer.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>$(QTDIR)\include;$(IncludePath)</IncludePath>
+    <ExecutablePath>$(QTDIR)\bin;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(QTDIR)\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(QTDIR)\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>if exist "$(QTDIR)\\bin\\QtCore4.so" (copy /y $(QTDIR)\\bin\\*4.so "$(OutDir)") 
+del /q "$(OutDir)*d4.so" 
+if exist "$(SolutionDir)Note\tool\upx.exe" ($(SolutionDir)Note\\tool\\upx.exe $(OutDir)$(TargetName)$(TargetExt)) </Command>
+    </PostBuildEvent>
+    <PreBuildEvent />
+    <PreBuildEvent>
+      <Command>rd /s /q ..\\moc 
+mkdir ..\\moc 
+if exist $(QTDIR)\\bin\\rcc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\Res\\*.qrc') do ($(QTDIR)\\bin\\rcc.exe ..\\Res\\%%~ni.qrc -o ..\\moc\\qrc_%%~ni.cpp) ) 
+if exist $(QTDIR)\\bin\\moc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\src\\*.h') do ($(QTDIR)\\bin\\moc.exe ..\\src\\%%~ni.h -o ..\\moc\\moc_%%~ni.cpp) ) 
+if exist $(QTDIR)\\bin\\uic.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\src\\*.ui') do ($(QTDIR)\\bin\\uic.exe ..\\src\\%%~ni.ui -o ..\\moc\\ui_%%~ni.h) ) </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

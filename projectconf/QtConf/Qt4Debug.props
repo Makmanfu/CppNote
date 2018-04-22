@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\CppConf\CppDebug.props" />
+    <Import Project="QTer.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <ExecutablePath>$(QTDIR)\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(QTDIR)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(QTDIR)\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(QTDIR)\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <PreBuildEvent />
+    <PostBuildEvent>
+      <Command>if exist "$(QTDIR)\\bin\\QtCored4.so" (copy /y $(QTDIR)\\bin\\*d4.so "$(OutDir)") </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rd /s /q ..\\moc 
+mkdir ..\\moc 
+if exist $(QTDIR)\\bin\\rcc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\Res\\*.qrc') do ($(QTDIR)\\bin\\rcc.exe ..\\Res\\%%~ni.qrc -o ..\\moc\\qrc_%%~ni.cpp) ) 
+if exist $(QTDIR)\\bin\\moc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\src\\*.h') do ($(QTDIR)\\bin\\moc.exe ..\\src\\%%~ni.h -o ..\\moc\\moc_%%~ni.cpp) ) 
+if exist $(QTDIR)\\bin\\uic.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\src\\*.ui') do ($(QTDIR)\\bin\\uic.exe ..\\src\\%%~ni.ui -o ..\\moc\\ui_%%~ni.h) ) </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

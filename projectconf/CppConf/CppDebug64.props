@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <LibPath>D:\Develop</LibPath>
+    <BOOST_PATH>$(LibPath)\boost\boost_1_66_0</BOOST_PATH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(IncludePath);$(SolutionDir)Note\Common\;$(SolutionDir)include\;$(BOOST_PATH)\;$(LibPath)\GUI\DirectX\Include\;</IncludePath>
+    <LibraryPath>../lib/;$(SolutionDir)lib\;$(BOOST_PATH)\stage\vc12x64\lib\;$(LibPath)\GUI\DirectX\Lib\x64\;$(LibraryPath)</LibraryPath>
+    <SourcePath>../src/;$(SourcePath)</SourcePath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)\$(TargetName)\</IntDir>
+    <TargetName>$(ProjectName)64d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>./;../;lib;../lib;src;../src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>$(SolutionDir)lib\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./;../;include;../include/;src;../src/;res;../res/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <PostBuildEvent />
+    <Bscmake>
+      <OutputFile>$(SolutionDir)bin\$(Configuration)\$(TargetName)\$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt)) </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="LibPath">
+      <Value>$(LibPath)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="BOOST_PATH">
+      <Value>$(BOOST_PATH)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

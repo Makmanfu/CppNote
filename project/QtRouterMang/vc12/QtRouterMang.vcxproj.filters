@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="UI">
+      <UniqueIdentifier>{e5f35a28-701d-4cda-a898-c53d2e376c1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\panel">
+      <UniqueIdentifier>{f80c322f-cef7-4dd0-9657-e57ba3995de7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User">
+      <UniqueIdentifier>{c81eed71-28d8-40b9-ad26-0f2aaa268519}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Start">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Start\res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Start\libQt">
+      <UniqueIdentifier>{6fbe4407-ade5-4d57-90f4-e1645a0fdb61}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdafx.cpp">
+      <Filter>Start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TreeGrid.cpp">
+      <Filter>UI\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Cinicfg.cpp">
+      <Filter>User</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DlgFrm.cpp">
+      <Filter>UI\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mainwindow.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WndDB.cpp">
+      <Filter>UI\panel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\QPublic.cpp">
+      <Filter>Start\libQt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\QtConfig.cpp">
+      <Filter>Start\libQt</Filter>
+    </ClCompile>
+    <ClCompile Include="QtConfig_moc.cpp">
+      <Filter>Start\libQt</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\stdafx.h">
+      <Filter>Start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TreeGrid.h">
+      <Filter>UI\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Cinicfg.h">
+      <Filter>User</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DlgFrm.h">
+      <Filter>UI\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\mainwindow.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WndDB.h">
+      <Filter>UI\panel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QPublic.h">
+      <Filter>Start\libQt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QtConfig.h">
+      <Filter>Start\libQt</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Res\RunICO.rc">
+      <Filter>Start\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\CppConf\CppRelease64.props" />
+    <Import Project="QTer.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>.\GeneratedFiles;.;$(QT5PATH64)\include;.\GeneratedFiles\$(ConfigurationName);$(QT5PATH64)\include\ActiveQt;$(QT5PATH64)\include\QtBluetooth;$(QT5PATH64)\include\QtConcurrent;$(QT5PATH64)\include\QtCore;$(QT5PATH64)\include\QtGui;$(QT5PATH64)\include\QtHelp;$(QT5PATH64)\include\QtLocation;$(QT5PATH64)\include\QtMultimedia;$(QT5PATH64)\include\QtMultimediaWidgets;$(QT5PATH64)\include\QtNetwork;$(QT5PATH64)\include\QtNfc;$(QT5PATH64)\include\QtOpenGL;$(QT5PATH64)\include\QtPositioning;$(QT5PATH64)\include\QtPrintSupport;$(QT5PATH64)\include\QtQml;$(QT5PATH64)\include\QtQuick;$(QT5PATH64)\include\QtQuickWidgets;$(QT5PATH64)\include\QtSensors;$(QT5PATH64)\include\QtSerialPort;$(QT5PATH64)\include\QtSql;$(QT5PATH64)\include\QtSvg;$(QT5PATH64)\include\QtTest;$(QT5PATH64)\include\QtUiTools;$(QT5PATH64)\include\QtWebChannel;$(QT5PATH64)\include\QtWebSockets;$(QT5PATH64)\include\QtWidgets;$(QT5PATH64)\include\QtWinExtras;$(QT5PATH64)\include\QtXml;$(QT5PATH64)\include\QtXmlPatterns;;$(IncludePath)</IncludePath>
+    <ExecutablePath>$(QT5PATH64)\bin;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(QT5PATH64)\lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(QT5PATH64)\..\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5AccessibilitySupport.lib;Qt5AxBase.lib;Qt5AxContainer.lib;Qt5AxServer.lib;Qt5Bluetooth.lib;Qt5CLucene.lib;Qt5Concurrent.lib;Qt5DBus.lib;Qt5DesignerComponents.lib;Qt5Designer.lib;Qt5DeviceDiscoverySupport.lib;Qt5EventDispatcherSupport.lib;Qt5FbSupport.lib;Qt5FontDatabaseSupport.lib;Qt5Help.lib;Qt5Location.lib;Qt5Multimedia.lib;Qt5MultimediaQuick_p.lib;Qt5MultimediaWidgets.lib;Qt5Network.lib;Qt5Nfc.lib;Qt5OpenGL.lib;Qt5OpenGLExtensions.lib;Qt5PacketProtocol.lib;Qt5PlatformCompositorSupport.lib;Qt5Positioning.lib;Qt5PrintSupport.lib;Qt5Qml.lib;Qt5QmlDebug.lib;Qt5QuickControls2.lib;Qt5Quick.lib;Qt5QuickParticles.lib;Qt5QuickTemplates2.lib;Qt5QuickTest.lib;Qt5QuickWidgets.lib;Qt5Scxml.lib;Qt5Sensors.lib;Qt5SerialBus.lib;Qt5SerialPort.lib;Qt5Sql.lib;Qt5Svg.lib;Qt5Test.lib;Qt5ThemeSupport.lib;Qt5UiTools.lib;Qt5WebChannel.lib;Qt5WebSockets.lib;Qt5WinExtras.lib;Qt5Xml.lib;Qt5XmlPatterns.lib;qtfreetype.lib;qtlibpng.lib;Qt53DCore.lib;Qt53DExtras.lib;Qt53DInput.lib;Qt53DLogic.lib;Qt53DQuick.lib;Qt53DQuickExtras.lib;Qt53DQuickInput.lib;Qt53DQuickRender.lib;Qt53DRender.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>QT_DLL;QT_NO_DEBUG;QT_BLUETOOTH_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_HELP_LIB;QT_LOCATION_LIB;QT_MULTIMEDIA_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_NETWORK_LIB;QT_NFC_LIB;QT_OPENGL_LIB;QT_POSITIONING_LIB;QT_PRINTSUPPORT_LIB;QT_QML_LIB;QT_QUICK_LIB;QT_QUICKWIDGETS_LIB;QT_SENSORS_LIB;QT_SERIALPORT_LIB;QT_SQL_LIB;QT_SVG_LIB;QT_TESTLIB_LIB;QT_UITOOLS_LIB;QT_WEBCHANNEL_LIB;QT_WEBSOCKETS_LIB;QT_WIDGETS_LIB;QT_WINEXTRAS_LIB;QT_XML_LIB;QT_XMLPATTERNS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>if exist "$(QT5PATH64)\\bin\\Qt5Core.dll" (copy /y $(QT5PATH64)\\bin\\*.dll "$(OutDir)") 
+del /q "$(OutDir)*d.dll" 
+MKDIR "$(OutDir)\\platforms"
+copy /y $(QT5PATH64)\\plugins\\platforms\\qwindows.dll "$(OutDir)\\platforms"
+if exist "$(SolutionDir)Note\tool\upx.exe" ($(SolutionDir)Note\\tool\\upx.exe $(OutDir)$(TargetName)$(TargetExt)) </Command>
+    </PostBuildEvent>
+    <PreBuildEvent />
+    <PreBuildEvent>
+      <Command>rd /s /q ..\\moc 
+mkdir ..\\moc 
+if exist $(QT5PATH64)\\bin\\rcc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\Res\\*.qrc') do ($(QT5PATH64)\\bin\\rcc.exe ..\\Res\\%%~ni.qrc -o ..\\moc\\qrc_%%~ni.cpp) ) 
+if exist $(QT5PATH64)\\bin\\moc.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\src\\*.h') do ($(QT5PATH64)\\bin\\moc.exe ..\\src\\%%~ni.h -o ..\\moc\\moc_%%~ni.cpp) ) 
+if exist $(QT5PATH64)\\bin\\uic.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b ..\\src\\*.ui') do ($(QT5PATH64)\\bin\\uic.exe ..\\src\\%%~ni.ui -o ..\\moc\\ui_%%~ni.h) ) </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

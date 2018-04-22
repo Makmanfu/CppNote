@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="start">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="library">
+      <UniqueIdentifier>{4086e521-c1c8-4c70-abf1-3cd44fa50061}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\res">
+      <UniqueIdentifier>{9e37f181-49bc-4b81-9993-660eeb855647}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RES\resource.h">
+      <Filter>start\res</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="SQC.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\RES\SQC.rc">
+      <Filter>start\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DLL_Debug|Win32">
+      <Configuration>DLL_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL_Debug|x64">
+      <Configuration>DLL_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL_Release|Win32">
+      <Configuration>DLL_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL_Release|x64">
+      <Configuration>DLL_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Debug|Win32">
+      <Configuration>EXE_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Debug|x64">
+      <Configuration>EXE_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Release|Win32">
+      <Configuration>EXE_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Release|x64">
+      <Configuration>EXE_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="STATIC_Debug|Win32">
+      <Configuration>STATIC_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="STATIC_Debug|x64">
+      <Configuration>STATIC_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="STATIC_Release|Win32">
+      <Configuration>STATIC_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="STATIC_Release|x64">
+      <Configuration>STATIC_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{51E0F9CD-F494-4A94-861C-C3A8472B9429}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PhotoCV</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVDebug64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVDebug64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVDebug64.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVRelease64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVRelease64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CVConf\CVRelease64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.so</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.so</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.so</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.so</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../src/stasm4;../src/stasm4/stasm;../src/stasm4/apps;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CVExports.h" />
+    <ClInclude Include="..\CVExports_typedef.h" />
+    <ClInclude Include="..\OpenCVConf.h" />
+    <ClInclude Include="..\res\CVres.h" />
+    <ClInclude Include="..\src\Character_Recognition\preprocessing.h" />
+    <ClInclude Include="..\src\Character_Recognition\sharedmatting.h" />
+    <ClInclude Include="..\src\ChesFeatures.h" />
+    <ClInclude Include="..\src\CUDA\NVCUDA.h" />
+    <ClInclude Include="..\src\CUDA\StuCUDA.h" />
+    <ClInclude Include="..\src\CVDlg.h" />
+    <ClInclude Include="..\src\DemoFun.h" />
+    <ClInclude Include="..\src\HudDisplay.h" />
+    <ClInclude Include="..\src\JpegCompress.h" />
+    <ClInclude Include="..\src\MatDispose.h" />
+    <ClInclude Include="..\src\MatMath.h" />
+    <ClInclude Include="..\src\MatUseTool.h" />
+    <ClInclude Include="..\src\SiftMatch.h" />
+    <ClInclude Include="..\src\SIFT\SIFT.h" />
+    <ClInclude Include="..\src\SIFT\utilsfeatures.h" />
+    <ClInclude Include="..\src\stasm4\apps\appmem.h" />
+    <ClInclude Include="..\src\stasm4\apps\appmisc.h" />
+    <ClInclude Include="..\src\stasm4\apps\linsolve.h" />
+    <ClInclude Include="..\src\stasm4\stasm\asm.h" />
+    <ClInclude Include="..\src\stasm4\stasm\atface.h" />
+    <ClInclude Include="..\src\stasm4\stasm\basedesc.h" />
+    <ClInclude Include="..\src\stasm4\stasm\classicdesc.h" />
+    <ClInclude Include="..\src\stasm4\stasm\convshape.h" />
+    <ClInclude Include="..\src\stasm4\stasm\err.h" />
+    <ClInclude Include="..\src\stasm4\stasm\eyedet.h" />
+    <ClInclude Include="..\src\stasm4\stasm\eyedist.h" />
+    <ClInclude Include="..\src\stasm4\stasm\faceroi.h" />
+    <ClInclude Include="..\src\stasm4\stasm\hat.h" />
+    <ClInclude Include="..\src\stasm4\stasm\hatdesc.h" />
+    <ClInclude Include="..\src\stasm4\stasm\landmarks.h" />
+    <ClInclude Include="..\src\stasm4\stasm\landtab_muct77.h" />
+    <ClInclude Include="..\src\stasm4\stasm\misc.h" />
+    <ClInclude Include="..\src\stasm4\stasm\MOD_1\facedet.h" />
+    <ClInclude Include="..\src\stasm4\stasm\MOD_1\initasm.h" />
+    <ClInclude Include="..\src\stasm4\stasm\pinstart.h" />
+    <ClInclude Include="..\src\stasm4\stasm\print.h" />
+    <ClInclude Include="..\src\stasm4\stasm\shape17.h" />
+    <ClInclude Include="..\src\stasm4\stasm\shapehacks.h" />
+    <ClInclude Include="..\src\stasm4\stasm\shapemod.h" />
+    <ClInclude Include="..\src\stasm4\stasm\startshape.h" />
+    <ClInclude Include="..\src\stasm4\stasm\stasm.h" />
+    <ClInclude Include="..\src\stasm4\stasm\stasm_landmarks.h" />
+    <ClInclude Include="..\src\stasm4\stasm\stasm_lib.h" />
+    <ClInclude Include="..\src\stasm4\stasm\stasm_lib_ext.h" />
+    <ClInclude Include="..\src\StuOpDetect.h" />
+    <ClInclude Include="..\src\StuOpDetect_typedef.h" />
+    <ClInclude Include="..\src\SURF\fasthessian.h" />
+    <ClInclude Include="..\src\SURF\integral.h" />
+    <ClInclude Include="..\src\SURF\ipoint.h" />
+    <ClInclude Include="..\src\SURF\kmeans.h" />
+    <ClInclude Include="..\src\SURF\responselayer.h" />
+    <ClInclude Include="..\src\SURF\surf.h" />
+    <ClInclude Include="..\src\SURF\surflib.h" />
+    <ClInclude Include="..\src\SURF\surfmain.hpp" />
+    <ClInclude Include="..\src\SURF\utils.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Character_Recognition\preprocessing.cpp" />
+    <ClCompile Include="..\src\Character_Recognition\sharedmatting.cpp" />
+    <ClCompile Include="..\src\ChesFeatures.cpp" />
+    <ClCompile Include="..\src\CUDA\NVCUDA.cpp" />
+    <ClCompile Include="..\src\CUDA\StuCUDA.cpp" />
+    <ClCompile Include="..\src\CVDlg.cpp" />
+    <ClCompile Include="..\src\DemoFun.cpp" />
+    <ClCompile Include="..\src\HudDisplay.cpp" />
+    <ClCompile Include="..\src\JpegCompress.cpp" />
+    <ClCompile Include="..\src\MatDispose.cpp" />
+    <ClCompile Include="..\src\MatMath.cpp" />
+    <ClCompile Include="..\src\MatUseTool.cpp" />
+    <ClCompile Include="..\src\SiftMatch.cpp" />
+    <ClCompile Include="..\src\SIFT\SIFT.cpp" />
+    <ClCompile Include="..\src\SIFT\utilsfeatures.cpp" />
+    <ClCompile Include="..\src\stasm4\apps\appmem.cpp" />
+    <ClCompile Include="..\src\stasm4\apps\appmisc.cpp" />
+    <ClCompile Include="..\src\stasm4\apps\linsolve.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\asm.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\classicdesc.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\convshape.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\err.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\eyedet.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\eyedist.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\faceroi.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\hat.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\hatdesc.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\landmarks.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\misc.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\MOD_1\facedet.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\MOD_1\initasm.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\pinstart.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\print.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\shape17.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\shapehacks.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\shapemod.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\startshape.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\stasm.cpp" />
+    <ClCompile Include="..\src\stasm4\stasm\stasm_lib.cpp" />
+    <ClCompile Include="..\src\StuOpDetect.cpp" />
+    <ClCompile Include="..\src\SURF\fasthessian.cpp" />
+    <ClCompile Include="..\src\SURF\integral.cpp" />
+    <ClCompile Include="..\src\SURF\ipoint.cpp" />
+    <ClCompile Include="..\src\SURF\surf.cpp" />
+    <ClCompile Include="..\src\SURF\utils.cpp" />
+    <ClCompile Include="PhotoCV.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\CVres.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\OpenCV.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\CUDA\StuCUDA.cu" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p00_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p01_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p02_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p03_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p04_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p05_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p06_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p07_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p08_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p09_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p10_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p11_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p12_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p13_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p14_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p15_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p16_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p17_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p18_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p19_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p20_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p21_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p22_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p23_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p24_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p25_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p26_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p27_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p28_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p29_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p30_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p31_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p32_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p33_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p34_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p35_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p36_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p37_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p38_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p39_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p40_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p41_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p42_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p43_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p44_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p45_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p46_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p47_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p48_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p49_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p50_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p51_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p52_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p53_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p54_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p55_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p56_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p57_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p58_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p59_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p60_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p61_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p62_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p63_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p64_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p65_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p66_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p67_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p68_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p69_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p70_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p71_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p72_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p73_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p74_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p75_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p76_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p00_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p01_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p02_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p03_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p04_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p05_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p06_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p07_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p08_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p09_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p10_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p11_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p12_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p13_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p14_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p15_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p16_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p17_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p18_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p19_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p20_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p21_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p22_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p23_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p24_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p25_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p26_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p27_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p28_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p29_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p30_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p31_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p32_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p33_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p34_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p35_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p36_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p37_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p38_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p39_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p40_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p41_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p42_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p43_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p44_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p45_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p46_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p47_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p48_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p49_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p50_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p51_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p52_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p53_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p54_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p55_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p56_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p57_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p58_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p59_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p60_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p61_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p62_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p63_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p64_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p65_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p66_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p67_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p68_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p69_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p70_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p71_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p72_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p73_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p74_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p75_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p76_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p00_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p01_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p02_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p03_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p04_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p05_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p06_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p07_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p08_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p09_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p10_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p11_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p12_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p13_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p14_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p15_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p16_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p17_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p18_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p19_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p20_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p21_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p22_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p23_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p24_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p25_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p26_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p27_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p28_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p29_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p30_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p31_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p32_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p33_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p34_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p35_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p36_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p37_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p38_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p39_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p40_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p41_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p42_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p43_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p44_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p45_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p46_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p47_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p48_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p49_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p50_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p51_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p52_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p53_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p54_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p55_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p56_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p57_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p58_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p59_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p60_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p61_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p62_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p63_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p64_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p65_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p66_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p67_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p68_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p69_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p70_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p71_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p72_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p73_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p74_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p75_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p76_hat.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p00_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p01_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p02_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p03_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p04_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p05_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p06_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p07_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p08_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p09_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p10_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p11_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p12_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p13_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p14_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p15_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p16_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p17_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p18_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p19_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p20_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p21_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p22_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p23_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p24_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p25_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p26_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p27_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p28_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p29_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p30_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p31_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p32_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p33_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p34_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p35_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p36_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p37_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p38_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p39_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p40_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p41_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p42_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p43_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p44_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p45_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p46_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p47_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p48_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p49_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p50_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p51_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p52_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p53_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p54_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p55_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p56_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p57_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p58_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p59_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p60_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p61_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p62_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p63_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p64_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p65_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p66_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p67_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p68_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p69_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p70_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p71_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p72_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p73_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p74_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p75_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p76_classic.mh" />
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_shapemodel.mh" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

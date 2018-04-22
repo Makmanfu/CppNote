@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="start">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="start\res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{2563ca42-0a77-4985-bfbe-cff46a6a03a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library">
+      <UniqueIdentifier>{9095863e-ded8-4736-a440-60b0db6f4c57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\freeglut">
+      <UniqueIdentifier>{0c59074d-7b37-4e29-8083-0f66aca3c329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\GLTools">
+      <UniqueIdentifier>{cb7f231b-d975-4931-9df0-0ead96289912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\GLTools\GLSL">
+      <UniqueIdentifier>{bdb7d999-103d-46c0-bb2f-5a7a4af7a01a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\FreeImage">
+      <UniqueIdentifier>{0fb94d78-17b9-445a-93a2-2274d105aaf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\freeglut\DEMO">
+      <UniqueIdentifier>{f62c7b1f-32ca-4e40-b84d-94c770a8f553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\四元素旋转有BUG">
+      <UniqueIdentifier>{d056af83-168e-4b3e-879d-e079be9db865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX">
+      <UniqueIdentifier>{35acefed-0506-4bc4-81ef-ac014600f9e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\GLEW">
+      <UniqueIdentifier>{418d987b-0598-4216-882f-08c6e7661f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\GLFW">
+      <UniqueIdentifier>{dfc6da5a-3268-4300-bff5-6e15aca96b72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\freeglut\C">
+      <UniqueIdentifier>{04d40fdc-5ad3-457e-b366-c6b77b597838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\freeglut\H">
+      <UniqueIdentifier>{91f4f1bd-005f-4aa8-b6f2-6864ee582a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\TrackBall">
+      <UniqueIdentifier>{12341c8d-1ab3-4705-9b08-8ea5ca321719}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GL">
+      <UniqueIdentifier>{5aba4ae7-fce7-47c5-82ce-4fcb9e517365}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\res\resource.h">
+      <Filter>start\res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DXView.h">
+      <Filter>DX</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLDraw.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLView.h">
+      <Filter>GL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLWindow.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VIEW\Math.hpp">
+      <Filter>start\四元素旋转有BUG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VIEW\Matrix4.hpp">
+      <Filter>start\四元素旋转有BUG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VIEW\VBOX.h">
+      <Filter>start\四元素旋转有BUG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VIEW\Vector4.hpp">
+      <Filter>start\四元素旋转有BUG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VIEW\ViewPort.h">
+      <Filter>start\四元素旋转有BUG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\freeglut-2.6.0\freeglut_teapot_data.h">
+      <Filter>library\freeglut\H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\freeglut-2.6.0\freeglut_internal.h">
+      <Filter>library\freeglut\H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\freeglut-2.6.0\GL\freeglut.h">
+      <Filter>library\freeglut\H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\freeglut-2.6.0\GL\freeglut_ext.h">
+      <Filter>library\freeglut\H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\freeglut-2.6.0\GL\freeglut_std.h">
+      <Filter>library\freeglut\H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\freeglut-2.6.0\GL\glut.h">
+      <Filter>library\freeglut\H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLFW\egl_context.h">
+      <Filter>library\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLFW\glfw_config.h">
+      <Filter>library\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLFW\glfw3.h">
+      <Filter>library\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLFW\glfw3native.h">
+      <Filter>library\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLFW\internal.h">
+      <Filter>library\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLFW\wgl_context.h">
+      <Filter>library\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLFW\win32_joystick.h">
+      <Filter>library\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLFW\win32_platform.h">
+      <Filter>library\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\GLBatch.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\GLBatchBase.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\GLFrame.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\GLFrustum.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\GLGeometryTransform.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\GLMatrixStack.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\GLShaderManager.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\GLTools.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\GLTriangleBatch.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\math3d.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GLTools\StopWatch.h">
+      <Filter>library\GLTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TrackBall\Camera.h">
+      <Filter>library\TrackBall</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TrackBall\Renderer.h">
+      <Filter>library\TrackBall</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TrackBall\RendererOpenGL1.h">
+      <Filter>library\TrackBall</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TrackBall\RenderWindowGLFW.h">
+      <Filter>library\TrackBall</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TrackBall\TrackBallInteractor.h">
+      <Filter>library\TrackBall</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TrackBall\Animator.h">
+      <Filter>library\TrackBall</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VIEW\Camera4.h">
+      <Filter>start\四元素旋转有BUG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TrackBall.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DXView.cpp">
+      <Filter>DX</Filter>
+    </ClCompile>
+    <ClCompile Include="GLGPU.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLView.cpp">
+      <Filter>GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLDraw.cpp">
+      <Filter>GL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLWindow.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VIEW\VBOX.cpp">
+      <Filter>start\四元素旋转有BUG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VIEW\ViewPort.cpp">
+      <Filter>start\四元素旋转有BUG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_callbacks.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_cursor.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_display.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_ext.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_font.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_font_data.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_gamemode.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_geometry.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_glutfont_definitions.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_init.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_input_devices.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_joystick.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_main.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_menu.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_misc.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_overlay.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_spaceball.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_state.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_stroke_mono_roman.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_stroke_roman.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_structure.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_teapot.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_videoresize.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_window.c">
+      <Filter>library\freeglut\C</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_demo.cpp">
+      <Filter>library\freeglut\DEMO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLEW\glew.c">
+      <Filter>library\GLEW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLEW\glewinfo.c">
+      <Filter>library\GLEW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLEW\visualinfo.c">
+      <Filter>library\GLEW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\context.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\egl_context.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\init.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\input.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\monitor.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\vulkan.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\wgl_context.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\win32_init.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\win32_joystick.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\win32_monitor.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\win32_time.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\win32_tls.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\win32_window.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLFW\window.c">
+      <Filter>library\GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLTools\src\GLBatch.cpp">
+      <Filter>library\GLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLTools\src\GLShaderManager.cpp">
+      <Filter>library\GLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLTools\src\GLTools.cpp">
+      <Filter>library\GLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLTools\src\GLTriangleBatch.cpp">
+      <Filter>library\GLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLTools\src\math3d.cpp">
+      <Filter>library\GLTools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TrackBall\Renderer.cpp">
+      <Filter>library\TrackBall</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TrackBall\RendererOpenGL1.cpp">
+      <Filter>library\TrackBall</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TrackBall\RenderWindowGLFW.cpp">
+      <Filter>library\TrackBall</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TrackBall\TrackBallInteractor.cpp">
+      <Filter>library\TrackBall</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TrackBall\Animator.cpp">
+      <Filter>library\TrackBall</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TrackBall\Camera.cpp">
+      <Filter>library\TrackBall</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VIEW\Camera4.cpp">
+      <Filter>start\四元素旋转有BUG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TrackBall.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TrackballC.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\GLGPU.rc">
+      <Filter>start\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\res\icon.ico">
+      <Filter>start\res</Filter>
+    </None>
+  </ItemGroup>
+</Project>

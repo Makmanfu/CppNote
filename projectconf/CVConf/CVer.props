@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <OPENCV2>D:\Develop\GUI\OPENCV2.9.10\build</OPENCV2>
+    <OPENCV3>D:\Develop\GUI\OPENCV\</OPENCV3>
+    <OPENCV_IN>$(SolutionDir)Note\3rdparty\opencv3\build</OPENCV_IN>
+    <OPENCV>$(OPENCV_IN)</OPENCV>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="OPENCV2">
+      <Value>$(OPENCV2)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OPENCV3">
+      <Value>$(OPENCV3)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OPENCV_IN">
+      <Value>$(OPENCV_IN)</Value>
+    </BuildMacro>
+    <BuildMacro Include="OPENCV">
+      <Value>$(OPENCV)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

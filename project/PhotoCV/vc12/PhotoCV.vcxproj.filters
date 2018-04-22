@@ -1,0 +1,1328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="start">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="start\res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Processing">
+      <UniqueIdentifier>{648e7374-9eb2-4285-a0b2-74f9e2da0bb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GPU">
+      <UniqueIdentifier>{ec13958f-20b5-44d5-b512-92ec6e6567b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{1adb02bd-d555-4232-adb8-a16a612e5fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processing\Character_Recognition">
+      <UniqueIdentifier>{2741366b-dc4b-4380-8a6a-3c4b583deb09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processing\SIFT">
+      <UniqueIdentifier>{13421859-8dee-470b-8b74-105508b24036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processing\SUFT">
+      <UniqueIdentifier>{f6b573c5-939b-48a5-b43e-6d1b0732abb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processing\STASM">
+      <UniqueIdentifier>{97bdf955-84b2-4087-bbfe-d550f2bcccbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processing\STASM\apps">
+      <UniqueIdentifier>{268d84fd-de37-4dd3-aab6-d33e4a7ec7ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processing\STASM\stasm">
+      <UniqueIdentifier>{f2a759fb-646a-4d15-b557-9a880453117a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processing\STASM\stasm\MOD_1">
+      <UniqueIdentifier>{4908a5bf-74a4-4bb9-ace3-55665e239abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Processing\STASM\stasm\MOD_1\mh">
+      <UniqueIdentifier>{c8aa5fdc-bf6c-4601-b006-a2435c017c99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\CV2.0">
+      <UniqueIdentifier>{3caee750-ac1b-43f1-af75-62855521a931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestSty">
+      <UniqueIdentifier>{c4347ea8-be9c-45e3-8b15-333ddf432123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\DLG">
+      <UniqueIdentifier>{e31d884f-0bb5-4b20-97de-533459f186f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\res\CVres.h">
+      <Filter>start\res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ChesFeatures.h">
+      <Filter>Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MatDispose.h">
+      <Filter>Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MatUseTool.h">
+      <Filter>Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MatMath.h">
+      <Filter>Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\StuOpDetect.h">
+      <Filter>Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\StuOpDetect_typedef.h">
+      <Filter>Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HudDisplay.h">
+      <Filter>Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CUDA\StuCUDA.h">
+      <Filter>GPU</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CVExports.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CVExports_typedef.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Character_Recognition\preprocessing.h">
+      <Filter>Processing\Character_Recognition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Character_Recognition\sharedmatting.h">
+      <Filter>Processing\Character_Recognition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SIFT\SIFT.h">
+      <Filter>Processing\SIFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SIFT\utilsfeatures.h">
+      <Filter>Processing\SIFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SURF\fasthessian.h">
+      <Filter>Processing\SUFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SURF\integral.h">
+      <Filter>Processing\SUFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SURF\ipoint.h">
+      <Filter>Processing\SUFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SURF\kmeans.h">
+      <Filter>Processing\SUFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SURF\responselayer.h">
+      <Filter>Processing\SUFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SURF\surf.h">
+      <Filter>Processing\SUFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SURF\surflib.h">
+      <Filter>Processing\SUFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SURF\surfmain.hpp">
+      <Filter>Processing\SUFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SURF\utils.h">
+      <Filter>Processing\SUFT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SiftMatch.h">
+      <Filter>Processing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\convshape.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\err.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\eyedet.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\eyedist.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\faceroi.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\hat.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\hatdesc.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\landmarks.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\landtab_muct77.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\misc.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\pinstart.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\print.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\shape17.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\shapehacks.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\shapemod.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\startshape.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\stasm.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\stasm_landmarks.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\stasm_lib.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\stasm_lib_ext.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\asm.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\atface.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\basedesc.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\classicdesc.h">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\MOD_1\facedet.h">
+      <Filter>Processing\STASM\stasm\MOD_1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\stasm\MOD_1\initasm.h">
+      <Filter>Processing\STASM\stasm\MOD_1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\apps\linsolve.h">
+      <Filter>Processing\STASM\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\apps\appmem.h">
+      <Filter>Processing\STASM\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stasm4\apps\appmisc.h">
+      <Filter>Processing\STASM\apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\OpenCVConf.h">
+      <Filter>start\res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DemoFun.h">
+      <Filter>TestSty</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CVDlg.h">
+      <Filter>start\DLG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CUDA\NVCUDA.h">
+      <Filter>GPU</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\JpegCompress.h">
+      <Filter>Processing</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ChesFeatures.cpp">
+      <Filter>Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MatDispose.cpp">
+      <Filter>Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MatUseTool.cpp">
+      <Filter>Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MatMath.cpp">
+      <Filter>Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\StuOpDetect.cpp">
+      <Filter>Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HudDisplay.cpp">
+      <Filter>Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CUDA\StuCUDA.cpp">
+      <Filter>GPU</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Character_Recognition\preprocessing.cpp">
+      <Filter>Processing\Character_Recognition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Character_Recognition\sharedmatting.cpp">
+      <Filter>Processing\Character_Recognition</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SIFT\SIFT.cpp">
+      <Filter>Processing\SIFT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SIFT\utilsfeatures.cpp">
+      <Filter>Processing\SIFT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SURF\fasthessian.cpp">
+      <Filter>Processing\SUFT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SURF\integral.cpp">
+      <Filter>Processing\SUFT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SURF\ipoint.cpp">
+      <Filter>Processing\SUFT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SURF\surf.cpp">
+      <Filter>Processing\SUFT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SURF\utils.cpp">
+      <Filter>Processing\SUFT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SiftMatch.cpp">
+      <Filter>Processing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\err.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\eyedet.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\eyedist.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\faceroi.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\hat.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\hatdesc.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\landmarks.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\misc.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\pinstart.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\print.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\shape17.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\shapehacks.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\shapemod.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\startshape.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\stasm.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\stasm_lib.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\asm.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\classicdesc.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\convshape.cpp">
+      <Filter>Processing\STASM\stasm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\MOD_1\facedet.cpp">
+      <Filter>Processing\STASM\stasm\MOD_1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\stasm\MOD_1\initasm.cpp">
+      <Filter>Processing\STASM\stasm\MOD_1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\apps\linsolve.cpp">
+      <Filter>Processing\STASM\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\apps\appmem.cpp">
+      <Filter>Processing\STASM\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stasm4\apps\appmisc.cpp">
+      <Filter>Processing\STASM\apps</Filter>
+    </ClCompile>
+    <ClCompile Include="PhotoCV.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DemoFun.cpp">
+      <Filter>TestSty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CVDlg.cpp">
+      <Filter>start\DLG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CUDA\NVCUDA.cpp">
+      <Filter>GPU</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\JpegCompress.cpp">
+      <Filter>Processing</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\CVres.rc">
+      <Filter>start\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\OpenCV.ico">
+      <Filter>start\res</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\CUDA\StuCUDA.cu">
+      <Filter>GPU</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p34_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p35_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p36_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p37_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p38_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p39_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p40_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p41_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p42_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p43_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p44_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p45_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p46_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p47_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p48_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p49_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p50_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p51_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p52_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p53_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p54_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p55_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p56_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p57_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p58_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p59_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p60_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p61_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p62_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p63_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p64_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p65_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p66_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p67_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p68_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p69_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p70_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p71_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p72_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p73_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p74_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p75_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p76_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p00_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p01_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p02_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p03_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p04_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p05_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p06_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p07_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p08_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p09_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p10_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p11_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p12_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p13_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p14_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p15_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p16_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p17_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p18_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p19_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p20_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p21_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p22_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p23_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p24_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p25_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p26_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p27_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p28_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p29_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p30_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p31_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p32_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p33_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p34_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p35_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p36_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p37_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p38_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p39_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p40_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p41_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p42_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p43_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p44_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p45_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p46_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p47_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p48_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p49_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p50_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p51_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p52_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p53_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p54_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p55_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p56_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p57_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p58_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p59_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p60_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p61_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p62_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p63_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p64_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p65_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p66_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p67_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p68_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p69_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p70_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p71_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p72_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p73_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p74_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p75_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev1_p76_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p00_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p01_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p02_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p03_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p04_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p05_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p06_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p07_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p08_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p09_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p10_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p11_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p12_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p13_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p14_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p15_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p16_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p17_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p18_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p19_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p20_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p21_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p22_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p23_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p24_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p25_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p26_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p27_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p28_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p29_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p30_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p31_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p32_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p33_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p34_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p35_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p36_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p37_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p38_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p39_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p40_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p41_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p42_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p43_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p44_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p45_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p46_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p47_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p48_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p49_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p50_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p51_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p52_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p53_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p54_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p55_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p56_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p57_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p58_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p59_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p60_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p61_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p62_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p63_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p64_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p65_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p66_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p67_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p68_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p69_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p70_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p71_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p72_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p73_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p74_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p75_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev2_p76_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p00_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p01_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p02_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p03_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p04_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p05_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p06_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p07_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p08_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p09_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p10_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p11_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p12_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p13_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p14_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p15_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p16_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p17_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p18_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p19_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p20_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p21_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p22_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p23_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p24_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p25_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p26_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p27_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p28_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p29_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p30_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p31_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p32_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p33_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p34_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p35_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p36_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p37_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p38_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p39_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p40_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p41_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p42_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p43_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p44_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p45_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p46_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p47_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p48_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p49_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p50_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p51_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p52_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p53_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p54_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p55_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p56_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p57_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p58_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p59_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p60_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p61_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p62_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p63_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p64_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p65_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p66_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p67_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p68_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p69_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p70_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p71_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p72_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p73_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p74_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p75_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev3_p76_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_shapemodel.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p00_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p01_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p02_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p03_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p04_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p05_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p06_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p07_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p08_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p09_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p10_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p11_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p12_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p13_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p14_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p15_classic.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p16_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p17_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p18_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p19_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p20_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p21_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p22_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p23_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p24_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p25_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p26_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p27_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p28_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p29_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p30_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p31_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p32_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+    <None Include="..\src\stasm4\stasm\MOD_1\mh\yaw00_lev0_p33_hat.mh">
+      <Filter>Processing\STASM\stasm\MOD_1\mh</Filter>
+    </None>
+  </ItemGroup>
+</Project>

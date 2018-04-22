@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Start">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Start\res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="library">
+      <UniqueIdentifier>{7f2f3f59-94dd-4c08-b592-b4bd3034402a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\UI">
+      <UniqueIdentifier>{43424ec4-8f20-4dc5-873d-b5d1e4cd0303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study">
+      <UniqueIdentifier>{a524e584-2afa-460c-8d45-b04a682a03ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\Parser">
+      <UniqueIdentifier>{9611a6e5-a7f0-4c7d-837c-0ec9325197f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\Parser\tinyxml">
+      <UniqueIdentifier>{04aad932-e4f7-4018-aa79-9062f9661cd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\Parser\libxls">
+      <UniqueIdentifier>{8af7c779-3369-454d-bbaf-c606c669b324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\Parser\ini">
+      <UniqueIdentifier>{e597fe39-9a4a-4790-966d-dd1f4507f99f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\Parser\json">
+      <UniqueIdentifier>{1091cfa8-6c69-49c8-a334-591b00749c6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\SVM">
+      <UniqueIdentifier>{587de249-6495-4fff-9d78-6ff8044ff0a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB">
+      <UniqueIdentifier>{4ace469c-7e8a-48d0-9ab5-41734921d013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB\C11_STL">
+      <UniqueIdentifier>{144d2e6d-a0ab-449e-8f79-7a4ff6ef8f66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB\C总结">
+      <UniqueIdentifier>{a49717b1-03fb-4e9f-a976-ec5d75df600a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB\C总结\指针和数组">
+      <UniqueIdentifier>{bfe08142-50bc-4346-9f76-f3bf65520a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB\模板算法">
+      <UniqueIdentifier>{e6a0eca8-9770-4d57-86a8-062dc99b6dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB\设计模式">
+      <UniqueIdentifier>{1d84170b-df9a-470e-850f-3affaada5b09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB\设计模式\创见型">
+      <UniqueIdentifier>{82b56b25-444f-4298-8c8e-f347331681a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB\设计模式\行为型">
+      <UniqueIdentifier>{694316ca-3ab8-4ac4-869d-2cc95e78b3c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB\设计模式\结构型">
+      <UniqueIdentifier>{0f039145-6826-405f-84b6-77121a43574c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\CLIB\数据结构">
+      <UniqueIdentifier>{73a07658-e717-4478-bb73-c69b039b56db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\WinAPI">
+      <UniqueIdentifier>{64e0e811-6f59-4956-b57f-ecee0e4430a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\DUILIB">
+      <UniqueIdentifier>{d5413d77-649f-4fe3-8eff-813d9cdb3f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\Parser\log">
+      <UniqueIdentifier>{39c7f961-fb76-434c-af29-dc62fe8c5298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\boost">
+      <UniqueIdentifier>{107e2687-1ef6-4dbe-abd0-63a59f81f4c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\res\resource.h">
+      <Filter>Start\res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Parser\tinyxml2.h">
+      <Filter>library\Parser\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Parser\json11.h">
+      <Filter>library\Parser\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Parser\libxls.h">
+      <Filter>library\Parser\libxls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Note\Common\CToolClass.hpp">
+      <Filter>library\CLIB\模板算法</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Note\Common\CArraySort.hpp">
+      <Filter>library\CLIB\模板算法</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Note\Common\CDefine.hpp">
+      <Filter>library\CLIB\模板算法</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Note\Common\CLinearList.hpp">
+      <Filter>library\CLIB\模板算法</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Note\Common\Cpplinq.hpp">
+      <Filter>library\CLIB\模板算法</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Note\Common\CSingleton.hpp">
+      <Filter>library\CLIB\模板算法</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Note\Common\CTemplate.hpp">
+      <Filter>library\CLIB\模板算法</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SVM\svm.h">
+      <Filter>library\SVM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CDList.h">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CList.h">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CQueue.h">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CRBTree.h">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CStack.h">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CBITree.h">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CDijkstra.h">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CAStar.h">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\AbstactFactory.hpp">
+      <Filter>library\CLIB\设计模式\创见型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Builder.hpp">
+      <Filter>library\CLIB\设计模式\创见型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Adapter.hpp">
+      <Filter>library\CLIB\设计模式\结构型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Bridge.hpp">
+      <Filter>library\CLIB\设计模式\结构型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\ChainofResponsibilit.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Command.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Composite.hpp">
+      <Filter>library\CLIB\设计模式\结构型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Decorator.hpp">
+      <Filter>library\CLIB\设计模式\结构型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Facade.hpp">
+      <Filter>library\CLIB\设计模式\结构型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Factory.hpp">
+      <Filter>library\CLIB\设计模式\创见型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Interpreter.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Iterator.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Mediator.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Memento.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Flyweight.hpp">
+      <Filter>library\CLIB\设计模式\结构型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Observer.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Visitor.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Template.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Strategy.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\State.hpp">
+      <Filter>library\CLIB\设计模式\行为型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Singleton.hpp">
+      <Filter>library\CLIB\设计模式\创见型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Prototype.hpp">
+      <Filter>library\CLIB\设计模式\创见型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Proxy.hpp">
+      <Filter>library\CLIB\设计模式\结构型</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CEXAM.hpp">
+      <Filter>library\CLIB\C总结</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CharPointer.h">
+      <Filter>library\CLIB\C总结\指针和数组</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\PointerArray.h">
+      <Filter>library\CLIB\C总结\指针和数组</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Sorting.h">
+      <Filter>library\CLIB\C总结\指针和数组</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\STL.hpp">
+      <Filter>library\CLIB\C11_STL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Effective.hpp">
+      <Filter>library\CLIB\C11_STL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Parser\miniIni.h">
+      <Filter>library\Parser\ini</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\BoostConfig.h">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\async_op.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\async_server_multi_threaded.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\coroutines.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\proxy.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\ssl_client_connect_to_yahoo.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\Boost_FTP.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\Boost_Memory.h">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\Boost_thread.h">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\Boost_Text.h">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\Boost_timer.h">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\tcp_async_echo.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\tcp_async_server.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\tcp_sync_echo.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\tcp_sync_server.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\udp_sync_echo.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Parser\tinyxml2.cpp">
+      <Filter>library\Parser\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Parser\json11.cpp">
+      <Filter>library\Parser\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Parser\libxls.cpp">
+      <Filter>library\Parser\libxls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SVM\svm.cpp">
+      <Filter>library\SVM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CDList.cpp">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CList.cpp">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CQueue.cpp">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CRBTree.cpp">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CStack.cpp">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CDijkstra.cpp">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CAStar.cpp">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CBITree.cpp">
+      <Filter>library\CLIB\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CharPointer.cpp">
+      <Filter>library\CLIB\C总结\指针和数组</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\PointerArray.cpp">
+      <Filter>library\CLIB\C总结\指针和数组</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\Sorting.cpp">
+      <Filter>library\CLIB\C总结\指针和数组</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Parser\miniIni.cpp">
+      <Filter>library\Parser\ini</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\boost\Boost_Memory.cpp">
+      <Filter>library\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\boost\Boost_thread.cpp">
+      <Filter>library\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\boost\Boost_Text.cpp">
+      <Filter>library\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\boost\Boost_timer.cpp">
+      <Filter>library\boost</Filter>
+    </ClCompile>
+    <ClCompile Include="SQBoost.cpp">
+      <Filter>Start</Filter>
+    </ClCompile>
+    <ClCompile Include="SQCore.cpp">
+      <Filter>Start</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\SQCore.rc">
+      <Filter>Start\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,270 @@
+<%Common.glsl%>
+	#version 130
+	#extension GL_EXT_gpu_shader4 : enable
+
+	float encode(ivec2 xy)
+	{	
+		int ret = (xy.x + 1) | ((xy.y + 1) << 11);
+		return float(ret);
+	}
+
+	ivec2 decode(float value)
+	{
+		int i = int(value);
+		int x = (i & 0x000007FF) - 1;
+		int y = ((i & 0x003FF800) >> 11) - 1;
+		return ivec2(x, y);
+	}
+
+<%CreateRuns.vert%>
+	void main()
+	{		
+		gl_Position = ftransform();
+	}
+
+<%CreateRuns.frag%>
+	uniform sampler2D tex;
+	uniform int pass;
+	
+	void main()
+	{
+		ivec2 screenPos = ivec2(floor(gl_FragCoord.xy));
+		
+		if (pass == 0) 
+		{			
+			float curPixelBit = clamp(texelFetch2D(tex, screenPos, 0).a, 0.0, 1.0);
+			float neighborBit = clamp(texelFetch2D(tex, screenPos + ivec2(0, 1), 0).a, 0.0, 1.0);
+			gl_FragColor.x = max(encode(screenPos + ivec2(0, 1)) * neighborBit, encode(screenPos)) * curPixelBit;			
+		} 
+		else 
+		{			
+			float curPixel = texelFetch2D(tex, screenPos, 0).x;
+			float next = texelFetch2D(tex, decode(curPixel), 0).x;
+			gl_FragColor.x = next;
+		}
+	}
+	
+<%GatherNeighbor.vert%>
+	uniform sampler2D tex;
+	flat out float scatterID;
+	
+	void main()
+	{
+		ivec2 uv = ivec2(gl_Vertex.xy + vec2(gl_ModelViewMatrix[3][0], gl_ModelViewMatrix[3][1]));
+		float curPixelID = texelFetch2D(tex, uv, 0).x;
+		float neighborID = texelFetch2D(tex, uv + ivec2(1, 0), 0).x;
+		
+		ivec2 rootXY = decode(curPixelID);
+		scatterID = neighborID;
+		
+		mat4 m = gl_ModelViewMatrix;
+		m[3] = vec4(vec3(0.0), 1.0);
+		
+		gl_Position = gl_ProjectionMatrix * m * vec4(vec2(rootXY), 0.0, 1.0);
+	}
+	
+<%GatherNeighbor.frag%>
+	flat in float scatterID;
+	
+	void main()
+	{
+		gl_FragColor.x = scatterID;
+	}
+	
+<%UpdateColumn.vert%>
+	void main()
+	{
+		gl_Position = ftransform();
+	}
+	
+<%UpdateColumn.frag%>
+	uniform sampler2D tex;
+	
+	void main()
+	{
+		ivec2 uv = ivec2(gl_FragCoord.xy);
+		ivec2 rootXY = decode(texelFetch2D(tex, uv, 0).x);
+		gl_FragColor.x = texelFetch2D(tex, rootXY, 0).x;
+	}
+	
+<%ScatterBack.vert%>
+	uniform sampler2D tex;
+	flat out float scatterID;
+	
+	void main()
+	{
+		ivec2 uv = ivec2(gl_Vertex.xy + vec2(gl_ModelViewMatrix[3][0], gl_ModelViewMatrix[3][1]));
+		float curPixelID = texelFetch2D(tex, uv, 0).x;
+		float neighborID = texelFetch2D(tex, uv + ivec2(1, 0), 0).x;
+		
+		ivec2 rootXY = decode(neighborID);
+		scatterID = curPixelID;
+		
+		mat4 m = gl_ModelViewMatrix;
+		m[3] = vec4(vec3(0.0), 1.0);
+		
+		gl_Position = gl_ProjectionMatrix * m * vec4(vec2(rootXY), -1.0, 1.0);		
+	}
+
+<%ScatterBack.frag%>
+	flat in float scatterID;
+	
+	void main()
+	{
+		gl_FragColor.x = scatterID;
+	}
+	
+<%UpdateRoots.vert%>
+	void main()
+	{
+		vec4 pos = gl_Vertex;
+		pos.z = -1.0;
+		gl_Position = gl_ModelViewProjectionMatrix * pos;
+	}
+	
+<%UpdateRoots.frag%>
+	uniform sampler2D tex;
+	
+	void main()
+	{
+		ivec2 uv = ivec2(gl_FragCoord.xy);
+		float curPixelID = 0.0;
+				
+		while (true)
+		{
+			curPixelID = texelFetch2D(tex, uv, 0).x;
+			ivec2 rootXY = decode(curPixelID);
+			
+			if (all(equal(rootXY, uv)))
+				break;
+				
+			uv = rootXY;
+		}
+		
+		gl_FragColor.x = curPixelID;		
+	}
+	
+<%UpdateChildren.vert%>
+	void main()
+	{
+		gl_Position = ftransform();
+	}
+	
+<%UpdateChildren.frag%>
+	uniform sampler2D tex;
+	
+	void main()
+	{
+		ivec2 uv = ivec2(gl_FragCoord.xy);
+		ivec2 rootXY = decode(texelFetch2D(tex, uv, 0).x);
+		gl_FragColor.x = texelFetch2D(tex, rootXY, 0).x;
+	}
+	
+<%BlockBorders.vert%>
+	uniform sampler2D tex;
+	flat out float scatterID;
+	
+	void main()
+	{
+		ivec2 uv = ivec2(gl_Vertex.xy);
+		float curPixelID = texelFetch2D(tex, uv, 0).x;
+		ivec2 rootXY = decode(curPixelID);
+		scatterID = texelFetch2D(tex, uv + ivec2(gl_Vertex.z, 0), 0).x;
+		gl_Position = gl_ModelViewProjectionMatrix * vec4(vec2(rootXY), -1.0, 1.0);		
+	}
+	
+<%BlockBorders.frag%>
+	flat in float scatterID;
+	
+	void main()
+	{
+		gl_FragColor.x = scatterID;
+	}
+	
+<%ComputeBBoxes.vert%>
+	uniform sampler2D tex;
+	flat out ivec2 scatterXY;
+	
+	void main()
+	{
+		ivec2 uv = ivec2(gl_Vertex.xy + vec2(gl_ModelViewMatrix[3][0], gl_ModelViewMatrix[3][1]));
+		float curPixelID = texelFetch2D(tex, uv, 0).x;
+		
+		vec2 rootXY = decode(curPixelID);
+		scatterXY = uv;
+		
+		mat4 m = gl_ModelViewMatrix;
+		m[3] = vec4(vec3(0.0), 1.0);
+		
+		gl_Position = gl_ProjectionMatrix * m * vec4(rootXY, 0.0, 1.0);
+	}
+	
+<%ComputeBBoxes.frag%>
+	uniform sampler2D tex;
+	flat in ivec2 scatterXY;
+	
+	void main()
+	{
+		ivec2 texSize = textureSize(tex, 0);
+		gl_FragColor = vec4(
+			float(texSize.x - scatterXY.x),
+			float(texSize.y - scatterXY.y),
+			float(scatterXY.x),
+			float(scatterXY.y)
+		);
+	}
+	
+<%GetIDCount.vert%>
+	void main()
+	{
+		gl_Position = ftransform();
+	}
+	
+<%GetIDCount.frag%>
+	uniform sampler2D tex;
+	
+	void main()
+	{
+		ivec2 uv = ivec2(gl_FragCoord.xy);
+		float curPixelID = texelFetch2D(tex, uv, 0).x;
+		ivec2 rootXY = decode(curPixelID);
+		
+		if (all(equal(rootXY, uv))) gl_FragColor.x = curPixelID;
+		else discard;
+	}
+	
+<%StencilRoute.vert%>
+	uniform sampler2D tex;
+	uniform sampler2D bboxTex;
+	uniform vec2 stencilCenter;
+	flat out float scatterID;
+	flat out vec4 scatterBBox;
+	
+	void main()
+	{
+		ivec2 uv = ivec2(gl_Vertex.xy + vec2(gl_ModelViewMatrix[3][0], gl_ModelViewMatrix[3][1]));
+		float curPixelID = texelFetch2D(tex, uv, 0).x;
+		vec4 curBBox = texelFetch2D(bboxTex, uv, 0);
+		
+		ivec2 rootXY = decode(curPixelID);
+		scatterID = curPixelID;
+		scatterBBox = curBBox;
+		
+		mat4 m = gl_ModelViewMatrix;
+		m[3] = vec4(vec3(0.0), 1.0);
+		
+		if (all(equal(uv, rootXY)))
+			gl_Position = gl_ProjectionMatrix * m * vec4(stencilCenter, 0.0, 1.0);
+		else
+			gl_Position = gl_ProjectionMatrix * m * vec4(-stencilCenter, 0.0, 0.0);		
+	}
+
+<%StencilRoute.frag%>
+	flat in float scatterID;
+	flat in vec4 scatterBBox;
+	
+	void main()
+	{
+		gl_FragData[0].x = scatterID;
+		gl_FragData[1] = scatterBBox;
+	}

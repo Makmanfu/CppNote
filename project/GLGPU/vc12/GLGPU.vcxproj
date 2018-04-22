@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="EXE_Debug|Win32">
+      <Configuration>EXE_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Debug|x64">
+      <Configuration>EXE_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Release|Win32">
+      <Configuration>EXE_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Release|x64">
+      <Configuration>EXE_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B2AE5987-B896-4D60-BD6A-9831A219AFC2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GLGPU</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppDebug64.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppRelease64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../src/freeglut-2.6.0;../src/GLEW;../src/GLFW;../src/GLTools;../src/TrackBall;../src/GLUT;$(IncludePath)</IncludePath>
+    <LibraryPath>../src/GLAux;../src/GLUT;../lib/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>../src/freeglut-2.6.0;../src/GLEW;../src/GLFW;../src/GLTools;../src/TrackBall;../src/GLUT;$(IncludePath)</IncludePath>
+    <LibraryPath>../src/GLAux;../src/GLUT;../lib/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>../src/freeglut-2.6.0;../src/GLEW;../src/GLFW;../src/GLTools;../src/TrackBall;../src/GLUT;$(IncludePath)</IncludePath>
+    <LibraryPath>../src/GLAux;../src/GLUT;../lib/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>../src/freeglut-2.6.0;../src/GLEW;../src/GLFW;../src/GLTools;../src/TrackBall;../src/GLUT;$(IncludePath)</IncludePath>
+    <LibraryPath>../src/GLAux;../src/GLUT;../lib/;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_GLFW_USE_CONFIG_H;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_GLFW_USE_CONFIG_H;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <IgnoreSpecificDefaultLibraries>LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_GLFW_USE_CONFIG_H;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_GLFW_USE_CONFIG_H;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>NotSet</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\res\resource.h" />
+    <ClInclude Include="..\src\DXView.h" />
+    <ClInclude Include="..\src\freeglut-2.6.0\freeglut_internal.h" />
+    <ClInclude Include="..\src\freeglut-2.6.0\freeglut_teapot_data.h" />
+    <ClInclude Include="..\src\freeglut-2.6.0\GL\freeglut.h" />
+    <ClInclude Include="..\src\freeglut-2.6.0\GL\freeglut_ext.h" />
+    <ClInclude Include="..\src\freeglut-2.6.0\GL\freeglut_std.h" />
+    <ClInclude Include="..\src\freeglut-2.6.0\GL\glut.h" />
+    <ClInclude Include="..\src\GLDraw.h" />
+    <ClInclude Include="..\src\GLFW\egl_context.h" />
+    <ClInclude Include="..\src\GLFW\glfw3.h" />
+    <ClInclude Include="..\src\GLFW\glfw3native.h" />
+    <ClInclude Include="..\src\GLFW\glfw_config.h" />
+    <ClInclude Include="..\src\GLFW\internal.h" />
+    <ClInclude Include="..\src\GLFW\wgl_context.h" />
+    <ClInclude Include="..\src\GLFW\win32_joystick.h" />
+    <ClInclude Include="..\src\GLFW\win32_platform.h" />
+    <ClInclude Include="..\src\GLTools\GLBatch.h" />
+    <ClInclude Include="..\src\GLTools\GLBatchBase.h" />
+    <ClInclude Include="..\src\GLTools\GLFrame.h" />
+    <ClInclude Include="..\src\GLTools\GLFrustum.h" />
+    <ClInclude Include="..\src\GLTools\GLGeometryTransform.h" />
+    <ClInclude Include="..\src\GLTools\GLMatrixStack.h" />
+    <ClInclude Include="..\src\GLTools\GLShaderManager.h" />
+    <ClInclude Include="..\src\GLTools\GLTools.h" />
+    <ClInclude Include="..\src\GLTools\GLTriangleBatch.h" />
+    <ClInclude Include="..\src\GLTools\math3d.h" />
+    <ClInclude Include="..\src\GLTools\StopWatch.h" />
+    <ClInclude Include="..\src\GLView.h" />
+    <ClInclude Include="..\src\GLWindow.h" />
+    <ClInclude Include="..\src\TrackBall.h" />
+    <ClInclude Include="..\src\TrackBall\Animator.h" />
+    <ClInclude Include="..\src\TrackBall\Camera.h" />
+    <ClInclude Include="..\src\TrackBall\Renderer.h" />
+    <ClInclude Include="..\src\TrackBall\RendererOpenGL1.h" />
+    <ClInclude Include="..\src\TrackBall\RenderWindowGLFW.h" />
+    <ClInclude Include="..\src\TrackBall\TrackBallInteractor.h" />
+    <ClInclude Include="..\src\VIEW\Camera4.h" />
+    <ClInclude Include="..\src\VIEW\Math.hpp" />
+    <ClInclude Include="..\src\VIEW\Matrix4.hpp" />
+    <ClInclude Include="..\src\VIEW\VBOX.h" />
+    <ClInclude Include="..\src\VIEW\Vector4.hpp" />
+    <ClInclude Include="..\src\VIEW\ViewPort.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\DXView.cpp" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_callbacks.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_cursor.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_demo.cpp" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_display.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_ext.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_font.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_font_data.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_gamemode.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_geometry.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_glutfont_definitions.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_init.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_input_devices.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_joystick.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_main.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_menu.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_misc.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_overlay.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_spaceball.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_state.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_stroke_mono_roman.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_stroke_roman.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_structure.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_teapot.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_videoresize.c" />
+    <ClCompile Include="..\src\freeglut-2.6.0\freeglut_window.c" />
+    <ClCompile Include="..\src\GLDraw.cpp" />
+    <ClCompile Include="..\src\GLEW\glew.c" />
+    <ClCompile Include="..\src\GLEW\glewinfo.c" />
+    <ClCompile Include="..\src\GLEW\visualinfo.c" />
+    <ClCompile Include="..\src\GLFW\context.c" />
+    <ClCompile Include="..\src\GLFW\egl_context.c" />
+    <ClCompile Include="..\src\GLFW\init.c" />
+    <ClCompile Include="..\src\GLFW\input.c" />
+    <ClCompile Include="..\src\GLFW\monitor.c" />
+    <ClCompile Include="..\src\GLFW\vulkan.c" />
+    <ClCompile Include="..\src\GLFW\wgl_context.c" />
+    <ClCompile Include="..\src\GLFW\win32_init.c" />
+    <ClCompile Include="..\src\GLFW\win32_joystick.c" />
+    <ClCompile Include="..\src\GLFW\win32_monitor.c" />
+    <ClCompile Include="..\src\GLFW\win32_time.c" />
+    <ClCompile Include="..\src\GLFW\win32_tls.c" />
+    <ClCompile Include="..\src\GLFW\win32_window.c" />
+    <ClCompile Include="..\src\GLFW\window.c" />
+    <ClCompile Include="..\src\GLTools\src\GLBatch.cpp" />
+    <ClCompile Include="..\src\GLTools\src\GLShaderManager.cpp" />
+    <ClCompile Include="..\src\GLTools\src\GLTools.cpp" />
+    <ClCompile Include="..\src\GLTools\src\GLTriangleBatch.cpp" />
+    <ClCompile Include="..\src\GLTools\src\math3d.cpp" />
+    <ClCompile Include="..\src\GLView.cpp" />
+    <ClCompile Include="..\src\GLWindow.cpp" />
+    <ClCompile Include="..\src\TrackBall.cpp" />
+    <ClCompile Include="..\src\TrackballC.cpp" />
+    <ClCompile Include="..\src\TrackBall\Animator.cpp" />
+    <ClCompile Include="..\src\TrackBall\Camera.cpp" />
+    <ClCompile Include="..\src\TrackBall\Renderer.cpp" />
+    <ClCompile Include="..\src\TrackBall\RendererOpenGL1.cpp" />
+    <ClCompile Include="..\src\TrackBall\RenderWindowGLFW.cpp" />
+    <ClCompile Include="..\src\TrackBall\TrackBallInteractor.cpp" />
+    <ClCompile Include="..\src\VIEW\Camera4.cpp" />
+    <ClCompile Include="..\src\VIEW\VBOX.cpp" />
+    <ClCompile Include="..\src\VIEW\ViewPort.cpp" />
+    <ClCompile Include="GLGPU.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\GLGPU.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\res\icon.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
