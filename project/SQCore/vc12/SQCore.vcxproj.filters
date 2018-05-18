@@ -281,6 +281,12 @@
     <ClInclude Include="..\src\boost\udp_sync_echo.hpp">
       <Filter>library\boost</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Parser\printlog.h">
+      <Filter>library\Parser\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinAPI\WinKey.h">
+      <Filter>library\WinAPI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -346,11 +352,17 @@
     <ClCompile Include="..\src\boost\Boost_timer.cpp">
       <Filter>library\boost</Filter>
     </ClCompile>
-    <ClCompile Include="SQBoost.cpp">
-      <Filter>Start</Filter>
-    </ClCompile>
     <ClCompile Include="SQCore.cpp">
       <Filter>Start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Parser\printlog.cpp">
+      <Filter>library\Parser\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinAPI\WinKey.cpp">
+      <Filter>library\WinAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\boost\SQBoost.cpp">
+      <Filter>library\boost</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

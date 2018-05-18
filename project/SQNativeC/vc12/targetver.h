@@ -4,7 +4,7 @@
 //警告宏处理--------------------------------------------------------------
 #define _CRT_SECURE_NO_WARNINGS
 //包含文件----------------------------------------------------------------
-#include <SDKDDKVer.h>
+//#include <SDKDDKVer.h>
 
 //平台运行模式(注意xp模式无效 依然需要手动设置)---------------------------
 #ifdef GUIRUN
@@ -36,8 +36,8 @@
     #define NATIVE_MATHEXP C_API
 #endif
 
-////开启win7后视觉效果 Copy from MSDN---------------------------------------
-//#pragma comment(linker,"\"/manifestdependency:type='win32' name='Microsoft.Windows.Common-Controls' \
-// version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
+//开启win7后视觉效果 Copy from MSDN---------------------------------------
+#pragma comment(linker,"\"/manifestdependency:type='win32' name='Microsoft.Windows.Common-Controls' \
+ version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 
 #endif

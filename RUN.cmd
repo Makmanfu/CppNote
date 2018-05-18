@@ -33,10 +33,11 @@ GOTO EXIT
 :PACKWORK
 set YYYYmmdd=%date:~0,4%%date:~5,2%%date:~8,2%
 set hhmiss=%time:~0,2%%time:~3,2%%time:~6,2%
-set "PackName=DZDK_%YYYYmmdd%_%hhmiss%.exe"
+set "PackName=CppNote_%YYYYmmdd%_%hhmiss%.exe"
 cd ..
 REM -pHAMIGUA
-.\DZDK\projectconf\cab.exe a -t7z -sfx ./%PackName% ./DZDK -pHAMIGUA -mx=9 -ms=200m -mf -mhc -mhcf -mmt 
+REM ECHO %PackName%
+.\CppNote\Note\TOOL\cab.exe a -t7z -sfx ./%PackName% ./CppNote -pHAMIGUA -mx=9 -ms=200m -mf -mhc -mhcf -mmt 
 GOTO EXIT
 :EXIT
 exit

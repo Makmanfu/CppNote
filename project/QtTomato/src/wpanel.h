@@ -12,7 +12,7 @@
 #include "QPublic.h"
 
 //闪动波形 
-class WaveFrom : public QWidget
+class CPP_API WaveFrom : public QWidget
 {
     Q_OBJECT
 public:
@@ -32,7 +32,7 @@ private:
 };
 
 //三色圆环仪表盘
-class DialPlot : public QWidget
+class CPP_API DialPlot : public QWidget
 {
     //1:增加设置背景色/第一第二第三颜色
     //2:增加设置文字字体及文字和刻度颜色
@@ -114,7 +114,7 @@ signals:
 };
 
 //圆盘进度
-class RoundPlot : public QWidget
+class CPP_API RoundPlot : public QWidget
 {
     Q_OBJECT
 public:

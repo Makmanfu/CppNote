@@ -1,6 +1,6 @@
 
 #include "stdafx.h"
-#include "PrintLog.h"
+#include "printlog.h"
 #include <time.h>
 #include <imagehlp.h>
 #pragma comment(lib, "imagehlp.lib")
@@ -355,8 +355,8 @@ void Logger::GenerateLogName()
     time(&curTime);
     pTimeInfo = localtime(&curTime);
     char tempLogName[1024] = { 0 };
-    //日志的名称如：2013-01-01.log
-    sprintf(tempLogName, "%04d-%02d-%02d.log", pTimeInfo->tm_year + 1900, pTimeInfo->tm_mon + 1, pTimeInfo->tm_mday);
+    //日志的名称如：20130101.log
+    sprintf(tempLogName, "%04d%02d%02d.log", pTimeInfo->tm_year + 1900, pTimeInfo->tm_mon + 1, pTimeInfo->tm_mday);
     if (0 != strcmp(m_strCurLogName, tempLogName))
     {
         strcpy(m_strCurLogName, tempLogName);

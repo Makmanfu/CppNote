@@ -167,7 +167,7 @@ private:
 };
 
 //坐标轴系统控件
-class WAxis : public QWidget
+class CPP_API WAxis : public QWidget
 {
     Q_OBJECT
 public:

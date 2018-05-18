@@ -86,6 +86,9 @@
     <ClInclude Include="..\src\QPublic.h">
       <Filter>Start\libQt</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\wprogressbar.h">
+      <Filter>UImanger\GUI\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp">
@@ -148,10 +151,30 @@
     <ClCompile Include="QtConfig_MOC.cpp">
       <Filter>Start\libQt</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\wprogressbar.cpp">
+      <Filter>UImanger\GUI\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\Res\res.rc">
       <Filter>Start\Res</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\dlgfrm.ui">
+      <Filter>User</Filter>
+    </None>
+    <None Include="..\src\wthreadgrid.ui">
+      <Filter>UImanger\GUI\UI</Filter>
+    </None>
+    <None Include="..\src\wplay.ui">
+      <Filter>UImanger\GUI\UI</Filter>
+    </None>
+    <None Include="..\src\wprogressbar.ui">
+      <Filter>UImanger\GUI\UI</Filter>
+    </None>
+    <None Include="..\res\wdgres.qrc">
+      <Filter>Start\Res</Filter>
+    </None>
   </ItemGroup>
 </Project>

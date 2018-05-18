@@ -1,6 +1,6 @@
 ﻿//*************************************************************************
 //
-//                       倒计时控件
+//                          倒计时控件
 //
 //
 //
@@ -13,8 +13,8 @@
 
 class FlowLayout;
 
-//倒计时控件
-class TimeNumBar : public QWidget
+//倒计时底层控件
+class CPP_API TimeNumBar : public QWidget
 {
     Q_OBJECT
 public:
@@ -58,7 +58,8 @@ private:
     void drawRule(QPainter& painter);
 };
 
-class TimeBarPanel: public QWidget
+//多个进度控件
+class CPP_API TimeBarPanel : public QWidget
 {
     Q_OBJECT
 public:
@@ -80,6 +81,7 @@ private:
 
     QMap<int, TimeNumBar*> m_mapbar;
 };
+
 
 #endif
 

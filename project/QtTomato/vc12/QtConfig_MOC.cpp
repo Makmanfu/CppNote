@@ -20,7 +20,7 @@
 #include "moc/moc_wplay.cpp"
 #include "moc/moc_wbase.cpp"
 #include "moc/moc_wtimenumbar.cpp"
-
+#include "moc/moc_wprogressbar.cpp"
 
 
 

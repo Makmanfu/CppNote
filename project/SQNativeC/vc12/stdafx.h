@@ -4,8 +4,8 @@
 #define GUIRUN                                //WINDOW´°¿ÚÔËÐÐ
 
 #include "targetver.h"
-#include <stdio.h>
-#include <tchar.h>
+//#include <stdio.h>
+//#include <tchar.h>
 #include <windows.h>
 #include "resource.h"
 #pragma comment (lib,"user32.lib")

@@ -30,25 +30,51 @@ INT_PTR CALLBACK DlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
             SendMessage(hwndDlg, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             break;
         case WM_INITDIALOG:
-            CreateWindowA("Button", "测试", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON,
+            CreateWindowA("Button", "帮助", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON,
                 10, 10, 130, 60, hwndDlg, (HMENU)IDB_BOX, NULL, NULL);
-            CreateWindowA("Button", "重启", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON,
+            CreateWindowA("Button", "闪电重启", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON,
                 10, 90, 130, 60, hwndDlg, (HMENU)IDB_REBOOT, NULL, NULL);
-            CreateWindowA("Button", "关机", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON,
+            CreateWindowA("Button", "闪电关机", WS_VISIBLE | WS_CHILD | BS_PUSHBUTTON,
                 10, 170, 130, 60, hwndDlg, (HMENU)IDB_SHUT, NULL, NULL);
             break;
+        //case WM_KEYDOWN:
+        //case WM_KEYUP:
+        //case WM_CHAR:
+        //case WM_DEADCHAR:
+        //case WM_SYSKEYDOWN:
+        //case WM_SYSKEYUP:
+        //case WM_SYSCHAR:
+        //case WM_SYSDEADCHAR:
+        //    //int KeyID = LOWORD(wParam);
+        //    MessageBoxA(hwndDlg, "WM_KEYDOWN", "Hello Native C++!", MB_OK);
+        //    switch (wParam)
+        //    {
+        //    case VK_UP:
+        //        MessageBoxA(hwndDlg, "VK_UP", "Hello Native C++!", MB_OK);
+        //        break;
+        //    case VK_DOWN:
+        //        MessageBoxA(hwndDlg, "VK_DOWN", "Hello Native C++!", MB_OK);
+        //        break;
+        //    case VK_LEFT:
+        //        MessageBoxA(hwndDlg, "VK_LEFT", "Hello Native C++!", MB_OK);
+        //        break;
+        //    case VK_RIGHT: default:
+        //        MessageBoxA(hwndDlg, "VK_RIGHT", "Hello Native C++!", MB_OK);
+        //        break;
+        //    }
+        //    break;
         case WM_COMMAND:
             int ctrlID = LOWORD(wParam);
             switch (ctrlID)
             {
                 case IDB_BOX:
-                    MessageBoxA(hwndDlg, "Hello Native C++!", "C++", MB_OK);
+                    MessageBoxA(hwndDlg, "Windows 原生关机功能函数调用。", "Hello Native C++!", MB_OK);
                     break;
                 case IDB_REBOOT:
-                    NaSysShut(1);
+                    NaSysShut(1);               //NT重启
                     break;
                 case IDB_SHUT:
-                    NaSysShut(2);            //NT关机
+                    NaSysShut(2);               //NT关机
                     break;
                 default:
                     break;

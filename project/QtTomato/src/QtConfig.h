@@ -17,6 +17,17 @@
 #include <QtWidgets/QtWidgets>
 #endif
 
+//输出宏定义
+#ifndef C_API
+#define C_API extern "C" __declspec(dllexport)
+#endif
+#ifndef CPP_API
+#define CPP_API __declspec(dllexport)
+#endif
+#ifndef DLL_API
+#define DLL_API CPP_API
+#endif
+
 //QT MODEL NAME
 #ifdef _DEBUG
 #define DLIB(name) name "d"

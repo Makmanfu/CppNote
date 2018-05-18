@@ -281,10 +281,16 @@ void TabGUIBase::GuiInit(void)
     m_pComBoxPage->setFixedSize(100, 25);
     m_pComBoxPage->setWindowFlags(Qt::WindowStaysOnTopHint);
     m_pComBoxPage->move(10, 10);
-    m_pComBoxPage->setEditable(false);
+    m_pComBoxPage->setEditable(false);                  //屏蔽编辑
+    m_pComBoxPage->setMaxCount(15);                     //超过15个出现滚动条
     connect(m_pComBoxPage, SIGNAL(currentIndexChanged(int)), this, SLOT(OnComBoxPageIndexChanged(int)));
     m_pComBoxPage->insertItem(0, QString::fromLocal8Bit("NULL"));
     //addcomboxItem(QString::fromLocal8Bit("QWidget"));
+}
+
+void TabGUIBase::setHideComBox(bool _bl)
+{
+    this->m_pComBoxPage->setVisible(_bl);
 }
 
 void TabGUIBase::OnComBoxPageIndexChanged(int nId)
@@ -464,6 +470,35 @@ void CUiTool::InitPushButton(QPushButton* button, QString strPmp, QString strTex
 }
 
 
+CMylay::CMylay(QWidget *parent) :QGridLayout(parent)
+{
+    this->setParent(parent);
+    this->setSpacing(0);
+    this->setContentsMargins(0, 0, 0, 0);
+
+    //// 下面代码将被优化掉
+    //m_mapWidget = new MapWidget(ui->wdgmap);
+    //m_maplay = new QGridLayout(ui->wdgmap);
+    //m_maplay->setSpacing(0);
+    //m_maplay->setContentsMargins(0, 0, 0, 0);
+    //m_maplay->addWidget(m_mapWidget);
+
+    //调用如下
+    //m_mapWidget = new SeaMapWidget(ui->wdgmap);
+    //m_maplay = new CMylay(ui->wdgmap);
+    //m_maplay->setWgt(m_mapWidget);
+}
+
+CMylay::~CMylay()
+{
+}
+
+void CMylay::setWgt(QWidget *wgt)
+{
+    this->setSpacing(0);
+    this->setContentsMargins(0, 0, 0, 0);
+    this->addWidget(wgt);
+}
 
 
 

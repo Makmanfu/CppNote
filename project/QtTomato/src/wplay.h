@@ -16,7 +16,7 @@ namespace Ui
     class WPlayer;
 }
 
-class WLrc : public QLabel
+class CPP_API WLrc : public QLabel
 {
     Q_OBJECT
 public:
@@ -46,7 +46,7 @@ private:
     QPoint offset;
 };
 
-class WPlayer : public QWidget
+class CPP_API WPlayer : public QWidget
 {
     Q_OBJECT
 public:

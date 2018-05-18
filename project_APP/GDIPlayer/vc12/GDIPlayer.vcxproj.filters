@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{4712b2de-1e2d-416c-b7aa-987ecb9e8eb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\MP3">
+      <UniqueIdentifier>{83d06869-5044-455e-9d86-3e4a6b460396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\MP4">
+      <UniqueIdentifier>{21980c17-099c-4544-a6d8-a4b5365377a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start">
+      <UniqueIdentifier>{5d3da94c-0ea9-470e-9443-f7c6e34cc5f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\Res">
+      <UniqueIdentifier>{188c6115-af8c-4eb3-927c-635674e11354}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\MainDlg.cpp">
+      <Filter>GUI\MP3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Music.cpp">
+      <Filter>GUI\MP3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CMP4.cpp">
+      <Filter>GUI\MP4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\OpenGLView.cpp">
+      <Filter>GUI\MP4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CTray.cpp">
+      <Filter>GUI\MP3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GDIPlayer.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdafx.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\res\resource.h">
+      <Filter>start\Res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MainDlg.h">
+      <Filter>GUI\MP3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Music.h">
+      <Filter>GUI\MP3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CMP4.h">
+      <Filter>GUI\MP4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OpenGLView.h">
+      <Filter>GUI\MP4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinMP4.hpp">
+      <Filter>GUI\MP4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinPlayer.hpp">
+      <Filter>GUI\MP3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CTray.h">
+      <Filter>GUI\MP3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stdafx.h">
+      <Filter>start</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\GDIPlay.rc">
+      <Filter>start\Res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\icon.ico">
+      <Filter>start\Res</Filter>
+    </Image>
+    <Image Include="..\res\bk.bmp">
+      <Filter>start\Res</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

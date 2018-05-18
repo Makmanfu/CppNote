@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <LibPath>D:\Develop</LibPath>
-    <BOOST_PATH>$(LibPath)\boost\boost_1_66_0</BOOST_PATH>
+    <BOOST_PATH>$(LibPath)\boost\boost_1_64_0</BOOST_PATH>
   </PropertyGroup>
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\</OutDir>

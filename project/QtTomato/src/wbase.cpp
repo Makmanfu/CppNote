@@ -22,8 +22,7 @@ CComboBoxCheck::CComboBoxCheck(QWidget* parent) //:QWidget(parent)
     this->setLineEdit(pLineEdit);
     pLineEdit->setReadOnly(true);
     //ui.comboBox->setEditable(true);
-    connect(pLineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(textChanged(const
-        QString &)));
+    connect(pLineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(textChanged(const QString &)));
 }
 
 CComboBoxCheck::~CComboBoxCheck()

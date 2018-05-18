@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="start">
+      <UniqueIdentifier>{10f6e353-ad3b-412f-8ac0-9366afde39f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{a23721a8-c218-454c-a26e-06fe8ae800c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src\Dlg">
+      <UniqueIdentifier>{4ff76934-03b7-409f-a221-6cb2e76ce1ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Communication%28通信%29">
+      <UniqueIdentifier>{32c0dd97-2e69-4d9e-a997-188b044e736f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Communication%28通信%29\PROCESS%28进程%29">
+      <UniqueIdentifier>{1ecfa5d2-9228-4d0c-9464-556e32667761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Communication%28通信%29\SerialPort%28串口%29">
+      <UniqueIdentifier>{d3be0cb3-c594-49ae-a952-16d8739aae9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Communication%28通信%29\SOCKET%28网络%29">
+      <UniqueIdentifier>{0a6c3db4-e074-4b38-b825-9b054d2e1f0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Communication%28通信%29\THREAD%28线程%29">
+      <UniqueIdentifier>{93249842-d093-4a3f-9dcc-482756410cfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\APP%28应用%29">
+      <UniqueIdentifier>{0afe791f-09e9-423c-865b-bc9b62317423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\APP%28应用%29\Remote%28远程%29">
+      <UniqueIdentifier>{fd037873-46b5-415a-ada4-6bac349866f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\APP%28应用%29\Download%28下载%29">
+      <UniqueIdentifier>{ab9b083a-96dd-418e-a4bf-46e21fbe110d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Study%28待处理%29">
+      <UniqueIdentifier>{eb1fa485-0d9d-4a25-b440-11a139fbea2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Study%28待处理%29\WINAPI%28win平台%29">
+      <UniqueIdentifier>{84831fc1-5ed0-42a1-90e5-5d3ce12432c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Study%28待处理%29\C11%28标准库%29">
+      <UniqueIdentifier>{8c01aa44-9cb7-4af4-b333-2a19134cad94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Study%28待处理%29\OTHER">
+      <UniqueIdentifier>{7d5426a5-7415-4a61-93f2-f6174c3e63de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Communication%28通信%29\THREAD%28线程%29\OpenThreads">
+      <UniqueIdentifier>{41c1808d-d3ef-46de-82ed-cfc64f9b3d3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\pack">
+      <UniqueIdentifier>{17836465-4386-4f3a-9377-170e38018bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core">
+      <UniqueIdentifier>{bfae112f-ea16-4a12-8721-30dcf2cf0ef5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Study%28待处理%29\Sock%28学习记录%29">
+      <UniqueIdentifier>{e4c05546-b050-4c1d-b1cc-97a93e6396f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HPSock">
+      <UniqueIdentifier>{0177416e-1ac1-467a-bee1-f969a959f31f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HPSock\Common">
+      <UniqueIdentifier>{d24676d0-9664-4d1c-8e52-de335a21f525}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HPSock\TCP">
+      <UniqueIdentifier>{28e13a71-edcc-47eb-8e30-903c16aeea3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HPSock\UDP">
+      <UniqueIdentifier>{7c8df374-7941-4dd3-aa47-99306b5f995a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HPSock\HTTP">
+      <UniqueIdentifier>{a9dda814-ebbc-458a-b196-d8deb407103e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HPSock\Demo">
+      <UniqueIdentifier>{63de4a53-ae4f-4d77-87f0-d966ea3a3d38}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\res\resource.h">
+      <Filter>start\res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinSockDlg.h">
+      <Filter>src\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CopyDATA.h">
+      <Filter>src\Communication%28通信%29\PROCESS%28进程%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SQCore\src\WinAPI\WinGUI.h">
+      <Filter>src\Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Rs232.h">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ThreadCookbook.h">
+      <Filter>src\Study%28待处理%29\WINAPI%28win平台%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\coondef.h">
+      <Filter>src\Communication%28通信%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CSock.h">
+      <Filter>src\Study%28待处理%29\OTHER</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ThreadPool.h">
+      <Filter>src\Study%28待处理%29\OTHER</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinThread.h">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ThreadConcurrency.h">
+      <Filter>src\Study%28待处理%29\C11%28标准库%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MyThread.h">
+      <Filter>src\Study%28待处理%29\WINAPI%28win平台%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OpenThreads\Atomic.h">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OpenThreads\Config.h">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OpenThreads\Mutex.h">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OpenThreads\ScopedLock.hpp">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OpenThreads\OpenThread.h">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ComDebug.h">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ComTools.h">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ComDataPool.h">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ComList.h">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ComProcess.h">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CSockSdy.h">
+      <Filter>src\Study%28待处理%29\Sock%28学习记录%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SocketNative.hpp">
+      <Filter>src\Study%28待处理%29\Sock%28学习记录%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CSock_def.h">
+      <Filter>src\Study%28待处理%29\OTHER</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinSocket.h">
+      <Filter>src\Communication%28通信%29\SOCKET%28网络%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WSockFileDlg.h">
+      <Filter>src\APP%28应用%29\Download%28下载%29</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\Common.h">
+      <Filter>src\HPSock\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\TcpAgent.h">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\SocketInterface.h">
+      <Filter>src\HPSock\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\HPTypeDef.h">
+      <Filter>src\HPSock\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\SocketHelper.h">
+      <Filter>src\HPSock\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\TcpClient.h">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\TcpPackAgent.h">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\TcpPackClient.h">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\TcpPackServer.h">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\TcpPullAgent.h">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\TcpPullClient.h">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\TcpPullServer.h">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\TcpServer.h">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\UdpCast.h">
+      <Filter>src\HPSock\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\UdpClient.h">
+      <Filter>src\HPSock\UDP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HPSocket\UdpServer.h">
+      <Filter>src\HPSock\UDP</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="SQSock.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinSockDlg.cpp">
+      <Filter>src\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CopyDATA.cpp">
+      <Filter>src\Communication%28通信%29\PROCESS%28进程%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SQCore\src\WinAPI\WinGUI.cpp">
+      <Filter>src\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Rs232.cpp">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ThreadCookbook.cpp">
+      <Filter>src\Study%28待处理%29\WINAPI%28win平台%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CSock.cpp">
+      <Filter>src\Study%28待处理%29\OTHER</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ThreadPool.cpp">
+      <Filter>src\Study%28待处理%29\OTHER</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinThread.cpp">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ThreadConcurrency.cpp">
+      <Filter>src\Study%28待处理%29\C11%28标准库%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MyThread.cpp">
+      <Filter>src\Study%28待处理%29\WINAPI%28win平台%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\OpenThreads\Atomic.cpp">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\OpenThreads\Mutex.cpp">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\OpenThreads\OpenThread.cpp">
+      <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ComDebug.cpp">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ComTools.cpp">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ComDataPool.cpp">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ComList.cpp">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ComProcess.cpp">
+      <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CSockSdy.cpp">
+      <Filter>src\Study%28待处理%29\Sock%28学习记录%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinSocket.cpp">
+      <Filter>src\Communication%28通信%29\SOCKET%28网络%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WSockFileDlg.cpp">
+      <Filter>src\APP%28应用%29\Download%28下载%29</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HPSocket\Common.cpp">
+      <Filter>src\HPSock\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HPSocket\TcpAgent.cpp">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HPSocket\SocketHelper.cpp">
+      <Filter>src\HPSock\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HPSocket\TcpClient.cpp">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HPSocket\TcpServer.cpp">
+      <Filter>src\HPSock\TCP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HPSocket\UdpCast.cpp">
+      <Filter>src\HPSock\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HPSocket\UdpClient.cpp">
+      <Filter>src\HPSock\UDP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HPSocket\UdpServer.cpp">
+      <Filter>src\HPSock\UDP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\SockSvr.rc">
+      <Filter>start\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\res\ICON.ico">
+      <Filter>start\res</Filter>
+    </None>
+  </ItemGroup>
+</Project>

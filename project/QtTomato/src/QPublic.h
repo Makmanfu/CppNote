@@ -17,7 +17,7 @@ QString TCSR(QString str);
 QPointF getPos(QMouseEvent* event);
 
 //全局工具类
-class CommonHelper
+class CPP_API CommonHelper
 {
 private:
     static CommonHelper* _instance;
@@ -29,7 +29,7 @@ public:
 };
 
 //可移动窗口[锁定移动区在桌面内]
-class QMoveDlg : public QWidget
+class CPP_API QMoveDlg : public QWidget
 {
     Q_OBJECT
 public:
@@ -44,7 +44,7 @@ protected:
 };
 
 //自动排列布局器
-class FlowLayout : public QLayout
+class CPP_API FlowLayout : public QLayout
 {
 public:
     explicit FlowLayout(QWidget* parent, int margin = -1, int hSpacing = -1, int vSpacing = -1);
@@ -73,8 +73,8 @@ private:
     int m_vSpace;
 };
 
-//UI切换器指挥者类
-class UIDirect
+//UI切换器
+class CPP_API UIDirect
 {
 private:
     QWidget* p;
@@ -112,27 +112,30 @@ public:
 };
 
 //界面演示框架
-class TabGUIBase : public QWidget
+class CPP_API TabGUIBase : public QWidget
 {
     Q_OBJECT
 public:
     explicit TabGUIBase(QWidget* parent = 0);
     virtual ~TabGUIBase();
 public:
+    //添加面板
     void addcomboxItem(const QString& str);
+    //界面初始化
     virtual void GuiInit(void);
+    void setHideComBox(bool _bl);
 public:
-    QComboBox* m_pComBoxPage;              //切换页
-    QWidget* m_pWgtShow;                   //通用控件显示面板框架
-    QGridLayout* m_pGrid, *m_pGridW;       //通用控件布局器
-    UIDirect* m_pPageUI;                   //ui页管理器
-    QWidget* m_pCurrUI;                    //当前UI页
-    public slots :
+    QComboBox* m_pComBoxPage;                   //切换页下拉框
+    QWidget* m_pWgtShow;                        //通用控件显示面板框架
+    QGridLayout* m_pGrid, *m_pGridW;            //通用控件布局器
+    UIDirect* m_pPageUI;                        //ui页管理器
+    QWidget* m_pCurrUI;                         //当前UI页
+public slots :
     virtual void OnComBoxPageIndexChanged(int nId);
 };
 
 //界面工具类
-class CUiTool
+class CPP_API CUiTool
 {
 private:
     static CUiTool* _instance;
@@ -163,7 +166,15 @@ public:
     void InitPushButton(QPushButton* button, QString strPmp, QString strText, int nWidth, int nHeight, int nFontSize, int nColor);
 };
 
-
+//简单布局器
+class CPP_API CMylay :public QGridLayout
+{
+    Q_OBJECT
+public:
+    explicit CMylay(QWidget *parent = 0);
+    ~CMylay();
+    void setWgt(QWidget *wgt);
+};
 
 
 

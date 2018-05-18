@@ -12,7 +12,7 @@
 #include "QPublic.h"
 
 //线程演示界面
-class WThread : public QWidget
+class CPP_API WThread : public QWidget
 {
     Q_OBJECT
 public:

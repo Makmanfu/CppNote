@@ -12,7 +12,7 @@
 #include "QPublic.h"
 
 //悬浮窗控件
-class WSuspension : public QMoveDlg
+class CPP_API WSuspension : public QMoveDlg
 {
     Q_OBJECT
 public:
@@ -66,7 +66,7 @@ public slots:
 };
 
 //win7时钟
-class WClock : public WSuspension
+class CPP_API WClock : public WSuspension
 {
     Q_OBJECT
 public:
@@ -77,7 +77,7 @@ protected:
 };
 
 //雷达扇形扫描控件
-class WScanRotate : public QWidget
+class CPP_API WScanRotate : public QWidget
 {
     Q_OBJECT
 public:
@@ -118,7 +118,7 @@ private slots:
 };
 
 //雷达控件
-class WRotate : public QWidget
+class CPP_API WRotate : public QWidget
 {
     Q_OBJECT
 public:
@@ -131,8 +131,8 @@ private:
     void drawDistanceMarking(QPainter* painter);
 };
 
-//空面板
-class QWidgetEmp :public QWidget
+//空面板(彩蛋控件)
+class CPP_API QWidgetEmp :public QWidget
 {
     Q_OBJECT
 public:
@@ -144,7 +144,7 @@ private:
 };
 
 //加速球控件
-class NProgreCirWater : public QWidget
+class CPP_API NProgreCirWater : public QWidget
 {
     Q_OBJECT
 public:

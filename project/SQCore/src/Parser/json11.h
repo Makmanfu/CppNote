@@ -40,16 +40,16 @@ namespace json11
         // Constructors for the various types of JSON value.
         Json() /*noexcept*/;                // NUL
         Json(std::nullptr_t) /*noexcept*/;  // NUL
-        Json(double value);             // NUMBER
-        Json(int value);                // NUMBER
-        Json(bool value);               // BOOL
-        Json(const std::string& value); // STRING
-        Json(std::string&& value);      // STRING
-        Json(const char* value);        // STRING
-        Json(const array& values);      // ARRAY
-        Json(array&& values);           // ARRAY
-        Json(const object& values);     // OBJECT
-        Json(object&& values);          // OBJECT
+        Json(double value);                 // NUMBER
+        Json(int value);                    // NUMBER
+        Json(bool value);                   // BOOL
+        Json(const std::string& value);     // STRING
+        Json(std::string&& value);          // STRING
+        Json(const char* value);            // STRING
+        Json(const array& values);          // ARRAY
+        Json(array&& values);               // ARRAY
+        Json(const object& values);         // OBJECT
+        Json(object&& values);              // OBJECT
 
         // Implicit constructor: anything with a to_json() function.
         template <class T, class = decltype(&T::to_json)>
@@ -216,7 +216,13 @@ namespace json11
 
 } 
 
-//???????????????????????????????????????????????????????????????????????????
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+//
+//                              Àý×Ó²¿·Ö
+//
+//
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 int test1();
 int test2();
 int test3();

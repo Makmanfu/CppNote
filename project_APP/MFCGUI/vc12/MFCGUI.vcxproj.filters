@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="start">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{fbcb89eb-550d-40d8-aa46-8a38e6c8dc9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="start\MFC">
+      <UniqueIdentifier>{95226174-9b9f-4aa2-bfcd-9ad4039e6774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\MFC\PANEL">
+      <UniqueIdentifier>{574b1044-73f5-448f-8168-afa4f1af6ea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SOCK">
+      <UniqueIdentifier>{75a32eea-7c39-4ac3-9531-9ec391131e08}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\res\Resource.h">
+      <Filter>start\res</Filter>
+    </ClInclude>
+    <ClInclude Include="MFCdef.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFC\MFCGUIDlg.h">
+      <Filter>start\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFC\MFCGUI.h">
+      <Filter>start\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MFC\GuiMan.h">
+      <Filter>start\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\UIEventListener.hpp">
+      <Filter>start\MFC\PANEL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\myButton.h">
+      <Filter>start\MFC\PANEL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Game2048.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MFC\MFCGUI.cpp">
+      <Filter>start\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MFC\MFCGUIDlg.cpp">
+      <Filter>start\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\MFC\GuiMan.cpp">
+      <Filter>start\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\myButton.cpp">
+      <Filter>start\MFC\PANEL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Game2048.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\MFCGUI.ico">
+      <Filter>start\res</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\res\MFCGUI.rc2">
+      <Filter>start\res</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\MFCGUI.rc">
+      <Filter>start\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

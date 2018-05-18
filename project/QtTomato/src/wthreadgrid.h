@@ -12,7 +12,7 @@
 #include "QPublic.h"
 
 //线程操作
-class MyThread : public QThread
+class CPP_API MyThread : public QThread
 {
     Q_OBJECT
 public:
@@ -31,7 +31,7 @@ namespace Ui
 }
 
 //线程演示界面
-class WThreadGrid : public QWidget
+class CPP_API WThreadGrid : public QWidget
 {
     Q_OBJECT
 public:

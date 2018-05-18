@@ -6,6 +6,7 @@
 #include "wbase.h"
 #include "waxis.h"
 #include "wtimenumbar.h"
+#include "wprogressbar.h"
 
 TabGUI::TabGUI(QWidget* parent) : TabGUIBase(parent)
 {
@@ -16,7 +17,7 @@ TabGUI::TabGUI(QWidget* parent) : TabGUIBase(parent)
     addcomboxItem(QString::fromLocal8Bit("WndPlayer"));
     addcomboxItem(QString::fromLocal8Bit("TimeNumBar"));
     addcomboxItem(QString::fromLocal8Bit("TimeBarPanel"));
-    addcomboxItem(QString::fromLocal8Bit("QWidget"));
+    addcomboxItem(QString::fromLocal8Bit("WProgressbar"));
     addcomboxItem(QString::fromLocal8Bit("QWidget"));
 }
 
@@ -52,7 +53,7 @@ void TabGUI::OnComBoxPageIndexChanged(int nId)
             m_pCurrUI = new TimeBarPanel(m_pWgtShow);
             break;
         case 7:             //频谱绘制
-            m_pCurrUI = new QWidget(m_pWgtShow);
+            m_pCurrUI = new WProgressbar(m_pWgtShow);
             break;
         case 8:
             m_pCurrUI = new QWidget(m_pWgtShow);

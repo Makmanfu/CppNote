@@ -1,5 +1,5 @@
 
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "miniIni.h"
 #include <fstream>
 #include <sstream>

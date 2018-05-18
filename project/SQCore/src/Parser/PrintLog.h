@@ -1,6 +1,6 @@
 //*************************************************************************
 //
-//  PrintLog适合全局保存日志 分析问题 可频繁打印日志(IO处理过)
+//  PrintLog适合全局保存日志 分析问题 可线程打印日志(IO处理过)
 //  Logger提供写日志功能，支持多线程，支持可变形参数操作，支持写日志级别的设置
 //  TextFile BinFile 文件操作例子
 //                                       @阿甘整理于 2018-03-23
@@ -14,8 +14,8 @@
 using namespace std;
 #include <windows.h>
 
-
-class PrintLog
+//日志工具
+class SQCPP_API PrintLog
 {
 public:
     //PrintLog用法例子
@@ -98,6 +98,7 @@ private:
     void OutputUnlock(void);
 };
 
+//日志打印工具 
 class SQCPP_API Logger
 {
 public:

@@ -73,7 +73,8 @@ version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' la
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@∫Í± º«@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //±‡“Î∆˜≈–∂œ∑Ω∑®
-//MS VC++ 13.0 _MSC_VER = 1900 (Visual C++ 2015)
+//MS VC++ 14.1 _MSC_VER = 1912 (Visual C++ 2017)
+//MS VC++ 14.0 _MSC_VER = 1900 (Visual C++ 2015)
 //MS VC++ 12.0 _MSC_VER = 1800 (Visual C++ 2013)
 //MS VC++ 11.0 _MSC_VER = 1700 (Visual C++ 2012)
 //MS VC++ 10.0 _MSC_VER = 1600 (Visual C++ 2010)
