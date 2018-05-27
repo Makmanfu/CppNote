@@ -26,8 +26,9 @@ for /f "delims=" %%a in ('dir /A=D /s /b debug*') do rd /s /q "%%~a"
 for /f "delims=" %%a in ('dir /A=D /s /b build*') do rd /s /q "%%~a"
 for /f "delims=" %%a in ('dir /A=D /s /b release*') do rd /s /q "%%~a"
 for /f "delims=" %%a in ('dir /A=D /s /b GeneratedFiles*') do rd /s /q "%%~a"
+for /f "delims=" %%a in ('dir /A=D /s /b moc*') do rd /s /q "%%~a"
 for /f "delims=" %%a in ('dir /A=D /s /b tmp*') do rd /s /q "%%~a"
-for /f "delims=" %%a in ('dir /A=D /s /b bin*') do rd /s /q "%%~a"
+for /f "delims=" %%a in ('dir /A=D /s /b cbin*') do rd /s /q "%%~a"
 cls
 GOTO EXIT
 :PACKWORK

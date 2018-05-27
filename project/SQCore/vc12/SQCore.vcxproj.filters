@@ -78,6 +78,12 @@
     <Filter Include="library\boost">
       <UniqueIdentifier>{107e2687-1ef6-4dbe-abd0-63a59f81f4c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="library\Parser\Sqlite">
+      <UniqueIdentifier>{3ab9c74a-1ec1-445f-9006-354b4c32b056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\Parser\mongdb">
+      <UniqueIdentifier>{2ca0d396-af9f-4362-a8e6-a8775ad8e4f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -245,9 +251,6 @@
     <ClInclude Include="..\src\boost\coroutines.hpp">
       <Filter>library\boost</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\boost\proxy.hpp">
-      <Filter>library\boost</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\boost\ssl_client_connect_to_yahoo.hpp">
       <Filter>library\boost</Filter>
     </ClInclude>
@@ -286,6 +289,174 @@
     </ClInclude>
     <ClInclude Include="..\src\WinAPI\WinKey.h">
       <Filter>library\WinAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SVM\CalcFun.h">
+      <Filter>library\SVM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UILabel.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIlib.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIList.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIManager.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIMarkup.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIOption.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIProgress.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIRender.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIRichEdit.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIScrollBar.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UISlider.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UITabLayout.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIText.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UITileLayout.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UITreeView.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIVerticalLayout.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIWebBrowser.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\Utils.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\WebBrowserEventHandler.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\WinImplBase.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\WndShadow.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\downloadmgr.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\FlashEventHandler.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\ScrCapture.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\stb_image.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIActiveX.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIBase.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIButton.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UICheckBox.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIChildLayout.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UICombo.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIContainer.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIControl.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIDateTime.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIDefine.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIDelegate.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIDlgBuilder.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIEdit.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIFlash.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIGifAnim.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\UIHorizontalLayout.h">
+      <Filter>library\DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinAPI\WinService.h">
+      <Filter>library\WinAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Parser\sqlite3.h">
+      <Filter>library\Parser\Sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Parser\DrvSqlite.h">
+      <Filter>library\Parser\Sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\HelloDUI.h">
+      <Filter>library\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinAPI\WinGUI.h">
+      <Filter>library\WinAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinAPI\WinFileSys.h">
+      <Filter>library\WinAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinAPI\WinFileSys_typedef.h">
+      <Filter>library\WinAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinAPI\WinTool.h">
+      <Filter>library\WinAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DllGui\FunAll.h">
+      <Filter>library\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DllGui\BootLoad.h">
+      <Filter>library\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\boost\Boost_proxy.hpp">
+      <Filter>library\boost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DllGui\MiniTools.hpp">
+      <Filter>library\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DllGui\Harkscr.hpp">
+      <Filter>library\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DUILIB\HelloDUI_def.h">
+      <Filter>library\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -364,10 +535,162 @@
     <ClCompile Include="..\src\boost\SQBoost.cpp">
       <Filter>library\boost</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\SVM\CalcFun.cpp">
+      <Filter>library\SVM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UILabel.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIlib.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIList.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIManager.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIMarkup.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIOption.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIProgress.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIRender.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIRichEdit.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIScrollBar.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UISlider.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UITabLayout.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIText.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UITileLayout.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UITreeView.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIVerticalLayout.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIWebBrowser.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\Utils.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\WinImplBase.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\WndShadow.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\XUnzip.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\ScrCapture.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIActiveX.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIBase.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIButton.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UICheckBox.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIChildLayout.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UICombo.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIContainer.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIControl.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIDateTime.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIDelegate.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIDlgBuilder.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIEdit.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIFlash.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIGifAnim.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\UIHorizontalLayout.cpp">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\stb_image.c">
+      <Filter>library\DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinAPI\WinService.cpp">
+      <Filter>library\WinAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Parser\sqlite3.c">
+      <Filter>library\Parser\Sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Parser\DrvSqlite.cpp">
+      <Filter>library\Parser\Sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DUILIB\HelloDUI.cpp">
+      <Filter>library\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinAPI\WinGUI.cpp">
+      <Filter>library\WinAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinAPI\WinFileSys.cpp">
+      <Filter>library\WinAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinAPI\WinTool.cpp">
+      <Filter>library\WinAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DllGui\FunAll.cpp">
+      <Filter>library\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DllGui\BootLoad.cpp">
+      <Filter>library\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\res\SQCore.rc">
       <Filter>Start\res</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\DUILIB\flash10a.tlh">
+      <Filter>library\DUILIB</Filter>
+    </None>
+    <None Include="..\src\DUILIB\flash11.tlh">
+      <Filter>library\DUILIB</Filter>
+    </None>
   </ItemGroup>
 </Project>

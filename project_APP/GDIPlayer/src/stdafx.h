@@ -3,13 +3,11 @@
 #ifndef STDAFX_H
 #define STDAFX_H
 
-#define GUIRUN
+#define GUIRUNC
+#define SQC_API
+#define SQCPP_API
 
-#define _CRT_SECURE_NO_WARNINGS
-#pragma warning(disable : 4100)
-#pragma warning(disable : 4996)
-
-//#include "CDefine.hpp"
+#include "CDefine.hpp"
 #include <WinSock2.h>
 #include <windows.h>                            //windows头文件
 #include <winuser.h>
@@ -19,10 +17,9 @@
 #include <memory.h>
 #include <stdio.h>
 #include <tchar.h>
-#include "CTemplate.hpp"
 #include "resource.h"                           //资源的定义
+#include "CTemplate.hpp" 
 
-//#pragma comment( lib,DLIB(PLIB("SQCore")))
 
 
 

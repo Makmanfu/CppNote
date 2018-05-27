@@ -1,5 +1,5 @@
-#ifndef RSMZ_ANIMATOR_H
-#define RSMZ_ANIMATOR_H
+#ifndef ANIMATOR_H
+#define ANIMATOR_H
 
 #include <chrono>
 #include "TrackBallInteractor.h"

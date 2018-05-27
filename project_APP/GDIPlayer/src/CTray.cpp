@@ -16,7 +16,7 @@ CTray::CTray(HWND hWnd, size_t IconID, HMENU hMenu) : hDlgWnd(hWnd)
     nid.uID = TaskIconID;
     nid.uFlags = NIF_MESSAGE | NIF_ICON | NIF_TIP;
     nid.uCallbackMessage = WM_SHOWTASK; //回调信息
-    lstrcpyA(nid.szTip, "asds");
+    lstrcpyA(nid.szTip, "GDIPlayer");
     SetIcon(TaskIconID);
     ShowWindow(hWnd, SW_HIDE);
     //显示托盘图标

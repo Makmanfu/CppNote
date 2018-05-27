@@ -14,7 +14,7 @@ WLrc::WLrc(QWidget* parent) : QLabel(parent)
     // 设置背景透明
     //setAttribute(Qt::WA_TranslucentBackground);
     this->setWindowOpacity(0.8);
-    setText(QString::fromLocal8Bit("QtPlayer音乐播放器"));
+    setText(TCSR("QtPlayer音乐播放器"));
     // 固定部件大小
     setMaximumSize(900, 80);
     setMinimumSize(600, 80);
@@ -102,7 +102,7 @@ void WLrc::mouseMoveEvent(QMouseEvent* event)
 void WLrc::contextMenuEvent(QContextMenuEvent* event)
 {
     QMenu menu;
-    menu.addAction(QString::fromLocal8Bit("隐藏"), this, SLOT(hide()));
+    menu.addAction(TCSR("隐藏"), this, SLOT(hide()));
     menu.exec(event->globalPos());
 }
 

@@ -13,16 +13,16 @@ WSuspension::WSuspension(int _PngType, QWidget* parent) : QMoveDlg(parent)
     this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint | Qt::Tool);
     m_iPngType = _PngType;
     //创建菜单
-    Act_MainShow = new QAction(QString::fromLocal8Bit("主界面"), this);
+    Act_MainShow = new QAction(TCSR("主界面"), this);
     connect(Act_MainShow, SIGNAL(triggered()), this, SLOT(iconActivated()));
-    Act_Suspen = new QAction(QString::fromLocal8Bit("悬浮窗"), this);
+    Act_Suspen = new QAction(TCSR("悬浮窗"), this);
     Act_Suspen->setCheckable(true);
     Act_Suspen->setChecked(true);
     connect(Act_Suspen, SIGNAL(triggered()), this, SLOT(Act_SuspenClick()));
-    Act_Tray = new QAction(QString::fromLocal8Bit("托盘"), this);
+    Act_Tray = new QAction(TCSR("托盘"), this);
     Act_Tray->setCheckable(true);
     connect(Act_Tray, SIGNAL(triggered()), this, SLOT(Act_TrayClick()));
-    Act_Exit = new QAction(QString::fromLocal8Bit("退出"), this);
+    Act_Exit = new QAction(TCSR("退出"), this);
     connect(Act_Exit, SIGNAL(triggered()), this, SLOT(exitSuspen()));
     m_MenuTray = new QMenu(this);
     //界面菜单设计
@@ -109,13 +109,13 @@ void WSuspension::setTrayShow(bool _state)
 
 void WSuspension::showMain()
 {
-    QMessageBox msgBox(QMessageBox::Warning, QString::fromLocal8Bit("精灵提示！"),
-                       QString::fromLocal8Bit("不要乱点哦，记得加蓝!"));
+    QMessageBox msgBox(QMessageBox::Warning, TCSR("精灵提示！"),
+                       TCSR("不要乱点哦，记得加蓝!"));
     QString SySheet = QString(" QLabel {font-size:20px; font-weight:normal; color:rgb(255, 0, 0);} ") +
                       QString(" QPushButton {font-size:20px; font-weight:normal; color:rgb(0, 255, 0);} ");
     msgBox.setStyleSheet(SySheet);
     msgBox.setStandardButtons(QMessageBox::Ok);
-    msgBox.setButtonText(QMessageBox::Ok, QString::fromLocal8Bit("确定"));
+    msgBox.setButtonText(QMessageBox::Ok, TCSR("确定"));
     msgBox.exec();
 }
 
@@ -330,23 +330,23 @@ WScanRotate::WScanRotate(QWidget* parent) : QWidget(parent)
     m_pCboxSelect->move(120, 10);
     m_pCboxSelect->setMaxVisibleItems(6);
     m_pCboxSelect->setEditable(false);
-    m_pCboxSelect->insertItem(0, QString::fromLocal8Bit("显示模式"));
-    m_pCboxSelect->insertItem(1, QString::fromLocal8Bit("轨迹模式"));
-    m_pCboxSelect->insertItem(2, QString::fromLocal8Bit("目标模式"));
+    m_pCboxSelect->insertItem(0, TCSR("显示模式"));
+    m_pCboxSelect->insertItem(1, TCSR("轨迹模式"));
+    m_pCboxSelect->insertItem(2, TCSR("目标模式"));
     connect(m_pCboxSelect, SIGNAL(currentIndexChanged(int)), this, SLOT(OnComboSelectIndexChanged(int)));
     m_pCboxlines->setVisible(false);
     //下面是轨迹编辑控件
     m_pCboxlines->move(120, 40);
     m_pCboxlines->setMaxVisibleItems(99);
     m_pCboxlines->setEditable(false);
-    //m_pCombolines->insertItem(0, QString::fromLocal8Bit("0"));
-    //m_pCombolines->insertItem(1, QString::fromLocal8Bit("1"));
-    //m_pCombolines->insertItem(2, QString::fromLocal8Bit("2"));
+    //m_pCombolines->insertItem(0, TCSR("0"));
+    //m_pCombolines->insertItem(1, TCSR("1"));
+    //m_pCombolines->insertItem(2, TCSR("2"));
     //connect(m_pCombolines, SIGNAL(currentIndexChanged(int)), this, SLOT(OnComboSelectIndexChanged(int)));
     m_pBtnadd = new QPushButton(this);
     m_pBtnadd->setFixedSize(80, 25);
     m_pBtnadd->move(230, 40);
-    m_pBtnadd->setText(QString::fromLocal8Bit("添加"));
+    m_pBtnadd->setText(TCSR("添加"));
     connect(m_pBtnadd, SIGNAL(clicked()), this, SLOT(OnBtnaddClicked()));
     m_pBtnadd->setVisible(false);
     //初始化计时器。计时器每秒触发12.5次，每次都触发界面重绘，重绘时将扫描扇形区域的位置移动一点点，形成动画效果
@@ -521,14 +521,14 @@ void WScanRotate::OnBtnaddClicked()
         m_mapPT.insert(m_mapPT.count(), m_vecPT);
         m_vecPT.clear();
         m_blinestate = false;
-        m_pBtnadd->setText(QString::fromLocal8Bit("添加"));
-        QString tmpstr = QString::fromLocal8Bit("轨迹") + QString::number(m_mapPT.size(), 10);
+        m_pBtnadd->setText(TCSR("添加"));
+        QString tmpstr = TCSR("轨迹") + QString::number(m_mapPT.size(), 10);
         m_pCboxlines->insertItem(m_pCboxlines->currentIndex(), tmpstr);
     }
     else
     {
         m_blinestate = true;
-        m_pBtnadd->setText(QString::fromLocal8Bit("完成添加"));
+        m_pBtnadd->setText(TCSR("完成添加"));
     }
 }
 

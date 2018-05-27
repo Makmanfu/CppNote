@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ImportGroup Label="PropertySheets" />
-  <PropertyGroup Label="UserMacros">
-    <LibPath>D:\Develop</LibPath>
-    <BOOST_PATH>$(LibPath)\boost\boost_1_64_0</BOOST_PATH>
-  </PropertyGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="boost.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <OutDir>$(SolutionDir)bin\</OutDir>
     <IntDir>$(SolutionDir)bin\$(Configuration)\$(TargetName)\</IntDir>
@@ -35,14 +34,5 @@
       <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt)) </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <BuildMacro Include="LibPath">
-      <Value>$(LibPath)</Value>
-      <EnvironmentVariable>true</EnvironmentVariable>
-    </BuildMacro>
-    <BuildMacro Include="BOOST_PATH">
-      <Value>$(BOOST_PATH)</Value>
-      <EnvironmentVariable>true</EnvironmentVariable>
-    </BuildMacro>
-  </ItemGroup>
+  <ItemGroup />
 </Project>

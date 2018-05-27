@@ -1,5 +1,5 @@
-#ifndef RSMZ_RENDERER_H
-#define RSMZ_RENDERER_H
+#ifndef RENDERER_H
+#define RENDERER_H
 
 #include <GL/gl.h>
 #include "Camera.h"

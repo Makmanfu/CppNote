@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Start_main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Start_main\Res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{654035c8-1aa0-41c3-b107-6e0d243f5080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{372053f7-6d26-43e5-8b4d-ee9900f0c512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="User">
+      <UniqueIdentifier>{28709d91-5d51-4e68-a08b-025472996050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\opencv">
+      <UniqueIdentifier>{3c6fd4c2-faa1-497d-aab5-0a9f2ad2d8e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SIFT_match">
+      <UniqueIdentifier>{1138edd5-b945-4ba5-9baa-ebe146adc098}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SIFT_match\UI">
+      <UniqueIdentifier>{14de03ac-92e1-4020-98a2-251e203ddcac}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sift_match\utilsfeatures.h">
+      <Filter>SIFT_match</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\siftmatch.h">
+      <Filter>SIFT_match\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OpenCVConf.h">
+      <Filter>UI\opencv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\StuOpDetect.h">
+      <Filter>UI\opencv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\StuOpDetect_typedef.h">
+      <Filter>UI\opencv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WndOpenCV.h">
+      <Filter>UI\opencv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Imgcv.h">
+      <Filter>UI\opencv</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\stdafx.h">
+      <Filter>Start_main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QPublic.h">
+      <Filter>Start_main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sift_match\SIFT.h">
+      <Filter>SIFT_match</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QtConfig.h">
+      <Filter>Start_main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\sift_match\utilsfeatures.cpp">
+      <Filter>SIFT_match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sift_match\SIFT.cpp">
+      <Filter>SIFT_match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\siftmatch.cpp">
+      <Filter>SIFT_match\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\StuOpDetect.cpp">
+      <Filter>UI\opencv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WndOpenCV.cpp">
+      <Filter>UI\opencv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Imgcv.cpp">
+      <Filter>UI\opencv</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Start_main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\QPublic.cpp">
+      <Filter>Start_main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdafx.cpp">
+      <Filter>Start_main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\QtConfig.cpp">
+      <Filter>Start_main</Filter>
+    </ClCompile>
+    <ClCompile Include="QtConfig_MOC.cpp">
+      <Filter>Start_main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Res\res.rc">
+      <Filter>Start_main\Res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

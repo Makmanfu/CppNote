@@ -1,6 +1,7 @@
 #ifndef  __FREEGLUT_H__
 #define  __FREEGLUT_H__
 
+#define _CRT_SECURE_NO_WARNINGS
 /*
     freeglut.h
 

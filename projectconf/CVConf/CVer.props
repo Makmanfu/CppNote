@@ -4,14 +4,12 @@
   <PropertyGroup Label="UserMacros">
     <OPENCV2>D:\Develop\GUI\OPENCV2.9.10\build</OPENCV2>
     <OPENCV3>D:\Develop\GUI\OPENCV\</OPENCV3>
-    <OPENCV_IN>$(SolutionDir)Note\3rdparty\opencv3\build</OPENCV_IN>
+    <OPENCV_IN>$(SolutionDir)Note\3rdParty\OpenCV</OPENCV_IN>
     <OPENCV>$(OPENCV_IN)</OPENCV>
   </PropertyGroup>
   <PropertyGroup />
   <ItemDefinitionGroup>
-    <ClCompile>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-    </ClCompile>
+    <ClCompile />
   </ItemDefinitionGroup>
   <ItemGroup>
     <BuildMacro Include="OPENCV2">

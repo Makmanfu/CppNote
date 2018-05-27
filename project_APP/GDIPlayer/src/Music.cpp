@@ -2,10 +2,12 @@
 #include "stdafx.h"
 #include "Music.h"
 
-Song::Song() : typeID(0)
+Music::Music() : typeID(0)
     , iLength(0)
     , state(SONG_INIT)
     , hVideo(NULL)
+    , iPlayMode(REPATEALL)   //默认 全部循环
+    , PlayingIndex(-1)       //当前播放索引
 {
     //视频播放结构初始化
     mciStatus.dwItem = MCI_DGV_STATUS_HWND;
@@ -15,16 +17,16 @@ Song::Song() : typeID(0)
     mciOpen.dwStyle = WS_CHILD;                 //窗口风格
 }
 
-Song::Song(string _mp3PathName, HWND hParent) : Song()
+Music::Music(string _mp3PathName, HWND hParent) : Music()
 {
     SetSong(_mp3PathName, hParent);
 }
 
-Song::~Song()
+Music::~Music()
 {
 }
 
-void Song::SetSong(string _mp3PathName, HWND hParent)
+void Music::SetSong(string _mp3PathName, HWND hParent)
 {
     //先执行一次停止
     Play(SONG_STOP);
@@ -65,7 +67,7 @@ void Song::SetSong(string _mp3PathName, HWND hParent)
     }
 }
 
-void Song::Play(PLAYSTATE setState)
+void Music::Play(PLAYSTATE setState)
 {
     if (CheckMyState())
         return;
@@ -107,7 +109,7 @@ void Song::Play(PLAYSTATE setState)
     }
 }
 
-void Song::SetSound(bool bok)
+void Music::SetSound(bool bok)
 {
     if (CheckMyState())
         return;
@@ -115,7 +117,7 @@ void Song::SetSound(bool bok)
     mciSendStringA(cmd, (LPSTR)NULL, 0, NULL);
 }
 
-void Song::SetVolume(int iVolume)
+void Music::SetVolume(int iVolume)
 {
     if (CheckMyState())
         return;
@@ -126,7 +128,7 @@ void Song::SetVolume(int iVolume)
     mciSendStringA(cmd, "", 0, NULL);
 }
 
-void Song::JumpTo(LONG lPos)
+void Music::JumpTo(LONG lPos)
 {
     if (CheckMyState())
         return;
@@ -140,7 +142,7 @@ void Song::JumpTo(LONG lPos)
     //    Play ( SONG_PAUSE );
 }
 
-bool Song::GetSongLen(long& llen)
+bool Music::GetSongLen(long& llen)
 {
     //得到歌曲的总时间
     char PlaySongLength[100];
@@ -157,7 +159,7 @@ bool Song::GetSongLen(long& llen)
     return CheckMyState();
 }
 
-long Song::GetCurPlayingPos()
+long Music::GetCurPlayingPos()
 {
     if (CheckMyState())
         return 0;
@@ -168,13 +170,13 @@ long Song::GetCurPlayingPos()
     return atol(pos);
 }
 
-bool Song::CheckMyState(void)
+bool Music::CheckMyState(void)
 {
     //如果什么连歌名都没有就报错了
     return (state == SONG_INIT);
 }
 
-BOOL Song::GetMp3Info(char* szFilePath, pMP3_ID3v1_STRUCT pMp3Info)
+BOOL Music::GetMp3Info(char* szFilePath, pMP3_ID3v1_STRUCT pMp3Info)
 {
     //memset(&SongInfo, 0, sizeof(SongInfo)); //SongInfo初始化
     return TRUE;

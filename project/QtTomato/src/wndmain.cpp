@@ -19,7 +19,7 @@ WndMain::WndMain(QWidget* parent) : QWidget(parent)
     , m_tabThread(NULL)
     , m_myWndTD(NULL)
 {
-    QFont ft = QFont(QString::fromLocal8Bit("微软雅黑"));
+    QFont ft = QFont(TCSR("微软雅黑"));
     ft.setPointSize(11);
     this->setFont(ft);
     this->resize(600, 640);
@@ -33,7 +33,7 @@ WndMain::WndMain(QWidget* parent) : QWidget(parent)
     QIcon icon;
     icon.addFile(QString::fromUtf8(":/Res/tray.ico"), QSize(), QIcon::Normal, QIcon::Off);
     this->setWindowIcon(icon);
-    this->setWindowTitle(QString::fromLocal8Bit("番茄BOSS浏览器"));
+    this->setWindowTitle(TCSR("番茄BOSS浏览器"));
     //测试窗口嵌套
     //HWND calc = FindWindowA(NULL, "计算器");
     //SetParent(calc, this->winId());
@@ -69,18 +69,18 @@ void WndMain::createTab(void)
     m_tabWeb = new QWidget();
     m_tabWeb->setObjectName(QString::fromUtf8("tabWeb"));
     m_tabWidget->addTab(m_tabWeb, QString());
-    m_tabGIS = new QWidget();
-    m_tabGIS->setObjectName(QString::fromUtf8("tabStruct"));
-    m_tabWidget->addTab(m_tabGIS, QString());
+    //m_tabGIS = new QWidget();
+    //m_tabGIS->setObjectName(QString::fromUtf8("tabStruct"));
+    //m_tabWidget->addTab(m_tabGIS, QString());
     m_gridLayout = new QGridLayout(this);
     m_gridLayout->setSpacing(6);
     m_gridLayout->setContentsMargins(0, 0, 0, 0);
     //gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
     m_gridLayout->addWidget(m_tabWidget, 0, 0, 1, 1);
-    m_tabWidget->setTabText(m_tabWidget->indexOf(m_tabGUI), QString::fromLocal8Bit("图形界面"));
-    m_tabWidget->setTabText(m_tabWidget->indexOf(m_tabThread), QString::fromLocal8Bit("线程控制"));
-    m_tabWidget->setTabText(m_tabWidget->indexOf(m_tabWeb), QString::fromLocal8Bit("网络通信"));
-    m_tabWidget->setTabText(m_tabWidget->indexOf(m_tabGIS), QString::fromLocal8Bit("GIS"));
+    m_tabWidget->setTabText(m_tabWidget->indexOf(m_tabGUI), TCSR("图形界面"));
+    m_tabWidget->setTabText(m_tabWidget->indexOf(m_tabThread), TCSR("线程控制"));
+    m_tabWidget->setTabText(m_tabWidget->indexOf(m_tabWeb), TCSR("网络通信"));
+    //m_tabWidget->setTabText(m_tabWidget->indexOf(m_tabGIS), TCSR("GIS"));
     m_tabWidget->setCurrentIndex(0);
     QMetaObject::connectSlotsByName(this);
 }
@@ -90,7 +90,7 @@ void WndMain::guiInit(void)
     //配置按钮
     m_lblconfg = new QPushButton(this);
     m_lblconfg->setFlat(true);
-    m_lblconfg->setText(QString::fromLocal8Bit("AppCfg"));
+    m_lblconfg->setText(TCSR("AppCfg"));
     m_lblconfg->setFixedSize(70, 25);
     connect(m_lblconfg, SIGNAL(clicked()), this, SLOT(on_lblconfg_click()));
     //创建界面演示
@@ -114,13 +114,13 @@ void WndMain::guiInit(void)
     m_WebGrid->addWidget(m_myWndWeb, 0, 0);
     m_WebGrid->setMargin(0);
     m_tabWeb->setLayout(m_WebGrid);
-    //创建数据结构演示
-    m_myGIS = new TabGIS(m_tabGIS);
-    m_myGIS->move(0, 0);
-    m_StructGrid = new QGridLayout;
-    m_StructGrid->addWidget(m_myGIS, 0, 0);
-    m_StructGrid->setMargin(0);
-    m_tabGIS->setLayout(m_StructGrid);
+    ////创建数据结构演示
+    //m_myGIS = new TabGIS(m_tabGIS);
+    //m_myGIS->move(0, 0);
+    //m_StructGrid = new QGridLayout;
+    //m_StructGrid->addWidget(m_myGIS, 0, 0);
+    //m_StructGrid->setMargin(0);
+    //m_tabGIS->setLayout(m_StructGrid);
     //时钟控件
     static WClock* m_clock = new WClock(this);
     m_clock->setParent(this, 0);
@@ -227,13 +227,13 @@ void WndSuspenUsr::showMain()
         m_wndFrm->show();
     else
     {
-        QMessageBox msgBox(QMessageBox::Warning, QString::fromLocal8Bit("番茄BOSS提示！"),
-                           QString::fromLocal8Bit("不要狂点行不，看清楚任务拦!"));
+        QMessageBox msgBox(QMessageBox::Warning, TCSR("番茄BOSS提示！"),
+                           TCSR("不要狂点行不，看清楚任务拦!"));
         QString SySheet = QString(" QLabel {font-size:20px; font-weight:normal; color:rgb(255, 0, 0);}") +
                           QString(" QPushButton {font-size:20px; font-weight:normal; color:rgb(0, 205, 0);} ");
         msgBox.setStyleSheet(SySheet);
         msgBox.setStandardButtons(QMessageBox::Ok);
-        msgBox.setButtonText(QMessageBox::Ok, QString::fromLocal8Bit("确定"));
+        msgBox.setButtonText(QMessageBox::Ok, TCSR("确定"));
         msgBox.exec();
     }
 }

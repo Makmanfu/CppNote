@@ -7,13 +7,8 @@
 //*************************************************************************
 #pragma once
 
-class SQCPP_API CDijkstra
+class CDijkstra
 {
-public:
-    static int main(int argc, char** argv)
-    {
-        return 1;
-    };
 };
 
 

@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "GLWindow.h"
 #include "CToolClass.hpp"
+#include "Harkscr.hpp"
 
 //freeglut
 extern int GL_freeglut_demo(int argc, char** argv);
@@ -33,6 +34,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine
     cmds.DefaultFunAdd(&TrackBallWnd::WINMAIN);
     cmds.ComandAdd(string("GLWnd"), &GLWnd::WINMAIN);
     cmds.ComandAdd(string("WndTrackBall"), &TrackBallWnd::WINMAIN);
+    cmds.ComandAdd(string("WinHarkscr"), &WinHarkscr::WINMAIN);
     cmds.GetCmdFunProc(string(lpCmdLine), &fp);
     if (fp != NULL)
         fp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);

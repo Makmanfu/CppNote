@@ -5,9 +5,7 @@
 #include <imagehlp.h>
 #pragma comment(lib, "imagehlp.lib")
 
-//#include "WinFileSys.h"
-
-PrintLog::PrintLog(void)
+PrintLog::PrintLog(const char* f_pathfile)
 {
     //初始化
     memset(&LogFile, 0, sizeof(Log_File));
@@ -17,10 +15,8 @@ PrintLog::PrintLog(void)
     traceInit = true;
     Loglocker.m_hMutex = 0;
     Loglocker.m_timeout = 30000;
-}
 
-PrintLog::PrintLog(const char* f_pathfile) : PrintLog()
-{
+    //设置文件全路径GetExeNamePath().c_str()
     CreateLogFilePath(f_pathfile);
 }
 

@@ -16,18 +16,15 @@
     <Filter Include="start\Res">
       <UniqueIdentifier>{188c6115-af8c-4eb3-927c-635674e11354}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GUI\API">
+      <UniqueIdentifier>{1e4ee51c-a59d-4986-b1fb-27c16ac18855}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\MainDlg.cpp">
-      <Filter>GUI\MP3</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Music.cpp">
       <Filter>GUI\MP3</Filter>
     </ClCompile>
     <ClCompile Include="..\src\CMP4.cpp">
-      <Filter>GUI\MP4</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\OpenGLView.cpp">
       <Filter>GUI\MP4</Filter>
     </ClCompile>
     <ClCompile Include="..\src\CTray.cpp">
@@ -39,13 +36,16 @@
     <ClCompile Include="..\src\stdafx.cpp">
       <Filter>start</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\WinPlayer.cpp">
+      <Filter>GUI\MP3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGUI.cpp">
+      <Filter>GUI\API</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\res\resource.h">
       <Filter>start\Res</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\MainDlg.h">
-      <Filter>GUI\MP3</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Music.h">
       <Filter>GUI\MP3</Filter>
@@ -53,20 +53,20 @@
     <ClInclude Include="..\src\CMP4.h">
       <Filter>GUI\MP4</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\OpenGLView.h">
-      <Filter>GUI\MP4</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\WinMP4.hpp">
       <Filter>GUI\MP4</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\WinPlayer.hpp">
-      <Filter>GUI\MP3</Filter>
     </ClInclude>
     <ClInclude Include="..\src\CTray.h">
       <Filter>GUI\MP3</Filter>
     </ClInclude>
     <ClInclude Include="..\src\stdafx.h">
       <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinPlayer.h">
+      <Filter>GUI\MP3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGUI.h">
+      <Filter>GUI\API</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

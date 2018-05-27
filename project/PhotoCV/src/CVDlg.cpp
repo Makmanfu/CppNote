@@ -1,8 +1,8 @@
 
 
 #include "stdafx.h"
-#include "../../../../CppNote/project/SQCore/src/WinAPI/WinGUI.CPP"
-#include "../../../../CppNote/project/SQCore/src/WinAPI/GDIView.CPP"
+#include "../../../../CppNote/project/GLGPU/src/WinGUI.CPP"
+#include "../../../../CppNote/project/GLGPU/src/GDIView.CPP"
 #include "CVDlg.h"
 
 

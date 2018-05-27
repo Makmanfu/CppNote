@@ -9,6 +9,12 @@
 //键盘操作
 class SQCPP_API CkeyHook
 {
+    static int main(int argc, char** argv)
+    {
+        CkeyHook key;
+        key.MaskAllkey();               //GetPressKeyValue
+        return 0;
+    };
 public:
     LPDWORD KEY_lpdwVirtualKey;             // Keycode 数组的指针
     int KEY_nLength;                        // Keycode 数组的大小

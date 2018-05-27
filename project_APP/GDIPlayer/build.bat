@@ -3,7 +3,7 @@
 :build_all
 REM 当前目录生成项目
 CD %~dp0
-RD /S /Q BIN tmp
+RD /S /Q CBIN tmp
 MD tmp
 CD tmp
 REM 调用MSVC编译器
@@ -15,5 +15,5 @@ CD %~dp0
 RD /S /Q tmp
 GOTO END
 :END
-start .\bin\GDIPlayer.exe
+start .\CBIN\GDIPlayer.exe
 

@@ -23,7 +23,6 @@ public:
     {
         //使用方法
         PrintLog slog;
-        slog.CreateLogFilePath("./");       //设置文件全路径GetExeNamePath().c_str()
         char s_szBuffer[512];
         for (size_t i = 1; i < 101; i++)
         {
@@ -38,11 +37,11 @@ public:
             //使用方法
             PrintLog slog("c:\\");
             while (1)
-            slog.PrintToLog("showlog \n");
+                slog.PrintToLog("showlog \n");
             //简单打日志例子
             for (int i = 0; i < 100; i++)
             LogFun("简单日志", "logApp.log", 2);
-            //频繁打日志  注意PrintLog类要放在什么生命周期里
+            //打日志  注意PrintLog类要放在什么生命周期里
             PrintLog slogFast;
             slogFast.CreateLogFilePath(GetExeNamePath().c_str());
             for (int i = 0; i < 10000; i++)
@@ -71,8 +70,7 @@ private:
     bool ourtocmd;                              //日志是否打印到命令行
     bool traceInit;                             //锁
 public:
-    PrintLog(void);
-    PrintLog(const char* f_pathfile);
+    PrintLog(const char* f_pathfile = "./");
     virtual ~PrintLog(void);
 public:
     //设置路径并创建 f_pathfile尾需带斜杠

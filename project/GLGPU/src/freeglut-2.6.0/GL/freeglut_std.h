@@ -61,7 +61,7 @@ extern "C" {
 #   include <Windows.h>
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#ifdef NO_FREEGLUT_DEF  屏蔽原来的宏定义
+#ifdef NO_FREEGLUT_DEF  //屏蔽原来的宏定义
 /* Windows static library */
 #   ifdef FREEGLUT_STATIC
 

@@ -32,11 +32,9 @@ INCLUDEPATH += ./ \
     ./moc \
     ./lib
 
-#宏定义方法
-DEFINES += _QT_CREATE_LIB
+#宏定义方�DEFINES += _QT_CREATE_LIB
 
-#加当前路径
-#win32: LIBS += -L$$PWD/ -lopencv_world -lopencv_ts
+#加当前路�#win32: LIBS += -L$$PWD/ -lopencv_world -lopencv_ts
 INCLUDEPATH += $$PWD/
 DEPENDPATH += $$PWD/
 
@@ -46,59 +44,62 @@ RCC_DIR += ../QtTomato/moc
 
 FORMS += \
     src/dlgfrm.ui \
+    src/frmnettool.ui \
     src/wplay.ui \
+    src/wprogressbar.ui \
     src/wthreadgrid.ui
 
 HEADERS += \
     src/appcfg.h \
-    src/crmsystem.h \
-    src/crmsystem_def.h \
     src/dlgfrm.h \
-    src/QFun.h \
+    src/frmnettool.h \
     src/QPublic.h \
-    src/quifun.h \
+    src/QtConfig.h \
     src/stdafx.h \
-    src/tabdb.h \
     src/tabgis.h \
     src/tabgui.h \
     src/tabnet.h \
     src/tabtd.h \
+    src/tcpserver.h \
     src/waxis.h \
     src/waxis_def.h \
     src/wbase.h \
-    src/wdb.h \
     src/wdraw.h \
     src/wndmain.h \
     src/wpanel.h \
     src/wplay.h \
+    src/wprogressbar.h \
     src/wthread.h \
     src/wthreadgrid.h \
     src/wtimenumbar.h
 
 SOURCES += \
     src/appcfg.cpp \
-    src/crmsystem.cpp \
     src/dlgfrm.cpp \
+    src/frmnettool.cpp \
     src/main.cpp \
-    src/QFun.cpp \
     src/QPublic.cpp \
-    src/quifun.cpp \
+    src/QtConfig.cpp \
     src/stdafx.cpp \
-    src/tabdb.cpp \
     src/tabgis.cpp \
     src/tabgui.cpp \
     src/tabnet.cpp \
     src/tabtd.cpp \
+    src/tcpserver.cpp \
     src/waxis.cpp \
     src/wbase.cpp \
-    src/wdb.cpp \
     src/wdraw.cpp \
     src/wndmain.cpp \
     src/wpanel.cpp \
     src/wplay.cpp \
+    src/wprogressbar.cpp \
     src/wthread.cpp \
     src/wthreadgrid.cpp \
     src/wtimenumbar.cpp
+
+RESOURCES += \
+    res/wdgres.qrc
+
 
 
 

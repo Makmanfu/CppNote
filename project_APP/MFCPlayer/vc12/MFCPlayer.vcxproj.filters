@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="start">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{fbcb89eb-550d-40d8-aa46-8a38e6c8dc9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="start\MFC">
+      <UniqueIdentifier>{95226174-9b9f-4aa2-bfcd-9ad4039e6774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VLC">
+      <UniqueIdentifier>{91fd4097-032a-476a-aaef-491a8e2f9cf9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\StdAfx.cpp">
+      <Filter>start\MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MFCGUI.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MFCGUIDlg.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VLCWrapper.cpp">
+      <Filter>VLC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VLCWrapperImpl.cpp">
+      <Filter>VLC</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\MFCdef.h">
+      <Filter>start\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\StdAfx.h">
+      <Filter>start\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\targetver.h">
+      <Filter>start\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\res\Resource.h">
+      <Filter>start\res</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MFCGUIDlg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MFCGUI.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VLCWrapper.h">
+      <Filter>VLC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VLCWrapperImpl.h">
+      <Filter>VLC</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\MFCGUI.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="player_eject.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="player_mute.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="player_pause.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="player_play.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="player_stop.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="player_volume.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\player_eject.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\player_mute.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\player_pause.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\player_play.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\player_stop.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\player_volume.ico">
+      <Filter>start\res</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\MFCGUI.rc">
+      <Filter>start\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

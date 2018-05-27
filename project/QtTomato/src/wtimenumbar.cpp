@@ -20,7 +20,7 @@ TimeNumBar::TimeNumBar(QWidget* _parent) :QWidget(_parent)
     m_labName->setFrameShape(QFrame::Panel);
     m_labName->setFrameShadow(QFrame::Plain);
     m_labName->setAlignment(Qt::AlignCenter);
-    m_labName->setText(QString::fromLocal8Bit("1分钟后爆炸"));
+    m_labName->setText(TCSR("1分钟后爆炸"));
     m_timelcd = new QLCDNumber(this);
     m_timelcd->setDigitCount(8);
     m_timelcd->setSegmentStyle(QLCDNumber::Flat);
@@ -51,7 +51,7 @@ TimeNumBar::TimeNumBar(QWidget* _parent) :QWidget(_parent)
     m_TestTmr->setInterval(1000);
     connect(m_TestTmr, SIGNAL(timeout()), this, SLOT(TestTimeSlot()));
     kk = 60;
-    setShowName(QString::fromLocal8Bit("一分钟炸死"));  //显示标题
+    setShowName(TCSR("一分钟炸死"));  //显示标题
     setAllTimeShow("00:01:00");                         //总时间
     setTimeHMS(0,1,0);                                  //倒计时
     setBarMaxMin(60, 0);
@@ -208,7 +208,7 @@ void TimeNumBar::drawRule(QPainter& painter)
     dw = 30;
     dx = this->width() / 2 - 15;
     //----------------------------------------------------------------------
-    //QFont ft = QFont(QString::fromLocal8Bit("宋体"));
+    //QFont ft = QFont(TCSR("宋体"));
     //ft.setPointSize(8);
     //painter.setFont(ft);
     painter.drawText(QPoint(dx - 40, dy + 20), QString::number(this->m_maxvalue));

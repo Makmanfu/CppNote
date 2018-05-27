@@ -1,5 +1,5 @@
-#ifndef RSMZ_CAMERA_H
-#define RSMZ_CAMERA_H
+#ifndef CAMERA_H
+#define CAMERA_H
 
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/glm.hpp>

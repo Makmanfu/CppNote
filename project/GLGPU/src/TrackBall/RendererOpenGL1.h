@@ -1,5 +1,5 @@
-#ifndef RSMZ_RENDEREROPENGL1_H
-#define RSMZ_RENDEREROPENGL1_H
+#ifndef RENDEREROPENGL1_H
+#define RENDEREROPENGL1_H
 
 #include "Renderer.h"
 #include <GL/gl.h>

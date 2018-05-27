@@ -2,8 +2,6 @@
 
 #include "stdafx.h"
 #include "GLWindow.h"
-#include "../../SQCore/src/WinAPI/WinGUI.cpp"
-
 
 int GLWnd::WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
 {

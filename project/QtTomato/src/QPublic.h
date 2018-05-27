@@ -26,6 +26,25 @@ protected:
 public:
     ~CommonHelper() {};
     static CommonHelper* Instance();
+public:
+    //界面测试
+    void TestBox(const QString& str, QWidget* parent = NULL);
+    //设置为开机启动
+    void runWithSystem(bool autoRun, QString strName, QString strPath);
+    //刷全局Style
+    void setStyle(const QString &style);
+    //刷QWidget的Style
+    void QWidgetSetStyle(QWidget* QW, const QString &style);
+    //动态加载MB
+    void loaddll(QString dllname, QWidget* dlg);
+    void loaddll(QString dllname, QWidget* dlg, QGridLayout* gl);
+    void loaddll(QString dllname, char* funname);
+    //程序唯一性运行
+    bool RunCheckOnly(QString appname);
+    //QT获取目录下扩展名的文件表
+    void GetFilelist(QStringList& files, QString path, QString extname);
+    //延时
+    void sleep(int sec);
 };
 
 //可移动窗口[锁定移动区在桌面内]
@@ -139,27 +158,13 @@ class CPP_API CUiTool
 {
 private:
     static CUiTool* _instance;
-protected:
-    //注意单键不要能实例化
     CUiTool(){};
 public:
     ~CUiTool() {};
     static CUiTool* Instance();
 public:
-    //界面测试
-    void TestBox(const QString& str, QWidget* parent = NULL);
-    //刷全局Style
-    void setStyle(const QString &style);
-    //刷QWidget的Style
-    void QWidgetSetStyle(QWidget* QW, const QString &style);
-    //动态加载MB
-    void loaddll(QString dllname, QWidget* dlg);
-    void loaddll(QString dllname, QWidget* dlg, QGridLayout* gl);
-    void loaddll(QString dllname, char* funname);
-    //程序唯一性运行
-    bool RunCheckOnly(QString appname);
-    //QT获取目录下扩展名的文件表
-    void GetFilelist(QStringList& files, QString path, QString extname);
+    //窗体居中显示
+    void formInCenter(QWidget* frm);
     //初始化按键
     void InitPushButton(QPushButton* button, QString strPmpNormal, QString strPmpHover, QString strPmpPressed, QString strPmpDisabled);
     //初始化按键
@@ -176,8 +181,24 @@ public:
     void setWgt(QWidget *wgt);
 };
 
-
-
+//转换
+class CPP_API CCastType
+{
+private:
+    static CCastType* _instance;
+    CCastType(){};
+public:
+    ~CCastType() {};
+    static CCastType* Instance();
+public:
+    QString byteArrayToHexStr(QByteArray data);
+    QString byteArrayToAsciiStr(QByteArray data);
+    QByteArray hexStrToByteArray(QString str);
+    QByteArray asciiStrToByteArray(QString str);
+    char convertHexChar(char ch);
+    QString decimalToStrHex(int decimal);
+    int strHexToDecimal(QString strHex);
+};
 
 
 

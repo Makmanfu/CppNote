@@ -4,10 +4,10 @@
 
 TabGIS::TabGIS(QWidget* parent) : TabGUIBase(parent)
 {
-    this->setWindowTitle(QString::fromLocal8Bit("GIS"));
-    addcomboxItem(QString::fromLocal8Bit("MarbleGIS"));
-    addcomboxItem(QString::fromLocal8Bit("SeaGIS"));
-    addcomboxItem(QString::fromLocal8Bit("QMapGis"));
+    this->setWindowTitle(TCSR("GIS"));
+    addcomboxItem(TCSR("MarbleGIS"));
+    addcomboxItem(TCSR("SeaGIS"));
+    addcomboxItem(TCSR("QMapGis"));
 }
 
 TabGIS::~TabGIS()

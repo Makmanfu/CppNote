@@ -10,8 +10,8 @@ set(CMAKE_BUILD_TYPE RELEASE)
 # 设置编译器选项 不显示所有警告
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")
 # 设置生成路径
-SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
-SET(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/CBIN)
+SET(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/CBIN)
 # 设置生成可执行文件的名称
 SET(EXECUTABLE_FILE_NAME QtRouterMang)
 #-----------------------------------------------------------------------

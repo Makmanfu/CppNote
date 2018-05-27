@@ -24,17 +24,17 @@ TreeGrid::TreeGrid(QWidget* _parent) : QTreeView(_parent)
     model = new QStandardItemModel();
     model->setRowCount(0);
     model->setColumnCount(1);
-    model->setHeaderData(0, Qt::Horizontal, QString::fromLocal8Bit(""));       //设置头显示
+    model->setHeaderData(0, Qt::Horizontal, TCSR(""));       //设置头显示
     setTableHead();
     //假数据
     map<QString, QVector<QString> > testdat;
     QVector<QString> objtest;
     for (int i = 0; i < 5; ++i)
-        objtest.push_back(QString::fromLocal8Bit("飞机"));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("航母系列"), objtest));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("雷达系列"), objtest));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("飞机系列"), objtest));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("其他"), objtest));
+        objtest.push_back(TCSR("飞机"));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("航母系列"), objtest));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("雷达系列"), objtest));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("飞机系列"), objtest));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("其他"), objtest));
     //加载数据
     //LoadTableData(testdat);
 }
@@ -106,7 +106,7 @@ void TreeGrid::LoadTableData(map<QString, QVector<QString> >& datas_)
         //设置一列显示
         model->setColumnCount(1);
         //设置头显示
-        //model->setHeaderData(0, Qt::Horizontal, QString::fromLocal8Bit("兵力布局"));
+        //model->setHeaderData(0, Qt::Horizontal, TCSR("兵力布局"));
         //遍历树
         int treeid(0);
         for (map<QString, QVector<QString> >::const_iterator mapit = datas_.begin();
@@ -133,7 +133,7 @@ void TreeGrid::LoadlistData(QVector<QString>& datas_)
         //设置一列显示
         model->setColumnCount(1);
         //设置头显示
-        //model->setHeaderData(0, Qt::Horizontal, QString::fromLocal8Bit("兵力布局"));
+        //model->setHeaderData(0, Qt::Horizontal, TCSR("兵力布局"));
         //遍历树
         int treeid(0);
         for (QVector<QString>::const_iterator it = datas_.begin();
@@ -150,19 +150,19 @@ void TreeGrid::LoadlistData(QVector<QString>& datas_)
     model->setRowCount(4);
     model->setColumnCount(1);
     //model->setHeaderData(1, Qt::Horizontal, tr("Details"));
-    QStandardItem* item1 = new QStandardItem(QString::fromLocal8Bit("航母系列"));
+    QStandardItem* item1 = new QStandardItem(TCSR("航母系列"));
     item1->setIcon(QIcon("gparted.png"));
-    QStandardItem* item2 = new QStandardItem(QString::fromLocal8Bit("雷达"));
+    QStandardItem* item2 = new QStandardItem(TCSR("雷达"));
     item2->setIcon(QIcon("gparted.png"));
-    QStandardItem* item3 = new QStandardItem(QString::fromLocal8Bit("飞机"));
+    QStandardItem* item3 = new QStandardItem(TCSR("飞机"));
     item3->setIcon(QIcon("gparted.png"));
-    QStandardItem* item4 = new QStandardItem(QString::fromLocal8Bit("其他"));
+    QStandardItem* item4 = new QStandardItem(TCSR("其他"));
     item4->setIcon(QIcon("gparted.png"));
     model->setItem(0, 0, item1);
     model->setItem(1, 0, item2);
     model->setItem(2, 0, item3);
     model->setItem(3, 0, item4);
-    QStandardItem* item5 = new QStandardItem(QString::fromLocal8Bit("敌机"));
+    QStandardItem* item5 = new QStandardItem(TCSR("敌机"));
     item4->appendRow(item5);
     //QModelIndex parent;
     //for (int i = 0; i < 4; ++i)
@@ -171,7 +171,7 @@ void TreeGrid::LoadlistData(QVector<QString>& datas_)
     //    model->insertRows(0, 1, parent);
     //    model->insertColumns(0, 1, parent);
     //    QModelIndex index = model->index(0, 0, parent);
-    //    model->setData(index, QString::fromLocal8Bit("航母%i").arg(i));
+    //    model->setData(index, TCSR("航母%i").arg(i));
     //}
     this->setModel(model);
 }

@@ -2,21 +2,15 @@
 
 #include "stdafx.h"
 #include "WndMain.h"
-//#include "crmsystem.h"
-//#include "exceloperate.h"
+#include <iostream>
+using namespace std;
 
 int main(int argc, char** argv)
 {
     //程序唯一性运行
-    if (!CUiTool::Instance()->RunCheckOnly("QtGuiSystemObject"))
+    if (!CommonHelper::Instance()->RunCheckOnly("QtGuiSystemObject"))
         return 0;
     QApplication app(argc, argv);
-    
-
-    //CrmSystem crm;
-    //crm.show();
-    //return app.exec();
-    
 
     //设置图标
     app.setWindowIcon(QIcon(":/Tomato.gif"));

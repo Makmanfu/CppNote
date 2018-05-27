@@ -188,63 +188,63 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static_Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>$(ProjectName)sd</TargetName>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static_Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>$(ProjectName)s64d</TargetName>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <TargetExt>.so</TargetExt>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <TargetExt>.so</TargetExt>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <TargetExt>.so</TargetExt>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetExt>.so</TargetExt>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static_Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>$(ProjectName)s</TargetName>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static_Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <TargetName>$(ProjectName)s64</TargetName>
-    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;$(IncludePath)</IncludePath>
+    <IncludePath>../src/boost;../src/SVM;../src/Parser;../src/WinAPI;../src/Clib;../src/DUILIB;../src/DllGui;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
     <ClCompile>
@@ -416,7 +416,7 @@
     <ClInclude Include="..\src\boost\Boost_thread.h" />
     <ClInclude Include="..\src\boost\Boost_timer.h" />
     <ClInclude Include="..\src\boost\coroutines.hpp" />
-    <ClInclude Include="..\src\boost\proxy.hpp" />
+    <ClInclude Include="..\src\boost\Boost_proxy.hpp" />
     <ClInclude Include="..\src\boost\ssl_client_connect_to_yahoo.hpp" />
     <ClInclude Include="..\src\boost\tcp_async_echo.hpp" />
     <ClInclude Include="..\src\boost\tcp_async_server.hpp" />
@@ -460,13 +460,68 @@
     <ClInclude Include="..\src\Clib\Strategy.hpp" />
     <ClInclude Include="..\src\Clib\Template.hpp" />
     <ClInclude Include="..\src\Clib\Visitor.hpp" />
+    <ClInclude Include="..\src\DllGui\BootLoad.h" />
+    <ClInclude Include="..\src\DllGui\FunAll.h" />
+    <ClInclude Include="..\src\DllGui\Harkscr.hpp" />
+    <ClInclude Include="..\src\DllGui\MiniTools.hpp" />
+    <ClInclude Include="..\src\DUILIB\downloadmgr.h" />
+    <ClInclude Include="..\src\DUILIB\FlashEventHandler.h" />
+    <ClInclude Include="..\src\DUILIB\HelloDUI_def.h" />
+    <ClInclude Include="..\src\DUILIB\HelloDUI.h" />
+    <ClInclude Include="..\src\DUILIB\ScrCapture.h" />
+    <ClInclude Include="..\src\DUILIB\stb_image.h" />
+    <ClInclude Include="..\src\DUILIB\UIActiveX.h" />
+    <ClInclude Include="..\src\DUILIB\UIBase.h" />
+    <ClInclude Include="..\src\DUILIB\UIButton.h" />
+    <ClInclude Include="..\src\DUILIB\UICheckBox.h" />
+    <ClInclude Include="..\src\DUILIB\UIChildLayout.h" />
+    <ClInclude Include="..\src\DUILIB\UICombo.h" />
+    <ClInclude Include="..\src\DUILIB\UIContainer.h" />
+    <ClInclude Include="..\src\DUILIB\UIControl.h" />
+    <ClInclude Include="..\src\DUILIB\UIDateTime.h" />
+    <ClInclude Include="..\src\DUILIB\UIDefine.h" />
+    <ClInclude Include="..\src\DUILIB\UIDelegate.h" />
+    <ClInclude Include="..\src\DUILIB\UIDlgBuilder.h" />
+    <ClInclude Include="..\src\DUILIB\UIEdit.h" />
+    <ClInclude Include="..\src\DUILIB\UIFlash.h" />
+    <ClInclude Include="..\src\DUILIB\UIGifAnim.h" />
+    <ClInclude Include="..\src\DUILIB\UIHorizontalLayout.h" />
+    <ClInclude Include="..\src\DUILIB\UILabel.h" />
+    <ClInclude Include="..\src\DUILIB\UIlib.h" />
+    <ClInclude Include="..\src\DUILIB\UIList.h" />
+    <ClInclude Include="..\src\DUILIB\UIManager.h" />
+    <ClInclude Include="..\src\DUILIB\UIMarkup.h" />
+    <ClInclude Include="..\src\DUILIB\UIOption.h" />
+    <ClInclude Include="..\src\DUILIB\UIProgress.h" />
+    <ClInclude Include="..\src\DUILIB\UIRender.h" />
+    <ClInclude Include="..\src\DUILIB\UIRichEdit.h" />
+    <ClInclude Include="..\src\DUILIB\UIScrollBar.h" />
+    <ClInclude Include="..\src\DUILIB\UISlider.h" />
+    <ClInclude Include="..\src\DUILIB\UITabLayout.h" />
+    <ClInclude Include="..\src\DUILIB\UIText.h" />
+    <ClInclude Include="..\src\DUILIB\UITileLayout.h" />
+    <ClInclude Include="..\src\DUILIB\UITreeView.h" />
+    <ClInclude Include="..\src\DUILIB\UIVerticalLayout.h" />
+    <ClInclude Include="..\src\DUILIB\UIWebBrowser.h" />
+    <ClInclude Include="..\src\DUILIB\Utils.h" />
+    <ClInclude Include="..\src\DUILIB\WebBrowserEventHandler.h" />
+    <ClInclude Include="..\src\DUILIB\WinImplBase.h" />
+    <ClInclude Include="..\src\DUILIB\WndShadow.h" />
+    <ClInclude Include="..\src\Parser\DrvSqlite.h" />
     <ClInclude Include="..\src\Parser\json11.h" />
     <ClInclude Include="..\src\Parser\libxls.h" />
     <ClInclude Include="..\src\Parser\miniIni.h" />
     <ClInclude Include="..\src\Parser\printlog.h" />
+    <ClInclude Include="..\src\Parser\sqlite3.h" />
     <ClInclude Include="..\src\Parser\tinyxml2.h" />
+    <ClInclude Include="..\src\SVM\CalcFun.h" />
     <ClInclude Include="..\src\SVM\svm.h" />
+    <ClInclude Include="..\src\WinAPI\WinFileSys.h" />
+    <ClInclude Include="..\src\WinAPI\WinFileSys_typedef.h" />
+    <ClInclude Include="..\src\WinAPI\WinGUI.h" />
     <ClInclude Include="..\src\WinAPI\WinKey.h" />
+    <ClInclude Include="..\src\WinAPI\WinService.h" />
+    <ClInclude Include="..\src\WinAPI\WinTool.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
@@ -486,13 +541,61 @@
     <ClCompile Include="..\src\Clib\CStack.cpp" />
     <ClCompile Include="..\src\Clib\PointerArray.cpp" />
     <ClCompile Include="..\src\Clib\Sorting.cpp" />
+    <ClCompile Include="..\src\DllGui\BootLoad.cpp" />
+    <ClCompile Include="..\src\DllGui\FunAll.cpp" />
+    <ClCompile Include="..\src\DUILIB\HelloDUI.cpp" />
+    <ClCompile Include="..\src\DUILIB\ScrCapture.cpp" />
+    <ClCompile Include="..\src\DUILIB\stb_image.c" />
+    <ClCompile Include="..\src\DUILIB\UIActiveX.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIBase.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIButton.cpp" />
+    <ClCompile Include="..\src\DUILIB\UICheckBox.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIChildLayout.cpp" />
+    <ClCompile Include="..\src\DUILIB\UICombo.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIContainer.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIControl.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIDateTime.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIDelegate.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIDlgBuilder.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIEdit.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIFlash.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIGifAnim.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIHorizontalLayout.cpp" />
+    <ClCompile Include="..\src\DUILIB\UILabel.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIlib.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIList.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIManager.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIMarkup.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIOption.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIProgress.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIRender.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIRichEdit.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIScrollBar.cpp" />
+    <ClCompile Include="..\src\DUILIB\UISlider.cpp" />
+    <ClCompile Include="..\src\DUILIB\UITabLayout.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIText.cpp" />
+    <ClCompile Include="..\src\DUILIB\UITileLayout.cpp" />
+    <ClCompile Include="..\src\DUILIB\UITreeView.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIVerticalLayout.cpp" />
+    <ClCompile Include="..\src\DUILIB\UIWebBrowser.cpp" />
+    <ClCompile Include="..\src\DUILIB\Utils.cpp" />
+    <ClCompile Include="..\src\DUILIB\WinImplBase.cpp" />
+    <ClCompile Include="..\src\DUILIB\WndShadow.cpp" />
+    <ClCompile Include="..\src\DUILIB\XUnzip.cpp" />
+    <ClCompile Include="..\src\Parser\DrvSqlite.cpp" />
     <ClCompile Include="..\src\Parser\json11.cpp" />
     <ClCompile Include="..\src\Parser\libxls.cpp" />
     <ClCompile Include="..\src\Parser\miniIni.cpp" />
     <ClCompile Include="..\src\Parser\printlog.cpp" />
+    <ClCompile Include="..\src\Parser\sqlite3.c" />
     <ClCompile Include="..\src\Parser\tinyxml2.cpp" />
+    <ClCompile Include="..\src\SVM\CalcFun.cpp" />
     <ClCompile Include="..\src\SVM\svm.cpp" />
+    <ClCompile Include="..\src\WinAPI\WinFileSys.cpp" />
+    <ClCompile Include="..\src\WinAPI\WinGUI.cpp" />
     <ClCompile Include="..\src\WinAPI\WinKey.cpp" />
+    <ClCompile Include="..\src\WinAPI\WinService.cpp" />
+    <ClCompile Include="..\src\WinAPI\WinTool.cpp" />
     <ClCompile Include="SQCore.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">Create</PrecompiledHeader>
@@ -511,6 +614,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\res\SQCore.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\DUILIB\flash10a.tlh" />
+    <None Include="..\src\DUILIB\flash11.tlh" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

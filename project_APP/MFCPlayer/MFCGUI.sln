@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCPlayer", "vc12\MFCPlayer.vcxproj", "{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DLL_Debug|Win32 = DLL_Debug|Win32
+		DLL_Debug|x64 = DLL_Debug|x64
+		DLL_Release|Win32 = DLL_Release|Win32
+		DLL_Release|x64 = DLL_Release|x64
+		EXE_Debug|Win32 = EXE_Debug|Win32
+		EXE_Debug|x64 = EXE_Debug|x64
+		EXE_Release|Win32 = EXE_Release|Win32
+		EXE_Release|x64 = EXE_Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.DLL_Debug|Win32.ActiveCfg = DLL_Debug|Win32
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.DLL_Debug|Win32.Build.0 = DLL_Debug|Win32
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.DLL_Debug|x64.ActiveCfg = DLL_Debug|x64
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.DLL_Debug|x64.Build.0 = DLL_Debug|x64
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.DLL_Release|Win32.ActiveCfg = DLL_Release|Win32
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.DLL_Release|Win32.Build.0 = DLL_Release|Win32
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.DLL_Release|x64.ActiveCfg = DLL_Release|x64
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.DLL_Release|x64.Build.0 = DLL_Release|x64
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.EXE_Debug|Win32.ActiveCfg = EXE_Debug|Win32
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.EXE_Debug|Win32.Build.0 = EXE_Debug|Win32
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.EXE_Debug|x64.ActiveCfg = EXE_Debug|x64
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.EXE_Debug|x64.Build.0 = EXE_Debug|x64
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.EXE_Release|Win32.ActiveCfg = EXE_Release|Win32
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.EXE_Release|Win32.Build.0 = EXE_Release|Win32
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.EXE_Release|x64.ActiveCfg = EXE_Release|x64
+		{3EF3443E-7150-4963-BE7B-26F0B3BECF4B}.EXE_Release|x64.Build.0 = EXE_Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

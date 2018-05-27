@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------
 //
-//          窗口绘制大全
+//                              窗口绘制大全
 //
 //-----------------------------------------------------------------------------
 #ifndef GLWINDOW_H
@@ -10,7 +10,7 @@
 #include "DXView.h"
 #define SQC_API
 #define SQCPP_API
-#include "../../SQCore/src/WinAPI/WinGUI.h"
+#include "WinGUI.h"
 
 //GL绘制
 class GLWnd : public XqWindowEx

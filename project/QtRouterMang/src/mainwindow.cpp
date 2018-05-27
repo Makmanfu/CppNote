@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setWindowTitle(QString::fromLocal8Bit("智能调配管理器"));
+    this->setWindowTitle(TCSR("智能调配管理器"));
     GuiInit();
 }
 
@@ -41,18 +41,18 @@ void MainWindow::GuiInit(void)
     map<QString, QVector<QString> > testdat;
     QVector<QString> objtest;
     for (int i = 0; i < 5; ++i)
-        objtest.push_back(QString::fromLocal8Bit("飞机"));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("航母系列"), objtest));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("雷达系列"), objtest));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("飞机系列"), objtest));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("其他"), objtest));
+        objtest.push_back(TCSR("飞机"));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("航母系列"), objtest));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("雷达系列"), objtest));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("飞机系列"), objtest));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("其他"), objtest));
     //加载数据
     //AllGrid->LoadTableData(testdat);
 }
 
 void MainWindow::on_Act_help_triggered()
 {
-    plainTextLog->appendPlainText(QString::fromLocal8Bit("打印日志测试!"));
+    plainTextLog->appendPlainText(TCSR("打印日志测试!"));
     cfgDLG = new DlgFrm(3, this);
     cfgDLG->setModal(true);
     cfgDLG->show();

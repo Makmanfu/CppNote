@@ -1,5 +1,5 @@
-#ifndef RSMZ_RENDERWINDOWGLFW_H
-#define RSMZ_RENDERWINDOWGLFW_H
+#ifndef RENDERWINDOWGLFW_H
+#define RENDERWINDOWGLFW_H
 
 #include <GLFW/glfw3.h>
 //#include "TrackBall.h"

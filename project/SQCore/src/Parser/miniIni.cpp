@@ -5,6 +5,26 @@
 #include <sstream>
 #include <windows.h>
 
+void ShowBox(const char* f_txt)
+{
+    MessageBoxA(NULL, f_txt, "提示", MB_OK);
+}
+
+void ShowBoxStr(string& f_txt)
+{
+    MessageBoxA(NULL, f_txt.c_str(), "提示", MB_OK);
+}
+
+void ShowBoxInt(int f_txt)
+{
+    //方法一 比较靠谱
+    char buf[255] = { 0 };
+    sprintf(buf, "%d", f_txt);
+    MessageBoxA(NULL, buf, "提示", MB_OK);
+    //方法二
+    //MessageBox(NULL,AIntToStr(f_txt).c_str(),"提示",MB_OK);
+}
+
 string ReadINI(string inode, string ikey, string ivalue, string ipathfile)
 {
     char szStr[256];            //  读文本

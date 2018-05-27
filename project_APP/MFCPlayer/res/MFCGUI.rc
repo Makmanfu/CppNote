@@ -1,0 +1,142 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MFCGUI.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "MFCGUI.ico"
+IDI_EJECT               ICON                    "player_eject.ico"
+IDI_MUTE2               ICON                    "player_mute.ico"
+IDI_PAUSE               ICON                    "player_pause.ico"
+IDI_PLAY                ICON                    "player_play.ico"
+IDI_STOP                ICON                    "player_stop.ico"
+IDI_MUTE                ICON                    "player_volume.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MFCGUI_DIALOG DIALOGEX 0, 0, 291, 238
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MFCPlayer"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Media control",IDC_STATIC_MEDIA_CONTROL,0,200,290,38
+    PUSHBUTTON      ">",IDC_BUTTON_PLAY,2,223,21,12,BS_ICON
+    PUSHBUTTON      "|=|",IDC_BUTTON_STOP,48,223,21,12,BS_ICON
+    PUSHBUTTON      "| |",IDC_BUTTON_PAUSE,25,223,21,12,BS_ICON
+    PUSHBUTTON      "...",IDC_BUTTON_LOAD,94,223,21,12,BS_ICON
+    PUSHBUTTON      "M",IDC_BUTTON_MUTE,71,223,21,12,BS_ICON
+    CONTROL         "",IDC_SLIDER_MEDIA,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,1,209,211,13
+    CONTROL         "",IDC_SLIDER_VOLUME,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,209,224,63,12
+    LTEXT           "Volume",IDC_STATIC_VOLUME_TEXT,179,226,30,8
+    RTEXT           "00:00:00/00:00:00",IDC_STATIC_POSITION,213,211,72,8
+    RTEXT           "100%",IDC_STATIC_VOLUME,269,226,17,8
+    CONTROL         "",IDC_STATIC_VLC,"Static",SS_BLACKRECT,0,0,290,200
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_MFCGUI_DIALOG, DIALOG
+    BEGIN
+        HORZGUIDE, 200
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\MFCGUI.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

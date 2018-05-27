@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.7)
 project(GDIPlayer)
 
 # 设置生成路径
-SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/CBIN)
 
 #设置字符集  
 add_definitions(-DUNICODE -D_UNICODE) 
@@ -13,6 +13,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")
 
 # 定义头文件的路径变量
 SET(INCLUDE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/res
+ ${CMAKE_CURRENT_SOURCE_DIR}/../../Note/Common
  ${CMAKE_CURRENT_SOURCE_DIR}/SRC
  ) 
 MESSAGE(STATUS "Include Path, ${INCLUDE_PATH}")

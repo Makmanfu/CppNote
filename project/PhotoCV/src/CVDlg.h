@@ -2,8 +2,8 @@
 #ifndef WINSOCKDLG_H
 #define WINSOCKDLG_H
 
-#include "../../../../CppNote/project/SQCore/src/WinAPI/WinGUI.h"
-#include "../../../../CppNote/project/SQCore/src/WinAPI/GDIView.h"
+#include "../../../../CppNote/project/GLGPU/src/WinGUI.h"
+#include "../../../../CppNote/project/GLGPU/src/GDIView.h"
 
 class CVDlg : public XqWindowDlg
 {

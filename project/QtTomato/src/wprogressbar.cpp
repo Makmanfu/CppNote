@@ -2560,7 +2560,7 @@ void GaugeDial::setPointerStyle(GaugeDial::PointerStyle pointerStyle)
 */
 GaugeClock::GaugeClock(QWidget* parent) : QWidget(parent)
 {
-    action_secondstyle = new QAction(QString::fromLocal8Bit("弹簧效果"), this);
+    action_secondstyle = new QAction(TCSR("弹簧效果"), this);
     connect(action_secondstyle, SIGNAL(triggered(bool)), this, SLOT(doAction()));
     this->addAction(action_secondstyle);
     this->setContextMenuPolicy(Qt::ActionsContextMenu);
@@ -2752,24 +2752,24 @@ void GaugeClock::doAction()
 {
     QAction* action = (QAction*)sender();
     QString str = action->text();
-    if (str == QString::fromLocal8Bit("弹簧效果"))
+    if (str == TCSR("弹簧效果"))
     {
-        action->setText(QString::fromLocal8Bit("连续效果"));
+        action->setText(TCSR("连续效果"));
         setSecondStyle(SecondStyle_Spring);
     }
-    else if (str == QString::fromLocal8Bit("连续效果"))
+    else if (str == TCSR("连续效果"))
     {
-        action->setText(QString::fromLocal8Bit("隐藏效果"));
+        action->setText(TCSR("隐藏效果"));
         setSecondStyle(SecondStyle_Continue);
     }
-    else if (str == QString::fromLocal8Bit("隐藏效果"))
+    else if (str == TCSR("隐藏效果"))
     {
-        action->setText(QString::fromLocal8Bit("普通效果"));
+        action->setText(TCSR("普通效果"));
         setSecondStyle(SecondStyle_Hide);
     }
-    else if (str == QString::fromLocal8Bit("普通效果"))
+    else if (str == TCSR("普通效果"))
     {
-        action->setText(QString::fromLocal8Bit("弹簧效果"));
+        action->setText(TCSR("弹簧效果"));
         setSecondStyle(SecondStyle_Normal);
     }
 }
@@ -2808,14 +2808,14 @@ void GaugeClock::setSecondStyle(GaugeClock::SecondStyle secondStyle)
     else
         timer->setInterval(1000);
     if (secondStyle == SecondStyle_Spring)
-        action_secondstyle->setText(QString::fromLocal8Bit("连续效果"));
+        action_secondstyle->setText(TCSR("连续效果"));
     else if (secondStyle == SecondStyle_Continue)
-        action_secondstyle->setText(QString::fromLocal8Bit("隐藏效果"));
+        action_secondstyle->setText(TCSR("隐藏效果"));
     else if (secondStyle == SecondStyle_Hide)
-        action_secondstyle->setText(QString::fromLocal8Bit("普通效果"));
+        action_secondstyle->setText(TCSR("普通效果"));
     else if (secondStyle == SecondStyle_Normal)
     {
-        action_secondstyle->setText(QString::fromLocal8Bit("弹簧效果"));
+        action_secondstyle->setText(TCSR("弹簧效果"));
         updateTime();
         return;
     }
@@ -2904,19 +2904,19 @@ void GaugeClock::testred(void)
 ImageClock::ImageClock(QWidget* parent) : QWidget(parent)
 {
     setFont(QFont("Microsoft Yahei", 9));
-    QAction* action_trad = new QAction(QString::fromLocal8Bit("黑色风格"), this);
+    QAction* action_trad = new QAction(TCSR("黑色风格"), this);
     connect(action_trad, SIGNAL(triggered(bool)), this, SLOT(doAction()));
     this->addAction(action_trad);
-    QAction* action_system = new QAction(QString::fromLocal8Bit("银色风格"), this);
+    QAction* action_system = new QAction(TCSR("银色风格"), this);
     connect(action_system, SIGNAL(triggered(bool)), this, SLOT(doAction()));
     this->addAction(action_system);
-    QAction* action_modern = new QAction(QString::fromLocal8Bit("红色风格"), this);
+    QAction* action_modern = new QAction(TCSR("红色风格"), this);
     connect(action_modern, SIGNAL(triggered(bool)), this, SLOT(doAction()));
     this->addAction(action_modern);
-    QAction* action_flower = new QAction(QString::fromLocal8Bit("花瓣风格"), this);
+    QAction* action_flower = new QAction(TCSR("花瓣风格"), this);
     connect(action_flower, SIGNAL(triggered(bool)), this, SLOT(doAction()));
     this->addAction(action_flower);
-    action_secondstyle = new QAction(QString::fromLocal8Bit("弹簧效果"), this);
+    action_secondstyle = new QAction(TCSR("弹簧效果"), this);
     connect(action_secondstyle, SIGNAL(triggered(bool)), this, SLOT(doAction()));
     this->addAction(action_secondstyle);
     this->setContextMenuPolicy(Qt::ActionsContextMenu);
@@ -3011,32 +3011,32 @@ void ImageClock::doAction()
 {
     QAction* action = (QAction*)sender();
     QString str = action->text();
-    if (str == QString::fromLocal8Bit("黑色风格"))
+    if (str == TCSR("黑色风格"))
         setClockStyle(ClockStyle_Trad);
-    else if (str == QString::fromLocal8Bit("银色风格"))
+    else if (str == TCSR("银色风格"))
         setClockStyle(ClockStyle_System);
-    else if (str == QString::fromLocal8Bit("红色风格"))
+    else if (str == TCSR("红色风格"))
         setClockStyle(ClockStyle_Modern);
-    else if (str == QString::fromLocal8Bit("花瓣风格"))
+    else if (str == TCSR("花瓣风格"))
         setClockStyle(ClockStyle_Flower);
-    else if (str == QString::fromLocal8Bit("弹簧效果"))
+    else if (str == TCSR("弹簧效果"))
     {
-        action->setText(QString::fromLocal8Bit("连续效果"));
+        action->setText(TCSR("连续效果"));
         setSecondStyle(SecondStyle_Spring);
     }
-    else if (str == QString::fromLocal8Bit("连续效果"))
+    else if (str == TCSR("连续效果"))
     {
-        action->setText(QString::fromLocal8Bit("隐藏效果"));
+        action->setText(TCSR("隐藏效果"));
         setSecondStyle(SecondStyle_Continue);
     }
-    else if (str == QString::fromLocal8Bit("隐藏效果"))
+    else if (str == TCSR("隐藏效果"))
     {
-        action->setText(QString::fromLocal8Bit("普通效果"));
+        action->setText(TCSR("普通效果"));
         setSecondStyle(SecondStyle_Hide);
     }
-    else if (str == QString::fromLocal8Bit("普通效果"))
+    else if (str == TCSR("普通效果"))
     {
-        action->setText(QString::fromLocal8Bit("弹簧效果"));
+        action->setText(TCSR("弹簧效果"));
         setSecondStyle(SecondStyle_Normal);
     }
 }
@@ -3088,14 +3088,14 @@ void ImageClock::setSecondStyle(ImageClock::SecondStyle secondStyle)
     else
         timer->setInterval(1000);
     if (secondStyle == SecondStyle_Spring)
-        action_secondstyle->setText(QString::fromLocal8Bit("连续效果"));
+        action_secondstyle->setText(TCSR("连续效果"));
     else if (secondStyle == SecondStyle_Continue)
-        action_secondstyle->setText(QString::fromLocal8Bit("隐藏效果"));
+        action_secondstyle->setText(TCSR("隐藏效果"));
     else if (secondStyle == SecondStyle_Hide)
-        action_secondstyle->setText(QString::fromLocal8Bit("普通效果"));
+        action_secondstyle->setText(TCSR("普通效果"));
     else if (secondStyle == SecondStyle_Normal)
     {
-        action_secondstyle->setText(QString::fromLocal8Bit("弹簧效果"));
+        action_secondstyle->setText(TCSR("弹簧效果"));
         updateTime();
         return;
     }

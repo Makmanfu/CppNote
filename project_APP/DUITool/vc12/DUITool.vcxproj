@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DLL_Debug|Win32">
+      <Configuration>DLL_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL_Debug|x64">
+      <Configuration>DLL_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL_Release|Win32">
+      <Configuration>DLL_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL_Release|x64">
+      <Configuration>DLL_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Debug|Win32">
+      <Configuration>EXE_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Debug|x64">
+      <Configuration>EXE_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Release|Win32">
+      <Configuration>EXE_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Release|x64">
+      <Configuration>EXE_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3EB20951-73C0-4FC5-B436-A8D1A57A1E1C}</ProjectGuid>
+    <RootNamespace>MFCGUI</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>DUITool</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppDebug64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppDebug64.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppRelease64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppRelease64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UILIB_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../MFC/;MFC;../DuiLib/;DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UILIB_EXPORTS;_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../MFC/;MFC;../DuiLib/;DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UILIB_EXPORTS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../MFC/;MFC;../DuiLib/;DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UILIB_EXPORTS;_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../MFC/;MFC;../DuiLib/;DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UILIB_EXPORTS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../MFC/;MFC;../DuiLib/;DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UILIB_EXPORTS;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../MFC/;MFC;../DuiLib/;DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UILIB_EXPORTS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../MFC/;MFC;../DuiLib/;DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UILIB_EXPORTS;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../MFC/;MFC;../DuiLib/;DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\DuiLib\downloadmgr.h" />
+    <ClInclude Include="..\DuiLib\FlashEventHandler.h" />
+    <ClInclude Include="..\DuiLib\UIActiveX.h" />
+    <ClInclude Include="..\DuiLib\UIBase.h" />
+    <ClInclude Include="..\DuiLib\UIButton.h" />
+    <ClInclude Include="..\DuiLib\UICheckBox.h" />
+    <ClInclude Include="..\DuiLib\UIChildLayout.h" />
+    <ClInclude Include="..\DuiLib\UICombo.h" />
+    <ClInclude Include="..\DuiLib\UIComboBox.h" />
+    <ClInclude Include="..\DuiLib\UIContainer.h" />
+    <ClInclude Include="..\DuiLib\UIControl.h" />
+    <ClInclude Include="..\DuiLib\UIDateTime.h" />
+    <ClInclude Include="..\DuiLib\UIDefine.h" />
+    <ClInclude Include="..\DuiLib\UIDelegate.h" />
+    <ClInclude Include="..\DuiLib\UIDlgBuilder.h" />
+    <ClInclude Include="..\DuiLib\UIEdit.h" />
+    <ClInclude Include="..\DuiLib\UIFlash.h" />
+    <ClInclude Include="..\DuiLib\UIHorizontalLayout.h" />
+    <ClInclude Include="..\DuiLib\UILabel.h" />
+    <ClInclude Include="..\DuiLib\UIlib.h" />
+    <ClInclude Include="..\DuiLib\UIList.h" />
+    <ClInclude Include="..\DuiLib\UIManager.h" />
+    <ClInclude Include="..\DuiLib\UIMarkup.h" />
+    <ClInclude Include="..\DuiLib\UIOption.h" />
+    <ClInclude Include="..\DuiLib\UIProgress.h" />
+    <ClInclude Include="..\DuiLib\UIRender.h" />
+    <ClInclude Include="..\DuiLib\UIRichEdit.h" />
+    <ClInclude Include="..\DuiLib\UIScrollBar.h" />
+    <ClInclude Include="..\DuiLib\UISlider.h" />
+    <ClInclude Include="..\DuiLib\UITabLayout.h" />
+    <ClInclude Include="..\DuiLib\UIText.h" />
+    <ClInclude Include="..\DuiLib\UITileLayout.h" />
+    <ClInclude Include="..\DuiLib\UITreeView.h" />
+    <ClInclude Include="..\DuiLib\UIVerticalLayout.h" />
+    <ClInclude Include="..\DuiLib\UIWebBrowser.h" />
+    <ClInclude Include="..\DuiLib\Utils.h" />
+    <ClInclude Include="..\DuiLib\WebBrowserEventHandler.h" />
+    <ClInclude Include="..\DuiLib\WinImplBase.h" />
+    <ClInclude Include="..\res\resource.h" />
+    <ClInclude Include="..\src\ChildFrm.h" />
+    <ClInclude Include="..\src\ClassView.h" />
+    <ClInclude Include="..\src\DialogCheckUpdate.h" />
+    <ClInclude Include="..\src\DialogCustomFonts.h" />
+    <ClInclude Include="..\src\DialogDefaultAttribList.h" />
+    <ClInclude Include="..\src\DialogProjectNew.h" />
+    <ClInclude Include="..\src\DialogSaveAsName.h" />
+    <ClInclude Include="..\src\DialogSkinFileNew.h" />
+    <ClInclude Include="..\src\DialogTemplateOpen.h" />
+    <ClInclude Include="..\src\DialogUIAttribEdit.h" />
+    <ClInclude Include="..\src\DuiDesigner.h" />
+    <ClInclude Include="..\src\FileView.h" />
+    <ClInclude Include="..\src\GlobalVariable.h" />
+    <ClInclude Include="..\src\HookAPI.h" />
+    <ClInclude Include="..\src\ImageDialog.h" />
+    <ClInclude Include="..\src\ImagePreview.h" />
+    <ClInclude Include="..\src\LayoutManager.h" />
+    <ClInclude Include="..\src\MainFrm.h" />
+    <ClInclude Include="..\src\MultiUITracker.h" />
+    <ClInclude Include="..\src\PropertiesWnd.h" />
+    <ClInclude Include="..\src\PropertyTabLayoutUI.h" />
+    <ClInclude Include="..\src\ResourceView.h" />
+    <ClInclude Include="..\src\tinystr.h" />
+    <ClInclude Include="..\src\tinyxml.h" />
+    <ClInclude Include="..\src\ToolBoxCtrl.h" />
+    <ClInclude Include="..\src\ToolBoxWnd.h" />
+    <ClInclude Include="..\src\UICommandHistory.h" />
+    <ClInclude Include="..\src\UIDesignerDoc.h" />
+    <ClInclude Include="..\src\UIDesignerView.h" />
+    <ClInclude Include="..\src\UIImagePreview.h" />
+    <ClInclude Include="..\src\UIProperties.h" />
+    <ClInclude Include="..\src\UIUtil.h" />
+    <ClInclude Include="..\src\ViewTree.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\DuiLib\UIActiveX.cpp" />
+    <ClCompile Include="..\DuiLib\UIBase.cpp" />
+    <ClCompile Include="..\DuiLib\UIButton.cpp" />
+    <ClCompile Include="..\DuiLib\UICheckBox.cpp" />
+    <ClCompile Include="..\DuiLib\UIChildLayout.cpp" />
+    <ClCompile Include="..\DuiLib\UICombo.cpp" />
+    <ClCompile Include="..\DuiLib\UIComboBox.cpp" />
+    <ClCompile Include="..\DuiLib\UIContainer.cpp" />
+    <ClCompile Include="..\DuiLib\UIControl.cpp" />
+    <ClCompile Include="..\DuiLib\UIDateTime.cpp" />
+    <ClCompile Include="..\DuiLib\UIDelegate.cpp" />
+    <ClCompile Include="..\DuiLib\UIDlgBuilder.cpp" />
+    <ClCompile Include="..\DuiLib\UIEdit.cpp" />
+    <ClCompile Include="..\DuiLib\UIFlash.cpp" />
+    <ClCompile Include="..\DuiLib\UIHorizontalLayout.cpp" />
+    <ClCompile Include="..\DuiLib\UILabel.cpp" />
+    <ClCompile Include="..\DuiLib\UIlib.cpp" />
+    <ClCompile Include="..\DuiLib\UIList.cpp" />
+    <ClCompile Include="..\DuiLib\UIManager.cpp" />
+    <ClCompile Include="..\DuiLib\UIMarkup.cpp" />
+    <ClCompile Include="..\DuiLib\UIOption.cpp" />
+    <ClCompile Include="..\DuiLib\UIProgress.cpp" />
+    <ClCompile Include="..\DuiLib\UIRender.cpp" />
+    <ClCompile Include="..\DuiLib\UIRichEdit.cpp" />
+    <ClCompile Include="..\DuiLib\UIScrollBar.cpp" />
+    <ClCompile Include="..\DuiLib\UISlider.cpp" />
+    <ClCompile Include="..\DuiLib\UITabLayout.cpp" />
+    <ClCompile Include="..\DuiLib\UIText.cpp" />
+    <ClCompile Include="..\DuiLib\UITileLayout.cpp" />
+    <ClCompile Include="..\DuiLib\UITreeView.cpp" />
+    <ClCompile Include="..\DuiLib\UIVerticalLayout.cpp" />
+    <ClCompile Include="..\DuiLib\UIWebBrowser.cpp" />
+    <ClCompile Include="..\DuiLib\Utils.cpp" />
+    <ClCompile Include="..\DuiLib\WinImplBase.cpp" />
+    <ClCompile Include="..\DuiLib\XUnzip.cpp" />
+    <ClCompile Include="..\src\ChildFrm.cpp" />
+    <ClCompile Include="..\src\ClassView.cpp" />
+    <ClCompile Include="..\src\DialogCheckUpdate.cpp" />
+    <ClCompile Include="..\src\DialogCustomFonts.cpp" />
+    <ClCompile Include="..\src\DialogDefaultAttribList.cpp" />
+    <ClCompile Include="..\src\DialogProjectNew.cpp" />
+    <ClCompile Include="..\src\DialogSaveAsName.cpp" />
+    <ClCompile Include="..\src\DialogSkinFileNew.cpp" />
+    <ClCompile Include="..\src\DialogTemplateOpen.cpp" />
+    <ClCompile Include="..\src\DialogUIAttribEdit.cpp" />
+    <ClCompile Include="..\src\DuiDesigner.cpp" />
+    <ClCompile Include="..\src\FileView.cpp" />
+    <ClCompile Include="..\src\GlobalVariable.cpp" />
+    <ClCompile Include="..\src\HookAPI.cpp" />
+    <ClCompile Include="..\src\ImageDialog.cpp" />
+    <ClCompile Include="..\src\ImagePreview.cpp" />
+    <ClCompile Include="..\src\LayoutManager.cpp" />
+    <ClCompile Include="..\src\MainFrm.cpp" />
+    <ClCompile Include="..\src\MultiUITracker.cpp" />
+    <ClCompile Include="..\src\PropertiesWnd.cpp" />
+    <ClCompile Include="..\src\PropertyTabLayoutUI.cpp" />
+    <ClCompile Include="..\src\ResourceView.cpp" />
+    <ClCompile Include="..\src\tinystr.cpp" />
+    <ClCompile Include="..\src\tinyxml.cpp" />
+    <ClCompile Include="..\src\tinyxmlerror.cpp" />
+    <ClCompile Include="..\src\tinyxmlparser.cpp" />
+    <ClCompile Include="..\src\ToolBoxCtrl.cpp" />
+    <ClCompile Include="..\src\ToolBoxWnd.cpp" />
+    <ClCompile Include="..\src\UICommandHistory.cpp" />
+    <ClCompile Include="..\src\UIDesignerDoc.cpp" />
+    <ClCompile Include="..\src\UIDesignerView.cpp" />
+    <ClCompile Include="..\src\UIImagePreview.cpp" />
+    <ClCompile Include="..\src\UIProperties.cpp" />
+    <ClCompile Include="..\src\UIUtil.cpp" />
+    <ClCompile Include="..\src\ViewTree.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\DuiTool.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\DuiLib\Flash11.tlb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\banner.bmp" />
+    <Image Include="..\res\classview.bmp" />
+    <Image Include="..\res\classview_hc.bmp" />
+    <Image Include="..\res\class_view.ico" />
+    <Image Include="..\res\class_view_hc.ico" />
+    <Image Include="..\res\DUI.ico" />
+    <Image Include="..\res\explorer.bmp" />
+    <Image Include="..\res\explorer_hc.bmp" />
+    <Image Include="..\res\fileview.bmp" />
+    <Image Include="..\res\fileview_hc.bmp" />
+    <Image Include="..\res\file_view.ico" />
+    <Image Include="..\res\file_view_hc.ico" />
+    <Image Include="..\res\formedit_hc.bmp" />
+    <Image Include="..\res\menuimages.bmp" />
+    <Image Include="..\res\menuimages_hc.bmp" />
+    <Image Include="..\res\movehandle.bmp" />
+    <Image Include="..\res\properties.bmp" />
+    <Image Include="..\res\properties_hc.bmp" />
+    <Image Include="..\res\properties_wnd.ico" />
+    <Image Include="..\res\properties_wnd_hc.ico" />
+    <Image Include="..\res\resource.bmp" />
+    <Image Include="..\res\resource24.bmp" />
+    <Image Include="..\res\res_view.ico" />
+    <Image Include="..\res\res_view_hc.ico" />
+    <Image Include="..\res\sort.bmp" />
+    <Image Include="..\res\sort_hc.bmp" />
+    <Image Include="..\res\Toolbar.bmp" />
+    <Image Include="..\res\Toolbar_hc.bmp" />
+    <Image Include="..\res\ToolBox\Active.ico" />
+    <Image Include="..\res\ToolBox\Button.ico" />
+    <Image Include="..\res\ToolBox\Combo.ico" />
+    <Image Include="..\res\ToolBox\Container.ico" />
+    <Image Include="..\res\ToolBox\Control.ico" />
+    <Image Include="..\res\ToolBox\Edit.ico" />
+    <Image Include="..\res\ToolBox\HorizontalLayout.ico" />
+    <Image Include="..\res\ToolBox\Label.ico" />
+    <Image Include="..\res\ToolBox\Option.ico" />
+    <Image Include="..\res\ToolBox\Pointer.ico" />
+    <Image Include="..\res\ToolBox\Progress.ico" />
+    <Image Include="..\res\ToolBox\ScrollBar.ico" />
+    <Image Include="..\res\ToolBox\Slider.ico" />
+    <Image Include="..\res\ToolBox\TabLayout.ico" />
+    <Image Include="..\res\ToolBox\Text.ico" />
+    <Image Include="..\res\ToolBox\TileLayout.ico" />
+    <Image Include="..\res\ToolBox\VerticalLayout.ico" />
+    <Image Include="..\res\toolbox_wnd_hc.ico" />
+    <Image Include="..\res\UIDesignerDoc.ico" />
+    <Image Include="..\res\uimenu.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

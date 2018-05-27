@@ -22,6 +22,8 @@
 #include "moc/moc_wtimenumbar.cpp"
 #include "moc/moc_wprogressbar.cpp"
 
+#include "moc/moc_tcpserver.cpp"
+#include "moc/moc_frmnettool.cpp"
 
 
 

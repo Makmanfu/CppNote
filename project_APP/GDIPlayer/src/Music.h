@@ -32,7 +32,7 @@ typedef struct _MP3_ID3v1_STRUCT
 } MP3_ID3v1_STRUCT, * pMP3_ID3v1_STRUCT;
 
 //歌曲类C++版
-class Song : public noncopyable
+class Music : public noncopyable
 {
 private:
     int typeID;                         //文件类型
@@ -50,12 +50,14 @@ public:
     string sFileDir;                    //全路径
     long iLength;                       //歌曲长度
     PLAYSTATE state;                    //播放状态
+    PLAYMODE iPlayMode;                 //播放模式,可取Music的宏定义
+    int PlayingIndex;                   //当前播放在列表中的序号
 private:
     char cmd[MAX_PATH + 10];            //执行命令
 public:
-    Song();
-    Song(string _mp3PathName, HWND hParent);
-    ~Song();
+    Music();
+    Music(string _mp3PathName, HWND hParent);
+    ~Music();
     void SetSong(string _mp3PathName, HWND hParent);
 public:
     //播放音乐控制[SONG_PLAYING播放, SONG_PAUSE暂停, SONG_STOP停止 ]

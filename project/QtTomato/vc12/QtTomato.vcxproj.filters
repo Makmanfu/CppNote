@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="User">
-      <UniqueIdentifier>{6bd9ad5f-9b41-48f8-98fe-f97ff009d665}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Start">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
@@ -12,20 +9,26 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="UImanger">
-      <UniqueIdentifier>{e9220b26-bcd1-4daf-8152-0afd634adcc3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="UImanger\GUI">
-      <UniqueIdentifier>{974cd32d-408c-4ec4-98ec-220442d80f0a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="UImanger\GUI\UI">
-      <UniqueIdentifier>{372053f7-6d26-43e5-8b4d-ee9900f0c512}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="UImanger\GUI\manger">
-      <UniqueIdentifier>{7dd1cb00-f325-4b0d-b489-15207a419835}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Start\libQt">
       <UniqueIdentifier>{c55faa53-2485-4a4a-9490-11ae4ce13d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{974cd32d-408c-4ec4-98ec-220442d80f0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\UI">
+      <UniqueIdentifier>{372053f7-6d26-43e5-8b4d-ee9900f0c512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\manger">
+      <UniqueIdentifier>{7dd1cb00-f325-4b0d-b489-15207a419835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Net">
+      <UniqueIdentifier>{335085e8-b3dc-4f76-968a-bc52f9ea4776}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\UImanger">
+      <UniqueIdentifier>{e9220b26-bcd1-4daf-8152-0afd634adcc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\UImanger\User">
+      <UniqueIdentifier>{6bd9ad5f-9b41-48f8-98fe-f97ff009d665}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,52 +36,49 @@
       <Filter>Start</Filter>
     </ClInclude>
     <ClInclude Include="..\src\wtimenumbar.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\waxis.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\waxis_def.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\wbase.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\wdraw.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\wpanel.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\wplay.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\appcfg.h">
-      <Filter>User</Filter>
+      <Filter>GUI\UImanger\User</Filter>
     </ClInclude>
     <ClInclude Include="..\src\dlgfrm.h">
-      <Filter>User</Filter>
+      <Filter>GUI\UImanger\User</Filter>
     </ClInclude>
     <ClInclude Include="..\src\tabgis.h">
-      <Filter>UImanger\GUI\manger</Filter>
+      <Filter>GUI\manger</Filter>
     </ClInclude>
     <ClInclude Include="..\src\tabgui.h">
-      <Filter>UImanger\GUI\manger</Filter>
+      <Filter>GUI\manger</Filter>
     </ClInclude>
     <ClInclude Include="..\src\tabnet.h">
-      <Filter>UImanger\GUI\manger</Filter>
+      <Filter>GUI\manger</Filter>
     </ClInclude>
     <ClInclude Include="..\src\tabtd.h">
-      <Filter>UImanger\GUI\manger</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\wndmain.h">
-      <Filter>UImanger\GUI</Filter>
+      <Filter>GUI\manger</Filter>
     </ClInclude>
     <ClInclude Include="..\src\wthreadgrid.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\wthread.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClInclude>
     <ClInclude Include="..\src\QtConfig.h">
       <Filter>Start\libQt</Filter>
@@ -87,7 +87,19 @@
       <Filter>Start\libQt</Filter>
     </ClInclude>
     <ClInclude Include="..\src\wprogressbar.h">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tcpserver.h">
+      <Filter>GUI\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\frmnettool.h">
+      <Filter>GUI\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\wndmain.h">
+      <Filter>GUI\UImanger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QData.h">
+      <Filter>Start\libQt</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -98,49 +110,46 @@
       <Filter>Start</Filter>
     </ClCompile>
     <ClCompile Include="..\src\wtimenumbar.cpp">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\waxis.cpp">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\wbase.cpp">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\wdraw.cpp">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\wpanel.cpp">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\wplay.cpp">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\appcfg.cpp">
-      <Filter>User</Filter>
+      <Filter>GUI\UImanger\User</Filter>
     </ClCompile>
     <ClCompile Include="..\src\dlgfrm.cpp">
-      <Filter>User</Filter>
+      <Filter>GUI\UImanger\User</Filter>
     </ClCompile>
     <ClCompile Include="..\src\tabgis.cpp">
-      <Filter>UImanger\GUI\manger</Filter>
+      <Filter>GUI\manger</Filter>
     </ClCompile>
     <ClCompile Include="..\src\tabgui.cpp">
-      <Filter>UImanger\GUI\manger</Filter>
+      <Filter>GUI\manger</Filter>
     </ClCompile>
     <ClCompile Include="..\src\tabnet.cpp">
-      <Filter>UImanger\GUI\manger</Filter>
+      <Filter>GUI\manger</Filter>
     </ClCompile>
     <ClCompile Include="..\src\tabtd.cpp">
-      <Filter>UImanger\GUI\manger</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\wndmain.cpp">
-      <Filter>UImanger\GUI</Filter>
+      <Filter>GUI\manger</Filter>
     </ClCompile>
     <ClCompile Include="..\src\wthreadgrid.cpp">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\wthread.cpp">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\QtConfig.cpp">
       <Filter>Start\libQt</Filter>
@@ -152,7 +161,16 @@
       <Filter>Start\libQt</Filter>
     </ClCompile>
     <ClCompile Include="..\src\wprogressbar.cpp">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tcpserver.cpp">
+      <Filter>GUI\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\frmnettool.cpp">
+      <Filter>GUI\Net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\wndmain.cpp">
+      <Filter>GUI\UImanger</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -162,19 +180,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\src\dlgfrm.ui">
-      <Filter>User</Filter>
+      <Filter>GUI\UImanger\User</Filter>
     </None>
     <None Include="..\src\wthreadgrid.ui">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </None>
     <None Include="..\src\wplay.ui">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </None>
     <None Include="..\src\wprogressbar.ui">
-      <Filter>UImanger\GUI\UI</Filter>
+      <Filter>GUI\UI</Filter>
     </None>
     <None Include="..\res\wdgres.qrc">
       <Filter>Start\Res</Filter>
+    </None>
+    <None Include="..\src\frmnettool.ui">
+      <Filter>GUI\Net</Filter>
     </None>
   </ItemGroup>
 </Project>

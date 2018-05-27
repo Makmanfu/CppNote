@@ -1,11 +1,12 @@
 //*********************************************************************
 //
 //                  全局判断宏整理
-//                                          @2017-03-21阿甘整理
+//                                          @2015-08-21阿甘整理
 //*********************************************************************
 #ifndef CDEFINE_HPP
 #define CDEFINE_HPP
 
+#define _CRT_SECURE_NO_WARNINGS
 
 //万能输出宏--------------------------------------------------------------
 #ifndef C_API
@@ -19,17 +20,21 @@
 #endif
 
 //平台运行模式(默认命令行,GUIRUN 图形化,HIDECMDRUN 隐藏界面)--------------
-#ifdef GUIRUN
+#ifdef CONSOLE                          //命令行
+#pragma comment (linker, "/subsystem:console")
+#endif
+#ifdef HIDECMD                          //隐藏命令行
+#pragma comment (linker, "/subsystem:windows /entry:mainCRTStartup")
+#endif
+#ifdef GUIRUNC                          //WIN图形化
     #pragma comment (linker, "/subsystem:windows")
-#else
-    #ifdef HIDECMDRUN
-        #pragma comment (linker, "/subsystem:windows /entry:mainCRTStartup")    //隐藏命令行
-    #else
-        #pragma comment (linker, "/subsystem:console")
-    #endif
-    #ifdef KILLMAIN
-        #pragma comment (linker, "/ENTRY:\"SQMain\"")       //修改main入口
-    #endif
+#endif
+#ifdef NATIVEC                          //原生入口修改main入口
+    #pragma comment (linker, "/ENTRY:\"SQMain\"")
+#endif
+//全都不定义会报错
+#if !defined(GUIRUNC) && !defined(NATIVEC) && !defined(CONSOLE) && !defined(HIDECMD)
+#pragma message("error:没有定义入口选项[GUIRUN/NATIVEC/CONSOLE/HIDECMD]编个飞机啊？")
 #endif
 
 //输出lib的自动处理-------------------------------------------------------

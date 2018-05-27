@@ -1,9 +1,12 @@
 //-----------------------------------------------------------------------------
 //
-//          stl学习使用记录
+//                           STL学习使用记录
+//                                          2014-06-16 AGAN
 //
 //-----------------------------------------------------------------------------
-#pragma once
+
+#ifndef STL_HPP
+#define STL_HPP
 #include <vector>
 #include <iostream>
 #include <memory>
@@ -154,7 +157,7 @@ public:
     ~CStudyMap(){};
 private:
     map<int, string> MDat;
-    //vector增加使用
+    //Map增加使用
     void MapADD_Demo(void)
     {
         //通过成员函数insert和STL的pair赋值
@@ -164,7 +167,7 @@ private:
         //通过make_pair赋值
         MDat.insert(make_pair(3, "王五"));
     };
-    //vector显示数据
+    //Map显示数据
     void MapShow_Demo(void)
     {
         //用迭代器遍历取map的值
@@ -198,8 +201,109 @@ private:
     };
 };
 
+//数组分n段数组表
+template <typename T>
+void SPLITARRAY(const vector<T>& datas, size_t n, vector<vector<T> >& table)
+{
+    if (n == 0)
+        return;
+#define PLANFUN3
+    vector<T> tmp;
+#ifdef PLANFUN1 //方法一
+    for (size_t i = 1; i <= datas.size(); ++i)
+    {
+        tmp.push_back(datas[i - 1]);                  //注意索引从0开始的
+        if (i % n == 0)                               //与N整除
+        {
+            table.push_back(tmp);
+            tmp.clear();                              //必须归零
+        }
+    }
+    table.push_back(tmp);
+    tmp.clear();                                      //归零
+#endif 
+
+#ifdef PLANFUN2 //方法二 测试时间得到效率高于一
+    size_t k = datas.size() / n, pos(0);
+    //注意K小于1时让p去处理 此处不好理解
+    size_t p = k < 1 ? datas.size() : datas.size() % n;
+    for (size_t i = 0; i < k; ++i)
+    {
+        for (size_t pt = 0; pt < n; ++pt)
+            tmp.push_back(datas[pos++]);
+        table.push_back(tmp);
+        tmp.clear();                                    //必须归零
+    }
+    if (p > 0)
+    {
+        for (size_t pt = 0; pt < p; ++pt)
+            tmp.push_back(datas[pos++]);
+        table.push_back(tmp);
+        tmp.clear();
+    }
+#endif 
+
+#ifdef PLANFUN3 //方法三 STL
+    size_t k = datas.size() / n, pos(0);
+    //注意K小于1时让p去处理 此处不好理解
+    size_t p = k < 1 ? datas.size() : datas.size() % n;
+    for (size_t i = 0; i < k; ++i)
+        table.push_back(vector<T>(datas.begin() + n*i, datas.begin() + n*(i + 1)));
+    if (p > 0)
+        table.push_back(vector<T>(datas.begin() + n*k, datas.end()));
+#endif 
+}
+
+//数组分段demos
+struct SPLITARRAY_show
+{
+    static int main(int argc, char** argv)
+    {
+        //数据表
+        vector<size_t> DATATABLE;
+        //分解表
+        vector<vector<size_t> > OutTABLE;
+        //测试数据
+        for (size_t i = 0; i < 17; ++i)
+            DATATABLE.push_back(i + 1);
+        //线性显示
+        for (vector<size_t>::const_iterator it = DATATABLE.begin();
+            it != DATATABLE.end(); ++it)
+            std::cout << *it << " ";
+        std::cout << std::endl;
+        std::cout << "请输入分段数："<<std::endl;
+        //测试分3段
+        int DD(3);
+        std::cin >> DD;
+        //分解算法
+        SPLITARRAY(DATATABLE, DD, OutTABLE);
+        //显示
+        for (vector<vector<size_t> >::const_iterator it = OutTABLE.begin();
+            it != OutTABLE.end(); ++it)
+        {
+            for (vector<size_t>::const_iterator iit = it->begin();
+                iit != it->end(); ++iit)
+                std::cout << *iit << " ";
+            std::cout << std::endl;
+        }
+        return 0;
+    };
+};
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
 

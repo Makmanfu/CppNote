@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="start">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{fbcb89eb-550d-40d8-aa46-8a38e6c8dc9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="start\MFC">
+      <UniqueIdentifier>{95226174-9b9f-4aa2-bfcd-9ad4039e6774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DUILIB">
+      <UniqueIdentifier>{2de8c83c-d3e9-482f-8fc7-b0dcb333cb4b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\res\resource.h">
+      <Filter>start\res</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIButton.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UICheckBox.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIChildLayout.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UICombo.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIComboBox.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIContainer.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIControl.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIDateTime.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIDefine.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIDelegate.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIDlgBuilder.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIEdit.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIFlash.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIHorizontalLayout.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UILabel.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIlib.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIList.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIManager.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIMarkup.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIOption.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIProgress.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIRender.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIRichEdit.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIScrollBar.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UISlider.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UITabLayout.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIText.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UITileLayout.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UITreeView.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIVerticalLayout.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIWebBrowser.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\Utils.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\WebBrowserEventHandler.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\WinImplBase.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\downloadmgr.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\FlashEventHandler.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIActiveX.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DuiLib\UIBase.h">
+      <Filter>DUILIB</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DialogUIAttribEdit.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DuiDesigner.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FileView.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GlobalVariable.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\HookAPI.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ImageDialog.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ImagePreview.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LayoutManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MainFrm.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MultiUITracker.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PropertiesWnd.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PropertyTabLayoutUI.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ResourceView.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tinystr.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tinyxml.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ToolBoxCtrl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ToolBoxWnd.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\UICommandHistory.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\UIDesignerDoc.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\UIDesignerView.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\UIImagePreview.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\UIProperties.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\UIUtil.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ViewTree.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ChildFrm.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ClassView.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DialogCheckUpdate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DialogCustomFonts.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DialogDefaultAttribList.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DialogProjectNew.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DialogSaveAsName.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DialogSkinFileNew.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DialogTemplateOpen.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UICheckBox.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIChildLayout.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UICombo.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIComboBox.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIContainer.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIControl.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIDateTime.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIDelegate.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIDlgBuilder.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIEdit.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIFlash.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIHorizontalLayout.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UILabel.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIlib.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIList.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIManager.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIMarkup.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIOption.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIProgress.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIRender.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIRichEdit.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIScrollBar.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UISlider.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UITabLayout.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIText.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UITileLayout.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UITreeView.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIVerticalLayout.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIWebBrowser.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\Utils.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\WinImplBase.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\XUnzip.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIActiveX.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIBase.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DuiLib\UIButton.cpp">
+      <Filter>DUILIB</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DuiDesigner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FileView.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GlobalVariable.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\HookAPI.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ImageDialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ImagePreview.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LayoutManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MainFrm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MultiUITracker.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PropertiesWnd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PropertyTabLayoutUI.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ResourceView.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinystr.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinyxml.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinyxmlerror.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinyxmlparser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ToolBoxCtrl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ToolBoxWnd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UICommandHistory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UIDesignerDoc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UIDesignerView.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UIImagePreview.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UIProperties.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\UIUtil.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ViewTree.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ChildFrm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ClassView.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DialogCheckUpdate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DialogCustomFonts.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DialogDefaultAttribList.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DialogProjectNew.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DialogSaveAsName.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DialogSkinFileNew.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DialogTemplateOpen.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DialogUIAttribEdit.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\res\DuiTool.rc">
+      <Filter>start\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\DuiLib\Flash11.tlb">
+      <Filter>DUILIB</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\DUI.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\UIDesignerDoc.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\file_view.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\file_view_hc.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\class_view.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\class_view_hc.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\properties_wnd.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\properties_wnd_hc.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\res_view.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\res_view_hc.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\toolbox_wnd_hc.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Active.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Button.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Option.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Combo.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Container.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Control.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Edit.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\HorizontalLayout.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Label.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Pointer.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Progress.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\ScrollBar.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Slider.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\TabLayout.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\Text.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\TileLayout.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\ToolBox\VerticalLayout.ico">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\Toolbar.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\Toolbar_hc.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\sort.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\sort_hc.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\fileview.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\fileview_hc.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\classview.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\classview_hc.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\explorer.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\explorer_hc.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\menuimages.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\menuimages_hc.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\properties.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\properties_hc.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\resource.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\resource24.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\movehandle.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\formedit_hc.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\uimenu.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+    <Image Include="..\res\banner.bmp">
+      <Filter>start\res</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

@@ -27,7 +27,6 @@ public:
     void SetMenu(HMENU hMenu);
     //设置图标
     void SetIcon(size_t IconID);
-
     //显示托盘
     void ShowTray(bool _state);
     //将窗口显示出来

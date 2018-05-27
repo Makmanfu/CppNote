@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="EXE_Debug|Win32">
+      <Configuration>EXE_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Debug|x64">
+      <Configuration>EXE_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Release|Win32">
+      <Configuration>EXE_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="EXE_Release|x64">
+      <Configuration>EXE_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8364DCE4-092D-429B-9F70-105D60F3D8A7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>QtTomato</RootNamespace>
+    <ProjectName>Qt5QmlUI</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppDebug.props" />
+    <Import Project="..\..\..\projectconf\QtConf\Qt5Debug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppDebug64.props" />
+    <Import Project="..\..\..\projectconf\QtConf\Qt5Debug64.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppRelease.props" />
+    <Import Project="..\..\..\projectconf\QtConf\Qt5Release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\projectconf\CppConf\CppRelease64.props" />
+    <Import Project="..\..\..\projectconf\QtConf\Qt5Release64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>./src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>./src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <IncludePath>./src;$(IncludePath)</IncludePath>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>./src;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link />
+    <PreBuildEvent />
+    <PostBuildEvent>
+      <Command>if exist "$(QT5PATH)\\bin\\Qt5Cored.dll" (copy /y $(QT5PATH)\\bin\\Qt5Cored.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Guid.dll" (copy /y $(QT5PATH)\\bin\\Qt5Guid.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Widgetsd.dll" (copy /y $(QT5PATH)\\bin\\Qt5Widgetsd.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Qmld.dll" (copy /y $(QT5PATH)\\bin\\Qt5Qmld.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Networkd.dll" (copy /y $(QT5PATH)\\bin\\Qt5Networkd.dll "$(OutDir)") 
+MKDIR "$(OutDir)\\platforms" 
+copy /y $(QT5PATH)\\plugins\\platforms\\qwindows*.dll "$(OutDir)\\platforms" 
+rem copy /y $(QT5PATH)\\plugins\\sqldrivers\\*.dll "$(OutDir)\\sqldrivers" 
+rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link />
+    <PreBuildEvent />
+    <PostBuildEvent>
+      <Command>if exist "$(QT5PATH)\\bin\\Qt5Cored.dll" (copy /y $(QT5PATH)\\bin\\Qt5Cored.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Guid.dll" (copy /y $(QT5PATH)\\bin\\Qt5Guid.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Widgetsd.dll" (copy /y $(QT5PATH)\\bin\\Qt5Widgetsd.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Qmld.dll" (copy /y $(QT5PATH)\\bin\\Qt5Qmld.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Networkd.dll" (copy /y $(QT5PATH)\\bin\\Qt5Networkd.dll "$(OutDir)") 
+MKDIR "$(OutDir)\\platforms" 
+copy /y $(QT5PATH)\\plugins\\platforms\\qwindows*.dll "$(OutDir)\\platforms" 
+rem copy /y $(QT5PATH)\\plugins\\sqldrivers\\*.dll "$(OutDir)\\sqldrivers" 
+rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <PostBuildEvent>
+      <Command>if exist "$(QT5PATH)\\bin\\Qt5Core.dll" (copy /y $(QT5PATH)\\bin\\Qt5Core.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Gui.dll" (copy /y $(QT5PATH)\\bin\\Qt5Gui.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Widgets.dll" (copy /y $(QT5PATH)\\bin\\Qt5Widgets.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Qml.dll" (copy /y $(QT5PATH)\\bin\\Qt5Qml.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Network.dll" (copy /y $(QT5PATH)\\bin\\Qt5Network.dll "$(OutDir)") 
+MKDIR "$(OutDir)\\platforms" 
+copy /y $(QT5PATH)\\plugins\\platforms\\qwindows*.dll "$(OutDir)\\platforms" 
+rem copy /y $(QT5PATH)\\plugins\\sqldrivers\\*.dll "$(OutDir)\\sqldrivers" 
+rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <PostBuildEvent>
+      <Command>if exist "$(QT5PATH)\\bin\\Qt5Core.dll" (copy /y $(QT5PATH)\\bin\\Qt5Core.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Gui.dll" (copy /y $(QT5PATH)\\bin\\Qt5Gui.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Widgets.dll" (copy /y $(QT5PATH)\\bin\\Qt5Widgets.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Qml.dll" (copy /y $(QT5PATH)\\bin\\Qt5Qml.dll "$(OutDir)") 
+if exist "$(QT5PATH)\\bin\\Qt5Network.dll" (copy /y $(QT5PATH)\\bin\\Qt5Network.dll "$(OutDir)") 
+MKDIR "$(OutDir)\\platforms" 
+copy /y $(QT5PATH)\\plugins\\platforms\\qwindows*.dll "$(OutDir)\\platforms" 
+rem copy /y $(QT5PATH)\\plugins\\sqldrivers\\*.dll "$(OutDir)\\sqldrivers" 
+rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\QPublic.h" />
+    <ClInclude Include="..\src\QtConfig.h" />
+    <ClInclude Include="..\src\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\QPublic.cpp" />
+    <ClCompile Include="..\src\QtConfig.cpp" />
+    <ClCompile Include="..\src\stdafx.cpp" />
+    <ClCompile Include="QtConfig_moc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Res\JavaSfun.js" />
+    <None Include="..\Res\main.qml" />
+    <None Include="..\Res\MainForm.ui.qml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Res\RunICO.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

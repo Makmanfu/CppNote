@@ -10,15 +10,15 @@
 
 TabGUI::TabGUI(QWidget* parent) : TabGUIBase(parent)
 {
-    this->setWindowTitle(QString::fromLocal8Bit("界面演示"));
-    addcomboxItem(QString::fromLocal8Bit("WndAxis"));
-    addcomboxItem(QString::fromLocal8Bit("WScanRotate"));
-    addcomboxItem(QString::fromLocal8Bit("WRotate"));
-    addcomboxItem(QString::fromLocal8Bit("WndPlayer"));
-    addcomboxItem(QString::fromLocal8Bit("TimeNumBar"));
-    addcomboxItem(QString::fromLocal8Bit("TimeBarPanel"));
-    addcomboxItem(QString::fromLocal8Bit("WProgressbar"));
-    addcomboxItem(QString::fromLocal8Bit("QWidget"));
+    this->setWindowTitle(TCSR("界面演示"));
+    addcomboxItem(TCSR("WndAxis"));
+    addcomboxItem(TCSR("WScanRotate"));
+    addcomboxItem(TCSR("WRotate"));
+    addcomboxItem(TCSR("WndPlayer"));
+    addcomboxItem(TCSR("TimeNumBar"));
+    addcomboxItem(TCSR("TimeBarPanel"));
+    addcomboxItem(TCSR("WProgressbar"));
+    addcomboxItem(TCSR("QWidget"));
 }
 
 TabGUI::~TabGUI()

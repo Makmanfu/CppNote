@@ -10,7 +10,7 @@ DlgFrm::DlgFrm(QWidget* parent) :
     ui->setupUi(this);
     this->setWindowFlags(Qt::Tool);
     this->setModal(true);
-    this->setWindowTitle(QString::fromLocal8Bit("程序设置"));
+    this->setWindowTitle(TCSR("程序设置"));
     connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(on_OKclicked()));
     connect(ui->buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
     //加载显示数据

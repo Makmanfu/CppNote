@@ -7,7 +7,7 @@ DlgFrm::DlgFrm(QWidget* parent) : QDialog(parent)
     , numPage(1)
 {
     ui->setupUi(this);
-    this->setWindowTitle(QString::fromLocal8Bit("通用框架"));
+    this->setWindowTitle(TCSR("通用框架"));
     this->setWindowFlags(Qt::Tool);
     showtype(numPage);
     PageInitOut(numPage);
@@ -18,7 +18,7 @@ DlgFrm::DlgFrm(int type_, QWidget* parent) : QDialog(parent)
     , numPage(type_)
 {
     ui->setupUi(this);
-    this->setWindowTitle(QString::fromLocal8Bit("通用框架"));
+    this->setWindowTitle(TCSR("通用框架"));
     this->setWindowFlags(Qt::Tool);
     //显示对应的页面
     showtype(numPage);
@@ -80,7 +80,7 @@ void DlgFrm::PageInitOut(int type_, bool state_)
 void DlgFrm::HelpShow(void)
 {
     ui->BtnAdd->setVisible(false);
-    ui->plainTextHelp->appendPlainText(QString::fromLocal8Bit("1.使用说明"));
+    ui->plainTextHelp->appendPlainText(TCSR("1.使用说明"));
 }
 
 void DlgFrm::SyscfgShow(void)

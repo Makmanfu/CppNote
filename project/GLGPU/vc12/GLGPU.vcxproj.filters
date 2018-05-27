@@ -12,11 +12,32 @@
     <Filter Include="GUI">
       <UniqueIdentifier>{2563ca42-0a77-4985-bfbe-cff46a6a03a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="start\四元素旋转有BUG">
+      <UniqueIdentifier>{d056af83-168e-4b3e-879d-e079be9db865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX">
+      <UniqueIdentifier>{35acefed-0506-4bc4-81ef-ac014600f9e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GL">
+      <UniqueIdentifier>{5aba4ae7-fce7-47c5-82ce-4fcb9e517365}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDI">
+      <UniqueIdentifier>{78294081-79ca-46ef-9723-6cddc7c7589e}</UniqueIdentifier>
+    </Filter>
     <Filter Include="library">
       <UniqueIdentifier>{9095863e-ded8-4736-a440-60b0db6f4c57}</UniqueIdentifier>
     </Filter>
     <Filter Include="library\freeglut">
       <UniqueIdentifier>{0c59074d-7b37-4e29-8083-0f66aca3c329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\freeglut\DEMO">
+      <UniqueIdentifier>{f62c7b1f-32ca-4e40-b84d-94c770a8f553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\freeglut\C">
+      <UniqueIdentifier>{04d40fdc-5ad3-457e-b366-c6b77b597838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library\freeglut\H">
+      <UniqueIdentifier>{91f4f1bd-005f-4aa8-b6f2-6864ee582a76}</UniqueIdentifier>
     </Filter>
     <Filter Include="library\GLTools">
       <UniqueIdentifier>{cb7f231b-d975-4931-9df0-0ead96289912}</UniqueIdentifier>
@@ -27,32 +48,14 @@
     <Filter Include="library\FreeImage">
       <UniqueIdentifier>{0fb94d78-17b9-445a-93a2-2274d105aaf3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="library\freeglut\DEMO">
-      <UniqueIdentifier>{f62c7b1f-32ca-4e40-b84d-94c770a8f553}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="start\四元素旋转有BUG">
-      <UniqueIdentifier>{d056af83-168e-4b3e-879d-e079be9db865}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DX">
-      <UniqueIdentifier>{35acefed-0506-4bc4-81ef-ac014600f9e8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="library\GLEW">
       <UniqueIdentifier>{418d987b-0598-4216-882f-08c6e7661f9d}</UniqueIdentifier>
     </Filter>
     <Filter Include="library\GLFW">
       <UniqueIdentifier>{dfc6da5a-3268-4300-bff5-6e15aca96b72}</UniqueIdentifier>
     </Filter>
-    <Filter Include="library\freeglut\C">
-      <UniqueIdentifier>{04d40fdc-5ad3-457e-b366-c6b77b597838}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="library\freeglut\H">
-      <UniqueIdentifier>{91f4f1bd-005f-4aa8-b6f2-6864ee582a76}</UniqueIdentifier>
-    </Filter>
     <Filter Include="library\TrackBall">
       <UniqueIdentifier>{12341c8d-1ab3-4705-9b08-8ea5ca321719}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GL">
-      <UniqueIdentifier>{5aba4ae7-fce7-47c5-82ce-4fcb9e517365}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +193,18 @@
     </ClInclude>
     <ClInclude Include="..\src\TrackBall.h">
       <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GDIView.h">
+      <Filter>GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GDIPlusView.h">
+      <Filter>GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WinGUI.h">
+      <Filter>GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GDIWindow.h">
+      <Filter>GDI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -384,6 +399,18 @@
     </ClCompile>
     <ClCompile Include="..\src\TrackballC.cpp">
       <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GDIPlusView.cpp">
+      <Filter>GDI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GDIView.cpp">
+      <Filter>GDI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WinGUI.cpp">
+      <Filter>GDI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GDIWindow.cpp">
+      <Filter>GDI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

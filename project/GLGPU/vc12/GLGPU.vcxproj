@@ -161,6 +161,9 @@
     <ClInclude Include="..\src\freeglut-2.6.0\GL\freeglut_ext.h" />
     <ClInclude Include="..\src\freeglut-2.6.0\GL\freeglut_std.h" />
     <ClInclude Include="..\src\freeglut-2.6.0\GL\glut.h" />
+    <ClInclude Include="..\src\GDIPlusView.h" />
+    <ClInclude Include="..\src\GDIView.h" />
+    <ClInclude Include="..\src\GDIWindow.h" />
     <ClInclude Include="..\src\GLDraw.h" />
     <ClInclude Include="..\src\GLFW\egl_context.h" />
     <ClInclude Include="..\src\GLFW\glfw3.h" />
@@ -196,6 +199,7 @@
     <ClInclude Include="..\src\VIEW\VBOX.h" />
     <ClInclude Include="..\src\VIEW\Vector4.hpp" />
     <ClInclude Include="..\src\VIEW\ViewPort.h" />
+    <ClInclude Include="..\src\WinGUI.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -226,6 +230,9 @@
     <ClCompile Include="..\src\freeglut-2.6.0\freeglut_teapot.c" />
     <ClCompile Include="..\src\freeglut-2.6.0\freeglut_videoresize.c" />
     <ClCompile Include="..\src\freeglut-2.6.0\freeglut_window.c" />
+    <ClCompile Include="..\src\GDIPlusView.cpp" />
+    <ClCompile Include="..\src\GDIView.cpp" />
+    <ClCompile Include="..\src\GDIWindow.cpp" />
     <ClCompile Include="..\src\GLDraw.cpp" />
     <ClCompile Include="..\src\GLEW\glew.c" />
     <ClCompile Include="..\src\GLEW\glewinfo.c" />
@@ -262,6 +269,7 @@
     <ClCompile Include="..\src\VIEW\Camera4.cpp" />
     <ClCompile Include="..\src\VIEW\VBOX.cpp" />
     <ClCompile Include="..\src\VIEW\ViewPort.cpp" />
+    <ClCompile Include="..\src\WinGUI.cpp" />
     <ClCompile Include="GLGPU.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">Create</PrecompiledHeader>

@@ -6,9 +6,9 @@
 
 TabTD::TabTD(QWidget* parent) : TabGUIBase(parent)
 {
-    this->setWindowTitle(QString::fromLocal8Bit("TabTD"));
-    this->addcomboxItem(QString::fromLocal8Bit("WThread"));
-    this->addcomboxItem(QString::fromLocal8Bit("WThreadGrid"));
+    this->setWindowTitle(TCSR("TabTD"));
+    this->addcomboxItem(TCSR("WThread"));
+    this->addcomboxItem(TCSR("WThreadGrid"));
 }
 
 TabTD::~TabTD()

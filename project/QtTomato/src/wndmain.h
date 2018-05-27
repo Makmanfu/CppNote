@@ -36,7 +36,7 @@ private:
     TabGUI* m_myGUI;              //界面演示
     TabTD* m_myWndTD;             //线程演示
     TabNet* m_myWndWeb;           //网络通信
-    TabGIS* m_myGIS;              //GIS
+    //TabGIS* m_myGIS;              //GIS
 private:
     QPoint m_PosDisp;             //鼠标点
     bool m_bPressed;              //记录状态

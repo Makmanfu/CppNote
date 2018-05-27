@@ -134,17 +134,17 @@ void WAxis::GuiInit(void)
     connect(Btn_ZoomOut, SIGNAL(clicked()), SLOT(OnBtnZoomOutClicked()));
     Btn_Pt0 = new QPushButton(this);
     Btn_Pt0->setFixedSize(25, 25);
-    Btn_Pt0->setText(QString::fromLocal8Bit("0"));
+    Btn_Pt0->setText(TCSR("0"));
     Btn_Pt0->move(k+60, 10);
     connect(Btn_Pt0, SIGNAL(clicked()), SLOT(OnBtnPt0Clicked()));
     Btn_PtS = new QPushButton(this);
     Btn_PtS->setFixedSize(25, 25);
-    Btn_PtS->setText(QString::fromLocal8Bit("S"));
+    Btn_PtS->setText(TCSR("S"));
     Btn_PtS->move(k+90, 10);
     connect(Btn_PtS, SIGNAL(clicked()), SLOT(OnBtnPtSClicked()));
     Btn_PtD = new QPushButton(this);
     Btn_PtD->setFixedSize(25, 25);
-    Btn_PtD->setText(QString::fromLocal8Bit("D"));
+    Btn_PtD->setText(TCSR("D"));
     Btn_PtD->move(k+120, 10);
     connect(Btn_PtD, SIGNAL(clicked()), SLOT(OnBtnPtDClicked()));
 }
@@ -152,21 +152,21 @@ void WAxis::GuiInit(void)
 void WAxis::menucreate(void)
 {
     //定义程序菜单
-    Act_Pt0 = new QAction(QString::fromLocal8Bit("回到原点"), this);
+    Act_Pt0 = new QAction(TCSR("回到原点"), this);
     connect(Act_Pt0, SIGNAL(triggered()), this, SLOT(OnBtnPt0Clicked()));
-    Act_Normal = new QAction(QString::fromLocal8Bit("移动"), this);
+    Act_Normal = new QAction(TCSR("移动"), this);
     connect(Act_Normal, SIGNAL(triggered()), this, SLOT(OnAct_NorClicked()));
-    Act_Sty = new QAction(QString::fromLocal8Bit("白色主题"), this);
+    Act_Sty = new QAction(TCSR("白色主题"), this);
     Act_Sty->setCheckable(true);
     Act_Sty->setChecked(true);
     connect(Act_Sty, SIGNAL(triggered()), this, SLOT(OnAct_StyClicked()));
-    Act_line = new QAction(QString::fromLocal8Bit("画直线"), this);
+    Act_line = new QAction(TCSR("画直线"), this);
     connect(Act_line, SIGNAL(triggered()), this, SLOT(OnAct_lineClicked()));
-    Act_curve = new QAction(QString::fromLocal8Bit("画曲线"), this);
+    Act_curve = new QAction(TCSR("画曲线"), this);
     connect(Act_curve, SIGNAL(triggered()), this, SLOT(OnAct_curveClicked()));
-    Act_circle = new QAction(QString::fromLocal8Bit("画圆"), this);
+    Act_circle = new QAction(TCSR("画圆"), this);
     connect(Act_circle, SIGNAL(triggered()), this, SLOT(OnAct_circleClicked()));
-    Act_Data = new QAction(QString::fromLocal8Bit("绘制数据"), this);
+    Act_Data = new QAction(TCSR("绘制数据"), this);
     connect(Act_Data, SIGNAL(triggered()), this, SLOT(OnAct_DataClicked()));
     menu = new QMenu(this);
     menu->setFont(QFont("Modern", 13));

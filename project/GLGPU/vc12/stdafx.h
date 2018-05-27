@@ -1,7 +1,7 @@
 
 #ifndef STDAFX_H
 #define STDAFX_H
-#define GUIRUN                                //WINDOW窗口运行
+#define GUIRUNC                                //WINDOW窗口运行
 
 
 #include "targetver.h"
@@ -23,6 +23,13 @@ using namespace std;
 //#include "Glconf.h"
 
 char* G2U(const char* gb2312);
+
+#ifndef SQC_API
+#define SQC_API extern "C" __declspec(dllexport)
+#endif
+#ifndef SQCPP_API
+#define SQCPP_API __declspec(dllexport)
+#endif
 
 
 #endif

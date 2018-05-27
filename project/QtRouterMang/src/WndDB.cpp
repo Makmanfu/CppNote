@@ -106,8 +106,8 @@ void TableModel::setData(const QVector<QStringList>& data)
 TableView::TableView(QWidget* parent) : QTableView(parent)
 {
     m_model = new TableModel();
-    Act_add = new QAction(QString::fromLocal8Bit("添加"), this);
-    Act_addroot = new QAction(QString::fromLocal8Bit("添加root"), this);
+    Act_add = new QAction(TCSR("添加"), this);
+    Act_addroot = new QAction(TCSR("添加root"), this);
     menutb = new QMenu(this);
     menutb->addAction(Act_add);
     menuroot = new QMenu(this);
@@ -204,11 +204,11 @@ TreeView::TreeView(QWidget* _parent) : QTreeView(_parent)
     map<QString, QVector<QString> > testdat;
     QVector<QString> objtest;
     for (int i = 0; i < 5; ++i)
-        objtest.push_back(QString::fromLocal8Bit("飞机"));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("航母系列"), objtest));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("雷达系列"), objtest));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("飞机系列"), objtest));
-    testdat.insert(map<QString, QVector<QString> >::value_type(QString::fromLocal8Bit("其他"), objtest));
+        objtest.push_back(TCSR("飞机"));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("航母系列"), objtest));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("雷达系列"), objtest));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("飞机系列"), objtest));
+    testdat.insert(map<QString, QVector<QString> >::value_type(TCSR("其他"), objtest));
     //加载数据
     LoadTableData(testdat);
     //全部展开
@@ -291,19 +291,19 @@ void TreeView::LoadlistData(QVector<QString>& datas_)
     model->setRowCount(4);
     model->setColumnCount(1);
     //model->setHeaderData(1, Qt::Horizontal, tr("Details"));   //设置头显示
-    QStandardItem* item1 = new QStandardItem(QString::fromLocal8Bit("航母系列"));
+    QStandardItem* item1 = new QStandardItem(TCSR("航母系列"));
     item1->setIcon(QIcon("gparted.png"));
-    QStandardItem* item2 = new QStandardItem(QString::fromLocal8Bit("雷达"));
+    QStandardItem* item2 = new QStandardItem(TCSR("雷达"));
     item2->setIcon(QIcon("gparted.png"));
-    QStandardItem* item3 = new QStandardItem(QString::fromLocal8Bit("飞机"));
+    QStandardItem* item3 = new QStandardItem(TCSR("飞机"));
     item3->setIcon(QIcon("gparted.png"));
-    QStandardItem* item4 = new QStandardItem(QString::fromLocal8Bit("其他"));
+    QStandardItem* item4 = new QStandardItem(TCSR("其他"));
     item4->setIcon(QIcon("gparted.png"));
     model->setItem(0, 0, item1);
     model->setItem(1, 0, item2);
     model->setItem(2, 0, item3);
     model->setItem(3, 0, item4);
-    QStandardItem* item5 = new QStandardItem(QString::fromLocal8Bit("敌机"));
+    QStandardItem* item5 = new QStandardItem(TCSR("敌机"));
     item4->appendRow(item5);
     //QModelIndex parent;
     //for (int i = 0; i < 4; ++i)
@@ -312,22 +312,22 @@ void TreeView::LoadlistData(QVector<QString>& datas_)
     //    model->insertRows(0, 1, parent);
     //    model->insertColumns(0, 1, parent);
     //    QModelIndex index = model->index(0, 0, parent);
-    //    model->setData(index, QString::fromLocal8Bit("航母%i").arg(i));
+    //    model->setData(index, TCSR("航母%i").arg(i));
     //}
     this->setModel(model);
 }
 
 void TreeView::setMenuInit(void)
 {
-    Act_add = new QAction(QString::fromLocal8Bit("添加子节点"), this);
+    Act_add = new QAction(TCSR("添加子节点"), this);
     connect(Act_add, SIGNAL(triggered()), this, SLOT(OnAct_addClicked()));
-    Act_edit = new QAction(QString::fromLocal8Bit("编辑节点"), this);
+    Act_edit = new QAction(TCSR("编辑节点"), this);
     connect(Act_edit, SIGNAL(triggered()), this, SLOT(OnAct_editClicked()));
-    Act_del = new QAction(QString::fromLocal8Bit("删除节点"), this);
+    Act_del = new QAction(TCSR("删除节点"), this);
     connect(Act_del, SIGNAL(triggered()), this, SLOT(OnAct_delClicked()));
-    Act_xml = new QAction(QString::fromLocal8Bit("导入文件"), this);
+    Act_xml = new QAction(TCSR("导入文件"), this);
     connect(Act_xml, SIGNAL(triggered()), this, SLOT(OnAct_xmlClicked()));
-    Act_xmlout = new QAction(QString::fromLocal8Bit("导出文件"), this);
+    Act_xmlout = new QAction(TCSR("导出文件"), this);
     connect(Act_xmlout, SIGNAL(triggered()), this, SLOT(OnAct_xmloutClicked()));
     menutb = new QMenu(this);
     menutb->addAction(Act_add);
@@ -337,7 +337,7 @@ void TreeView::setMenuInit(void)
     menutb->addAction(Act_xml);
     menutb->addAction(Act_xmlout);
     menutb->addSeparator();
-    Act_addroot = new QAction(QString::fromLocal8Bit("添加跟节点"), this);
+    Act_addroot = new QAction(TCSR("添加跟节点"), this);
     connect(Act_addroot, SIGNAL(triggered()), this, SLOT(OnAct_addrootClicked()));
     menuroot = new QMenu(this);
     menuroot->addAction(Act_addroot);
@@ -358,7 +358,7 @@ void TreeView::setTableInit(void)
     model = new QStandardItemModel();
     model->setRowCount(0);
     model->setColumnCount(1);
-    model->setHeaderData(0, Qt::Horizontal, QString::fromLocal8Bit(""));       //设置头显示
+    model->setHeaderData(0, Qt::Horizontal, TCSR(""));       //设置头显示
     //设置默认数据
     this->setModel(model);
 }
@@ -381,7 +381,7 @@ void TreeView::contextMenuEvent(QContextMenuEvent* ev)
 void TreeView::OnAct_addClicked()
 {
     bool isOK(false);
-    QString text = QInputDialog::getText(this, QString::fromLocal8Bit("添加节点"), QString::fromLocal8Bit("请输入节点名:"),
+    QString text = QInputDialog::getText(this, TCSR("添加节点"), TCSR("请输入节点名:"),
                                          QLineEdit::Normal, currentItem->text(), &isOK);
     if (isOK)
     {
@@ -393,7 +393,7 @@ void TreeView::OnAct_addClicked()
 void TreeView::OnAct_editClicked()
 {
     bool isOK(false);
-    QString text = QInputDialog::getText(this, QString::fromLocal8Bit(" 编辑节点"), QString::fromLocal8Bit("请输入节点名:"),
+    QString text = QInputDialog::getText(this, TCSR(" 编辑节点"), TCSR("请输入节点名:"),
                                          QLineEdit::Normal, currentItem->text(), &isOK);
     if (isOK)
         currentItem->setText(text);
@@ -410,8 +410,8 @@ void TreeView::OnAct_delClicked()
 void TreeView::OnAct_addrootClicked()
 {
     bool isOK(false);
-    QString text = QInputDialog::getText(this, QString::fromLocal8Bit("添加跟节点"),
-                                         QString::fromLocal8Bit("请输入跟节点名:"),
+    QString text = QInputDialog::getText(this, TCSR("添加跟节点"),
+                                         TCSR("请输入跟节点名:"),
                                          QLineEdit::Normal, "root", &isOK);
     if (isOK)
     {
@@ -422,12 +422,12 @@ void TreeView::OnAct_addrootClicked()
 
 void TreeView::OnAct_xmlClicked()
 {
-    QString XMLfile = QFileDialog::getOpenFileName(this, QString::fromLocal8Bit("打开对话框"), "C:", tr("*.XML;*.JOSN"));
+    QString XMLfile = QFileDialog::getOpenFileName(this, TCSR("打开对话框"), "C:", tr("*.XML;*.JOSN"));
 }
 
 void TreeView::OnAct_xmloutClicked()
 {
-    QString XMLfile = QFileDialog::getOpenFileName(this, QString::fromLocal8Bit("保存对话框"), "C:", tr("*.XML;*.JOSN"));
+    QString XMLfile = QFileDialog::getOpenFileName(this, TCSR("保存对话框"), "C:", tr("*.XML;*.JOSN"));
 }
 
 void TreeView::printTree(void)
@@ -480,8 +480,8 @@ WndDBPage::WndDBPage(QWidget* _parent) : QWidget(_parent)
     TeatDatas.append(QStringList() << TCSR("王五") << TCSR("人妖") << "28");
     m_table->SetData(TeatDatas);
     //设置菜单方法
-    Act_add = new QAction(QString::fromLocal8Bit("n添加"), this);
-    Act_addroot = new QAction(QString::fromLocal8Bit("n添加root"), this);
+    Act_add = new QAction(TCSR("n添加"), this);
+    Act_addroot = new QAction(TCSR("n添加root"), this);
     menutb = new QMenu(this);
     menutb->addAction(Act_add);
     menuroot = new QMenu(this);
