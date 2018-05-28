@@ -83,6 +83,10 @@ void FunWINAll(CWINParam* pWIN)
     //DUI
     pWIN->ComandAdd("DuiTest01", FUNP(&DuiTest01::WINMAIN, (void*)"DUI001"));
     pWIN->ComandAdd("DuiTest02", FUNP(&DuiTest02::WINMAIN, (void*)"DUI002"));
+    pWIN->ComandAdd("DuiTest03", FUNP(&DuiTest03::WINMAIN, (void*)"DUI003"));
+    pWIN->ComandAdd("DuiTest04", FUNP(&DuiTest04::WINMAIN, (void*)"DUI004"));
+    pWIN->ComandAdd("DuiTest05", FUNP(&DuiTest05::WINMAIN, (void*)"DUI005"));
+    pWIN->ComandAdd("DuiTest06", FUNP(&DuiTest06::WINMAIN, (void*)"DUI006"));
 }
 
 

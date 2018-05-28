@@ -311,8 +311,16 @@ private:
     }
 };
 
+#define WM_ADDLISTITEM WM_USER + 50
 
-
+//线程函数中传入的结构体变量，使用线程为了使界面线程立即返回，防止卡住，你们懂得。
+struct Prama
+{
+    HWND hWnd;
+    CListUI* pList;
+    CButtonUI* pSearch;
+    CDuiString tDomain;
+};
 
 
 
