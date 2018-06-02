@@ -63,10 +63,10 @@ int BootLoad::CMDMAIN(int argc, char** argv)
     int ret(0);
     if (CMDfp != NULL)
         ret = CMDfp(argc, argv);
-    //消息循环
-    if (ret)
     {
         MSG msg;
+    //消息循环
+    if (ret)
         return MSGLOOP(msg);
     }
 }

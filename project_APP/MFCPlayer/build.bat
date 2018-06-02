@@ -2,7 +2,7 @@
 
 :build_all
 REM 调用MSVC编译器
-CALL Z:\D\Develop\Compiler\VC2013\BIN\vcvarsall.BAT
+CALL Z:\B\Develop\Compiler\VC2013\BIN\vcvarsall.BAT x64
 
 REM 当前目录生成项目
 CD %~dp0

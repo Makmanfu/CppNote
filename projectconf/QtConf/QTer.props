@@ -5,7 +5,7 @@
     <QTINLINE>$(SolutionDir)Note\3rdparty\QT4</QTINLINE>
     <QT4PATH>z:\D\Develop\QT\Qt4.8.6\4.8\msvc12</QT4PATH>
     <QT4PATH64>D:\Develop\QT\Qt4.8.6\4.8\msvc12_64</QT4PATH64>
-    <QT5PATH>z:\D\Develop\QT\Qt5.8.0\5.8\msvc12</QT5PATH>
+    <QT5PATH>z:\B\Develop\QT\Qt5.8.0\5.8\msvc12</QT5PATH>
     <QT5PATH64>D:\Develop\QT\Qt5.8.0\5.8\msvc12_64</QT5PATH64>
     <QTDIR>$(QT4PATH)</QTDIR>
     <QTDIR64>$(QT4PATH64)</QTDIR64>

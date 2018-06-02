@@ -3,6 +3,7 @@
 #include "QtConfig.h"
 
 #include "moc/moc_QPublic.cpp"
+//#include "moc/moc_wgtcommandpanel.cpp"
 
 #include "moc/qrc_PlayRes.cpp"
 #include "moc/moc_crmsystem.cpp"
