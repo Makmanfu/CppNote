@@ -2,11 +2,11 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <QTINLINE>$(SolutionDir)Note\3rdparty\QT4</QTINLINE>
-    <QT4PATH>z:\D\Develop\QT\Qt4.8.6\4.8\msvc12</QT4PATH>
-    <QT4PATH64>D:\Develop\QT\Qt4.8.6\4.8\msvc12_64</QT4PATH64>
-    <QT5PATH>z:\B\Develop\QT\Qt5.8.0\5.8\msvc12</QT5PATH>
-    <QT5PATH64>D:\Develop\QT\Qt5.8.0\5.8\msvc12_64</QT5PATH64>
+    <WORKDIR>D:\Develop</WORKDIR>
+    <QT4PATH>$(WORKDIR)\QT\Qt4.8.6\4.8\msvc12</QT4PATH>
+    <QT4PATH64>$(WORKDIR)\QT\Qt4.8.6\4.8\msvc12_64</QT4PATH64>
+    <QT5PATH>$(WORKDIR)\QT\Qt5.8.0\5.8\msvc12</QT5PATH>
+    <QT5PATH64>$(WORKDIR)\QT\Qt5.8.0\5.8\msvc12_64</QT5PATH64>
     <QTDIR>$(QT4PATH)</QTDIR>
     <QTDIR64>$(QT4PATH64)</QTDIR64>
   </PropertyGroup>
@@ -33,8 +33,9 @@ rem if exist $(QTDIR)\\bin\\uic.exe (for /f "tokens=1,2 delims=" %%i in ('dir /b
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <BuildMacro Include="QTINLINE">
-      <Value>$(QTINLINE)</Value>
+    <BuildMacro Include="WORKDIR">
+      <Value>$(WORKDIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
     </BuildMacro>
     <BuildMacro Include="QT4PATH">
       <Value>$(QT4PATH)</Value>
