@@ -1,8 +1,8 @@
-## CppNote(C++笔记库)
+## CppNote
 
-### C++四大模块
+### C++整理模块
 ![Image text](Note/DOC/img/1.png)
-### 详细图(初版总结)
+### 详细图(归类总结)
 ![Image text](Note/DOC/img/2.png)
 
 
