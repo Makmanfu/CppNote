@@ -12,7 +12,6 @@
 
 
 
-
 LPCTSTR DuiTest01::GetWindowClassName() const
 {
     return _T("DuiMainFrame");

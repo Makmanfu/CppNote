@@ -57,18 +57,6 @@ bool CenterWindowDesk(HWND hwndWindow)
 XqWindowDlg* XqWindowDlg::pDlg = NULL;
 int XqWindowDlg::ResDlgID = 0;
 
-int XqWindowDlg::WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
-{
-#ifndef IDD_DLLDLG
-#define IDD_DLLDLG 99999
-#endif
-    //模态窗口 消息回调DialogBoxParam
-    XqWindowDlg MsgDlg(IDD_DLLDLG);
-    //DialogBoxParamA(hInstance, MAKEINTRESOURCEA(IDD_DLLDLG), NULL, (DLGPROC)Main_Proc, (LPARAM)&MsgDlg);
-    DialogBoxA(hInstance, MAKEINTRESOURCEA(XqWindowDlg::ResDlgID), NULL, XqWindowDlg::Main_Proc);
-    return 0;
-};
-
 INT_PTR CALLBACK XqWindowDlg::Main_Proc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     //XqWindowDlg* pDlg = static_cast<XqWindowDlg*>((void*)(lParam));
@@ -286,15 +274,6 @@ LRESULT XqWindowDlg::ListViewAndProc(HWND hWnd, UINT message, WPARAM wParam, HIN
 }
 
 
-
-
-int XqWindow::WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
-{
-    XqWindow WND;
-    WND.InitData(hInstance);
-    WND.Create();
-    return WND.ShowDLG();
-};
 
 XqWindow::XqWindow(void) : hWnd(NULL)
 , hInst(NULL)

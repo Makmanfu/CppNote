@@ -18,8 +18,17 @@ SQC_API bool CenterWindowDesk(HWND hwndWindow);
 class SQCPP_API XqWindowDlg
 {
 public:
-    //测试 主程序入口
-    static int WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow);
+    //测试演示 主程序入口
+    static int WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
+    {
+#ifndef IDD_DLLDLG
+#define IDD_DLLDLG 99999
+#endif
+        XqWindowDlg MsgDlg(IDD_DLLDLG);     //模态窗口 消息回调DialogBoxParam
+        //DialogBoxParamA(hInstance, MAKEINTRESOURCEA(IDD_DLLDLG), NULL, (DLGPROC)Main_Proc, (LPARAM)&MsgDlg);
+        DialogBoxA(hInstance, MAKEINTRESOURCEA(XqWindowDlg::ResDlgID), NULL, XqWindowDlg::Main_Proc);
+        return 0;
+    };
 public:
     static XqWindowDlg* pDlg;           //窗口对象指针
     static int ResDlgID;                //资源ID
@@ -66,7 +75,14 @@ private:
 class SQCPP_API XqWindow
 {
 public:
-    static int WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow);
+    //测试演示 主程序入口
+    static int WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
+    {
+        XqWindow WND;
+        WND.InitData(hInstance);
+        WND.Create();
+        return WND.ShowDLG();
+    };
 public:
     XqWindow(void);
     virtual ~XqWindow(void);
@@ -99,7 +115,7 @@ private:
 class SQCPP_API XqWindowEx: public XqWindow
 {
 public:
-    //测试 主程序入口
+    //测试演示 主程序入口
     static int WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
     {
         XqWindowEx WND(hInstance);

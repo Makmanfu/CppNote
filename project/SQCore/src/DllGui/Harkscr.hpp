@@ -49,11 +49,7 @@ private:
     int iFontWidth, iFontHeight, iColumnCount;  //字体的宽度 高度, 列数
     CharColumn* ccChain;
 public:
-    WinHarkscr(HINSTANCE hInst) : XqWindowEx(hInst)
-        , iFontWidth(10 + 5)
-        , iFontHeight(15 + 5)
-        , iColumnCount(0)
-    {};
+    WinHarkscr(HINSTANCE hInst) : XqWindowEx(hInst), iFontWidth(10 + 5), iFontHeight(15 + 5), iColumnCount(0){};
     ~WinHarkscr() {};
 public:
     virtual void WMCREATE(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -159,8 +155,7 @@ public:
 private:
     //随机字符产生函数
     TCHAR randomChar(void)
-    {
-        //33到126之间
+    {   //33到126之间
         return (TCHAR)(rand() % (126 - 33) + 33);
     };
     //初始化
