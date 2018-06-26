@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.7)
 project(CMakeMFC)
 
 # 设置生成路径
-SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/cbin)
 # 设置编译器选项 不显示所有警告
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")
 # 定义头文件的路径变量
