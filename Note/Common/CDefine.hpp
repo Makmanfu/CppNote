@@ -19,7 +19,7 @@
 #define DLL_API CPP_API
 #endif
 
-//平台运行模式(默认命令行,GUIRUN 图形化,HIDECMDRUN 隐藏界面)--------------
+//平台运行模式(默认命令行,GUIRUNC 图形化,HIDECMDRUN 隐藏界面)--------------
 #ifdef CONSOLE                          //命令行
 #pragma comment (linker, "/subsystem:console")
 #endif
@@ -34,7 +34,7 @@
 #endif
 //全都不定义会报错
 #if !defined(GUIRUNC) && !defined(NATIVEC) && !defined(CONSOLE) && !defined(HIDECMD)
-#pragma message("error:没有定义入口选项[GUIRUN/NATIVEC/CONSOLE/HIDECMD]编个飞机啊？")
+#pragma message("error:没有定义入口选项[GUIRUNC/NATIVEC/CONSOLE/HIDECMD]编个飞机啊？")
 #endif
 
 //输出lib的自动处理-------------------------------------------------------

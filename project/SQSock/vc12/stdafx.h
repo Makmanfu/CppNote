@@ -2,7 +2,7 @@
 #ifndef STDAFX_H
 #define STDAFX_H
 //编译开关----------------------------------------------------------------
-#define GUIRUN                                  //界面开关宏
+#define GUIRUNC                                         //入口选项 GUIRUNC/NATIVEC/CONSOLE/HIDECMD
 
 //包含文件----------------------------------------------------------------
 #include "targetver.h"
