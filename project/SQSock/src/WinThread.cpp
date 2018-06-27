@@ -3,15 +3,6 @@
 #include "WinThread.h"
 #include <assert.h>
 
-void ThreadProcTmp(FunThreadProc NewFun)
-{
-    //全局变量:线程句柄和线程返回ID供下面StartThreadPro使用
-    HANDLE StartThreadHandle;
-    DWORD StartThreadID;
-    //这里使用函数指针NewFun
-    StartThreadHandle = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)NewFun, NULL, 0, &StartThreadID);
-    CloseHandle(StartThreadHandle); //上面线程完成后自动释放线程
-}
 
 namespace ThreadWork
 {

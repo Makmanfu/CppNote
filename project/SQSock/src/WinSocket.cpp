@@ -105,8 +105,8 @@ void TCPSocket::end(void)
     {
         TerminateThread(m_hRecv, 0);
         closesocket(m_socket);
-        //CloseHandle(m_hRecv);
-        //m_hRecv = NULL;
+        CloseHandle(m_hRecv);
+        m_hRecv = NULL;
     }
     m_bIsRun = false;
     printf("关闭接受线程!\n");

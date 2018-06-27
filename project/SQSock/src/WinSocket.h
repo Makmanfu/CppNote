@@ -1,6 +1,6 @@
 //*************************************************************************
 //
-//                  WinSocket
+//                  WinSocket 学习
 //
 //
 //
@@ -9,7 +9,7 @@
 #ifndef WINSOCKET_H
 #define WINSOCKET_H
 
-//简单TCP服务器
+//简单TCP服务器例子
 class TCPSocket
 {
 public:
@@ -19,7 +19,7 @@ public:
     {
         TCPSocket sock(TSERVER);
         sock.start();
-        Sleep(100000);
+        Sleep(10000);
         sock.end();
         return 0;
     };
@@ -27,7 +27,7 @@ public:
     {
         TCPSocket sock(TCLIENT);
         sock.start();
-        Sleep(100000);
+        Sleep(10000);
         sock.end();
         return 0;
     };

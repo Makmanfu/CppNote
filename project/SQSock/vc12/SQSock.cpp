@@ -8,6 +8,7 @@
 #include "WinSocket.h"
 #include "ThreadConcurrency.h"              //C11例子
 #include "MyThread.h"                       //个人总结
+#include "WinThread.h"                      //线程学习
 //win32
 #include "WinSockDlg.h"                     //框架界面
 #include "ThreadCookbook.h"                 //Cookbook例子
@@ -19,7 +20,15 @@ int main(int argc, char** argv)
     CMDProc fp = NULL, CmdMain = NULL, DefaultFun = &TCPSocket::TCPServer;
     CCMDParam cmds(argv[0]);               //程序名传入
     cmds.DefaultFunAdd(DefaultFun);
-    //基本例子
+    //基本线程学习
+    cmds.ComandAdd("GlobalThread", &GlobalThread::main);        //无参数基本全局线程
+
+
+
+
+
+
+    //网络原生通信基本例子
     cmds.ComandAdd("TCPServer", &SocketNative::TCPServer);
     cmds.ComandAdd("TCPClient", &SocketNative::TCPClient);
     cmds.ComandAdd("UDPServer", &SocketNative::UDPServer);
@@ -58,11 +67,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine
     cmds.DefaultFunAdd(&WinSockDlg::WINMAIN);
     cmds.ComandAdd("WinSockDlg", &WinSockDlg::WINMAIN);
     cmds.ComandAdd("WSockFileDlg", &WSockFileDlg::WINMAIN);
-
-
-
-
-
 
     //下面都是测试
     cmds.ComandAdd("IPCDemo", &IPCDemo::IPCGui::WINMAIN);

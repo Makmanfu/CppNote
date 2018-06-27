@@ -150,7 +150,7 @@ public:
     {
         MSG msg;
         HACCEL hAccelTable = NULL;
-        printf("message loop!\n");
+        printf("Message loop!\n");
         while (GetMessage(&msg, NULL, 0, 0))
         {
             if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))

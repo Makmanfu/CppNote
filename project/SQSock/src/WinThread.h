@@ -18,11 +18,6 @@
 #include <thread>
 using namespace std;
 
-//定义函数指针
-typedef void(*FunThreadProc)(void);
-
-//启动线程 [不管理 运行完后自动释放(无参数)]
-__declspec(dllexport) void ThreadProcTmp(FunThreadProc NewFun);
 
 //临界区锁[只能在线程里 是很高效率的锁]
 struct DLL_API CThreadLock
@@ -72,6 +67,45 @@ struct DLL_API CProcessLock
 private:
     HANDLE hMutex;
 };
+
+//无参数全局线程(无法管理不推荐用)
+struct DLL_API GlobalThread
+{
+    //定义函数指针
+    typedef void(*FunProc)(void);
+    //启动线程 [不管理 运行完后自动释放(无参数)]
+    GlobalThread(FunProc NewFun)
+    {
+        //全局变量:线程句柄和线程返回ID供下面StartThreadPro使用
+        static HANDLE StartThreadHandle;
+        static DWORD StartThreadID;
+        //这里使用函数指针NewFun
+        StartThreadHandle = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)NewFun, NULL, 0, &StartThreadID);
+        //上面线程完成后自动释放线程
+        CloseHandle(StartThreadHandle);
+    };
+    
+    //注意是static函数例子
+    static void WINAPI ThreadLoop(void)
+    {
+        for (int i = 1; i <= 20; ++i)
+        {
+            printf("GlobalThread::FunProc %d.\n",i);
+            Sleep(800);
+        }
+    };
+    static int main(int argc, char** argv)
+    {
+        //注意用GlobalThread::FunProc转换
+        GlobalThread(GlobalThread::FunProc(&ThreadLoop));
+        printf("线程启动后无法管理直到自动完成结束！\n");
+        return 0;
+    };
+};
+
+
+
+
 
 //原子锁
 

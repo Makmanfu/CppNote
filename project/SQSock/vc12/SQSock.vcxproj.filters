@@ -82,9 +82,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="targetver.h">
-      <Filter>start</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>start</Filter>
     </ClInclude>
@@ -214,7 +211,7 @@
     <ClInclude Include="..\src\HPSocket\UdpServer.h">
       <Filter>src\HPSock\UDP</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\GLGPU\src\WinGUI.h">
+    <ClInclude Include="..\src\WinGUI.h">
       <Filter>src\Dlg</Filter>
     </ClInclude>
   </ItemGroup>
@@ -309,7 +306,7 @@
     <ClCompile Include="..\src\HPSocket\UdpServer.cpp">
       <Filter>src\HPSock\UDP</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\GLGPU\src\WinGUI.cpp">
+    <ClCompile Include="..\src\WinGUI.cpp">
       <Filter>src\Dlg</Filter>
     </ClCompile>
   </ItemGroup>

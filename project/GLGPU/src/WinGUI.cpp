@@ -57,18 +57,6 @@ bool CenterWindowDesk(HWND hwndWindow)
 XqWindowDlg* XqWindowDlg::pDlg = NULL;
 int XqWindowDlg::ResDlgID = 0;
 
-int XqWindowDlg::WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
-{
-#ifndef IDD_DLLDLG
-#define IDD_DLLDLG 99999
-#endif
-    //模态窗口 消息回调DialogBoxParam
-    XqWindowDlg MsgDlg(IDD_DLLDLG);
-    //DialogBoxParamA(hInstance, MAKEINTRESOURCEA(IDD_DLLDLG), NULL, (DLGPROC)Main_Proc, (LPARAM)&MsgDlg);
-    DialogBoxA(hInstance, MAKEINTRESOURCEA(XqWindowDlg::ResDlgID), NULL, XqWindowDlg::Main_Proc);
-    return 0;
-};
-
 INT_PTR CALLBACK XqWindowDlg::Main_Proc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     //XqWindowDlg* pDlg = static_cast<XqWindowDlg*>((void*)(lParam));
@@ -287,15 +275,6 @@ LRESULT XqWindowDlg::ListViewAndProc(HWND hWnd, UINT message, WPARAM wParam, HIN
 
 
 
-
-int XqWindow::WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
-{
-    XqWindow WND;
-    WND.InitData(hInstance);
-    WND.Create();
-    return WND.ShowDLG();
-};
-
 XqWindow::XqWindow(void) : hWnd(NULL)
 , hInst(NULL)
 {
@@ -338,8 +317,8 @@ bool XqWindow::Create(wchar_t* szTitleName, int w, int h, WNDPROC lWndProc)
     wchar_t szClassName[255];       //主窗口类名
     wchar_t szTitle[255];           //标题栏文本
     //注册窗口类
-    WNDCLASSEX wcex;
-    wcex.cbSize = sizeof(WNDCLASSEX);
+    WNDCLASSEXW wcex;
+    wcex.cbSize = sizeof(WNDCLASSEXW);
     wcex.style = CS_HREDRAW | CS_VREDRAW;
     if (lWndProc != NULL)
         wcex.lpfnWndProc = (WNDPROC)lWndProc;
@@ -348,31 +327,31 @@ bool XqWindow::Create(wchar_t* szTitleName, int w, int h, WNDPROC lWndProc)
     wcex.cbClsExtra = 0;
     wcex.cbWndExtra = 0;
     wcex.hInstance = this->hInst;
-    wcex.hIcon = ::LoadIcon(wcex.hInstance, MAKEINTRESOURCE(MAINICON));
+    wcex.hIcon = ::LoadIconW(wcex.hInstance, MAKEINTRESOURCEW(MAINICON));
     wcex.hCursor = ::LoadCursor(NULL, IDC_ARROW);
     wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
     wcex.lpszMenuName = NULL;           //菜单
     wcex.lpszClassName = szClassName;
-    wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(MAINICON));
+    wcex.hIconSm = LoadIconW(wcex.hInstance, MAKEINTRESOURCEW(MAINICON));
     //注册窗口
-    if (0 == ::RegisterClassEx(&wcex)) 
+    if (0 == ::RegisterClassExW(&wcex)) 
         return 1;
     // 创建窗口
     if (this->hWnd == NULL)
     {
-        ::wsprintf(szTitle, L"_XqWindow");
+        ::wsprintfW(szTitle, L"_XqWindow");
         RECT rectDesk;
         ::GetWindowRect(::GetDesktopWindow(), &rectDesk);
         int nX = ((rectDesk.right - rectDesk.left) - w) / 2;
         int nY = ((rectDesk.bottom - rectDesk.top) - h) / 2;
-        this->hWnd = ::CreateWindow(szClassName, wcscmp(szTitleName, L"WINGUI") ? szTitleName : szTitle,
+        this->hWnd = ::CreateWindowW(szClassName, wcscmp(szTitleName, L"WINGUI") ? szTitleName : szTitle,
             WS_OVERLAPPEDWINDOW /*| WS_EX_TOOLWINDOW*/, nX, nY, w, h, NULL, NULL, this->hInst, (LPVOID)this);
         if (this->hWnd == NULL)
         {
             this->hWnd = NULL;
             wchar_t msg[100];
-            ::wsprintf(msg, L"CreateWindow()失败:%ld", ::GetLastError());
-            ::MessageBox(NULL, msg, L"错误", MB_OK);
+            ::wsprintfW(msg, L"CreateWindow()失败:%ld", ::GetLastError());
+            ::MessageBoxW(NULL, msg, L"错误", MB_OK);
             return 1;
         }
     }
@@ -522,7 +501,7 @@ bool XqWindowEx::Create(wchar_t* szTitleName, int w, int h)
     wchar_t szClassName[255];       //主窗口类名
     wchar_t szTitle[255];           //标题栏文本
     void* _vPtr = *((void**)this);
-    ::wsprintf(szClassName, L"%p", _vPtr);
+    ::wsprintfW(szClassName, L"%p", _vPtr);
     std::vector<void*>::iterator it;
     // 判断对象的类是否注册过
     for (it = registeredClassArray.begin(); it != registeredClassArray.end(); it++)
@@ -533,39 +512,39 @@ bool XqWindowEx::Create(wchar_t* szTitleName, int w, int h)
     if (it == registeredClassArray.end())       // 如果没注册过，则进行注册
     {
         //注册窗口类
-        WNDCLASSEX wcex;
-        wcex.cbSize = sizeof(WNDCLASSEX);
+        WNDCLASSEXW wcex;
+        wcex.cbSize = sizeof(WNDCLASSEXW);
         wcex.style = CS_HREDRAW | CS_VREDRAW;
         wcex.lpfnWndProc = XqWindowEx::WndProc;
         wcex.cbClsExtra = 0;
         wcex.cbWndExtra = 0;
         wcex.hInstance = this->GethInst();
-        wcex.hIcon = ::LoadIcon(wcex.hInstance, MAKEINTRESOURCE(MAINICON));
-        wcex.hCursor = ::LoadCursor(NULL, IDC_ARROW);
+        wcex.hIcon = ::LoadIconW(wcex.hInstance, MAKEINTRESOURCEW(MAINICON));
+        wcex.hCursor = ::LoadCursorW(NULL, MAKEINTRESOURCEW(IDC_ARROW));
         wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
         wcex.lpszMenuName = NULL;           //菜单
         wcex.lpszClassName = szClassName;
-        wcex.hIconSm = LoadIconA(wcex.hInstance, MAKEINTRESOURCEA(MAINICON));
+        wcex.hIconSm = LoadIconW(wcex.hInstance, MAKEINTRESOURCEW(MAINICON));
         //注册窗口
-        if (0 != ::RegisterClassEx(&wcex))     // 把注册成功的类加入链表
+        if (0 != ::RegisterClassExW(&wcex))     // 把注册成功的类加入链表
             registeredClassArray.push_back(_vPtr);
     }
     // 创建窗口
     if (this->GetHandle() == NULL)
     {
-        ::wsprintf(szTitle, L"窗口类名(C++类虚表指针)：%p", _vPtr);
+        ::wsprintfW(szTitle, L"窗口类名(C++类虚表指针)：%p", _vPtr);
         RECT rectDesk;
         ::GetWindowRect(::GetDesktopWindow(), &rectDesk);
         int nX = ((rectDesk.right - rectDesk.left) - w) / 2;
         int nY = ((rectDesk.bottom - rectDesk.top) - h) / 2;
-        this->SetHandle(::CreateWindow(szClassName, wcscmp(szTitleName, L"WINGUI") ? szTitleName : szTitle,
+        this->SetHandle(::CreateWindowW(szClassName, wcscmp(szTitleName, L"WINGUI") ? szTitleName : szTitle,
                                     WS_OVERLAPPEDWINDOW /*| WS_EX_TOOLWINDOW*/, nX, nY, w, h, NULL, NULL, this->GethInst(), (LPVOID)this));
         if (this->GetHandle() == NULL)
         {
             this->SetHandle(NULL);
             wchar_t msg[100];
-            ::wsprintf(msg, L"CreateWindow()失败:%ld", ::GetLastError());
-            ::MessageBox(NULL, msg, L"错误", MB_OK);
+            ::wsprintfW(msg, L"CreateWindow()失败:%ld", ::GetLastError());
+            ::MessageBoxW(NULL, msg, L"错误", MB_OK);
             return false;
         }
     }
@@ -577,44 +556,44 @@ bool XqWindowEx::CreateEX(wchar_t* szTitleName /*= L"WINGUI"*/, int w /*= 600*/,
     if (this->GethInst() == NULL)
         return 1;
     wchar_t szClassName[255];       //主窗口类名
-    ::wsprintf(szClassName, L"WINGUI");
+    ::wsprintfW(szClassName, L"WINGUI");
     //注册窗口类
-    WNDCLASSEX wcex;
-    wcex.cbSize = sizeof(WNDCLASSEX);
+    WNDCLASSEXW wcex;
+    wcex.cbSize = sizeof(WNDCLASSEXW);
     wcex.style = CS_HREDRAW | CS_VREDRAW;
     wcex.lpfnWndProc = XqWindowEx::WndProc;
     wcex.cbClsExtra = 0;
     wcex.cbWndExtra = 0;
     wcex.hInstance = this->GethInst();
-    wcex.hIcon = ::LoadIcon(wcex.hInstance, MAKEINTRESOURCE(MAINICON));
-    wcex.hCursor = ::LoadCursor(NULL, IDC_ARROW);
+    wcex.hIcon = ::LoadIconW(wcex.hInstance, MAKEINTRESOURCEW(MAINICON));
+    wcex.hCursor = ::LoadCursorW(NULL, MAKEINTRESOURCEW(IDC_ARROW));
     wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
     wcex.lpszMenuName = NULL;           //菜单
     wcex.lpszClassName = szClassName;
-    wcex.hIconSm = LoadIconA(wcex.hInstance, MAKEINTRESOURCEA(MAINICON));
+    wcex.hIconSm = LoadIconW(wcex.hInstance, MAKEINTRESOURCEW(MAINICON));
     //注册窗口
-    if (0 == ::RegisterClassEx(&wcex))     // 把注册成功的类加入链表
+    if (0 == ::RegisterClassExW(&wcex))     // 把注册成功的类加入链表
     {
-        ::MessageBox(NULL, L"注册窗口错误", L"错误", MB_OK);
+        ::MessageBoxW(NULL, L"注册窗口错误", L"错误", MB_OK);
         return 1;
     }
     // 创建窗口
     if (this->GetHandle() == NULL)
     {
         wchar_t szTitle[255];           //标题栏文本
-        ::wsprintf(szTitle, L"XqWindow");
+        ::wsprintfW(szTitle, L"XqWindow");
         RECT rectDesk;
         ::GetWindowRect(::GetDesktopWindow(), &rectDesk);
         int nX = ((rectDesk.right - rectDesk.left) - w) / 2;
         int nY = ((rectDesk.bottom - rectDesk.top) - h) / 2;
-        this->SetHandle(::CreateWindow(szClassName, wcscmp(szTitleName, L"WINGUI") ? szTitleName : szTitle,
+        this->SetHandle(::CreateWindowW(szClassName, wcscmp(szTitleName, L"WINGUI") ? szTitleName : szTitle,
                                     WS_OVERLAPPEDWINDOW /*| WS_EX_TOOLWINDOW*/, nX, nY, w, h, NULL, NULL, this->GethInst(), (LPVOID)this));
         if (this->GetHandle() == NULL)
         {
             this->SetHandle(NULL);
             wchar_t msg[100];
-            ::wsprintf(msg, L"CreateWindow()失败:%ld", ::GetLastError());
-            ::MessageBox(NULL, msg, L"错误", MB_OK);
+            ::wsprintfW(msg, L"CreateWindow()失败:%ld", ::GetLastError());
+            ::MessageBoxW(NULL, msg, L"错误", MB_OK);
             return 1;
         }
     }

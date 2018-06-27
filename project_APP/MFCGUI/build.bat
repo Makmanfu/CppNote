@@ -1,6 +1,6 @@
 @echo off
 REM 设置编译器路径(B:\Develop\Compiler  %~dp0..\.. )
-SET COMPILERDIR=%~dp0..\..
+SET COMPILERDIR=B:\Develop\Compiler
 REM 设置生成程序
 SET EXENAME=TestMFC.exe
 REM 设置生成平台

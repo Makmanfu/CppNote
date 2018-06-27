@@ -232,7 +232,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -252,7 +252,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -272,7 +272,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -290,7 +290,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -306,7 +306,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -322,7 +322,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -340,7 +340,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -364,7 +364,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -388,7 +388,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -410,7 +410,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -430,7 +430,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -450,7 +450,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;$(SolutionDir)project\GLGPU\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -463,7 +463,6 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\GLGPU\src\WinGUI.h" />
     <ClInclude Include="..\res\resource.h" />
     <ClInclude Include="..\src\ComDataPool.h" />
     <ClInclude Include="..\src\ComDebug.h" />
@@ -502,15 +501,14 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
     <ClInclude Include="..\src\Rs232.h" />
     <ClInclude Include="..\src\ThreadPool.h" />
     <ClInclude Include="..\src\coondef.h" />
+    <ClInclude Include="..\src\WinGUI.h" />
     <ClInclude Include="..\src\WinSockDlg.h" />
     <ClInclude Include="..\src\WinSocket.h" />
     <ClInclude Include="..\src\WinThread.h" />
     <ClInclude Include="..\src\WSockFileDlg.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\GLGPU\src\WinGUI.cpp" />
     <ClCompile Include="..\src\ComDataPool.cpp" />
     <ClCompile Include="..\src\ComDebug.cpp" />
     <ClCompile Include="..\src\ComList.cpp" />
@@ -535,6 +533,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
     <ClCompile Include="..\src\ThreadCookbook.cpp" />
     <ClCompile Include="..\src\Rs232.cpp" />
     <ClCompile Include="..\src\ThreadPool.cpp" />
+    <ClCompile Include="..\src\WinGUI.cpp" />
     <ClCompile Include="..\src\WinSockDlg.cpp" />
     <ClCompile Include="..\src\WinSocket.cpp" />
     <ClCompile Include="..\src\WinThread.cpp" />
