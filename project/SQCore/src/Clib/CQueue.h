@@ -16,6 +16,7 @@ typedef struct _QUEUE
     int size;
 } Queue;
 
+
 //隊列的學習
 class SQCPP_API CQueue
 {
@@ -25,7 +26,9 @@ public:
     CQueue();
     ~CQueue();
 public:
-
+    typedef void (*VISIT)(Item);
+    Queue* pQueueDemo;                      //測試指針用
+    static void Queueprint(Item L);
 public:
     //构造一个空队列
     Queue* QueueInit(void);
@@ -49,7 +52,7 @@ public:
     void QueueDestroy(Queue* pqueue);
 public:
     //遍历队列并对各数据项调用visit函数
-    void QueueTraverse(Queue* pqueue, void(*visit)(Item));
+    void QueueTraverse(Queue* pqueue, VISIT VFUN);
 };
 
 

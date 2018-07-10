@@ -9,29 +9,31 @@
 
 int CQueue::main(int argc, char** argv)
 {
-    //printf("---------------栈测试----------------\n");
-    //Queue* pq = InitQueue();
-    //int i, item;
-    //printf("0-9依次入队并输出如下：\n");
-    //for (i = 0; i < 10; i++)
-    //{
-    //    EnQueue(pq, i);
-    //    GetRear(pq, &item);
-    //    printf("%d ", item);
-    //}
-    //printf("\n从队头到队尾遍历并对每个元素执行print函数：\n");
-    //QueueTraverse(pq, Queueprint);
-    //printf("队列中元素依次出队列并输出如下：\n");
-    //for (i = 0; i < 10; i++)
-    //{
-    //    DeQueue(pq, &item);
-    //    printf("%d ", item);
-    //}
-    //ClearQueue(pq);
-    //if (QueueIsEmpty(pq))
-    //    printf("\n将队列置空成功\n");
-    //DestroyQueue(pq);
-    //printf("队列已被销毁\n");
+    printf("---------------队列测试----------------\n");
+    CQueue qu;
+    qu.pQueueDemo = qu.QueueInit();
+    int i, item;
+    printf("0-9依次入队并输出如下：\n");
+    for (i = 0; i < 10; i++)
+    {
+        qu.EnQueue(qu.pQueueDemo, i);
+        qu.GetRear(qu.pQueueDemo, &item);
+        printf("%d ", item);
+    }
+    printf("\n从队头到队尾遍历并对每个元素执行print函数：\n");
+    qu.QueueTraverse(qu.pQueueDemo, Queueprint);
+    printf("\n");
+    printf("队列中元素依次出队列并输出如下：\n");
+    for (i = 0; i < 10; i++)
+    {
+        qu.DeQueue(qu.pQueueDemo, &item);
+        printf("%d ", item);
+    }
+    qu.QueueClear(qu.pQueueDemo);
+    if (qu.QueueIsEmpty(qu.pQueueDemo))
+        printf("\n将队列置空成功\n");
+    qu.QueueDestroy(qu.pQueueDemo);
+    printf("队列已被销毁\n");
     return 1;
 }
 
@@ -41,6 +43,11 @@ CQueue::CQueue()
 
 CQueue::~CQueue()
 {
+}
+
+void CQueue::Queueprint(Item L)
+{
+    printf("%d ", L);
 }
 
 Queue* CQueue::QueueInit(void)
@@ -149,13 +156,13 @@ void CQueue::QueueDestroy(Queue* pqueue)
     free(pqueue);
 }
 
-void CQueue::QueueTraverse(Queue* pqueue, void(*visit)(Item))
+void CQueue::QueueTraverse(Queue* pqueue, VISIT VFUN)
 {
     ListNode* pnode = pqueue->front;
     int i = pqueue->size;
     while (i--)
     {
-        visit(pnode->data);
+        VFUN(pnode->data);
         pnode = pnode->next;
     }
 }

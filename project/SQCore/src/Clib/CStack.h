@@ -24,7 +24,9 @@ public:
     CStack();
     ~CStack();
 public:
-
+    typedef void(*VISIT)(Item);
+    Stack* pStackDemo;                      //測試指針用
+    static void Stackprint(Item L);
 public:
     //构造一个空栈
     Stack* StackInit(void);
@@ -44,7 +46,7 @@ public:
     void StackDestroy(Stack* ps);
 public:
     //遍历栈并访问visit函数
-    void StackTraverse(Stack* ps, void(*visit)(Item));
+    void StackTraverse(Stack* ps, VISIT VFUN);
 };
 
 

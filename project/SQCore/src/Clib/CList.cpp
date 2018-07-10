@@ -82,14 +82,14 @@ ListNode* CList::ListMakeHead(int key)
     return L;
 }
 
-int CList::ListIsEmpty(ListNode* L)
+bool CList::ListIsEmpty(ListNode* L)
 {
-    return L == NULL ? 1 : 0;
+    return bool(L == NULL);
 }
 
-int CList::ListIsEnd(ListNode* L)
+bool CList::ListIsEnd(ListNode* L)
 {
-    return L->next == NULL ? 1 : 0;
+    return bool(L->next == NULL);
 }
 
 void CList::ListBeginInsertHead(ListNode* L, int key)

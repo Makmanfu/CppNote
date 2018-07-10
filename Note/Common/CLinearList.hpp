@@ -1,17 +1,19 @@
 //*********************************************************************
 //
 //          线性表的模板实现[包括链表,队列,栈]
+//          二叉树 
 //                                          @2017-07-05阿甘整理
 //*********************************************************************
 #ifndef CLINEARLIST_HPP
 #define CLINEARLIST_HPP
 
+//线性表的节点定义
 template <class T>
 class CNode
 {
 private:
-    T* tElement;
-    CNode* next;
+    T* tElement;                        //存内容
+    CNode* next;                        //存指向下一个的指针
 public:
     CNode(T* tElement) : tElement(tElement), next(0) { };
     T* Element() const
@@ -225,6 +227,290 @@ public:
     };
     CList<T>::Count;
 };
+
+//树的节点定义
+template<class T>
+struct BiTNode
+{
+    T tElement;
+    BiTNode<T> *lchild, *rchild;
+    //默认构造
+    BiTNode() :tElement(0), lchild(NULL), rchild(NULL){};
+    //用值初始化构造
+    BiTNode(T x,BiTNode<T>* pl, BiTNode<T>* pr)
+    {
+        tElement = x;
+        lchild = pl;
+        rchild = pr;
+    };
+};
+
+//二叉树的实现[以下cout为记录顺序]
+template<class T>
+class CBiTree
+{
+private:
+    BiTNode<T> *m_root;                   //根节点
+    //二叉树的创建
+    BiTNode<T> *CreateBiTree(T x[], int &n)
+    {
+        T ch = x[n];
+        n++;
+        if (ch == '#')
+        {
+            return NULL;
+        }
+        else
+        {
+            BiTNode<T> *Node = new BiTNode<T>;
+            Node->tElement = ch;
+            Node->lchild = createBiTree(x, n);
+            Node->rchild = createBiTree(x, n);
+            return Node;
+        }
+    };
+    //二叉树的删除
+    void DestroyAllNode(BiTNode<T>* root)
+    {
+        if (root != NULL)
+        {
+            DestroyAllNode(root->lchild);
+            DestroyAllNode(root->rchild);
+            delete root;
+            root = NULL;
+        }
+    };
+public:
+    BiTree()
+    {
+        T ch[100];
+        cin.getline(ch, 100);
+        int num = 0;
+        m_root = CreateBiTree(ch, num);
+    };
+    ~BiTree()
+    {
+        DestroyAllNode(m_root);
+    };
+    //深度
+    int GetDepth(BiTNode<T>* pRoot)
+    {
+        if (pRoot)
+        {
+            int depthLeft = GetDepth(pRoot->lChild);
+            int depthRight = GetDepth(pRoot->rChild);
+            return depthLeft > depthRight ? (depthLeft + 1) : (depthRight + 1);
+        }
+        return 0;
+    };
+    //节点个数
+    int GetNodeNum(BiTNode<T>* pRoot)
+    {
+        int num = 0;
+        if (pRoot)
+        {
+            num += 1;
+            num += GetNodeNum(pRoot->lChild);
+            num += GetNodeNum(pRoot->rChild);
+        }
+        return num;
+    };
+    //叶子节点个数
+    int GetLeafNodeNum(BiTNode<T>* pRoot)
+    {
+        int num = 0;
+        if (pRoot)
+        {
+            if (pRoot->lChild == NULL && pRoot->rChild == NULL)
+                num += 1;
+            else
+            {
+                num += GetLeafNodeNum(pRoot->lChild);
+                num += GetLeafNodeNum(pRoot->rChild);
+            }
+        }
+        return num;
+    };
+    //是不是平衡二叉树
+    bool IsAVL(BiTNode<T>* pRoot, int* pHeight = NULL)
+    {
+        if (pRoot)
+        {
+            int heightLeft = 0;
+            bool resultLeft = IsAVL(pRoot->lChild, &heightLeft);
+            int heightRight = 0;
+            bool resultRight = IsAVL(pRoot->rChild, &heightRight);
+            if (resultLeft && resultRight && abs(heightLeft - heightRight) <= 1)
+            {
+                if (pHeight)
+                    *pHeight = max(heightLeft, heightRight) + 1;
+                return true;
+            }
+            else
+            {
+                if (pHeight)
+                    *pHeight = max(heightLeft, heightRight) + 1;
+                return false;
+            }
+        }
+        else
+        {
+            if (pHeight)
+                *pHeight = 0;
+            return true;
+        }
+    };
+    //前序遍历[brec递归]
+    void PreOrder(BiTNode<T>* pRoot, bool brec = false)
+    {
+        if (pRoot != NULL)
+        {
+            if (brec)
+            {
+                cout << pRoot->tElement << " ";
+                PreOrderTraverse(pRoot->lchild);
+                PreOrderTraverse(pRoot->rchild);
+            }
+            else {
+                BiTNode<T>* p = pRoot;
+                stack<BiTNode<T>*> s;
+                while (NULL != p || !s.empty())
+                {
+                    while (NULL != p)
+                    {
+                        cout << p->tElement << " ";
+                        s.push(p);
+                        p = p->lchild;
+                    }
+                    if (!s.empty())
+                    {
+                        p = s.top();
+                        s.pop();
+                        p = p->rchild;
+                    }
+                }
+            }
+        }
+    };
+    //递归中序遍历
+    void InOrder(BiTNode<T>* pRoot, bool brec = false)
+    {
+        if (pRoot != NULL)
+        {
+            if (brec)
+            {
+                InOrderTraverse(pRoot->lchild);
+                cout << pRoot->tElement << " ";
+                InOrderTraverse(pRoot->rchild);
+            }
+            else {
+                BiTNode<T>* p = pRoot;
+                stack<BiTNode<T>*> s;
+                while (NULL != p || !s.empty())
+                {
+                    while (NULL != p)
+                    {
+                        s.push(p);
+                        p = p->lchild;
+                    }
+                    if (!s.empty())
+                    {
+                        p = s.top();
+                        cout << p->tElement << " ";  //res.push_back(p->tElement);
+                        s.pop();
+                        p = p->rchild;
+                    }
+                }
+            }
+        }
+    };
+    //递归后序遍历
+    void PostOrder(BiTNode<T>* pRoot, bool brec = false)
+    {
+        if (pRoot != NULL)
+        {
+            if (brec)
+            {
+                PostOrderTraverse(pRoot->lchild);
+                PostOrderTraverse(pRoot->rchild);
+                cout << pRoot->tElement << " ";
+            }
+            else {
+                stack<BiTNode<T>*> s;
+                s.push(pRoot);
+                BiTNode<T>* pre = NULL;
+                BiTNode<T>* cur = NULL;
+                while (!s.empty())
+                {
+                    cur = s.top();
+                    if ((cur->lchild == NULL && cur->rchild == NULL) ||//没有子结点
+                        (pre != NULL) && (pre == cur->lchild || pre == cur->rchild))//或子结点已访问
+                    {
+                        cout << cur->tElement << " ";
+                        s.pop();
+                        pre = cur;
+                    }
+                    else
+                    {
+                        if (cur->rchild != NULL)
+                            s.push(cur->rchild);
+                        if (cur->lchild != NULL)
+                            s.push(cur->lchild);
+                    }
+                }
+            }
+        }
+    };
+    //层次遍历
+    void PrintNodeTraverse(BiTNode<T>* pRoot)
+    {
+        vector<BiTNode<T>*> vec;
+        vec.push_back(pRoot);
+        int cur = 0;                            //保存的是之前所以层的结点数
+        int last = 1;                           //加上待遍历层结点数后的总结点数
+        while (cur < vec.size())
+        {
+            last = vec.size();                  //重置上一行结点数
+            while (cur < last)                  //做几次是由上一层的结点数决定的
+            {
+                cout << vec[cur]->tElement << " ";  //访问节点
+                if (vec[cur]->lchild)           //当前访问节点的左节点不为空则压入
+                    vec.push_back(vec[cur]->lchild);
+                if (vec[cur]->rchild)           //当前访问节点的右节点不为空则压入，注意左右节点的访问顺序不能颠倒
+                    vec.push_back(vec[cur]->rchild);
+                cur++;
+            }
+            cout << endl;                       //当cur=last时说明该层的结点已被遍历
+        }
+
+        //方法2
+        //if (pRoot)
+        //{
+        //    BiTNode<T>* p = NULL;
+        //    queue<BiTNode<T>*> q;
+        //    q.push(pRoot);
+        //    while (!q.empty())
+        //    {
+        //        p = q.front();
+        //        q.pop();
+        //        cout << p->data << " ";
+        //        if (p->lChild)
+        //            q.push(p->lChild);
+        //        if (p->rChild)
+        //            q.push(p->rChild);
+        //    }
+        //}
+    };
+    //获取根节点
+    BiTNode<T>* GetRoot(void)
+    {
+        return m_root;
+    };
+};
+
+//红黑树
+
+
 
 
 #endif

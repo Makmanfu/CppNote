@@ -219,3 +219,63 @@ void CBITree::PostOrderTraverse(BiTNode* tree, void(*visit)(Item))
 
 
 
+
+/*  ¶þ²æÊ÷
+void testtree(void)
+{
+TreeNode<int> *root = new TreeNode<int>(0);
+root->left = new TreeNode<int>(1);
+root->right = new TreeNode<int>(2);
+
+Tree<int> t(root);
+
+vector<int>res;
+t.PreOrder(res);
+for (int i = 0; i < res.size(); i++)
+{
+cout << res[i];
+cout << endl;
+}
+
+res.clear();
+t.PreOrderNonRescursion(res);
+for (int i = 0; i < res.size(); i++)
+{
+cout << res[i];
+cout << endl;
+}
+
+res.clear();
+t.InOrder(res);
+for (int i = 0; i < res.size(); i++)
+{
+cout << res[i];
+cout << endl;
+}
+
+res.clear();
+t.InOrderNonRescursion(res);
+for (int i = 0; i < res.size(); i++)
+{
+cout << res[i];
+cout << endl;
+}
+
+res.clear();
+t.PostOrder(res);
+for (int i = 0; i < res.size(); i++)
+{
+cout << res[i];
+cout << endl;
+}
+
+res.clear();
+t.PostOrderNonRescursion(res);
+for (int i = 0; i < res.size(); i++)
+{
+cout << res[i];
+cout << endl;
+}
+}
+
+*/

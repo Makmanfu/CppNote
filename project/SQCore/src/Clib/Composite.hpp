@@ -40,8 +40,8 @@ public:
     ~Composite() {};
     void Operation()
     {
-        for (vector<ComPart*>::iterator comIter = comVec.begin(); comIter != comVec.end(); comIter++)
-            (*comIter)->Operation();
+        for (auto It = comVec.begin(); It != comVec.end(); It++)
+            (*It)->Operation();
     };
     void Add(ComPart* com)
     {
@@ -49,7 +49,13 @@ public:
     };
     void Remove(ComPart* com)
     {
-        //comVec.erase(&com);
+        for (auto It = comVec.begin(); It != comVec.end();)
+        {
+            if (*It == com)
+                comVec.erase(It++);
+            else
+                It++;
+        }
     };
     ComPart* GetChild(int index)
     {
@@ -150,6 +156,8 @@ int Mode_Composite(int argc, char** argv)
     //pCom->Add(pLeaf2);
     //pCom->Operation();
     //pCom->GetChild(2)->Operation();
+
+
     printf("实例演示!============\n");
     ConcreteCompany* p = new ConcreteCompany("清华大学");
     p->Add(new HrDepartment("清华大学人才部"));

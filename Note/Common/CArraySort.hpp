@@ -7,7 +7,7 @@
 //*************************************************************************
 #pragma once
 
-//直接插入排序
+//1.直接插入排序
 template <typename T>
 inline void InsertSort(T* data, size_t n)
 {
@@ -44,7 +44,7 @@ inline void BiInsertSort(T* data, size_t n)
     }
 };
 
-//希尔排序
+//2.希尔排序
 template <typename T>
 inline void ShellSort(T* data, size_t n)
 {
@@ -59,7 +59,7 @@ inline void ShellSort(T* data, size_t n)
         }
 };
 
-//冒泡排序
+//3.冒泡排序
 template <typename T>
 inline void BubbleSort(T* data, size_t n)
 {
@@ -80,7 +80,7 @@ inline void BubbleSort(T* data, size_t n)
     }
 };
 
-//快速排序[L为取其中一个比较值index]
+//4.快速排序[L为取其中一个比较值index]
 template <typename T>
 inline void QuickSort(T* data, size_t n, size_t L = 0)
 {
@@ -112,7 +112,7 @@ inline void QuickSort(T* data, size_t n, size_t L = 0)
     InsertSort(data + start + 1, n - start - 1);
 };
 
-//选择排序
+//5.选择排序
 template <typename T>
 inline void SelectSort(T* data, size_t n)
 {
@@ -133,6 +133,13 @@ inline void SelectSort(T* data, size_t n)
         }
     }
 };
+
+//6.归并排序
+//7.基数排序
+//8.堆排序
+//9.计数排序
+//9.桶排序
+
 
 //数组的排序管理
 template <typename T>

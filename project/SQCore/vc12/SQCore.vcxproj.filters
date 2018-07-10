@@ -15,9 +15,6 @@
     <Filter Include="library\UI">
       <UniqueIdentifier>{43424ec4-8f20-4dc5-873d-b5d1e4cd0303}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Study">
-      <UniqueIdentifier>{a524e584-2afa-460c-8d45-b04a682a03ca}</UniqueIdentifier>
-    </Filter>
     <Filter Include="library\Parser">
       <UniqueIdentifier>{9611a6e5-a7f0-4c7d-837c-0ec9325197f7}</UniqueIdentifier>
     </Filter>
@@ -38,15 +35,6 @@
     </Filter>
     <Filter Include="library\CLIB">
       <UniqueIdentifier>{4ace469c-7e8a-48d0-9ab5-41734921d013}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="library\CLIB\C11_STL">
-      <UniqueIdentifier>{144d2e6d-a0ab-449e-8f79-7a4ff6ef8f66}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="library\CLIB\C总结">
-      <UniqueIdentifier>{a49717b1-03fb-4e9f-a976-ec5d75df600a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="library\CLIB\C总结\指针和数组">
-      <UniqueIdentifier>{bfe08142-50bc-4346-9f76-f3bf65520a76}</UniqueIdentifier>
     </Filter>
     <Filter Include="library\CLIB\模板算法">
       <UniqueIdentifier>{e6a0eca8-9770-4d57-86a8-062dc99b6dfd}</UniqueIdentifier>
@@ -83,6 +71,24 @@
     </Filter>
     <Filter Include="library\Parser\mongdb">
       <UniqueIdentifier>{2ca0d396-af9f-4362-a8e6-a8775ad8e4f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28学习试验性代码%29">
+      <UniqueIdentifier>{a524e584-2afa-460c-8d45-b04a682a03ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28学习试验性代码%29\数据结构">
+      <UniqueIdentifier>{b4749557-528b-4c1f-b012-0f835b1455f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28学习试验性代码%29\设计模式">
+      <UniqueIdentifier>{00580e58-587b-4e15-bbe4-056d43c84f0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28学习试验性代码%29\C和指针">
+      <UniqueIdentifier>{de3a18cc-7d00-4bc8-a856-b53be7efc7f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28学习试验性代码%29\C和指针\指针和数组">
+      <UniqueIdentifier>{bfe08142-50bc-4346-9f76-f3bf65520a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28学习试验性代码%29\标准库STL">
+      <UniqueIdentifier>{8b733066-cd71-43ed-8fbf-051b963e83bc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -124,30 +130,6 @@
     </ClInclude>
     <ClInclude Include="..\src\SVM\svm.h">
       <Filter>library\SVM</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\CDList.h">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\CList.h">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\CQueue.h">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\CRBTree.h">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\CStack.h">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\CBITree.h">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\CDijkstra.h">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\CAStar.h">
-      <Filter>library\CLIB\数据结构</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Clib\AbstactFactory.hpp">
       <Filter>library\CLIB\设计模式\创见型</Filter>
@@ -218,23 +200,14 @@
     <ClInclude Include="..\src\Clib\Proxy.hpp">
       <Filter>library\CLIB\设计模式\结构型</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Clib\CEXAM.hpp">
-      <Filter>library\CLIB\C总结</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Clib\CharPointer.h">
-      <Filter>library\CLIB\C总结\指针和数组</Filter>
+      <Filter>Study%28学习试验性代码%29\C和指针\指针和数组</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Clib\PointerArray.h">
-      <Filter>library\CLIB\C总结\指针和数组</Filter>
+      <Filter>Study%28学习试验性代码%29\C和指针\指针和数组</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Clib\Sorting.h">
-      <Filter>library\CLIB\C总结\指针和数组</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\STL.hpp">
-      <Filter>library\CLIB\C11_STL</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Clib\Effective.hpp">
-      <Filter>library\CLIB\C11_STL</Filter>
+      <Filter>Study%28学习试验性代码%29\C和指针\指针和数组</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Parser\miniIni.h">
       <Filter>library\Parser\ini</Filter>
@@ -458,6 +431,39 @@
     <ClInclude Include="..\src\DUILIB\HelloDUI_def.h">
       <Filter>library\UI</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Clib\CAStar.h">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CBITree.h">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CDijkstra.h">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CDList.h">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CList.h">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CQueue.h">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CRBTree.h">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CStack.h">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\CEXAM.hpp">
+      <Filter>Study%28学习试验性代码%29\C和指针</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\Effective.hpp">
+      <Filter>Study%28学习试验性代码%29\标准库STL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Clib\STL.hpp">
+      <Filter>Study%28学习试验性代码%29\标准库STL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -475,38 +481,14 @@
     <ClCompile Include="..\src\SVM\svm.cpp">
       <Filter>library\SVM</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Clib\CDList.cpp">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Clib\CList.cpp">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Clib\CQueue.cpp">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Clib\CRBTree.cpp">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Clib\CStack.cpp">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Clib\CDijkstra.cpp">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Clib\CAStar.cpp">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Clib\CBITree.cpp">
-      <Filter>library\CLIB\数据结构</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Clib\CharPointer.cpp">
-      <Filter>library\CLIB\C总结\指针和数组</Filter>
+      <Filter>Study%28学习试验性代码%29\C和指针\指针和数组</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Clib\PointerArray.cpp">
-      <Filter>library\CLIB\C总结\指针和数组</Filter>
+      <Filter>Study%28学习试验性代码%29\C和指针\指针和数组</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Clib\Sorting.cpp">
-      <Filter>library\CLIB\C总结\指针和数组</Filter>
+      <Filter>Study%28学习试验性代码%29\C和指针\指针和数组</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Parser\miniIni.cpp">
       <Filter>library\Parser\ini</Filter>
@@ -678,6 +660,30 @@
     </ClCompile>
     <ClCompile Include="..\src\DllGui\BootLoad.cpp">
       <Filter>library\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CAStar.cpp">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CBITree.cpp">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CDijkstra.cpp">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CDList.cpp">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CList.cpp">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CQueue.cpp">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CRBTree.cpp">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Clib\CStack.cpp">
+      <Filter>Study%28学习试验性代码%29\数据结构</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

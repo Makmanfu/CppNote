@@ -33,9 +33,9 @@ public:
     //创建链表头
     ListNode* ListMakeHead(int key=0);
     //判定链表是否为空 判定位置P的节点是否为尾节点
-    int ListIsEmpty(ListNode* L);
+    bool ListIsEmpty(ListNode* L);
     //判定链表节点是否为尾节点
-    int ListIsEnd(ListNode* L);
+    bool ListIsEnd(ListNode* L);
     //头插入key就變成第1個
     void ListBeginInsertHead(ListNode* L, int key);
     //头插入key就變成第2個
