@@ -5,7 +5,7 @@ if not exist "%PATHEXE%" (GOTO build_all) else (GOTO RUN)
 
 :build_all
 REM 调用MSVC
-CALL D:\Develop\Compiler\VC2013\bin\vcvarsall.BAT
+CALL B:\Develop\Compiler\VC2013\bin\vcvarsall.BAT
 CALL:SETLIBPATH
 REM TMP目录生成项目
 CD %~dp0 & RD /S /Q tmp CBIN & MD tmp & CD tmp
@@ -18,7 +18,7 @@ CALL:SETLIBPATH
 START %PATHEXE%
 GOTO END
 :buildGUI
-CALL D:\Develop\Compiler\VC2013\bin\vcvarsall.BAT
+CALL B:\Develop\Compiler\VC2013\bin\vcvarsall.BAT
 cmake-GUI
 GOTO END
 REM --------------------------------------------------------------------
@@ -27,7 +27,7 @@ RD /S /Q tmp CBIN
 GOTO END
 :SETLIBPATH
 REM 设置环境变量
-set QTDIR=D:\Develop\QT\Qt4.8.6\4.8\msvc12
+set QTDIR=B:\Develop\QT\Qt4.8.6\4.8\msvc12
 set QTPATH=%QTDIR%
 REM set CMAKE_PREFIX_PATH=%QTDIR%\lib\cmake
 SET PATH=%QTDIR%\BIN;%PATH%

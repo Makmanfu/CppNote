@@ -2,7 +2,7 @@
 
 #pragma once
 //编译开关----------------------------------------------------------------
-//#define GUIRUN                                  //界面开关宏
+#define GUIRUNC                     //[GUIRUNC/NATIVEC/CONSOLE/HIDECMD]
 
 //包含文件----------------------------------------------------------------
 #include "targetver.h"
