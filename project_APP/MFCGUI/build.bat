@@ -39,8 +39,8 @@ if %PLATFORM%==x86 (
 REM TMP目录生成项目
 CD %~dp0 &RD /S /Q CBIN tmp &MD tmp &CD tmp
 REM 编译工程
-cmake -G"NMake Makefiles" ..
-NMAKE
+cmake  -G "NMake Makefiles JOM"  .. 
+jom -j 4
 CD %~dp0 &RD /S /Q tmp & GOTO RUN
 :BUILDGUI
 CALL %COMPILERDIR%\VC2013\bin\vcvarsall.BAT %CCNUM%
