@@ -80,7 +80,8 @@ void WinTool::SignFlagEXE(const char* exename, int ver, int verr)
         iofile.close();
     }
     else {
-        MessageBoxA(NULL, "error", "dll", MB_OK);
+        printf("文件打开失败!\n");
+        //MessageBoxA(NULL, "error", "dll", MB_OK);
     }
     //main中调用
     //if (argc > 1)

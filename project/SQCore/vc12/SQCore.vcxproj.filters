@@ -464,6 +464,9 @@
     <ClInclude Include="..\src\Clib\STL.hpp">
       <Filter>Study%28学习试验性代码%29\标准库STL</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Parser\Convert.h">
+      <Filter>library\Parser</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -684,6 +687,9 @@
     </ClCompile>
     <ClCompile Include="..\src\Clib\CStack.cpp">
       <Filter>Study%28学习试验性代码%29\数据结构</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Parser\Convert.cpp">
+      <Filter>library\Parser</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

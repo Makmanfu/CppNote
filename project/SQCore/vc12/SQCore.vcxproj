@@ -507,6 +507,7 @@
     <ClInclude Include="..\src\DUILIB\WebBrowserEventHandler.h" />
     <ClInclude Include="..\src\DUILIB\WinImplBase.h" />
     <ClInclude Include="..\src\DUILIB\WndShadow.h" />
+    <ClInclude Include="..\src\Parser\Convert.h" />
     <ClInclude Include="..\src\Parser\DrvSqlite.h" />
     <ClInclude Include="..\src\Parser\json11.h" />
     <ClInclude Include="..\src\Parser\libxls.h" />
@@ -582,6 +583,7 @@
     <ClCompile Include="..\src\DUILIB\WinImplBase.cpp" />
     <ClCompile Include="..\src\DUILIB\WndShadow.cpp" />
     <ClCompile Include="..\src\DUILIB\XUnzip.cpp" />
+    <ClCompile Include="..\src\Parser\Convert.cpp" />
     <ClCompile Include="..\src\Parser\DrvSqlite.cpp" />
     <ClCompile Include="..\src\Parser\json11.cpp" />
     <ClCompile Include="..\src\Parser\libxls.cpp" />

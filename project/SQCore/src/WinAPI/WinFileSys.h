@@ -19,6 +19,8 @@ public:
     void PathFormat(string& path, bool endflg = false);
     //检测路径或文件是否合法 ????
     bool CheckPathFile(const string& pathfile);
+    //判断对象是文件夹否则是文件
+    bool IsDirectory(const string& pathfile);
     //获取当前程序路径信息[idtype:0-全路径,1-程序名,2-路径c:\test ]
     string GetExePath(EXETYPE idtype = PATHALL);
     //得到系统所有驱动器

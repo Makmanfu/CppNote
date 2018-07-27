@@ -73,6 +73,17 @@ bool WinFileSys::CheckPathFile(const string& pathfile)
     return rValue;
 }
 
+bool WinFileSys::IsDirectory(const string& pathfile)
+{
+    DWORD dwAttr = ::GetFileAttributesA(pathfile.c_str());  //得到文件属性
+    if (dwAttr == 0xFFFFFFFF)                   // 文件或目录不存在
+        return false;
+    else if (dwAttr&FILE_ATTRIBUTE_DIRECTORY)   // 如果是目录
+        return true;
+    else
+        return false;
+}
+
 string WinFileSys::GetExePath(EXETYPE idtype)
 {
     char szAppPath[MAX_PATH];

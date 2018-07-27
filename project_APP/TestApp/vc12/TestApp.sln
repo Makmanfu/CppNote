@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestApp", "project_APP\TestApp\vc12\TestApp.vcxproj", "{860B3D2C-F5C0-4D1C-B7DB-01C7A7D66931}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GDIPlayer", "project_APP\GDIPlayer\vc12\GDIPlayer.vcxproj", "{6FB2F2DB-D375-48A6-90D4-F4309D42EE88}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GDIPlayer", "GDIPlayer.vcxproj", "{6FB2F2DB-D375-48A6-90D4-F4309D42EE88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,14 +13,6 @@ Global
 		EXE_Release|x64 = EXE_Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{860B3D2C-F5C0-4D1C-B7DB-01C7A7D66931}.EXE_Debug|Win32.ActiveCfg = EXE_Debug|Win32
-		{860B3D2C-F5C0-4D1C-B7DB-01C7A7D66931}.EXE_Debug|Win32.Build.0 = EXE_Debug|Win32
-		{860B3D2C-F5C0-4D1C-B7DB-01C7A7D66931}.EXE_Debug|x64.ActiveCfg = EXE_Debug|x64
-		{860B3D2C-F5C0-4D1C-B7DB-01C7A7D66931}.EXE_Debug|x64.Build.0 = EXE_Debug|x64
-		{860B3D2C-F5C0-4D1C-B7DB-01C7A7D66931}.EXE_Release|Win32.ActiveCfg = EXE_Release|Win32
-		{860B3D2C-F5C0-4D1C-B7DB-01C7A7D66931}.EXE_Release|Win32.Build.0 = EXE_Release|Win32
-		{860B3D2C-F5C0-4D1C-B7DB-01C7A7D66931}.EXE_Release|x64.ActiveCfg = EXE_Release|x64
-		{860B3D2C-F5C0-4D1C-B7DB-01C7A7D66931}.EXE_Release|x64.Build.0 = EXE_Release|x64
 		{6FB2F2DB-D375-48A6-90D4-F4309D42EE88}.EXE_Debug|Win32.ActiveCfg = EXE_Debug|Win32
 		{6FB2F2DB-D375-48A6-90D4-F4309D42EE88}.EXE_Debug|Win32.Build.0 = EXE_Debug|Win32
 		{6FB2F2DB-D375-48A6-90D4-F4309D42EE88}.EXE_Debug|x64.ActiveCfg = EXE_Debug|x64
