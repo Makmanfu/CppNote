@@ -415,7 +415,6 @@
     <ClInclude Include="..\src\CVDlg.h" />
     <ClInclude Include="..\src\DemoFun.h" />
     <ClInclude Include="..\src\HudDisplay.h" />
-    <ClInclude Include="..\src\JpegCompress.h" />
     <ClInclude Include="..\src\MatDispose.h" />
     <ClInclude Include="..\src\MatMath.h" />
     <ClInclude Include="..\src\MatUseTool.h" />
@@ -474,7 +473,6 @@
     <ClCompile Include="..\src\CVDlg.cpp" />
     <ClCompile Include="..\src\DemoFun.cpp" />
     <ClCompile Include="..\src\HudDisplay.cpp" />
-    <ClCompile Include="..\src\JpegCompress.cpp" />
     <ClCompile Include="..\src\MatDispose.cpp" />
     <ClCompile Include="..\src\MatMath.cpp" />
     <ClCompile Include="..\src\MatUseTool.cpp" />

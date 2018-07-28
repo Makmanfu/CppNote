@@ -10,7 +10,7 @@
 #define JPEGCOMPRESS_H
 
 #include <stdio.h>
-#include "jpeglib.h"
+//#include "jpeglib.h"
 #include <setjmp.h>
 
 struct my_error_mgr

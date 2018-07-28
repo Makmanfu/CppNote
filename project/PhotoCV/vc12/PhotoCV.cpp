@@ -6,7 +6,7 @@
 
 #include "HudDisplay.h"
 #include "MatDispose.h"
-#include "JpegCompress.h"
+//#include "JpegCompress.h"
 
 
 int main(int argc, char** argv)
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
     cmds.ComandAdd(string("Gethist"), test_gethist);       //¼ÆËãÍ¼ÏñÖ±·½Í¼
     cmds.ComandAdd(string("CheckNum"), test_CheckNum);     //·Ö¸îÍ¼Ïñ²âÊÔ
     cmds.ComandAdd(string("ArrowShow"), TestArrowShow);    //HUD
-    cmds.ComandAdd(string("JpegResize"), JpegResize);      //jpeg Compress
+    //cmds.ComandAdd(string("JpegResize"), JpegResize);      //jpeg Compress
     string strcmd = argc > 1 ? argv[1] : "default";
     cmds.GetCmdFunProc(strcmd, &fp);
     if (fp != NULL)

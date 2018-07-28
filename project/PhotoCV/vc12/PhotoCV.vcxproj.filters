@@ -233,9 +233,6 @@
     <ClInclude Include="..\src\CUDA\NVCUDA.h">
       <Filter>GPU</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\JpegCompress.h">
-      <Filter>Processing</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -375,9 +372,6 @@
     </ClCompile>
     <ClCompile Include="..\src\CUDA\NVCUDA.cpp">
       <Filter>GPU</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\JpegCompress.cpp">
-      <Filter>Processing</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
