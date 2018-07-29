@@ -188,43 +188,67 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL_Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='STATIC_Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
+    <IncludePath>$(SolutionDir)Note\3rdParty\ZeroMQ\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Note\3rdParty\ZeroMQ\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
     <ClCompile>
@@ -495,6 +519,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
     <ClInclude Include="..\src\OpenThreads\Mutex.h" />
     <ClInclude Include="..\src\OpenThreads\ScopedLock.hpp" />
     <ClInclude Include="..\src\OpenThreads\OpenThread.h" />
+    <ClInclude Include="..\src\styzmq.h" />
     <ClInclude Include="..\src\ThreadConcurrency.h" />
     <ClInclude Include="..\src\ThreadCookbook.h" />
     <ClInclude Include="..\src\SocketNative.hpp" />
@@ -529,6 +554,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
     <ClCompile Include="..\src\OpenThreads\Atomic.cpp" />
     <ClCompile Include="..\src\OpenThreads\Mutex.cpp" />
     <ClCompile Include="..\src\OpenThreads\OpenThread.cpp" />
+    <ClCompile Include="..\src\styzmq.cpp" />
     <ClCompile Include="..\src\ThreadConcurrency.cpp" />
     <ClCompile Include="..\src\ThreadCookbook.cpp" />
     <ClCompile Include="..\src\Rs232.cpp" />

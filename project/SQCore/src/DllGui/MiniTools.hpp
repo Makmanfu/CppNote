@@ -8,6 +8,7 @@
 #define MINITOOLS_HPP
 #include "WinTool.h"
 #include <iostream>
+#include<algorithm>
 using namespace std;
 
 //程序簽名器
@@ -27,6 +28,59 @@ struct SignFlagexe
         return 0;
     };
 public:
+    string strexe, strdll, strso, strFile;
+
+    SignFlagexe()
+    {
+        strexe = string("exe");
+        strdll = string("dll");
+        strso = string("so");
+    };
+
+    char* GetMulTik(const char* f_write)
+    {
+        //得出时间
+        char* szBuffer = (char*)malloc(23 * sizeof(char));
+        SYSTEMTIME st;
+        GetLocalTime(&st);
+        sprintf(szBuffer, "%04d%02d%02d %02d:%02d:%02d:%03d: ",
+            st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond, st.wMilliseconds);
+        //时间值 cout<<szBuffer<<endl;
+        char* tmpchar = new char[strlen(szBuffer) + strlen(f_write) + 1];
+        strcpy(tmpchar, szBuffer);
+        return strcat(tmpchar, f_write);
+    }
+
+    char* GetMulTikN(const char* f_write)
+    {
+        //得出时间
+        char* szBuffer = (char*)malloc((strlen(f_write) + 25) * sizeof(char));
+        SYSTEMTIME st;
+        GetLocalTime(&st);
+        sprintf(szBuffer, "%04d%02d%02d %02d:%02d:%02d:%03d: %s\n",
+            st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond, st.wMilliseconds, f_write);
+        return szBuffer;
+    }
+
+    int LogFun(const char* f_txt, const char* f_logpath, int cmd)
+    {
+        if ((strlen(f_txt) <= 0) || (strlen(f_logpath) <= 0))  return 0;
+        //判断命令行显示
+        if (cmd == 1)
+        {
+            printf(GetMulTikN(f_txt));
+            return 1;
+        }
+        FILE* m_File = fopen(f_logpath, "a+t");
+        if (NULL == m_File)  return 0;
+        f_txt = GetMulTikN(f_txt);
+        if (cmd == 2) printf(f_txt);
+        fputs(f_txt, m_File);
+        fclose(m_File);
+        m_File = NULL;
+        return 1;
+    }
+
     bool IsDirectory(const string& pathfile)
     {
         DWORD dwAttr = ::GetFileAttributesA(pathfile.c_str());  //得到文件属性
@@ -80,12 +134,17 @@ public:
         {
             if (!strcmp(FindDTT.cFileName, "..") || !strcmp(FindDTT.cFileName, "."))
                 continue;
-            if (FindDTT.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY)
+            //if (FindDTT.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY) //有BUG
+            if (FindDTT.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY) 
                 SignAllFile(Sear + FindDTT.cFileName);
             else
             {
-                if (rightstr(string(FindDTT.cFileName), 3) == string("exe") || rightstr(string(FindDTT.cFileName), 3) == string("dll"))
+                strFile = string(FindDTT.cFileName);
+                //转小写
+                transform(strFile.begin(), strFile.end(), strFile.begin(), tolower);
+                if (rightstr(strFile, 3) == strexe || rightstr(strFile, 3) == strdll || rightstr(strFile, 2) == strso)
                 {
+                    //LogFun((Sear + FindDTT.cFileName).c_str(), "app.log", 0);
                     WinTool::Instance()->SignFlagEXE((Sear + FindDTT.cFileName).c_str());
                 }
             }

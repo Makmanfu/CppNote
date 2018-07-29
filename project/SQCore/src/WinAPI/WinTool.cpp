@@ -60,6 +60,7 @@ void WinTool::SetAutoRun(LPSTR RegName, bool fsetrun /*= true*/)
 
 void WinTool::SignFlagEXE(const char* exename, int ver, int verr)
 {
+    //printf("%s文件打开!\n", exename);
     std::fstream iofile(exename, ios::in | ios::out | ios::binary);    //二进制覆写
     if (iofile)   //判断打开成功
     {
@@ -71,16 +72,16 @@ void WinTool::SignFlagEXE(const char* exename, int ver, int verr)
             CurTime.wMinute, CurTime.wSecond, CurTime.wMilliseconds);
         iofile.seekp(2, ios::beg);                  //寻找位置
         iofile.write(buf, 58/*sizeof(buf)*/);       //头部
-        free(buf);
         char* buf2 = (char*)malloc(52 * sizeof(char));
         sprintf(buf2, "WHATEVER IS WORTH DOING IS WORTH DOING WELL! PROGRAM\n");
         iofile.seekp(64, ios::beg);                 //寻找位置
         iofile.write(buf2, 52/*sizeof(buf)*/);      //头部
-        free(buf2);
         iofile.close();
+        free(buf);
+        free(buf2);
     }
     else {
-        printf("文件打开失败!\n");
+        printf("%s文件打开失败!\n", exename);
         //MessageBoxA(NULL, "error", "dll", MB_OK);
     }
     //main中调用

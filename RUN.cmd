@@ -18,6 +18,7 @@ GOTO EXIT
 :CLEAN
 cls
 echo «Â¿Ì÷–...
+RD /s /q .\Note\Common\SQ
 RD /s /q BIN LIB ipch
 del /f /s /q /a .\Thumbs.db 
 del /s /q /f /A :H *.suo
@@ -29,6 +30,7 @@ for /f "delims=" %%a in ('dir /A=D /s /b GeneratedFiles*') do rd /s /q "%%~a"
 for /f "delims=" %%a in ('dir /A=D /s /b moc*') do rd /s /q "%%~a"
 for /f "delims=" %%a in ('dir /A=D /s /b tmp*') do rd /s /q "%%~a"
 for /f "delims=" %%a in ('dir /A=D /s /b cbin*') do rd /s /q "%%~a"
+
 cls
 GOTO EXIT
 :PACKWORK

@@ -281,14 +281,14 @@ private:
         }
     };
 public:
-    BiTree()
+    CBiTree()
     {
         T ch[100];
         cin.getline(ch, 100);
         int num = 0;
         m_root = CreateBiTree(ch, num);
     };
-    ~BiTree()
+    ~CBiTree()
     {
         DestroyAllNode(m_root);
     };

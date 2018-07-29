@@ -186,28 +186,28 @@ int WinFileSys::GetDirFiles(const string& path, vector<string>& AllDir, DIRTYPE 
             case DALL:
             default:                                                //全递归
                 AllDir.push_back(Sear + FindDTT.cFileName);
-                if (FindDTT.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY)
+                if (FindDTT.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY)
                     GetDirFiles(Sear + FindDTT.cFileName, AllDir, DALL);
                 break;
             case DALLDIR:                                           //仅递归文件夹
-                if (FindDTT.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY)
+                if (FindDTT.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY)
                 {
                     AllDir.push_back(Sear + FindDTT.cFileName);
                     GetDirFiles(Sear + FindDTT.cFileName, AllDir, DALLDIR);
                 }
                 break;
             case DALLFILE:                                          //仅递归文件
-                if (FindDTT.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY)
+                if (FindDTT.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY)
                     GetDirFiles(Sear + FindDTT.cFileName, AllDir, DALLFILE);
                 else
                     AllDir.push_back(Sear + FindDTT.cFileName);
                 break;
             case DCURRDIR:                                          //当前文件夹
-                if (FindDTT.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY)
+                if (FindDTT.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY)
                     AllDir.push_back(Sear + FindDTT.cFileName);
                 break;
             case DCURRFILE:                                         //当前文件
-                if (FindDTT.dwFileAttributes != FILE_ATTRIBUTE_DIRECTORY)
+                if (FindDTT.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY)
                     AllDir.push_back(Sear + FindDTT.cFileName);
                 break;
         }
@@ -277,7 +277,7 @@ bool WinFileSys::DelPathDir(const string& path)
     {
         if (!strcmp(FindDTT.cFileName, "..") || !strcmp(FindDTT.cFileName, "."))
             continue;                                       //此级没有文件
-        if (FindDTT.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY)
+        if (FindDTT.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY)
             DelPathDir(Sear + FindDTT.cFileName);           //递归删除文件夹
         else
             DeleteFileA((Sear + FindDTT.cFileName).c_str());
@@ -299,7 +299,7 @@ bool WinFileSys::SmartFile(const string& path, FileProc fp)
     {
         if (!strcmp(FindDTT.cFileName, "..") || !strcmp(FindDTT.cFileName, "."))
             continue;
-        if (FindDTT.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY)
+        if (FindDTT.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY)
             SmartFile(Sear + FindDTT.cFileName, fp);
         else
             fp(Sear + FindDTT.cFileName);
@@ -321,7 +321,7 @@ bool WinFileSys::SmartDir(const string& path, FileProc fp)
     {
         if (!strcmp(FindDTT.cFileName, "..") || !strcmp(FindDTT.cFileName, "."))
             continue;
-        if (FindDTT.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY)
+        if (FindDTT.dwFileAttributes&FILE_ATTRIBUTE_DIRECTORY)
             SmartDir(Sear + FindDTT.cFileName, fp);
     }
     while (TRUE == FindNextFileA(hFind, &FindDTT));

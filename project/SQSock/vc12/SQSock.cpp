@@ -13,21 +13,21 @@
 #include "WinSockDlg.h"                     //框架界面
 #include "ThreadCookbook.h"                 //Cookbook例子
 #include "WSockFileDlg.h"
+//ZMQ
+#include "styzmq.h"
 
 
 int main(int argc, char** argv)
 {
-    CMDProc fp = NULL, CmdMain = NULL, DefaultFun = &TCPSocket::TCPServer;
+    CMDProc fp = NULL, CmdMain = NULL, DefaultFun = &StyZMQ::hwserver2;
     CCMDParam cmds(argv[0]);               //程序名传入
     cmds.DefaultFunAdd(DefaultFun);
+
+    //ZMQ
+    cmds.ComandAdd("hwserver", &StyZMQ::hwserver);
+    cmds.ComandAdd("hwserver", &StyZMQ::hwserver2);
     //基本线程学习
     cmds.ComandAdd("GlobalThread", &GlobalThread::main);        //无参数基本全局线程
-
-
-
-
-
-
     //网络原生通信基本例子
     cmds.ComandAdd("TCPServer", &SocketNative::TCPServer);
     cmds.ComandAdd("TCPClient", &SocketNative::TCPClient);

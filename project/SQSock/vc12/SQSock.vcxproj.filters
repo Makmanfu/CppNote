@@ -80,6 +80,9 @@
     <Filter Include="src\HPSock\Demo">
       <UniqueIdentifier>{63de4a53-ae4f-4d77-87f0-d966ea3a3d38}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ZMQ">
+      <UniqueIdentifier>{05cf3184-2e86-4c7f-91ef-b24be5f8e7c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -214,6 +217,9 @@
     <ClInclude Include="..\src\WinGUI.h">
       <Filter>src\Dlg</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\styzmq.h">
+      <Filter>ZMQ</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -308,6 +314,9 @@
     </ClCompile>
     <ClCompile Include="..\src\WinGUI.cpp">
       <Filter>src\Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\styzmq.cpp">
+      <Filter>ZMQ</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
