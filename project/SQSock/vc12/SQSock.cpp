@@ -25,7 +25,7 @@ int main(int argc, char** argv)
 
     //ZMQ
     cmds.ComandAdd("hwserver", &StyZMQ::hwserver);
-    cmds.ComandAdd("hwserver", &StyZMQ::hwserver2);
+    cmds.ComandAdd("hwserver2", &StyZMQ::hwserver2);
     //基本线程学习
     cmds.ComandAdd("GlobalThread", &GlobalThread::main);        //无参数基本全局线程
     //网络原生通信基本例子

@@ -11,6 +11,7 @@ add_definitions(-DUNICODE -D_UNICODE)
 
 # 定义头文件的路径变量
 SET(INCLUDE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/SRC
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../Note/3rdparty/ZeroMQ/include
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Note/Common
     ${CMAKE_CURRENT_SOURCE_DIR}/SRC/HPSocket
     ${CMAKE_CURRENT_SOURCE_DIR}/SRC/OpenThreads
@@ -20,17 +21,21 @@ SET(INCLUDE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/SRC
 MESSAGE(STATUS "Include Path, ${INCLUDE_PATH}")
 
 # 定义库文件路径
-SET(LIB_PATH ${INCLUDE_PATH})
+SET(LIB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../Note/3rdparty/ZeroMQ/lib)
 MESSAGE(STATUS "Libs Path, ${LIB_PATH}")
-
 # 定义源文件路径变量
 SET(SOURCE_PATH ${INCLUDE_PATH}) 
 MESSAGE(STATUS "Source Path , ${SOURCE_PATH}") 
-
 # 包含头文件搜索路径
 INCLUDE_DIRECTORIES(${INCLUDE_PATH}) 
 # 包含库搜索路径
 LINK_DIRECTORIES(${LIB_PATH})
+#CMAKE的内建变量，如果是true，就说明编译器的64位的，自然可以编译64bit的程序
+if(CMAKE_CL_64)    
+link_libraries(libzmqs64.lib) 
+else()
+link_libraries(libzmqs.lib) 
+endif()
 
 # 添加源文件路径下所有源文件存放到变量中(*.c && *.cpp)
 AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/SRC/HPSocket DIR_SRCS)

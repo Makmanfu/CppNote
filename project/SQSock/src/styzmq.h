@@ -8,6 +8,7 @@
 #define STYZMQ_H
 
 #include <zmq.h>
+#include <zmq.hpp>
 #include <stdio.h>
 //#include <unistd.h>
 #include <string.h>
@@ -58,7 +59,7 @@ struct StyZMQ
             socket.recv(&request);
             std::cout << "Received Hello" << std::endl;
             // Do some 'work'
-            sleep(1);
+            Sleep(1);
             // Send reply back to client
             zmq::message_t reply(5);
             memcpy((void*)reply.data(), "World", 5);
