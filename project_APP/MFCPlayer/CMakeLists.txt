@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 2.8.7)
 project(MFCPlayer)
 
 # 设置生成路径
-SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/CBIN)
 # 设置编译器选项 不显示所有警告
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W0")
 # 定义头文件的路径变量
@@ -29,7 +29,11 @@ INCLUDE_DIRECTORIES(${INCLUDE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/VLC/lib)
 
 # 包含库搜索路径
 LINK_DIRECTORIES(${LIB_PATH})
+if(CMAKE_CL_64)    
+link_libraries(libvlc64.lib libvlccore64.lib) 
+else()
 link_libraries(libvlc.lib libvlccore.lib) 
+endif()
 
 # 添加源文件路径下所有源文件存放到变量中(*.c && *.cpp)
 AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/SRC DIR_SRCS)
@@ -51,7 +55,11 @@ SET(CMAKE_MFC_FLAG 1)
 #ADD_DEFINITIONS(-D_AFXDLL)  
 
 # 设置生成可执行文件的名称
+if(CMAKE_CL_64)    
+SET(EXECUTABLE_FILE_NAME MFCPlayer64)
+else()
 SET(EXECUTABLE_FILE_NAME MFCPlayer)
+endif()
 
 # 生成可执行文件
 ADD_EXECUTABLE(${EXECUTABLE_FILE_NAME} ${DIR_SRCS})
