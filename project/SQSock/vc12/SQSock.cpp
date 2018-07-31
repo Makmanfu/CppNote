@@ -19,13 +19,17 @@
 
 int main(int argc, char** argv)
 {
-    CMDProc fp = NULL, CmdMain = NULL, DefaultFun = &StyZMQ::hwserver2;
+    CMDProc fp = NULL, CmdMain = NULL, DefaultFun = &StyZMQ::zmq_hwclient;
     CCMDParam cmds(argv[0]);               //程序名传入
     cmds.DefaultFunAdd(DefaultFun);
 
     //ZMQ
-    cmds.ComandAdd("hwserver", &StyZMQ::hwserver);
-    cmds.ComandAdd("hwserver2", &StyZMQ::hwserver2);
+    cmds.ComandAdd("zmq_hwserverc", &StyZMQ::zmq_hwserverc);
+    cmds.ComandAdd("zmq_hwservercpp", &StyZMQ::zmq_hwservercpp);
+    cmds.ComandAdd("zmq_hwclient", &StyZMQ::zmq_hwclient);
+    cmds.ComandAdd("zmq_wuserverPub", &StyZMQ::zmq_wuserverPub);
+    cmds.ComandAdd("zmq_wuclientSub", &StyZMQ::zmq_wuclientSub);
+
     //基本线程学习
     cmds.ComandAdd("GlobalThread", &GlobalThread::main);        //无参数基本全局线程
     //网络原生通信基本例子

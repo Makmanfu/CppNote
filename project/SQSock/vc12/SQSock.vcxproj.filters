@@ -11,9 +11,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="src\Dlg">
-      <UniqueIdentifier>{4ff76934-03b7-409f-a221-6cb2e76ce1ea}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Communication%28通信%29">
       <UniqueIdentifier>{32c0dd97-2e69-4d9e-a997-188b044e736f}</UniqueIdentifier>
     </Filter>
@@ -38,18 +35,6 @@
     <Filter Include="src\APP%28应用%29\Download%28下载%29">
       <UniqueIdentifier>{ab9b083a-96dd-418e-a4bf-46e21fbe110d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Study%28待处理%29">
-      <UniqueIdentifier>{eb1fa485-0d9d-4a25-b440-11a139fbea2f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Study%28待处理%29\WINAPI%28win平台%29">
-      <UniqueIdentifier>{84831fc1-5ed0-42a1-90e5-5d3ce12432c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Study%28待处理%29\C11%28标准库%29">
-      <UniqueIdentifier>{8c01aa44-9cb7-4af4-b333-2a19134cad94}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Study%28待处理%29\OTHER">
-      <UniqueIdentifier>{7d5426a5-7415-4a61-93f2-f6174c3e63de}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Communication%28通信%29\THREAD%28线程%29\OpenThreads">
       <UniqueIdentifier>{41c1808d-d3ef-46de-82ed-cfc64f9b3d3c}</UniqueIdentifier>
     </Filter>
@@ -58,9 +43,6 @@
     </Filter>
     <Filter Include="src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core">
       <UniqueIdentifier>{bfae112f-ea16-4a12-8721-30dcf2cf0ef5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Study%28待处理%29\Sock%28学习记录%29">
-      <UniqueIdentifier>{e4c05546-b050-4c1d-b1cc-97a93e6396f7}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\HPSock">
       <UniqueIdentifier>{0177416e-1ac1-467a-bee1-f969a959f31f}</UniqueIdentifier>
@@ -80,8 +62,29 @@
     <Filter Include="src\HPSock\Demo">
       <UniqueIdentifier>{63de4a53-ae4f-4d77-87f0-d966ea3a3d38}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ZMQ">
+    <Filter Include="src\ZMQ">
       <UniqueIdentifier>{05cf3184-2e86-4c7f-91ef-b24be5f8e7c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28待处理%29">
+      <UniqueIdentifier>{eb1fa485-0d9d-4a25-b440-11a139fbea2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28待处理%29\WINAPI%28win平台%29">
+      <UniqueIdentifier>{84831fc1-5ed0-42a1-90e5-5d3ce12432c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28待处理%29\C11%28标准库%29">
+      <UniqueIdentifier>{8c01aa44-9cb7-4af4-b333-2a19134cad94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28待处理%29\OTHER">
+      <UniqueIdentifier>{7d5426a5-7415-4a61-93f2-f6174c3e63de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Study%28待处理%29\Sock%28学习记录%29">
+      <UniqueIdentifier>{e4c05546-b050-4c1d-b1cc-97a93e6396f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\Dlg">
+      <UniqueIdentifier>{4ff76934-03b7-409f-a221-6cb2e76ce1ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\muduo">
+      <UniqueIdentifier>{c4ba1fc8-1cdd-42e8-99da-fb07fec8831c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -92,7 +95,7 @@
       <Filter>start\res</Filter>
     </ClInclude>
     <ClInclude Include="..\src\WinSockDlg.h">
-      <Filter>src\Dlg</Filter>
+      <Filter>start\Dlg</Filter>
     </ClInclude>
     <ClInclude Include="..\src\CopyDATA.h">
       <Filter>src\Communication%28通信%29\PROCESS%28进程%29</Filter>
@@ -101,25 +104,25 @@
       <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ThreadCookbook.h">
-      <Filter>src\Study%28待处理%29\WINAPI%28win平台%29</Filter>
+      <Filter>Study%28待处理%29\WINAPI%28win平台%29</Filter>
     </ClInclude>
     <ClInclude Include="..\src\coondef.h">
       <Filter>src\Communication%28通信%29</Filter>
     </ClInclude>
     <ClInclude Include="..\src\CSock.h">
-      <Filter>src\Study%28待处理%29\OTHER</Filter>
+      <Filter>Study%28待处理%29\OTHER</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ThreadPool.h">
-      <Filter>src\Study%28待处理%29\OTHER</Filter>
+      <Filter>Study%28待处理%29\OTHER</Filter>
     </ClInclude>
     <ClInclude Include="..\src\WinThread.h">
       <Filter>src\Communication%28通信%29\THREAD%28线程%29</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ThreadConcurrency.h">
-      <Filter>src\Study%28待处理%29\C11%28标准库%29</Filter>
+      <Filter>Study%28待处理%29\C11%28标准库%29</Filter>
     </ClInclude>
     <ClInclude Include="..\src\MyThread.h">
-      <Filter>src\Study%28待处理%29\WINAPI%28win平台%29</Filter>
+      <Filter>Study%28待处理%29\WINAPI%28win平台%29</Filter>
     </ClInclude>
     <ClInclude Include="..\src\OpenThreads\Atomic.h">
       <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
@@ -152,13 +155,13 @@
       <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
     </ClInclude>
     <ClInclude Include="..\src\CSockSdy.h">
-      <Filter>src\Study%28待处理%29\Sock%28学习记录%29</Filter>
+      <Filter>Study%28待处理%29\Sock%28学习记录%29</Filter>
     </ClInclude>
     <ClInclude Include="..\src\SocketNative.hpp">
-      <Filter>src\Study%28待处理%29\Sock%28学习记录%29</Filter>
+      <Filter>Study%28待处理%29\Sock%28学习记录%29</Filter>
     </ClInclude>
     <ClInclude Include="..\src\CSock_def.h">
-      <Filter>src\Study%28待处理%29\OTHER</Filter>
+      <Filter>Study%28待处理%29\OTHER</Filter>
     </ClInclude>
     <ClInclude Include="..\src\WinSocket.h">
       <Filter>src\Communication%28通信%29\SOCKET%28网络%29</Filter>
@@ -215,10 +218,13 @@
       <Filter>src\HPSock\UDP</Filter>
     </ClInclude>
     <ClInclude Include="..\src\WinGUI.h">
-      <Filter>src\Dlg</Filter>
+      <Filter>start\Dlg</Filter>
     </ClInclude>
     <ClInclude Include="..\src\styzmq.h">
-      <Filter>ZMQ</Filter>
+      <Filter>src\ZMQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\zhelpers.h">
+      <Filter>src\ZMQ</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -229,7 +235,7 @@
       <Filter>start</Filter>
     </ClCompile>
     <ClCompile Include="..\src\WinSockDlg.cpp">
-      <Filter>src\Dlg</Filter>
+      <Filter>start\Dlg</Filter>
     </ClCompile>
     <ClCompile Include="..\src\CopyDATA.cpp">
       <Filter>src\Communication%28通信%29\PROCESS%28进程%29</Filter>
@@ -238,22 +244,22 @@
       <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ThreadCookbook.cpp">
-      <Filter>src\Study%28待处理%29\WINAPI%28win平台%29</Filter>
+      <Filter>Study%28待处理%29\WINAPI%28win平台%29</Filter>
     </ClCompile>
     <ClCompile Include="..\src\CSock.cpp">
-      <Filter>src\Study%28待处理%29\OTHER</Filter>
+      <Filter>Study%28待处理%29\OTHER</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ThreadPool.cpp">
-      <Filter>src\Study%28待处理%29\OTHER</Filter>
+      <Filter>Study%28待处理%29\OTHER</Filter>
     </ClCompile>
     <ClCompile Include="..\src\WinThread.cpp">
       <Filter>src\Communication%28通信%29\THREAD%28线程%29</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ThreadConcurrency.cpp">
-      <Filter>src\Study%28待处理%29\C11%28标准库%29</Filter>
+      <Filter>Study%28待处理%29\C11%28标准库%29</Filter>
     </ClCompile>
     <ClCompile Include="..\src\MyThread.cpp">
-      <Filter>src\Study%28待处理%29\WINAPI%28win平台%29</Filter>
+      <Filter>Study%28待处理%29\WINAPI%28win平台%29</Filter>
     </ClCompile>
     <ClCompile Include="..\src\OpenThreads\Atomic.cpp">
       <Filter>src\Communication%28通信%29\THREAD%28线程%29\OpenThreads\core</Filter>
@@ -280,7 +286,7 @@
       <Filter>src\Communication%28通信%29\SerialPort%28串口%29</Filter>
     </ClCompile>
     <ClCompile Include="..\src\CSockSdy.cpp">
-      <Filter>src\Study%28待处理%29\Sock%28学习记录%29</Filter>
+      <Filter>Study%28待处理%29\Sock%28学习记录%29</Filter>
     </ClCompile>
     <ClCompile Include="..\src\WinSocket.cpp">
       <Filter>src\Communication%28通信%29\SOCKET%28网络%29</Filter>
@@ -313,10 +319,10 @@
       <Filter>src\HPSock\UDP</Filter>
     </ClCompile>
     <ClCompile Include="..\src\WinGUI.cpp">
-      <Filter>src\Dlg</Filter>
+      <Filter>start\Dlg</Filter>
     </ClCompile>
     <ClCompile Include="..\src\styzmq.cpp">
-      <Filter>ZMQ</Filter>
+      <Filter>src\ZMQ</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

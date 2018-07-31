@@ -531,6 +531,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
     <ClInclude Include="..\src\WinSocket.h" />
     <ClInclude Include="..\src\WinThread.h" />
     <ClInclude Include="..\src\WSockFileDlg.h" />
+    <ClInclude Include="..\src\zhelpers.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
