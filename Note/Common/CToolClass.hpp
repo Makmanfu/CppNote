@@ -47,6 +47,11 @@ public:
     {
         SetExeName(exename);
     };
+    CmdProc(const char* exename, const FunProcInfo fp)
+    {
+        SetExeName(exename);
+        DefaultFunAdd(fp);
+    };
     ~CmdProc() {};
 private:
     //½ûÖ¹¿½±´²Ù×÷

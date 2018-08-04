@@ -4,7 +4,7 @@ SET COMPILERDIR=B:\Develop\Compiler
 REM 设置生成程序
 SET EXENAME=SQCore.exe
 REM 设置生成平台
-SET PLATFORM=x86
+SET PLATFORM=x64
 REM 设置编译器版本
 SET CCNUM=12
 

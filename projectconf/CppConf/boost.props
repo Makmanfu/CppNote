@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
-    <LibPath>D:\Develop</LibPath>
+    <LibPath>B:\Develop</LibPath>
     <BOOST_PATH>$(LibPath)\boost\boost_1_66_0</BOOST_PATH>
   </PropertyGroup>
   <PropertyGroup />

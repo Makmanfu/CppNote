@@ -37,20 +37,6 @@ public:
         strso = string("so");
     };
 
-    char* GetMulTik(const char* f_write)
-    {
-        //得出时间
-        char* szBuffer = (char*)malloc(23 * sizeof(char));
-        SYSTEMTIME st;
-        GetLocalTime(&st);
-        sprintf(szBuffer, "%04d%02d%02d %02d:%02d:%02d:%03d: ",
-            st.wYear, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond, st.wMilliseconds);
-        //时间值 cout<<szBuffer<<endl;
-        char* tmpchar = new char[strlen(szBuffer) + strlen(f_write) + 1];
-        strcpy(tmpchar, szBuffer);
-        return strcat(tmpchar, f_write);
-    }
-
     char* GetMulTikN(const char* f_write)
     {
         //得出时间
