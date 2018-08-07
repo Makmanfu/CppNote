@@ -1,13 +1,12 @@
 
 
 #include "stdafx.h"
-#include "tabdb.h"
+#include "QTPlayer.h"
 
 int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
-    //app.setWindowIcon(QIcon(":/player.png"));
-    TabDB WD;
+    QTPlayer WD;    //QWidget WD;  QTPlayer  QMoveDlg
     WD.show();
     return app.exec();
 }

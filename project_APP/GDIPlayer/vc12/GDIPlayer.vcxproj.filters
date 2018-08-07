@@ -7,9 +7,6 @@
     <Filter Include="GUI\MP3">
       <UniqueIdentifier>{83d06869-5044-455e-9d86-3e4a6b460396}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GUI\MP4">
-      <UniqueIdentifier>{21980c17-099c-4544-a6d8-a4b5365377a2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="start">
       <UniqueIdentifier>{5d3da94c-0ea9-470e-9443-f7c6e34cc5f3}</UniqueIdentifier>
     </Filter>
@@ -23,9 +20,6 @@
   <ItemGroup>
     <ClCompile Include="..\src\Music.cpp">
       <Filter>GUI\MP3</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\CMP4.cpp">
-      <Filter>GUI\MP4</Filter>
     </ClCompile>
     <ClCompile Include="..\src\CTray.cpp">
       <Filter>GUI\MP3</Filter>
@@ -49,12 +43,6 @@
     </ClInclude>
     <ClInclude Include="..\src\Music.h">
       <Filter>GUI\MP3</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\CMP4.h">
-      <Filter>GUI\MP4</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\WinMP4.hpp">
-      <Filter>GUI\MP4</Filter>
     </ClInclude>
     <ClInclude Include="..\src\CTray.h">
       <Filter>GUI\MP3</Filter>

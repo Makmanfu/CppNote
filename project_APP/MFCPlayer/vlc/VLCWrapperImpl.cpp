@@ -1,8 +1,6 @@
 
 #include "stdafx.h"
 #include "VLCWrapperImpl.h"
-#include "vlc\vlc.h"
-#include "vlc\libvlc_events.h"
 #include <stdio.h>
 
 VLCWrapperImpl::VLCWrapperImpl(void): pVLCInstance_(0)

@@ -11,5 +11,18 @@
         <file>images/save.png</file>
         <file>images/send.png</file>
         <file>images/under.png</file>
+        <file>ffplay/bb.jpg</file>
+        <file>ffplay/close.png</file>
+        <file>ffplay/max.png</file>
+        <file>ffplay/min.png</file>
+        <file>ffplay/restore.png</file>
+        <file>ffplay/PauseH.png</file>
+        <file>ffplay/PauseN.png</file>
+        <file>ffplay/PauseP.png</file>
+        <file>ffplay/PlayD.png</file>
+        <file>ffplay/PlayH.png</file>
+        <file>ffplay/PlayN.png</file>
+        <file>ffplay/PlayP.png</file>
+        <file>ffplay/titleBar.css</file>
     </qresource>
 </RCC>

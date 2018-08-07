@@ -3,12 +3,12 @@
 #include "QtConfig.h"
 
 #include "moc/moc_QPublic.cpp"
-//#include "moc/moc_wgtcommandpanel.cpp"
-
 #include "moc/qrc_PlayRes.cpp"
-#include "moc/moc_crmsystem.cpp"
-#include "moc/moc_tabdb.cpp"
-#include "moc/moc_wdb.cpp"
+#include "moc/moc_DisplayMediaTimer.cpp"
+#include "moc/moc_ReadPacketsThread.cpp"
+#include "moc/moc_QTPlayer.cpp"
+#include "moc/moc_VideoOpenGLWidget.cpp"
+
 
 
 

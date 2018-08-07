@@ -72,11 +72,14 @@ void CMP4Msg::WMPAINT(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     //GDIBMPPaint(hWnd);
 }
 
+extern void play(void);
+
 void CMP4Msg::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch (wParam)
     {
-        case IDC_ADDFILE:
+        case ID_OpenFile:
+            play();
             break;
         case IDC_EXIT:
             PostQuitMessage(0);
@@ -153,7 +156,7 @@ void CMP4Msg::GDIBMPPaint(HWND hWnd)
 void CMP4Msg::WMCONTEXTMENU(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     //ªÒ»°≤Àµ•
-    HMENU hPopMenu = LoadMenu(hInst, MAKEINTRESOURCE(IDR_LISTMENU));
+    HMENU hPopMenu = LoadMenu(hInst, MAKEINTRESOURCEW(IDR_FFMPEGMENU));
     hPopMenu = GetSubMenu(hPopMenu, 0);
     //DestroyMenu(hTrayMenu);
     TrackPopupMenu(hPopMenu, TPM_LEFTALIGN, LOWORD(lParam), HIWORD(lParam), 0, hWnd, NULL);

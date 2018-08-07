@@ -3,9 +3,6 @@
 #include "VLCWrapper.h"
 #include "VLCWrapperImpl.h"
 
-#pragma comment(lib,"libvlc.lib")  
-#pragma comment(lib,"libvlccore.lib")  
-
 VLCWrapper::VLCWrapper(void)
 :   pImpl_(std::auto_ptr<VLCWrapperImpl>(new VLCWrapperImpl()))
 {

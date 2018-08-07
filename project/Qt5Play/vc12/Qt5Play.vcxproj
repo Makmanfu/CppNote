@@ -67,6 +67,7 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\projectconf\CppConf\CppRelease.props" />
+    <Import Project="..\..\..\projectconf\FFmpegConf\FFRelease.props" />
     <Import Project="..\..\..\projectconf\QtConf\Qt5Release.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="PropertySheets">
@@ -94,50 +95,31 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link />
     <PreBuildEvent />
     <PostBuildEvent />
-    <PostBuildEvent>
-      <Command>if exist "$(QT5PATH)\\bin\\Qt5Cored.dll" (copy /y $(QT5PATH)\\bin\\Qt5Cored.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Guid.dll" (copy /y $(QT5PATH)\\bin\\Qt5Guid.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Widgetsd.dll" (copy /y $(QT5PATH)\\bin\\Qt5Widgetsd.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Sqld.dll" (copy /y $(QT5PATH)\\bin\\Qt5Sqld.dll "$(OutDir)") 
-MKDIR "$(OutDir)\\platforms" 
-copy /y $(QT5PATH)\\plugins\\platforms\\qwindows*.dll "$(OutDir)\\platforms" 
-rem copy /y $(QT5PATH)\\plugins\\sqldrivers\\*.dll "$(OutDir)\\sqldrivers" 
-rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" </Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link />
     <PreBuildEvent />
     <PostBuildEvent />
-    <PostBuildEvent>
-      <Command>if exist "$(QT5PATH)\\bin\\Qt5Cored.dll" (copy /y $(QT5PATH)\\bin\\Qt5Cored.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Guid.dll" (copy /y $(QT5PATH)\\bin\\Qt5Guid.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Widgetsd.dll" (copy /y $(QT5PATH)\\bin\\Qt5Widgetsd.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Sqld.dll" (copy /y $(QT5PATH)\\bin\\Qt5Sqld.dll "$(OutDir)") 
-MKDIR "$(OutDir)\\platforms" 
-copy /y $(QT5PATH)\\plugins\\platforms\\qwindows*.dll "$(OutDir)\\platforms" 
-rem copy /y $(QT5PATH)\\plugins\\sqldrivers\\*.dll "$(OutDir)\\sqldrivers" 
-rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" </Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
     <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>Full</Optimization>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -146,24 +128,15 @@ rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" <
     <PreBuildEvent />
     <PostBuildEvent />
     <PostBuildEvent />
-    <PostBuildEvent>
-      <Command>if exist "$(QT5PATH)\\bin\\Qt5Core.dll" (copy /y $(QT5PATH)\\bin\\Qt5Core.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Gui.dll" (copy /y $(QT5PATH)\\bin\\Qt5Gui.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Widgets.dll" (copy /y $(QT5PATH)\\bin\\Qt5Widgets.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Sql.dll" (copy /y $(QT5PATH)\\bin\\Qt5Sql.dll "$(OutDir)") 
-MKDIR "$(OutDir)\\platforms" 
-copy /y $(QT5PATH)\\plugins\\platforms\\qwindows*.dll "$(OutDir)\\platforms" 
-rem copy /y $(QT5PATH)\\plugins\\sqldrivers\\*.dll "$(OutDir)\\sqldrivers" 
-rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" </Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'">
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -172,38 +145,49 @@ rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" <
     <PreBuildEvent />
     <PostBuildEvent />
     <PostBuildEvent />
-    <PostBuildEvent>
-      <Command>if exist "$(QT5PATH)\\bin\\Qt5Core.dll" (copy /y $(QT5PATH)\\bin\\Qt5Core.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Gui.dll" (copy /y $(QT5PATH)\\bin\\Qt5Gui.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Widgets.dll" (copy /y $(QT5PATH)\\bin\\Qt5Widgets.dll "$(OutDir)") 
-if exist "$(QT5PATH)\\bin\\Qt5Sql.dll" (copy /y $(QT5PATH)\\bin\\Qt5Sql.dll "$(OutDir)") 
-MKDIR "$(OutDir)\\platforms" 
-copy /y $(QT5PATH)\\plugins\\platforms\\qwindows*.dll "$(OutDir)\\platforms" 
-rem copy /y $(QT5PATH)\\plugins\\sqldrivers\\*.dll "$(OutDir)\\sqldrivers" 
-rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" </Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\crmsystem.h" />
-    <ClInclude Include="..\src\crmsystem_def.h" />
+    <ClInclude Include="..\src\Audio.h" />
+    <ClInclude Include="..\src\DisplayMediaTimer.h" />
+    <ClInclude Include="..\src\FrameQueue.h" />
+    <ClInclude Include="..\src\ImageFilter.h" />
+    <ClInclude Include="..\src\Media.h" />
+    <ClInclude Include="..\src\PacketQueue.h" />
+    <ClInclude Include="..\src\QImageHandler.h" />
     <ClInclude Include="..\src\QPublic.h" />
     <ClInclude Include="..\src\QtConfig.h" />
+    <ClInclude Include="..\src\QTPlayer.h" />
+    <ClInclude Include="..\src\ReadPacketsThread.h" />
     <ClInclude Include="..\src\stdafx.h" />
-    <ClInclude Include="..\src\tabdb.h" />
-    <ClInclude Include="..\src\wdb.h" />
+    <ClInclude Include="..\src\Video.h" />
+    <ClInclude Include="..\src\VideoOpenGLWidget.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\crmsystem.cpp" />
+    <ClCompile Include="..\src\Audio.cpp" />
+    <ClCompile Include="..\src\DisplayMediaTimer.cpp" />
+    <ClCompile Include="..\src\FrameQueue.cpp" />
+    <ClCompile Include="..\src\ImageFilter.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Media.cpp" />
+    <ClCompile Include="..\src\PacketQueue.cpp" />
+    <ClCompile Include="..\src\QImageHandler.cpp" />
     <ClCompile Include="..\src\QPublic.cpp" />
     <ClCompile Include="..\src\QtConfig.cpp" />
+    <ClCompile Include="..\src\QTPlayer.cpp" />
+    <ClCompile Include="..\src\ReadPacketsThread.cpp" />
     <ClCompile Include="..\src\stdafx.cpp" />
-    <ClCompile Include="..\src\tabdb.cpp" />
-    <ClCompile Include="..\src\wdb.cpp" />
+    <ClCompile Include="..\src\Video.cpp" />
+    <ClCompile Include="..\src\VideoOpenGLWidget.cpp" />
     <ClCompile Include="QtConfig_moc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\Res\RunICO.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Res\PlayRes.qrc" />
+    <None Include="..\src\QTPlayer.ui" />
+    <None Include="..\src\VideoOpenGLWidget.ui" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

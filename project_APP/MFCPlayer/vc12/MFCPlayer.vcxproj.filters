@@ -15,7 +15,10 @@
     <Filter Include="start\MFC">
       <UniqueIdentifier>{95226174-9b9f-4aa2-bfcd-9ad4039e6774}</UniqueIdentifier>
     </Filter>
-    <Filter Include="VLC">
+    <Filter Include="src\ffmpeg">
+      <UniqueIdentifier>{812577d3-f0d1-4410-9fe8-bb1c38cee3b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\vlc">
       <UniqueIdentifier>{91fd4097-032a-476a-aaef-491a8e2f9cf9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -23,17 +26,20 @@
     <ClCompile Include="..\src\StdAfx.cpp">
       <Filter>start\MFC</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\MFCGUI.cpp">
+    <ClCompile Include="..\vlc\VLCWrapper.cpp">
+      <Filter>src\vlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vlc\VLCWrapperImpl.cpp">
+      <Filter>src\vlc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\mfcgui.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\MFCGUIDlg.cpp">
+    <ClCompile Include="..\ffmpeg\ffmpegdlg.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\VLCWrapper.cpp">
-      <Filter>VLC</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\VLCWrapperImpl.cpp">
-      <Filter>VLC</Filter>
+    <ClCompile Include="..\src\vlcdlg.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -49,17 +55,26 @@
     <ClInclude Include="..\res\Resource.h">
       <Filter>start\res</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\MFCGUIDlg.h">
+    <ClInclude Include="..\vlc\VLCWrapper.h">
+      <Filter>src\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\vlc\VLCWrapperImpl.h">
+      <Filter>src\vlc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\vlcdef.h">
+      <Filter>start\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ffmpegdef.h">
+      <Filter>start\MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\mfcgui.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\MFCGUI.h">
+    <ClInclude Include="..\ffmpeg\ffmpegdlg.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\VLCWrapper.h">
-      <Filter>VLC</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\VLCWrapperImpl.h">
-      <Filter>VLC</Filter>
+    <ClInclude Include="..\src\vlcdlg.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,9 +1,9 @@
 
-#ifndef MFCGUIDLG_H
-#define MFCGUIDLG_H
+#ifndef VLCDLG_H
+#define VLCDLG_H
 #include "VLCWrapper.h"
 
-class CMFCGUIDlg : public CDialog
+class CVLCdlg : public CDialog
 {
     VLCWrapper vlcPlayer_;
     bool muteFlag_;
@@ -30,7 +30,7 @@ class CMFCGUIDlg : public CDialog
     CSliderCtrl volumeSlider_;
     //}}AFX_DATA
 public:
-    CMFCGUIDlg(CWnd* pParent = NULL);   // standard constructor
+    CVLCdlg(CWnd* pParent = NULL);   // standard constructor
 
     void UpdatePosition();
 

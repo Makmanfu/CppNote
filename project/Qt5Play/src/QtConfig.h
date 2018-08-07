@@ -32,13 +32,11 @@
 #pragma comment( lib, DLIB("qtmain") )
 #pragma comment( lib, QLIB(DLIB("QtCore")) )
 #pragma comment( lib, QLIB(DLIB("QtGui")) )
-#pragma comment( lib, QLIB(DLIB("QtSql")) )
 #else
 #pragma comment( lib, DLIB("qtmain") )
 #pragma comment( lib, QLIB(DLIB("Qt5Core")) )
 #pragma comment( lib, QLIB(DLIB("Qt5Gui")) )
 #pragma comment( lib, QLIB(DLIB("Qt5Widgets")) )
-#pragma comment( lib, QLIB(DLIB("QtSql")) )
 #endif
 
 

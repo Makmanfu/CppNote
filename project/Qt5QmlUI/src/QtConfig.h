@@ -38,10 +38,9 @@
 #pragma comment( lib, QLIB(DLIB("Qt5Core")) )
 #pragma comment( lib, QLIB(DLIB("Qt5Gui")) )
 #pragma comment( lib, QLIB(DLIB("Qt5Widgets")) )
+#pragma comment( lib, QLIB(DLIB("QtSql")) )
 #pragma comment( lib, QLIB(DLIB("Qt5Qml")) )              //qml
 #endif
-
-
 
 
 

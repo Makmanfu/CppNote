@@ -12,6 +12,7 @@
 #include "ffmpeg_audio_decoder.hpp"
 #include "ffmpeg_audio_player.hpp"
 #include "ffmpeg_picture_encoder.hpp"
+#include "WinMP4.hpp"
 
 
 //exe的入口函数
@@ -39,10 +40,18 @@ int main(int argc, char** argv)
 }
 
 //窗口界面程序
-//int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
-//{
-//    return 0;
-//}
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
+{
+    WINProc fp = NULL;
+    CmdProc<WINProc> cmds;
+    cmds.DefaultFunAdd(&WinMP4::WINMAIN);
+    cmds.ComandAdd(string("WinMP4"), &WinMP4::WINMAIN);
+    cmds.GetCmdFunProc(string(lpCmdLine), &fp);
+    if (fp != NULL)
+        fp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+    return 0;
+    return 0;
+}
 
 //dll的入口函数
 bool APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)

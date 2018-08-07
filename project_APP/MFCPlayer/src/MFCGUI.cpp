@@ -1,8 +1,9 @@
 
 
 #include "stdafx.h"
-#include "MFCGUI.h"
-#include "MFCGUIDlg.h"
+#include "mfcgui.h"
+#include "vlcdlg.h"
+#include "ffmpegdlg.h"
 
 
 BEGIN_MESSAGE_MAP(CMFCGUIApp, CWinApp)
@@ -26,7 +27,7 @@ BOOL CMFCGUIApp::InitInstance()
 #else
     Enable3dControlsStatic();   // Call this when linking to MFC statically
 #endif
-    CMFCGUIDlg dlg;
+    CVLCdlg dlg;    //CFFmpegdlg    CVLCdlg
     m_pMainWnd = &dlg;
     int nResponse = dlg.DoModal();
     if (nResponse == IDOK)

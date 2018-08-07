@@ -1,11 +1,10 @@
 
 
 #include "stdafx.h"
-#include "MFCGUI.h"
-#include "MFCGUIDlg.h"
-#include "vlc/vlc.h"
+#include "mfcgui.h"
+#include "vlcdlg.h"
 
-BEGIN_MESSAGE_MAP(CMFCGUIDlg, CDialog)
+BEGIN_MESSAGE_MAP(CVLCdlg, CDialog)
     //{{AFX_MSG_MAP(CMFCGUIDlg)
     ON_WM_SYSCOMMAND()
     ON_WM_PAINT()
@@ -25,7 +24,7 @@ END_MESSAGE_MAP()
 
 static void HandleVLCEvents(const VLCEvent* pEvt, void* pUserData)
 {
-    CMFCGUIDlg* pDlg = reinterpret_cast<CMFCGUIDlg*>(pUserData);
+    CVLCdlg* pDlg = reinterpret_cast<CVLCdlg*>(pUserData);
 
     switch (pEvt->type)
     {
@@ -37,8 +36,8 @@ static void HandleVLCEvents(const VLCEvent* pEvt, void* pUserData)
     }
 }
 
-CMFCGUIDlg::CMFCGUIDlg(CWnd* pParent /*=NULL*/)
-    : CDialog(CMFCGUIDlg::IDD, pParent)
+CVLCdlg::CVLCdlg(CWnd* pParent /*=NULL*/)
+    : CDialog(CVLCdlg::IDD, pParent)
     , muteFlag_(false)
     , length_(0)
     , created_(false)
@@ -46,7 +45,7 @@ CMFCGUIDlg::CMFCGUIDlg(CWnd* pParent /*=NULL*/)
     m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CMFCGUIDlg::UpdatePosition()
+void CVLCdlg::UpdatePosition()
 {
     length_ = vlcPlayer_.GetLength();
     int64_t newPosition = vlcPlayer_.GetTime();
@@ -65,7 +64,7 @@ void CMFCGUIDlg::UpdatePosition()
     mediaSlider_.SetPos(newSliderPos);
 }
 
-void CMFCGUIDlg::DoDataExchange(CDataExchange* pDX)
+void CVLCdlg::DoDataExchange(CDataExchange* pDX)
 {
     CDialog::DoDataExchange(pDX);
     DDX_Control(pDX, IDC_STATIC_MEDIA_CONTROL, mediaControlGroup_);
@@ -82,7 +81,7 @@ void CMFCGUIDlg::DoDataExchange(CDataExchange* pDX)
     DDX_Control(pDX, IDC_STATIC_VOLUME, volumeLevel_);
 }
 
-BOOL CMFCGUIDlg::OnInitDialog()
+BOOL CVLCdlg::OnInitDialog()
 {
     CDialog::OnInitDialog();
     SetIcon(m_hIcon, TRUE);         // Set big icon
@@ -133,12 +132,12 @@ BOOL CMFCGUIDlg::OnInitDialog()
     return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
-void CMFCGUIDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void CVLCdlg::OnSysCommand(UINT nID, LPARAM lParam)
 {
     CDialog::OnSysCommand(nID, lParam);
 }
 
-void CMFCGUIDlg::OnPaint()
+void CVLCdlg::OnPaint()
 {
     if (IsIconic())
     {
@@ -162,18 +161,18 @@ void CMFCGUIDlg::OnPaint()
 
 }
 
-HCURSOR CMFCGUIDlg::OnQueryDragIcon()
+HCURSOR CVLCdlg::OnQueryDragIcon()
 {
     return (HCURSOR) m_hIcon;
 }
 
-void CMFCGUIDlg::OnLButtonDown(UINT nFlags, CPoint point)
+void CVLCdlg::OnLButtonDown(UINT nFlags, CPoint point)
 {
     PostMessage(WM_NCLBUTTONDOWN, HTCAPTION, MAKELPARAM(point.x, point.y)); //实现客户区拖动
     CDialog::OnLButtonDown(nFlags, point);
 }
 
-void CMFCGUIDlg::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
+void CVLCdlg::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 {
     CSliderCtrl* pSlider = reinterpret_cast<CSliderCtrl*>(pScrollBar);
 
@@ -197,19 +196,19 @@ void CMFCGUIDlg::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
     CDialog::OnHScroll(nSBCode, nPos, pScrollBar);
 }
 
-void CMFCGUIDlg::OnShowWindow(BOOL bShow, UINT nStatus)
+void CVLCdlg::OnShowWindow(BOOL bShow, UINT nStatus)
 {
     CDialog::OnShowWindow(bShow, nStatus);
 }
 
-void CMFCGUIDlg::OnSize(UINT nType, int cx, int cy)
+void CVLCdlg::OnSize(UINT nType, int cx, int cy)
 {
     CDialog::OnSize(nType, cx, cy);
     RecalcLayout(cx, cy);
     Invalidate();
 }
 
-void CMFCGUIDlg::OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI)
+void CVLCdlg::OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI)
 {
     if (created_)
     {
@@ -218,12 +217,12 @@ void CMFCGUIDlg::OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI)
     }
 }
 
-void CMFCGUIDlg::OnBnClickedButtonPlay()
+void CVLCdlg::OnBnClickedButtonPlay()
 {
     vlcPlayer_.Play();
 }
 
-void CMFCGUIDlg::OnBnClickedButtonStop()
+void CVLCdlg::OnBnClickedButtonStop()
 {
     vlcPlayer_.Stop();
     length_ = 0;
@@ -234,19 +233,19 @@ void CMFCGUIDlg::OnBnClickedButtonStop()
     mediaPosition_.SetWindowText(length);
 }
 
-void CMFCGUIDlg::OnBnClickedButtonPause()
+void CVLCdlg::OnBnClickedButtonPause()
 {
     vlcPlayer_.Pause();
 }
 
-void CMFCGUIDlg::OnBnClickedButtonMute()
+void CVLCdlg::OnBnClickedButtonMute()
 {
     muteFlag_ = !vlcPlayer_.GetMute();
     (muteFlag_) ? buttonMute_.SetIcon(muteIcon_) : buttonMute_.SetIcon(noMuteIcon_);
     vlcPlayer_.Mute(muteFlag_);
 }
 
-void CMFCGUIDlg::OnBnClickedButtonLoad()
+void CVLCdlg::OnBnClickedButtonLoad()
 {
     CFileDialog dlgFile(TRUE);
     if (dlgFile.DoModal() == IDOK)
@@ -267,7 +266,7 @@ void CMFCGUIDlg::OnBnClickedButtonLoad()
     }
 }
 
-void CMFCGUIDlg::RecalcLayout(int cx, int cy)
+void CVLCdlg::RecalcLayout(int cx, int cy)
 {
     if (!created_)
         return;

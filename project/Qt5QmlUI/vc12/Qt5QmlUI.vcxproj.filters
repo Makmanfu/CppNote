@@ -18,6 +18,9 @@
     <Filter Include="Start\libQt">
       <UniqueIdentifier>{159c440f-d937-4b91-ae7b-310998677844}</UniqueIdentifier>
     </Filter>
+    <Filter Include="db">
+      <UniqueIdentifier>{6a325602-c236-4a4a-b427-d66c96abe7e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\stdafx.h">
@@ -28,6 +31,18 @@
     </ClInclude>
     <ClInclude Include="..\src\QPublic.h">
       <Filter>Start\libQt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\crmsystem.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\crmsystem_def.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tabdb.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\wdb.h">
+      <Filter>db</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +60,15 @@
     </ClCompile>
     <ClCompile Include="QtConfig_moc.cpp">
       <Filter>Start\libQt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crmsystem.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tabdb.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\wdb.cpp">
+      <Filter>db</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

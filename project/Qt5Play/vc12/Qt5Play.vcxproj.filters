@@ -12,34 +12,58 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="db">
-      <UniqueIdentifier>{654035c8-1aa0-41c3-b107-6e0d243f5080}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Start\libQt">
       <UniqueIdentifier>{7626d96e-8b96-4812-83a6-81609c7c777c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fplay">
+      <UniqueIdentifier>{1de0df6f-9471-48a2-b71e-35e113164295}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fplay\ff">
+      <UniqueIdentifier>{7d009003-cb1d-4bfb-90e2-78391d20b7f7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\stdafx.h">
       <Filter>Start</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\tabdb.h">
-      <Filter>db</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\crmsystem_def.h">
-      <Filter>db</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\wdb.h">
-      <Filter>db</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\crmsystem.h">
-      <Filter>db</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\QPublic.h">
       <Filter>Start\libQt</Filter>
     </ClInclude>
     <ClInclude Include="..\src\QtConfig.h">
       <Filter>Start\libQt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FrameQueue.h">
+      <Filter>fplay\ff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ImageFilter.h">
+      <Filter>fplay\ff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PacketQueue.h">
+      <Filter>fplay\ff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QImageHandler.h">
+      <Filter>fplay\ff</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ReadPacketsThread.h">
+      <Filter>fplay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Audio.h">
+      <Filter>fplay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DisplayMediaTimer.h">
+      <Filter>fplay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Media.h">
+      <Filter>fplay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Video.h">
+      <Filter>fplay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\QTPlayer.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\VideoOpenGLWidget.h">
+      <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -48,15 +72,6 @@
     </ClCompile>
     <ClCompile Include="..\src\stdafx.cpp">
       <Filter>Start</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\tabdb.cpp">
-      <Filter>db</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\wdb.cpp">
-      <Filter>db</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\crmsystem.cpp">
-      <Filter>db</Filter>
     </ClCompile>
     <ClCompile Include="..\src\QPublic.cpp">
       <Filter>Start\libQt</Filter>
@@ -67,10 +82,54 @@
     <ClCompile Include="QtConfig_moc.cpp">
       <Filter>Start\libQt</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\FrameQueue.cpp">
+      <Filter>fplay\ff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ImageFilter.cpp">
+      <Filter>fplay\ff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PacketQueue.cpp">
+      <Filter>fplay\ff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\QImageHandler.cpp">
+      <Filter>fplay\ff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ReadPacketsThread.cpp">
+      <Filter>fplay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Audio.cpp">
+      <Filter>fplay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\DisplayMediaTimer.cpp">
+      <Filter>fplay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Media.cpp">
+      <Filter>fplay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Video.cpp">
+      <Filter>fplay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\QTPlayer.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\VideoOpenGLWidget.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\Res\RunICO.rc">
       <Filter>Start\Res</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\QTPlayer.ui">
+      <Filter>UI</Filter>
+    </None>
+    <None Include="..\src\VideoOpenGLWidget.ui">
+      <Filter>UI</Filter>
+    </None>
+    <None Include="..\Res\PlayRes.qrc">
+      <Filter>Start\Res</Filter>
+    </None>
   </ItemGroup>
 </Project>

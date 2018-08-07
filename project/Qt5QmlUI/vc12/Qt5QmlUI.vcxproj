@@ -184,15 +184,22 @@ rem copy /y $(QT5PATH)\\plugins\\imageformats\\*.dll "$(OutDir)\\imageformats" <
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\crmsystem.h" />
+    <ClInclude Include="..\src\crmsystem_def.h" />
     <ClInclude Include="..\src\QPublic.h" />
     <ClInclude Include="..\src\QtConfig.h" />
     <ClInclude Include="..\src\stdafx.h" />
+    <ClInclude Include="..\src\tabdb.h" />
+    <ClInclude Include="..\src\wdb.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\crmsystem.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\QPublic.cpp" />
     <ClCompile Include="..\src\QtConfig.cpp" />
     <ClCompile Include="..\src\stdafx.cpp" />
+    <ClCompile Include="..\src\tabdb.cpp" />
+    <ClCompile Include="..\src\wdb.cpp" />
     <ClCompile Include="QtConfig_moc.cpp" />
   </ItemGroup>
   <ItemGroup>
