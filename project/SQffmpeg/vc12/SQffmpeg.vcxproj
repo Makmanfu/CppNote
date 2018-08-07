@@ -332,6 +332,9 @@
     <ClInclude Include="..\src\ffmpeg_audio_play_sdl2.hpp" />
     <ClInclude Include="..\src\ffmpeg_audio_decoder.hpp" />
     <ClInclude Include="..\src\ffmpeg_audio_player.hpp" />
+    <ClInclude Include="..\src\mpv_streamcb.hpp" />
+    <ClInclude Include="..\src\mpv_sdl.hpp" />
+    <ClInclude Include="..\src\mpv_hello.hpp" />
     <ClInclude Include="..\src\WinMP4.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />

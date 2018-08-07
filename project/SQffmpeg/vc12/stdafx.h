@@ -3,7 +3,7 @@
 #define STDAFX_H
 
 //编译开关----------------------------------------------------------------
-#define GUIRUNC                                 //入口选项 GUIRUNC/NATIVEC/CONSOLE/HIDECMD
+#define GUIRUNC                                 //入口选项 GUIRUNC/CONSOLE/NATIVEC/HIDECMD
 //包含文件----------------------------------------------------------------
 #define __STDC_CONSTANT_MACROS
 #include "targetver.h"
@@ -11,6 +11,7 @@
 //#include <windows.h>
 #include <stdio.h>
 #include <tchar.h>
+#include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
 #include "resource.h"
@@ -38,6 +39,7 @@ extern "C"
 #pragma comment(lib,"avformat.lib")
 #pragma comment(lib,"postproc.lib")
 #pragma comment(lib,"swresample.lib")
+#pragma comment(lib,"mpeg.lib")
 
 #pragma comment(lib,"SDL2.lib")
 #pragma comment(lib,"SDL2main.lib")

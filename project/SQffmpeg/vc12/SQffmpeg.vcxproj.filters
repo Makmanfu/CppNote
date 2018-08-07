@@ -61,6 +61,15 @@
     <ClInclude Include="..\src\WinMP4.hpp">
       <Filter>MP4</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\mpv_hello.hpp">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\mpv_sdl.hpp">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\mpv_streamcb.hpp">
+      <Filter>library</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
