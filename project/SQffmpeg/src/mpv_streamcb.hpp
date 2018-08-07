@@ -51,12 +51,12 @@ struct mpv_streamcb
     }
     static int start(int argc, char** argv)
     {
-        //if (argc != 2)
-        //{
-        //    printf("pass a single media file as argument\n");
-        //    return 1;
-        //}
-        argv[1] = "1.mp4";
+        if (argc != 2)
+        {
+            printf("pass a single media file as argument\n");
+            return 1;
+        }
+        //argv[1] = "1.mp4";
         mpv_handle* ctx = mpv_create();
         if (!ctx)
         {
