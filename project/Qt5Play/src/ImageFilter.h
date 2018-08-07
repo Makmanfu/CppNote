@@ -29,10 +29,15 @@ struct ColorTask
 class ImageFilter
 {
 public:
+    //过滤图片操作
     QImage* filter(QImage*& img);
+    //增加操作任务
     void addTask(XTask task);
+    //增加颜色任务
     void addColorTask(ColorTask task);
+    //过滤颜色
     QImage* filterColor(QImage*& img);
+    //清空任务
     void clear();
     static ImageFilter* getInstance()
     {

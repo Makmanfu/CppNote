@@ -7,14 +7,7 @@
 const static long long  MAX_AUDIOQ_SIZE = (5 * 16 * 1024);//最大音频包大小（队列中所有加起来的大小）
 const static long long   MAX_VIDEOQ_SIZE = (5 * 256 * 1024);//最大视频包大小（队列中所有视频包加起来的大小）
 
-//************************************
-// Method:    r2d
-// FullName:  r2d
-// Access:    public static
-// Returns:   double
-// Qualifier: 时间基准计算
-// Parameter: AVRational r
-//************************************
+//时间基准计算
 static double r2d(AVRational r)
 {
     return r.num == 0 || r.den == 0 ? 0. : (double)r.num / (double)r.den;
@@ -29,14 +22,7 @@ Media::Media()
     video = new Video;
 }
 
-//************************************
-// Method:    config
-// FullName:  Media::config
-// Access:    public
-// Returns:   Media::Media *
-// Qualifier:配置视频
-//************************************
-Media*   Media::config()
+Media* Media::config()
 {
     close();
     QMutexLocker locker(&mutex);
@@ -89,27 +75,12 @@ Media*   Media::config()
     return this;
 }
 
-//************************************
-// Method:    setMediaFile
-// FullName:  Media::setMediaFile
-// Access:    public
-// Returns:   Media::Media *
-// Qualifier: 设置视频文件
-// Parameter: const char * filename 视频文件名字
-//************************************
 Media* Media::setMediaFile(const char* filename)
 {
     this->filename = filename;
     return this;
 }
 
-//************************************
-// Method:    checkMediaSizeValid
-// FullName:  Media::checkMediaSizeValid
-// Access:    public
-// Returns:   bool
-// Qualifier: 检查视频大小是否合法
-//************************************
 bool Media::checkMediaSizeValid()
 {
     if (this->audio == nullptr || this->video == nullptr)
@@ -119,75 +90,31 @@ bool Media::checkMediaSizeValid()
     return (audioSize > MAX_AUDIOQ_SIZE || videoSize > MAX_VIDEOQ_SIZE);
 }
 
-//************************************
-// Method:    getVideoStreamIndex
-// FullName:  Media::getVideoStreamIndex
-// Access:    public
-// Returns:   int
-// Qualifier: 获取视频流信息
-//************************************
 int Media::getVideoStreamIndex()
 {
     return video->getStreamIndex();
 }
 
-//************************************
-// Method:    getAudioStreamIndex
-// FullName:  Media::getAudioStreamIndex
-// Access:    public
-// Returns:   int
-// Qualifier:获取音频流下标
-//************************************
 int Media::getAudioStreamIndex()
 {
     return audio->getStreamIndex();
 }
 
-//************************************
-// Method:    enqueueVideoPacket
-// FullName:  Media::enqueueVideoPacket
-// Access:    public
-// Returns:   void
-// Qualifier:视频包入队
-// Parameter: const AVPacket & packet
-//************************************
 void Media::enqueueVideoPacket(const AVPacket& packet)
 {
     video->enqueuePacket(packet);
 }
 
-//************************************
-// Method:    enqueueAudioPacket
-// FullName:  Media::enqueueAudioPacket
-// Access:    public
-// Returns:   void
-// Qualifier:音频包入队
-// Parameter: const AVPacket & packet
-//************************************
 void Media::enqueueAudioPacket(const AVPacket& packet)
 {
     audio->enqueuePacket(packet);
 }
 
-//************************************
-// Method:    startAudioPlay
-// FullName:  Media::startAudioPlay
-// Access:    public
-// Returns:   void
-// Qualifier: 音频开始播放
-//************************************
 void Media::startAudioPlay()
 {
     audio->audioPlay();
 }
 
-//************************************
-// Method:    getAVFormatContext
-// FullName:  Media::getAVFormatContext
-// Access:    public
-// Returns:   AVFormatContext *
-// Qualifier:获取音视频文件格式上下文
-//************************************
 AVFormatContext* Media::getAVFormatContext()
 {
     QMutexLocker locker(&mutex);
@@ -195,13 +122,6 @@ AVFormatContext* Media::getAVFormatContext()
     return p;
 }
 
-//************************************
-// Method:    close
-// FullName:  Media::close
-// Access:    public
-// Returns:   void
-// Qualifier:关闭，回收资源
-//************************************
 void Media::close()
 {
     QMutexLocker locker(&mutex);

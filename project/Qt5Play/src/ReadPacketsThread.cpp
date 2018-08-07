@@ -4,15 +4,8 @@
 #include "Media.h"
 #include <QMutexLocker>
 
-static bool isExit = false;
+bool ReadPacketsThread::isExit = false;
 
-//************************************
-// Method:    run
-// FullName:  ReadPacketsThread::run
-// Access:    public
-// Returns:   void
-// Qualifier:读取音视频包的线程处理函数
-//************************************
 void ReadPacketsThread::run()
 {
     AVPacket packet;
@@ -95,39 +88,16 @@ ReadPacketsThread::~ReadPacketsThread()
     wait();
 }
 
-//************************************
-// Method:    getIsPlaying
-// FullName:  ReadPacketsThread::getIsPlaying
-// Access:    public
-// Returns:   bool
-// Qualifier: 获取视频播放状态
-//************************************
 bool ReadPacketsThread::getIsPlaying()
 {
     return isPlay;
 }
 
-//************************************
-// Method:    setPlaying
-// FullName:  ReadPacketsThread::setPlaying
-// Access:    public
-// Returns:   void
-// Qualifier: 设置播放状态
-// Parameter: bool isPlaying
-//************************************
 void ReadPacketsThread::setPlaying(bool isPlaying)
 {
     this->isPlay = isPlaying;
 }
 
-//************************************
-// Method:    receivePos
-// FullName:  ReadPacketsThread::receivePos
-// Access:    public
-// Returns:   void
-// Qualifier: 接收跳转的位置，跳转标识设置true
-// Parameter: float pos 视频跳转位置
-//************************************
 void ReadPacketsThread::receivePos(float pos)
 {
     currentPos = pos;

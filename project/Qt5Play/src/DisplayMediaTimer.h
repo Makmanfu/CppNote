@@ -13,13 +13,18 @@ public:
         static DisplayMediaTimer displayMediaThread;
         return &displayMediaThread;
     }
-    bool isPlaying();//获取播放状态
-    void setPlay(bool isPlaying);//设置播放状态
     ~DisplayMediaTimer();
+    //获取播放状态
+    bool isPlaying();
+    //设置播放状态
+    void setPlay(bool isPlaying);
+    //重置视频大小，窗体最大化最小化时使用
     void resetImage(int width, int height);
 public slots:
+    //音视频同步设置
     void synchronizeAudioAndVideo();
 private:
+    //启动视频定时器
     DisplayMediaTimer();
     bool isPlay = false;
     QTimer* timer;//视频定时刷新器
@@ -29,7 +34,8 @@ private:
     int imageHeight = 600;
     QMutex mutex;
 signals:
-    void updateFrame(QImage* image);//发送到opengl
+    //发送到opengl
+    void updateFrame(QImage* image);
 
 };
 

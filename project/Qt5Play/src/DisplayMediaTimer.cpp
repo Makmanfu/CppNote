@@ -7,13 +7,6 @@
 static const double SYNC_THRESHOLD = 0.01;//同步临界值
 static const double NOSYNC_THRESHOLD = 10.0;//非同步临界值
 
-//************************************
-// Method:    synchronizeAudioAndVideo
-// FullName:  DisplayMediaTimer::synchronizeAudioAndVideo
-// Access:    public
-// Returns:   void
-// Qualifier:音视频同步设置
-//************************************
 void DisplayMediaTimer::synchronizeAudioAndVideo()
 {
     if (!isPlay)
@@ -123,13 +116,6 @@ void DisplayMediaTimer::synchronizeAudioAndVideo()
     //mutex.unlock();
 }
 
-//************************************
-// Method:    DisplayMediaTimer
-// FullName:  DisplayMediaTimer::DisplayMediaTimer
-// Access:    private
-// Returns:
-// Qualifier:启动视频定时器
-//************************************
 DisplayMediaTimer::DisplayMediaTimer()
 {
     buf = new uchar[imageWidth * imageHeight * 4];
@@ -139,21 +125,11 @@ DisplayMediaTimer::DisplayMediaTimer()
     timer->start(20);
 }
 
-//************************************
-// Method:    resetImage
-// FullName:  DisplayMediaTimer::resetImage
-// Access:    public
-// Returns:   void
-// Qualifier:重置视频大小，窗体最大化最小化时使用
-// Parameter: int width 宽
-// Parameter: int height 高
-//************************************
 void DisplayMediaTimer::resetImage(int width, int height)
 {
     imageWidth = width;
     imageHeight = height;
 }
-
 
 DisplayMediaTimer::~DisplayMediaTimer()
 {
@@ -165,26 +141,11 @@ DisplayMediaTimer::~DisplayMediaTimer()
         delete timer;
 }
 
-//************************************
-// Method:    setPlay
-// FullName:  DisplayMediaTimer::setPlay
-// Access:    public
-// Returns:   void
-// Qualifier: 设置播放状态
-// Parameter: bool isPlaying
-//************************************
 void DisplayMediaTimer::setPlay(bool isPlaying)
 {
     this->isPlay = isPlaying;
 }
 
-//************************************
-// Method:    isPlaying
-// FullName:  DisplayMediaTimer::isPlaying
-// Access:    public
-// Returns:   bool
-// Qualifier: 获取播放状态
-//************************************
 bool DisplayMediaTimer::isPlaying()
 {
     return isPlay;

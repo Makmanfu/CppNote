@@ -13,9 +13,13 @@ class PacketQueue
 {
 public:
     PacketQueue();
+    //包队列入队
     bool enQueue(const AVPacket packet);
+    //包队列出队
     AVPacket deQueue();
+    //获取包大小
     Uint32 getPacketSize();
+    //清空队列
     void queueFlush();
     ~PacketQueue();
 private:

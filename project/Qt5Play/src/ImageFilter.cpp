@@ -5,14 +5,6 @@
 #include <QMutexLocker>
 #include "QImageHandler.h"
 
-//************************************
-// Method:    filter
-// FullName:  ImageFilter::filter
-// Access:    public
-// Returns:   QT_NAMESPACE::QImage *
-// Qualifier:过滤图片操作
-// Parameter: QImage * & img
-//************************************
 QImage* ImageFilter::filter(QImage*& img)
 {
     QMutexLocker locker(&mutex);
@@ -34,42 +26,18 @@ QImage* ImageFilter::filter(QImage*& img)
     return handler.getHandleImage();//返回操作后的图片
 }
 
-//************************************
-// Method:    addTask
-// FullName:  ImageFilter::addTask
-// Access:    public
-// Returns:   void
-// Qualifier:增加操作任务
-// Parameter: XTask task
-//************************************
 void ImageFilter::addTask(XTask task)
 {
     QMutexLocker locker(&mutex);
     tasks.push_back(task);
 }
 
-//************************************
-// Method:    addColorTask
-// FullName:  ImageFilter::addColorTask
-// Access:    public
-// Returns:   void
-// Qualifier: 增加颜色任务
-// Parameter: ColorTask task
-//************************************
 void ImageFilter::addColorTask(ColorTask task)
 {
     QMutexLocker locker(&mutex);
     colorTasks.push_back(task);
 }
 
-//************************************
-// Method:    filterColor
-// FullName:  ImageFilter::filterColor
-// Access:    public
-// Returns:   QT_NAMESPACE::QImage *
-// Qualifier: 过滤颜色
-// Parameter: QImage * & img
-//************************************
 QImage* ImageFilter::filterColor(QImage*& img)
 {
     QMutexLocker locker(&mutex);
@@ -91,13 +59,6 @@ QImage* ImageFilter::filterColor(QImage*& img)
     return handler.getHandleImage();
 }
 
-//************************************
-// Method:    clear
-// FullName:  ImageFilter::clear
-// Access:    public
-// Returns:   void
-// Qualifier:清空任务
-//************************************
 void ImageFilter::clear()
 {
     QMutexLocker locker(&mutex);

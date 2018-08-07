@@ -6,7 +6,7 @@
 #include "Media.h"
 #include "ReadPacketsThread.h"
 
-static QImage* image;
+QImage* VideoOpenGLWidget::image;
 
 VideoOpenGLWidget::VideoOpenGLWidget(QWidget* parent): QOpenGLWidget(parent)
 {
@@ -17,14 +17,6 @@ VideoOpenGLWidget::~VideoOpenGLWidget()
 {
 }
 
-//************************************
-// Method:    setVideoImage
-// FullName:  VideoOpenGLWidget::setVideoImage
-// Access:    public
-// Returns:   void
-// Qualifier: 槽，调用更新函数
-// Parameter: QImage * img
-//************************************
 void VideoOpenGLWidget::setVideoImage(QImage* img)
 {
     if (ReadPacketsThread::getInstance()->getIsPlaying())
@@ -34,14 +26,6 @@ void VideoOpenGLWidget::setVideoImage(QImage* img)
     }
 }
 
-//************************************
-// Method:    paintEvent
-// FullName:  VideoOpenGLWidget::paintEvent
-// Access:    public
-// Returns:   void
-// Qualifier: 更新画面
-// Parameter: QPaintEvent * e
-//************************************
 void VideoOpenGLWidget::paintEvent(QPaintEvent* e)
 {
     if (image == nullptr)
@@ -51,3 +35,5 @@ void VideoOpenGLWidget::paintEvent(QPaintEvent* e)
     painter.drawImage(QPoint(0, 0), *image);
     painter.end();
 }
+
+

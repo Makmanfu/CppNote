@@ -57,11 +57,13 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\projectconf\CppConf\CppDebug.props" />
+    <Import Project="..\..\..\projectconf\FFmpegConf\FFDebug.props" />
     <Import Project="..\..\..\projectconf\QtConf\Qt5Debug.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\projectconf\CppConf\CppDebug64.props" />
+    <Import Project="..\..\..\projectconf\FFmpegConf\FFDebug64.props" />
     <Import Project="..\..\..\projectconf\QtConf\Qt5Debug64.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='EXE_Release|Win32'">
@@ -73,6 +75,7 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='EXE_Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\..\projectconf\CppConf\CppRelease64.props" />
+    <Import Project="..\..\..\projectconf\FFmpegConf\FFRelease64.props" />
     <Import Project="..\..\..\projectconf\QtConf\Qt5Release64.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />

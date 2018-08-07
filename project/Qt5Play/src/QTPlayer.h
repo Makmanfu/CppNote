@@ -4,7 +4,7 @@
 #include "ui_QTPlayer.h"
 
 
-class QTPlayer : public QMoveDlg
+class QTPlayer : public QWidget
 {
     Q_OBJECT
 public: 
@@ -26,7 +26,6 @@ public slots:
     void sliderRelease();
     void play();
     void setVolume(int volume);
-
 signals:
     void sendPos(float pos);
 private:
