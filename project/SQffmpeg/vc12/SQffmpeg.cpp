@@ -12,16 +12,16 @@
 #include "ffmpeg_audio_decoder.hpp"
 #include "ffmpeg_audio_player.hpp"
 #include "ffmpeg_picture_encoder.hpp"
-#include "mpv_hello.hpp"
-#include "mpv_sdl.hpp"
-#include "mpv_streamcb.hpp"
+//#include "mpv_hello.hpp"
+//#include "mpv_sdl.hpp"
+//#include "mpv_streamcb.hpp"
 #include "WinMP4.hpp"
 
 
 //exe的入口函数
 int main(int argc, char** argv)
 {
-    CMDProc fp = NULL, CmdMain = NULL, DefaultFun = &mpv_hello::start;
+    CMDProc fp = NULL, CmdMain = NULL, DefaultFun = &ffmpeg_player_su::start;
     CCMDParam cmds(argv[0], DefaultFun);               //程序名传入
     cmds.ComandAdd("ffmpeg_helloworld", &ffmpeg_helloworld::start);
     cmds.ComandAdd("ffmpeg_player", &ffmpeg_player::start);
@@ -33,9 +33,9 @@ int main(int argc, char** argv)
     cmds.ComandAdd("ffmpeg_audio_decoder", &ffmpeg_audio_decoder::start);
     cmds.ComandAdd("ffmpeg_audio_player", &ffmpeg_audio_player::start);
     cmds.ComandAdd("ffmpeg_picture_encoder", &ffmpeg_picture_encoder::start);
-    cmds.ComandAdd("mpv_hello", &mpv_hello::start);
-    cmds.ComandAdd("mpv_sdl", &mpv_sdl::start);
-    cmds.ComandAdd("mpv_streamcb", &mpv_streamcb::start);
+    //cmds.ComandAdd("mpv_hello", &mpv_hello::start);
+    //cmds.ComandAdd("mpv_sdl", &mpv_sdl::start);
+    //cmds.ComandAdd("mpv_streamcb", &mpv_streamcb::start);
 
     string strcmd = argc > 1 ? argv[1] : "default";    //default  help
     cmds.GetCmdFunProc(strcmd, &fp);

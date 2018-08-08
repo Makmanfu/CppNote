@@ -1,10 +1,10 @@
 @ECHO OFF
 REM 设置编译器路径(B:\Develop\Compiler  %~dp0..\.. )
-SET COMPILERDIR=B:\Develop\Compiler
+SET CSHELL=B:\Develop\Compiler
 REM 设置生成程序
-SET EXENAME=SQCore.exe
+SET EXENAME=SQCore
 REM 设置生成平台
-SET PLATFORM=x64
+SET PLATFORM=x86
 REM 设置编译器版本
 SET CCNUM=12
 
@@ -25,48 +25,42 @@ SET CCNUM=12
 
 
 
-
-
-
-
-SET PATHEXE=.\CBIN\%EXENAME%
-if not exist "%PATHEXE%" (GOTO BUILD_ALL) else (GOTO RUN)
-GOTO END
-:BUILD_ALL
-REM 调用MSVC编译器CALL vcvarsall.BAT x86
-if %COMPILERDIR%=="" GOTO EXIT
+:START
+REM 调用MSVC编译器
+if %CSHELL%=="" GOTO EXIT
 if %PLATFORM%==x86 (
-    CALL %COMPILERDIR%\VC.BAT %CCNUM%
+    CALL %CSHELL%\VC.BAT %CCNUM% x86
+    SET RUNEXE=%EXENAME%.exe
 ) else (
-    CALL %COMPILERDIR%\VC.BAT %CCNUM% x64
+    CALL %CSHELL%\VC.BAT %CCNUM% x64
+    SET RUNEXE=%EXENAME%64.exe
 )
-REM TMP目录生成项目
-CD %~dp0 &RD /S /Q CBIN tmp &MD tmp &CD tmp
+if not exist ".\CBIN\%RUNEXE%" (GOTO BUILD_ALL) else (GOTO RUN)
+GOTO EOF
+:BUILD_ALL
+CALL:TMPDODIR
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 REM 编译工程
 ::cmake -G"NMake Makefiles" ..
 ::NMAKE
 :: cmake  -G "NMake Makefiles JOM" -DCMAKE_MAKE_PROGRAM=d:\jom-1.1.2\jom.exe .
 cmake  -G "NMake Makefiles JOM"  .. 
 jom -j 4
-CD %~dp0 &RD /S /Q tmp & GOTO RUN
-GOTO END
-:BUILDGUI
-if %PLATFORM%==x86 (
-    CALL %COMPILERDIR%\VC.BAT %CCNUM%
-) else (
-    CALL %COMPILERDIR%\VC.BAT %CCNUM% x64
-)
-cmake-GUI
-GOTO END
-:CLEAN
-RD /S /Q tmp CBIN
-GOTO END
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CALL:RUN
+GOTO EOF
+:TMPDODIR
+CD %~dp0&RD /S /Q CBIN tmp&MD tmp&CD tmp
+GOTO EOF
 :RUN
-CD CBIN & START %EXENAME%
-GOTO END
+CD %~dp0 
+RD /S /Q tmp
+CD CBIN
+START %~dp0CBIN\%RUNEXE%
+GOTO EOF
 :EXIT
 EXIT
-:END
+:EOF
 
 
 

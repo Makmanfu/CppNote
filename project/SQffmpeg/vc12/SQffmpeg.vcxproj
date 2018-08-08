@@ -192,8 +192,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <IgnoreSpecificDefaultLibraries>
-      </IgnoreSpecificDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent />
   </ItemDefinitionGroup>

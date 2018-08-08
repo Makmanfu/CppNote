@@ -33,6 +33,7 @@ find_package(Qt5Core)
 find_package(Qt5Widgets)
 find_package(Qt5Gui)
 find_package(Qt5Qml)
+find_package(Qt5Sql)
 # MOC
 #QT5_WRAP_CPP(QT_MOCS src/widget.h)
 # UIC
@@ -55,4 +56,4 @@ ADD_EXECUTABLE(${EXECUTABLE_FILE_NAME} WIN32 ${ALL_SRCS} )
 #-----------------------------------------------------------------------
 # Á´½ÓQT¿â
 #TARGET_LINK_LIBRARIES(${EXECUTABLE_FILE_NAME} ${QT_LIBRARIES} ${QT_QTMAIN_LIBRARY})
-TARGET_LINK_LIBRARIES(${EXECUTABLE_FILE_NAME} Qt5::Widgets Qt5::Core Qt5::Gui Qt5::Qml)
+TARGET_LINK_LIBRARIES(${EXECUTABLE_FILE_NAME} Qt5::Widgets Qt5::Core Qt5::Gui Qt5::Qml Qt5::Sql)
