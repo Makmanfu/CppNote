@@ -83,13 +83,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\RES\SQC.rc">
-      <Filter>start\res</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="..\RES\icon.ico">
       <Filter>start\res</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\RES\SQffmpeg.rc">
+      <Filter>start\res</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

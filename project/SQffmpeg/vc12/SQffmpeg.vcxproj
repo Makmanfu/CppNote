@@ -353,7 +353,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\RES\SQC.rc" />
+    <ResourceCompile Include="..\RES\SQffmpeg.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\RES\icon.ico" />

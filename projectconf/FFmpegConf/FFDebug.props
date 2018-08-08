@@ -15,7 +15,7 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt)) 
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt)) 
 copy /y $(FFMPEG)\\x86\\bin\\*.dll "$(OutDir)" 
 copy /y $(FFMPEG)\\x86\\bin\\*.so "$(OutDir)" </Command>
     </PostBuildEvent>

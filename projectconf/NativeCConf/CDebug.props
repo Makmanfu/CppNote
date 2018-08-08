@@ -45,7 +45,7 @@
       <OutputFile>$(SolutionDir)bin\$(Configuration)\$(TargetName)\$(TargetName).bsc</OutputFile>
     </Bscmake>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt)) </Command>
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt)) </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

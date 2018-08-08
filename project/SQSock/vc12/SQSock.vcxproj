@@ -265,7 +265,7 @@
       <PreserveSbr>true</PreserveSbr>
     </Bscmake>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt))
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt))
 md "$(SolutionDir)Note\Common\SQ\" 
 for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </Command>
     </PostBuildEvent>
@@ -285,7 +285,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <PreserveSbr>true</PreserveSbr>
     </Bscmake>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt))
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt))
 md "$(SolutionDir)Note\Common\SQ\" 
 for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </Command>
     </PostBuildEvent>
@@ -320,7 +320,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <SubSystem>NotSet</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt))
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt))
 md "$(SolutionDir)Note\Common\SQ\" 
 for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </Command>
     </PostBuildEvent>
@@ -336,7 +336,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <SubSystem>NotSet</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt))
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt))
 md "$(SolutionDir)Note\Common\SQ\" 
 for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </Command>
     </PostBuildEvent>
@@ -375,7 +375,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <PreserveSbr>true</PreserveSbr>
     </Bscmake>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt))
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt))
 md "$(SolutionDir)Note\Common\SQ\" 
 for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </Command>
     </PostBuildEvent>
@@ -399,7 +399,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <PreserveSbr>true</PreserveSbr>
     </Bscmake>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt))
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt))
 md "$(SolutionDir)Note\Common\SQ\" 
 for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </Command>
     </PostBuildEvent>
@@ -442,7 +442,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt))
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt))
 md "$(SolutionDir)Note\Common\SQ\" 
 for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </Command>
     </PostBuildEvent>
@@ -462,7 +462,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>if exist "$(SolutionDir)Note\tool\SignFlagEXE.exe" ($(SolutionDir)Note\\tool\\SignFlagEXE.exe $(OutDir)$(TargetName)$(TargetExt))
+      <Command>if exist "$(SolutionDir)Note\tool\SignFlag.exe" ($(SolutionDir)Note\\tool\\SignFlag.exe $(OutDir)$(TargetName)$(TargetExt))
 md "$(SolutionDir)Note\Common\SQ\" 
 for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </Command>
     </PostBuildEvent>
