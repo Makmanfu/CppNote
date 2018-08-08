@@ -29,16 +29,8 @@ extern "C"
 #include "SDL2/SDL.h"
 };
 //ffmpeg¡¥Ω”ø‚
-#pragma comment(lib,"avcodec.lib")
-#pragma comment(lib,"avformat.lib")
-#pragma comment(lib,"avfilter.lib")
-#pragma comment(lib,"avutil.lib")
-#pragma comment(lib,"swscale.lib")
-#pragma comment(lib,"avdevice.lib")
-#pragma comment(lib,"postproc.lib")
-#pragma comment(lib,"swresample.lib")
+#pragma comment(lib,"ffmpeg_static.lib")
 #pragma comment(lib,"SDL2.lib")
-#pragma comment(lib,"SDL2main.lib")
 #pragma comment(lib,"Ws2_32.lib")
 #pragma comment(lib,"Secur32.lib")
 #pragma comment(lib,"Bcrypt.lib")
