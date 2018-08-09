@@ -13,7 +13,7 @@
 #include <vector>
 using namespace std;
 //opencv÷ß≥÷
-#define OPENCV_INDLL  //OPENCV_INDLL OPENCV_DLL
+#define OPENCV_DLL  //OPENCV_DLL OPENCV_STATIC
 #include "OpenCVConf.h"
 #include "CVres.h"
 

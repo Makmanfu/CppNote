@@ -8,7 +8,7 @@
 #define MINITOOLS_HPP
 #include "WinTool.h"
 #include <iostream>
-#include<algorithm>
+#include <algorithm>
 using namespace std;
 
 //³ÌĞòºÃûÆ÷
