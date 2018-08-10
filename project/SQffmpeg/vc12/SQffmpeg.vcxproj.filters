@@ -8,11 +8,17 @@
     <Filter Include="library">
       <UniqueIdentifier>{4086e521-c1c8-4c70-abf1-3cd44fa50061}</UniqueIdentifier>
     </Filter>
-    <Filter Include="start\res">
-      <UniqueIdentifier>{9e37f181-49bc-4b81-9993-660eeb855647}</UniqueIdentifier>
-    </Filter>
     <Filter Include="MP4">
       <UniqueIdentifier>{950916f6-7eed-45e0-9eda-58007735c54f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\ffres">
+      <UniqueIdentifier>{9e37f181-49bc-4b81-9993-660eeb855647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MP3">
+      <UniqueIdentifier>{f359b8ab-79a0-4b32-a82b-8ed0ca3f2999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start\gdires">
+      <UniqueIdentifier>{b6cda725-aa8c-4451-a404-d847cffb38b0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -21,9 +27,6 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>start</Filter>
-    </ClInclude>
-    <ClInclude Include="..\RES\resource.h">
-      <Filter>start\res</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ffmpeg_helloworld.hpp">
       <Filter>library</Filter>
@@ -58,9 +61,6 @@
     <ClInclude Include="..\src\CMP4.h">
       <Filter>MP4</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\WinMP4.hpp">
-      <Filter>MP4</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\mpv_hello.hpp">
       <Filter>library</Filter>
     </ClInclude>
@@ -69,6 +69,21 @@
     </ClInclude>
     <ClInclude Include="..\src\mpv_streamcb.hpp">
       <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CTray.h">
+      <Filter>MP3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Music.h">
+      <Filter>MP3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RES\ffmpegres.h">
+      <Filter>start\ffres</Filter>
+    </ClInclude>
+    <ClInclude Include="..\res\gdiplay.h">
+      <Filter>start\gdires</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GDIPlayer.h">
+      <Filter>MP3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -81,15 +96,33 @@
     <ClCompile Include="..\src\CMP4.cpp">
       <Filter>MP4</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\RES\icon.ico">
-      <Filter>start\res</Filter>
-    </Image>
+    <ClCompile Include="..\src\Music.cpp">
+      <Filter>MP3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CTray.cpp">
+      <Filter>MP3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GDIPlayer.cpp">
+      <Filter>MP3</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\RES\SQffmpeg.rc">
-      <Filter>start\res</Filter>
+      <Filter>start\ffres</Filter>
     </ResourceCompile>
+    <ResourceCompile Include="..\res\GDIPlay.rc">
+      <Filter>start\gdires</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\RES\gdiicon.ico">
+      <Filter>start\gdires</Filter>
+    </Image>
+    <Image Include="..\res\bk.bmp">
+      <Filter>start\gdires</Filter>
+    </Image>
+    <Image Include="..\RES\icon.ico">
+      <Filter>start\ffres</Filter>
+    </Image>
   </ItemGroup>
 </Project>

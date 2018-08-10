@@ -217,9 +217,6 @@
     <ClInclude Include="..\src\HPSocket\UdpServer.h">
       <Filter>src\HPSock\UDP</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\WinGUI.h">
-      <Filter>start\Dlg</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\styzmq.h">
       <Filter>src\ZMQ</Filter>
     </ClInclude>
@@ -317,9 +314,6 @@
     </ClCompile>
     <ClCompile Include="..\src\HPSocket\UdpServer.cpp">
       <Filter>src\HPSock\UDP</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\WinGUI.cpp">
-      <Filter>start\Dlg</Filter>
     </ClCompile>
     <ClCompile Include="..\src\styzmq.cpp">
       <Filter>src\ZMQ</Filter>

@@ -200,9 +200,6 @@
     <ClInclude Include="..\src\GDIPlusView.h">
       <Filter>GDI</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\WinGUI.h">
-      <Filter>GDI</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\GDIWindow.h">
       <Filter>GDI</Filter>
     </ClInclude>
@@ -404,9 +401,6 @@
       <Filter>GDI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\GDIView.cpp">
-      <Filter>GDI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\WinGUI.cpp">
       <Filter>GDI</Filter>
     </ClCompile>
     <ClCompile Include="..\src\GDIWindow.cpp">

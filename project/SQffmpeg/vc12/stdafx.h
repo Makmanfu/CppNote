@@ -3,18 +3,25 @@
 #define STDAFX_H
 
 //编译开关----------------------------------------------------------------
-#define CONSOLE                                 //入口选项 GUIRUNC/CONSOLE/NATIVEC/HIDECMD
+#define GUIRUNC                                 //入口选项 GUIRUNC/CONSOLE/NATIVEC/HIDECMD
+#define SQC_API
+#define SQCPP_API
 //包含文件----------------------------------------------------------------
 #define __STDC_CONSTANT_MACROS
 #include "targetver.h"
 //#include <winsock2.h>
-//#include <windows.h>
+#include <windows.h>
 #include <stdio.h>
 #include <tchar.h>
 #include <stddef.h>
-#include <stdlib.h>
-#include <string.h>
-#include "resource.h"
+#include <stdlib.h>                             //得到随机数用到
+#include <ctime>                                //得到随机数用到
+#include <malloc.h>
+#include <memory.h>
+#include <string>
+#include "ffmpegres.h"
+#include "gdiplay.h"
+#include "CTemplate.hpp" 
 
 //ffmpeg head
 extern "C"

@@ -1,9 +1,8 @@
 
-#ifndef WINPLAYER_H
-#define WINPLAYER_H
+#ifndef GDIPLAYER_H
+#define GDIPLAYER_H
 #include "stdafx.h"
 #include <windows.h>
-#include "CSingleton.hpp"
 #include "WinGUI.h"
 #include "Music.h"
 #include "CTray.h"
@@ -11,14 +10,14 @@
 #define WM_INVALIDATE WM_USER + 1
 
 //WinAPI播放器
-class WinPlayer :public XqWindowDlg
+class GDIPlayer :public XqWindowDlg
 {
 public:
     //测试 主程序入口
-    static int WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow);
+    static int WIN_MAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow);
 public:
-    WinPlayer(int tResDlgID = 0);     //IDD_DLLDLG
-    virtual ~WinPlayer();
+    GDIPlayer(int tResDlgID = 0);     //IDD_DLLDLG
+    virtual ~GDIPlayer();
 private:
     //绘制类型
     enum DRAWTYPE { DGPI, DGPIBMP};

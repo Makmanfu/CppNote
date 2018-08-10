@@ -7,51 +7,56 @@
 #ifndef CMP4_H
 #define CMP4_H
 
-#include "CTemplate.hpp"
-#include "CSingleton.hpp"
+#include "WinGUI.h"
 
+class CMP4;
 
-//管理消息回调
-class CMP4Msg: public noncopyable
+struct  tagMediaParam
 {
-    DEFINE_SINGLETON(CMP4Msg);
-#define MAX_LOADSTRING 100
-public:
-    HINSTANCE hInst;                            //当前实例
-    TCHAR szTitle[MAX_LOADSTRING];              //标题栏文本
-    TCHAR szWindowClass[MAX_LOADSTRING];        //主窗口类名
-    RECT rect;                                  //绘制区大小
-public:
-    CMP4Msg();
-    ~CMP4Msg();
-private:
-    void DrawGDITest(HWND hWnd);
-    //GPI绘制播放器logo
-    void GDIPaint(HWND hWnd);
-    //GDI贴图BMP
-    void GDIBMPPaint(HWND hWnd);
-public:
-    void InitData(HINSTANCE hInstance);
-    //其他消息
-    void WMOTHER(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-    //窗口创建时候的消息.
-    void WMCREATE(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-    //点击消息
-    void WMLBUTTONDOWN(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-    //右键事件
-    void WMCONTEXTMENU(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-    //改变尺寸时
-    void WMSIZE(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-    //重绘制
-    void WMPAINT(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-    //命令事件
-    void WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-    //窗口改变时
-    void WMSIZING(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    AVFormatContext* pFormatCtx;
+    AVCodecContext*  pCodecCtx;
+    AVCodec*         pCodec;
+    int              videoindex;
+    SwsContext*      img_convert_ctx;
+    RECT             screenRect;
+    HANDLE           thread;
+    CMP4*            gui;
 };
 
-//单例指针
-extern "C" CMP4Msg* GetMP4();
+//非模态窗口消息处理
+class CMP4 : public XqWindowEx
+{
+public:
+    //测试演示 主程序入口
+    static int WIN_MAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
+    {
+        CMP4 WND(hInstance);
+        WND.CreateEX(L"ffmpeg_player");
+        return WND.ShowDLG();     //消息循环
+    };
+    static unsigned int __stdcall VideoRenderThread(LPVOID p);
+public:
+    CMP4(HINSTANCE hInst);
+    ~CMP4() {};
+public:
+    BOOL bOffThreadFlag = FALSE;        //是否关闭当前的播放视频的线程
+    bool playstate;
+    tagMediaParam mParam;
+    HWND m_hWnd;
+    RECT rect;
+public:
+    virtual void WMDESTROY(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    virtual void WMPAINT(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    virtual void WMRBUTTONDOWN(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    virtual void WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    void play(void);
+    void freeall(void);
+};
+
+
+
+
+
 
 
 

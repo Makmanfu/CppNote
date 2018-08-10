@@ -15,17 +15,10 @@
 //#include "mpv_hello.hpp"
 //#include "mpv_sdl.hpp"
 //#include "mpv_streamcb.hpp"
-#include "WinMP4.hpp"
 
-void doargc(int& argc, char** argv_list)
-{
-    if (argc > 1)
-    {
-        for (int i = 1; i < argc; ++i)
-            argv_list[i] = argv_list[i + 1];
-    }
-    argc = argc - 1;
-}
+#include "CToolClass.hpp"
+#include "CMP4.h"
+#include "GDIPlayer.h"
 
 //exe的入口函数
 int main(int argc, char** argv)
@@ -54,14 +47,14 @@ int main(int argc, char** argv)
     return 0;
 }
 
-
 //窗口界面程序
-int WINAPI Win_Main(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
 {
     WINProc fp = NULL;
     CmdProc<WINProc> cmds;
-    cmds.DefaultFunAdd(&WinMP4::WIN_MAIN);
-    cmds.ComandAdd(string("WinMP4"), &WinMP4::WIN_MAIN);
+    cmds.DefaultFunAdd(&CMP4::WIN_MAIN);
+    cmds.ComandAdd(string("CMP4"), &CMP4::WIN_MAIN);
+    cmds.ComandAdd(string("WinPlayer"), &GDIPlayer::WIN_MAIN);
     cmds.GetCmdFunProc(string(lpCmdLine), &fp);
     if (fp != NULL)
         fp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);

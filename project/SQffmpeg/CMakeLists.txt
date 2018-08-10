@@ -12,6 +12,7 @@ add_definitions(-DUNICODE -D_UNICODE)
 # 定义头文件的路径变量
 SET(INCLUDE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/SRC
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Note/Common
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../project/SQCore/src/WinAPI/
     ${CMAKE_CURRENT_SOURCE_DIR}/../../Note/3rdParty/ffmpeg/include
     ${CMAKE_CURRENT_SOURCE_DIR}/RES
     ${CMAKE_CURRENT_SOURCE_DIR}/VC12
@@ -34,7 +35,7 @@ LINK_DIRECTORIES(${LIB_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/../../Note/3rdParty/ffm
 else()
 LINK_DIRECTORIES(${LIB_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/../../Note/3rdParty/ffmpeg/x86/lib)
 endif()
-link_libraries(avcodec.lib avformat.lib avfilter.lib avutil.lib swscale.lib avdevice.lib postproc.lib swresample.lib SDL2.lib SDL2main.lib) 
+link_libraries(ffmpeg_static.lib SDL2.lib) 
 #link_libraries(Ws2_32.lib Secur32.lib Bcrypt.lib Version.lib WINMM.lib IMM32.lib)
 
 # 添加源文件路径下所有源文件存放到变量中(*.c && *.cpp)
@@ -42,6 +43,7 @@ AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/ DIR_SRCS)
 AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/SRC DIR_SRCS)
 AUX_SOURCE_DIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/vc12 DIR_SRCS)
 SET(DIR_SRCS ${DIR_SRCS} res/SQffmpeg.rc)
+SET(DIR_SRCS ${DIR_SRCS} res/GDIPlay.rc)
 MESSAGE(STATUS "DIR_SRCS , ${DIR_SRCS}") 
 
 # 设置生成可执行文件的路径

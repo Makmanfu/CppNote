@@ -1,109 +1,166 @@
 
 #include "stdafx.h"
 #include "CMP4.h"
+#include <atlstr.h>
 
-CMP4Msg::CMP4Msg()
+CString GetFilePath(HWND* phWnd)
 {
+    OPENFILENAME ofn;      // 公共对话框结构。
+    TCHAR szFile[MAX_PATH]; // 保存获取文件名称的缓冲区。
+    ZeroMemory(&ofn, sizeof(ofn));
+    ofn.lStructSize = sizeof(ofn);
+    ofn.hwndOwner = *phWnd;
+    ofn.lpstrFile = szFile;
+    //
+    //
+    ofn.lpstrFile[0] = _T('\0');
+    ofn.nMaxFile = sizeof(szFile);
+    ofn.lpstrFilter = _T("视频(*.*)\0*.*\0\0");
+    ofn.nFilterIndex = 1;
+    ofn.lpstrFileTitle = NULL;
+    ofn.nMaxFileTitle = 0;
+    ofn.lpstrInitialDir = NULL;
+    ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
+    ofn.lpstrFileTitle = (LPTSTR)_T("打开");
+    // 显示打开选择文件对话框。
+    BOOL bRet = GetOpenFileName(&ofn);
+    if (bRet)
+        return szFile;
+    return _T("");
 }
 
-CMP4Msg::~CMP4Msg()
+unsigned int __stdcall CMP4::VideoRenderThread(LPVOID p)
 {
-}
+    tagMediaParam* pmParam = (tagMediaParam*)p;
+    AVPacket* packet = NULL;
+    AVFrame* pFrame = NULL;
+    AVFrame* pFrameRGB = NULL;
+    PVOID pbit = NULL;
+    BITMAP bmp = { 0 };
+    HBITMAP hBitmap = NULL;
+    BITMAPINFO bmpinfo = { 0 };
+    HDC hdcSrc = NULL;
+    HDC hdcDes = NULL;
+    unsigned char* out_bufRgb;
+    RECT rc;
+    packet = av_packet_alloc();
+    pFrame = av_frame_alloc();
+    pFrameRGB = av_frame_alloc();
 
-void CMP4Msg::InitData(HINSTANCE hInstance)
-{
-    hInst = hInstance;
-    //初始化全局字符串
-    //LoadString(hInst, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
-    //LoadString(hInst, IDC_MYGUI, szWindowClass, MAX_LOADSTRING);
-    wcscpy(szTitle, TEXT("WINMP4"));
-    wcscpy(szWindowClass, TEXT("MYGUI"));
-}
-
-void CMP4Msg::WMOTHER(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
-    //+++++++++++++++++++++++++++++++处理控件+++++++++++++++++++++++++++++++
-    //创建按钮
-    //ButtonAndProc ( hWnd, uMsg, wParam, hInst );
-    //创建对话框
-    //CreateDlg ( hWnd, message, hInst );
-    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    //opengl绘制
-    //OpenGlProc(hWnd, uMsg, wParam, lParam);
-}
-
-#define LEFT_LISTBOX    1
-
-void CMP4Msg::WMCREATE(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
-    //获取窗体尺寸
-    GetWindowRect(hWnd, &rect);
-    //获得屏幕尺寸 并居中显示
-    rect.left = (GetSystemMetrics(SM_CXSCREEN) - rect.right) / 2;
-    rect.top = (GetSystemMetrics(SM_CYSCREEN) - rect.bottom) / 2;
-    //设置窗体位置
-    SetWindowPos(hWnd, HWND_TOP, rect.left, rect.top, rect.right, rect.bottom, SWP_SHOWWINDOW);
-    //获取菜单
-    //HMENU hMainMenu = LoadMenuA(hInst, MAKEINTRESOURCEA(IDR_MENU));
-    //SetMenu(hWnd, hMainMenu);
-}
-
-void CMP4Msg::WMLBUTTONDOWN(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
-    //模拟拖动窗体
-    SendMessage(hWnd, WM_NCLBUTTONDOWN, HTCAPTION, 0);
-    return;
-    //openFileDialog(hWnd);
-    //InvalidateRect(hWnd, NULL, TRUE);
-    //mciSendStringA("Play movie repeat", NULL, 0, 0);
-}
-
-void CMP4Msg::WMSIZE(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
-    //将播放avi文件的窗口居中
-    //if (hVideoALL)
-    //    MoveWindow(hVideoALL, 0, 0, LOWORD(lParam), HIWORD(lParam), TRUE);
-}
-
-void CMP4Msg::WMPAINT(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
-    //DrawGDITest(hWnd);
-    GDIPaint(hWnd);
-    //GDIBMPPaint(hWnd);
-}
-
-extern void play(void);
-
-void CMP4Msg::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
-    switch (wParam)
+    GetClientRect(pmParam->gui->m_hWnd, &pmParam->screenRect);
+    bmpinfo.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
+    bmpinfo.bmiHeader.biWidth = pmParam->screenRect.right - pmParam->screenRect.left;
+    bmpinfo.bmiHeader.biHeight = -pmParam->screenRect.bottom + pmParam->screenRect.top;
+    bmpinfo.bmiHeader.biPlanes = 1;
+    bmpinfo.bmiHeader.biBitCount = 32;
+    bmpinfo.bmiHeader.biCompression = BI_RGB;
+    pmParam->img_convert_ctx = sws_getContext(pmParam->pCodecCtx->width, pmParam->pCodecCtx->height
+        , pmParam->pCodecCtx->pix_fmt, pmParam->screenRect.right - pmParam->screenRect.left
+        , pmParam->screenRect.bottom - pmParam->screenRect.top
+        , AV_PIX_FMT_RGB32, SWS_BICUBIC, NULL, NULL, NULL);
+    out_bufRgb = (unsigned char*)av_malloc(av_image_get_buffer_size(AV_PIX_FMT_RGB32
+        , pmParam->screenRect.right - pmParam->screenRect.left
+        , pmParam->screenRect.bottom - pmParam->screenRect.top
+        , 1));
+    hdcDes = GetDC(pmParam->gui->m_hWnd);
+    hdcSrc = CreateCompatibleDC(hdcDes);
+    av_image_fill_arrays(pFrameRGB->data
+        , pFrameRGB->linesize, out_bufRgb
+        , AV_PIX_FMT_RGB32, pmParam->screenRect.right - pmParam->screenRect.left
+        , pmParam->screenRect.bottom - pmParam->screenRect.top, 1);
+    while (true)
     {
-        case ID_OpenFile:
-            play();
-            break;
-        case IDC_EXIT:
-            PostQuitMessage(0);
-        default:
-            break;
+        if (pmParam->gui->bOffThreadFlag)
+        {
+            ReleaseDC(pmParam->gui->m_hWnd, hdcSrc);
+            ReleaseDC(pmParam->gui->m_hWnd, hdcDes);
+            pmParam->gui->bOffThreadFlag = FALSE;
+            avformat_close_input(&pmParam->gui->mParam.pFormatCtx);
+            av_packet_unref(packet);
+            return 0;
+        }
+        if (packet == NULL)
+        {
+            packet = av_packet_alloc();
+            av_usleep(20 * 1000);
+            continue;
+        }
+        if (av_read_frame(pmParam->pFormatCtx, packet) >= 0)
+        {
+            if (packet->stream_index == pmParam->videoindex)
+            {
+                GetClientRect(pmParam->gui->m_hWnd, &rc);
+                if (rc.left != pmParam->screenRect.left
+                    || rc.right != pmParam->screenRect.right
+                    || rc.top != pmParam->screenRect.top
+                    || rc.bottom != pmParam->screenRect.bottom)
+                {
+                    pmParam->screenRect = rc;
+                    pmParam->img_convert_ctx = sws_getContext(pmParam->pCodecCtx->width, pmParam->pCodecCtx->height
+                        , pmParam->pCodecCtx->pix_fmt, pmParam->screenRect.right - pmParam->screenRect.left
+                        , pmParam->screenRect.bottom - pmParam->screenRect.top
+                        , AV_PIX_FMT_RGB32, SWS_BICUBIC, NULL, NULL, NULL);
+                    av_free(out_bufRgb);
+                    out_bufRgb = (unsigned char*)av_malloc(av_image_get_buffer_size(AV_PIX_FMT_RGB32
+                        , pmParam->screenRect.right - pmParam->screenRect.left
+                        , pmParam->screenRect.bottom - pmParam->screenRect.top
+                        , 1));
+                    av_frame_unref(pFrameRGB);
+                    av_image_fill_arrays(pFrameRGB->data
+                        , pFrameRGB->linesize, out_bufRgb
+                        , AV_PIX_FMT_RGB32, pmParam->screenRect.right - pmParam->screenRect.left
+                        , pmParam->screenRect.bottom - pmParam->screenRect.top, 1);
+                    bmpinfo.bmiHeader.biWidth = pmParam->screenRect.right - pmParam->screenRect.left;
+                    bmpinfo.bmiHeader.biHeight = -pmParam->screenRect.bottom + pmParam->screenRect.top;
+                }
+                if (avcodec_send_packet(pmParam->pCodecCtx, packet) == 0)
+                {
+                    if (avcodec_receive_frame(pmParam->pCodecCtx, pFrame) == 0)
+                    {
+                        sws_scale(pmParam->img_convert_ctx, (const unsigned char* const*)pFrame->data, pFrame->linesize
+                            , 0, pmParam->pCodecCtx->height,
+                            pFrameRGB->data, pFrameRGB->linesize);
+                        hBitmap = CreateDIBSection(hdcSrc, &bmpinfo, DIB_RGB_COLORS, &pbit, NULL, 0);
+                        GetObject(hBitmap, sizeof(BITMAP), &bmp);
+                        memcpy(pbit, out_bufRgb
+                            , (pmParam->screenRect.right - pmParam->screenRect.left) * (pmParam->screenRect.bottom - pmParam->screenRect.top) * 4);
+                        SelectObject(hdcSrc, hBitmap);
+                        BitBlt(hdcDes, 0, 0, pmParam->screenRect.right - pmParam->screenRect.left, pmParam->screenRect.bottom - pmParam->screenRect.top, hdcSrc, 0, 0, SRCCOPY);
+                        DeleteObject(hBitmap);
+                        av_usleep(40 * 1000);
+                    }
+                    else
+                        continue;
+                }
+                else
+                    break;
+            }
+        }
+        av_packet_unref(packet);
     }
+    ReleaseDC(pmParam->gui->m_hWnd, hdcSrc);
+    ReleaseDC(pmParam->gui->m_hWnd, hdcDes);
+    pmParam->gui->bOffThreadFlag = FALSE;
+    avformat_close_input(&pmParam->gui->mParam.pFormatCtx);
+    return 0;
 }
 
-void CMP4Msg::WMSIZING(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+CMP4::CMP4(HINSTANCE hInst) :XqWindowEx(hInst)
 {
-    if (LPRECT(lParam)->right - LPRECT(lParam)->left < 500) LPRECT(lParam)->right = LPRECT(lParam)->left + 500;
-    if (LPRECT(lParam)->bottom - LPRECT(lParam)->top < 558) LPRECT(lParam)->bottom = LPRECT(lParam)->top + 558;
+    m_hWnd = this->GetHandle();
+    mParam.gui = this;
+
+    playstate = false;
 }
 
-void CMP4Msg::DrawGDITest(HWND hWnd)
+void CMP4::WMDESTROY(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    PAINTSTRUCT ps;     //ZeroMemory(&ps, sizeof(PAINTSTRUCT));     //memset(&ps, 0, sizeof(PAINTSTRUCT));
-    HDC hDrawDC = BeginPaint(hWnd, &ps);
-    SetTextColor(ps.hdc, RGB(10, 0, 255));//设置文本颜色
-    DrawText(ps.hdc, TEXT("朋友，你好。"), int(wcslen(L"朋友，你好。")), &(ps.rcPaint), DT_CENTER);
-    EndPaint(hWnd, &ps);
+    //播放之前清理相关参数
+    freeall();
+    PostQuitMessage(0);
 }
 
-void CMP4Msg::GDIPaint(HWND hWnd)
+void CMP4::WMPAINT(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     PAINTSTRUCT ps;
     HDC hDrawDC = BeginPaint(hWnd, &ps);
@@ -126,45 +183,104 @@ void CMP4Msg::GDIPaint(HWND hWnd)
     //清理对象
     DeleteObject(hb);
     EndPaint(hWnd, &ps);
+
+
+    //PAINTSTRUCT ps;
+    ////创建DC和内存DC
+    //HDC hDrawDC = BeginPaint(hWnd, &ps), memDc = CreateCompatibleDC(NULL);
+    ////获得绘制区域
+    //GetClientRect(hWnd, &rect);
+    ////加载图片
+    //HBITMAP hBmp = LoadBitmap(GethInst(), MAKEINTRESOURCE(IDB_BMPLOGO));
+    ////HBITMAP hBmp = LoadBitmapA(NULL, "bk.bmp");
+    ////图片放入内存DC
+    //SelectObject(memDc, hBmp);
+    ////设置在指定设备内容中的伸展模式。解决失真问题。
+    //SetStretchBltMode(hDrawDC, COLORONCOLOR);
+    ////获得图片尺寸
+    //BITMAP bmp;
+    //GetObject(hBmp, sizeof(BITMAP), &bmp);
+    ////内存DC拷贝到Dc
+    //StretchBlt(hDrawDC, 0, 0, rect.right - rect.left, rect.bottom - rect.top,
+    //    memDc, 0, 0, bmp.bmWidth, bmp.bmHeight, SRCCOPY);
+    //DeleteDC(memDc);
+    //DeleteObject(hBmp);
+    //EndPaint(hWnd, &ps);
 }
 
-void CMP4Msg::GDIBMPPaint(HWND hWnd)
+void CMP4::WMRBUTTONDOWN(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    PAINTSTRUCT ps;
-    //创建DC和内存DC
-    HDC hDrawDC = BeginPaint(hWnd, &ps), memDc = CreateCompatibleDC(NULL);
-    //获得绘制区域
-    GetClientRect(hWnd, &rect);
-    //加载图片
-    //HBITMAP hBmp = LoadBitmap(hInstance, MAKEINTRESOURCE(IDB_BMPLOGO));
-    HBITMAP hBmp = LoadBitmapA(NULL, "bk.bmp");
-    //图片放入内存DC
-    SelectObject(memDc, hBmp);
-    //设置在指定设备内容中的伸展模式。解决失真问题。
-    SetStretchBltMode(hDrawDC, COLORONCOLOR);
-    //获得图片尺寸
-    BITMAP bmp;
-    GetObject(hBmp, sizeof(BITMAP), &bmp);
-    //内存DC拷贝到Dc
-    StretchBlt(hDrawDC, 0, 0, rect.right - rect.left, rect.bottom - rect.top,
-               memDc, 0, 0, bmp.bmWidth, bmp.bmHeight, SRCCOPY);
-    DeleteDC(memDc);
-    DeleteObject(hBmp);
-    EndPaint(hWnd, &ps);
-}
-
-void CMP4Msg::WMCONTEXTMENU(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
-    //获取菜单
-    HMENU hPopMenu = LoadMenu(hInst, MAKEINTRESOURCEW(IDR_FFMPEGMENU));
+    POINT pt;
+    pt.x = LOWORD(lParam);
+    pt.y = HIWORD(lParam);
+    ClientToScreen(hWnd, &pt);
+    HMENU hPopMenu = LoadMenu(this->GethInst(), MAKEINTRESOURCEW(IDR_FFMPEGMENU));
     hPopMenu = GetSubMenu(hPopMenu, 0);
-    //DestroyMenu(hTrayMenu);
-    TrackPopupMenu(hPopMenu, TPM_LEFTALIGN, LOWORD(lParam), HIWORD(lParam), 0, hWnd, NULL);
+    TrackPopupMenu(hPopMenu, TPM_LEFTALIGN, pt.x, pt.y, 0, hWnd, NULL);
+    DestroyMenu(hPopMenu);
 }
 
-IMPLEMENT_SINGLETON(CMP4Msg);
-
-extern "C" CMP4Msg* GetMP4()
+void CMP4::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    return CMP4Msg::Instance();
+    switch (wParam)
+    {
+    case ID_OpenFile:
+        play();
+        break;
+    case IDC_FFMPEGEXIT:
+        PostQuitMessage(0);
+    default:
+        break;
+    }
 }
+
+void CMP4::play(void)
+{
+    //播放之前清理相关参数‘
+    bOffThreadFlag = FALSE;
+    freeall();
+
+    av_register_all();
+    mParam.pFormatCtx = avformat_alloc_context();
+    CStringA strPath(GetFilePath(&m_hWnd));
+    if (avformat_open_input(&mParam.pFormatCtx, strPath, NULL, NULL) < 0)
+        return;
+    if (avformat_find_stream_info(mParam.pFormatCtx, NULL) < 0)
+        return;
+    for (int i = 0; i < (int)mParam.pFormatCtx->nb_streams; i++)
+    {
+        if (mParam.pFormatCtx->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_VIDEO)
+            mParam.videoindex = i;
+    }
+    mParam.pCodecCtx = avcodec_alloc_context3(NULL);
+    if (avcodec_parameters_to_context(mParam.pCodecCtx
+        , mParam.pFormatCtx->streams[mParam.videoindex]->codecpar) < 0)
+        av_log(NULL, AV_LOG_ERROR, "video avcodec_parameters_to_context faild");
+    mParam.pCodec = avcodec_find_decoder(mParam.pCodecCtx->codec_id);
+    if (mParam.pCodec == NULL)
+        return;
+    if (avcodec_open2(mParam.pCodecCtx, mParam.pCodec, NULL) < 0)
+        return;
+    mParam.thread = (HANDLE)_beginthreadex(NULL, 0, &VideoRenderThread, &mParam, 0, NULL);
+    playstate = true;
+}
+
+void CMP4::freeall(void)
+{
+    if (playstate)
+    {
+        avcodec_close(mParam.pCodecCtx);
+        avcodec_free_context(&mParam.pCodecCtx);
+        avformat_free_context(mParam.pFormatCtx);
+        sws_freeContext(mParam.img_convert_ctx);
+
+        if (mParam.thread != NULL)
+            bOffThreadFlag = TRUE;
+        WaitForSingleObject(mParam.thread, INFINITE);
+        CloseHandle(mParam.thread);
+        mParam.thread = NULL;
+
+        playstate = false;
+    }
+}
+

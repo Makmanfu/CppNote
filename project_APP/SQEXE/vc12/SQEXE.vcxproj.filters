@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="GUI">
-      <UniqueIdentifier>{4712b2de-1e2d-416c-b7aa-987ecb9e8eb0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="start">
       <UniqueIdentifier>{5d3da94c-0ea9-470e-9443-f7c6e34cc5f3}</UniqueIdentifier>
     </Filter>

@@ -2,7 +2,7 @@
 REM 设置编译器路径(B:\Develop\Compiler  %~dp0..\.. )
 SET CSHELL=B:\Develop\Compiler
 REM 设置生成程序
-SET EXENAME=SignFlag
+SET EXENAME=SQEXE
 REM 设置生成平台
 SET PLATFORM=x86
 REM 设置编译器版本

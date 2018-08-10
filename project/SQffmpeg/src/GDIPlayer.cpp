@@ -3,7 +3,8 @@
 #include <shellapi.h>   //拖拽文件时用到的HDROP定义在此文件(要写在windowsx.h之前，HANDLE_WM_DROPFILES才能被识别)
 #include <windowsx.h>
 #include <Shlobj.h>     //添加目录是使用
-#include "WinPlayer.h"
+#include "GDIPlayer.h"
+
 
 void TcharToChar(const TCHAR* tchar, char* _char)
 {
@@ -13,14 +14,14 @@ void TcharToChar(const TCHAR* tchar, char* _char)
     WideCharToMultiByte(CP_ACP, 0, tchar, -1, _char, iLength, NULL, NULL);
 }
 
-int WinPlayer::WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
+int GDIPlayer::WIN_MAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
 {
-    WinPlayer MsgDlg(IDD_MAIN);
+    GDIPlayer MsgDlg(IDD_GDIMAIN);
     DialogBoxA(hInstance, MAKEINTRESOURCEA(XqWindowDlg::ResDlgID), NULL, XqWindowDlg::Main_Proc);
     return 0;
 }
 
-WinPlayer::WinPlayer(int tResDlgID) :XqWindowDlg(tResDlgID)
+GDIPlayer::GDIPlayer(int tResDlgID) :XqWindowDlg(tResDlgID)
 , iExitFlag(0)//默认不退出到托盘
 , hProgress(NULL)
 , hSound(NULL)
@@ -32,11 +33,11 @@ WinPlayer::WinPlayer(int tResDlgID) :XqWindowDlg(tResDlgID)
 {
 }
 
-WinPlayer::~WinPlayer()
+GDIPlayer::~GDIPlayer()
 {
 }
 
-void WinPlayer::ConvLTime2Str(LONG LTime, char* StrTime)
+void GDIPlayer::ConvLTime2Str(LONG LTime, char* StrTime)
 {
     LTime = LTime / 1000; //由于LTime代表的微秒数，故除以1000
     struct Time
@@ -55,7 +56,7 @@ void WinPlayer::ConvLTime2Str(LONG LTime, char* StrTime)
     wsprintfA(StrTime, "%s:%s:%s", h, m, si);
 }
 
-int WinPlayer::GetRandNum(int a, int b)
+int GDIPlayer::GetRandNum(int a, int b)
 {
     srand((unsigned long)time(NULL));
     int num = rand();
@@ -63,7 +64,7 @@ int WinPlayer::GetRandNum(int a, int b)
     return num;
 }
 
-BOOL WinPlayer::SearchFileAddtoList(HWND hWnd, char path[], char format[])
+BOOL GDIPlayer::SearchFileAddtoList(HWND hWnd, char path[], char format[])
 {
     char szMusicName[MAX_PATH], SearchFormat[MAX_PATH + 15];
     LPSTR PszFilePathName = NULL;  //歌曲全路径(包含歌曲名)
@@ -87,14 +88,14 @@ BOOL WinPlayer::SearchFileAddtoList(HWND hWnd, char path[], char format[])
     return TRUE;
 }
 
-void WinPlayer::GetExeP(char* exePath, int iLen)
+void GDIPlayer::GetExeP(char* exePath, int iLen)
 {
     GetModuleFileNameA(NULL, exePath, iLen); //得到全路径
     char* CutPos = strrchr(exePath, '\\');
     *CutPos = '\0';
 }
 
-void WinPlayer::InitOFN(HWND hWnd, OPENFILENAMEA* Pofn, char OpenSaveFileName[])
+void GDIPlayer::InitOFN(HWND hWnd, OPENFILENAMEA* Pofn, char OpenSaveFileName[])
 {
     ZeroMemory(Pofn, sizeof(OPENFILENAME));
     Pofn->lStructSize = sizeof(OPENFILENAME);
@@ -105,17 +106,17 @@ void WinPlayer::InitOFN(HWND hWnd, OPENFILENAMEA* Pofn, char OpenSaveFileName[])
     Pofn->lpstrFileTitle = NULL;
 }
 
-void WinPlayer::initGui(void)
+void GDIPlayer::initGui(void)
 {
-    hWndList = GetDlgItem(this->getWnd(), IDC_LIST);
-    hProgress = GetDlgItem(this->getWnd(), IDC_SLIDER);
-    hWndShow = GetDlgItem(this->getWnd(), IDC_SHOW);
-    hSound = GetDlgItem(this->getWnd(), IDC_SOUND_SLIDER);
+    hWndList = GetDlgItem(this->GetDlgHWND(), IDC_LIST);
+    hProgress = GetDlgItem(this->GetDlgHWND(), IDC_SLIDER);
+    hWndShow = GetDlgItem(this->GetDlgHWND(), IDC_SHOW);
+    hSound = GetDlgItem(this->GetDlgHWND(), IDC_SOUND_SLIDER);
     //获得绘制区大小
     GetClientRect(hWndShow, &rect);
 }
 
-void WinPlayer::Initsound(void)
+void GDIPlayer::Initsound(void)
 {
     SendMessage(hProgress, TBM_SETPAGESIZE, 0, (LPARAM)500);
     SendMessage(hProgress, TBM_SETLINESIZE, 0, (LPARAM)500);
@@ -126,7 +127,7 @@ void WinPlayer::Initsound(void)
     SendMessage(hSound, TBM_SETPOS, TRUE, iVolume);             //设定当前的滚动值
 }
 
-void WinPlayer::ReadSettingInfo(HWND hWnd)
+void GDIPlayer::ReadSettingInfo(HWND hWnd)
 {
     char exePath[MAX_PATH], SetFilePath[MAX_PATH + 10];
     GetExeP(exePath, sizeof(exePath));
@@ -156,7 +157,7 @@ void WinPlayer::ReadSettingInfo(HWND hWnd)
     fclose(fp);
 }
 
-void WinPlayer::InitWelcomSound(void)
+void GDIPlayer::InitWelcomSound(void)
 {
     //播放欢迎声音
     //char ExePath[MAX_PATH];
@@ -170,13 +171,13 @@ void WinPlayer::InitWelcomSound(void)
     //mciSendStringA(WelcomCmd, "", 0, NULL);
 }
 
-void WinPlayer::GetMyMenu(HWND hWnd)
+void GDIPlayer::GetMyMenu(HWND hWnd)
 {
     //获取菜单
-    hMainMenu = LoadMenu(this->getInst(), MAKEINTRESOURCE(IDR_MENU));
+    hMainMenu = LoadMenu(this->GetDlgInst(), MAKEINTRESOURCE(IDR_GDIMENU));
     hTrayMenu = GetSubMenu(hMainMenu, 0);
     //myTrayClass.SetMenu(hTrayMenu);
-    hPopMenu = LoadMenu(this->getInst(), MAKEINTRESOURCE(IDR_LISTMENU));
+    hPopMenu = LoadMenu(this->GetDlgInst(), MAKEINTRESOURCE(IDR_LISTMENU));
     hPopMenu = GetSubMenu(hPopMenu, 0);
     SetMenu(hWnd, iMenuFlag ? hMainMenu : NULL);
     //根据读出的iExitFlag设置菜单
@@ -195,7 +196,7 @@ void WinPlayer::GetMyMenu(HWND hWnd)
         SetDlgItemText(hWnd, IDC_STATICPLAYMODE, TEXT("全部循环"));
 }
 
-void WinPlayer::WriteSettingInfo(HWND hWnd)
+void GDIPlayer::WriteSettingInfo(HWND hWnd)
 {
     char exePath[MAX_PATH];
     GetExeP(exePath, sizeof(exePath));
@@ -223,7 +224,7 @@ void WinPlayer::WriteSettingInfo(HWND hWnd)
     fclose(fp);
 }
 
-BOOL WinPlayer::AddDirMusic(HWND hWnd)
+BOOL GDIPlayer::AddDirMusic(HWND hWnd)
 {
     BOOL flag = TRUE;
     BROWSEINFOA NewBro;
@@ -245,7 +246,7 @@ BOOL WinPlayer::AddDirMusic(HWND hWnd)
     return flag;
 }
 
-BOOL WinPlayer::AddMusicFileToList(HWND hWnd)
+BOOL GDIPlayer::AddMusicFileToList(HWND hWnd)
 {
     char szOpenFileName[50 * MAX_PATH];
     OPENFILENAMEA ofn;
@@ -297,7 +298,7 @@ BOOL WinPlayer::AddMusicFileToList(HWND hWnd)
     return TRUE;
 }
 
-void WinPlayer::RemoveSelectedMusic(HWND hWnd)
+void GDIPlayer::RemoveSelectedMusic(HWND hWnd)
 {
     int count = ListBox_GetSelCount(hWnd);
     int* pSelectIndexes = new int[count];
@@ -314,7 +315,7 @@ void WinPlayer::RemoveSelectedMusic(HWND hWnd)
     }
 }
 
-void WinPlayer::ClearMusicList(HWND hWnd)
+void GDIPlayer::ClearMusicList(HWND hWnd)
 {
     if (IDYES != MessageBox(hWnd, TEXT("是否清空播放列表？"), TEXT("消息"), MB_YESNO | MB_ICONQUESTION))
         return;
@@ -326,7 +327,7 @@ void WinPlayer::ClearMusicList(HWND hWnd)
     //StopMusic(hWnd);
 }
 
-void WinPlayer::PlayMusicInList(HWND hWnd, int index)
+void GDIPlayer::PlayMusicInList(HWND hWnd, int index)
 {
     if (index <= LB_ERR)    //id非法
         return;
@@ -337,7 +338,7 @@ void WinPlayer::PlayMusicInList(HWND hWnd, int index)
     TcharToChar(swmp3name, smp3name);
     //路径获取
     char* smp3Dir = (char*)ListBox_GetItemData(hWndList, index);    //MessageBoxA(hWnd, smp3Dir, smp3name, MB_OK);
-    m_mp3.SetSong(smp3Dir, this->getWnd());    //CurPlayingSong.SetSong(smp3Dir, hWndShow );
+    m_mp3.SetSong(smp3Dir, this->GetDlgHWND());    //CurPlayingSong.SetSong(smp3Dir, hWndShow );
     m_mp3.Play(SONG_PLAYING);
     //设置播放暂停按钮的图标
     SetDlgItemTextA(hWnd, IDC_PLAYPAUSE, "暂停");
@@ -355,7 +356,7 @@ void WinPlayer::PlayMusicInList(HWND hWnd, int index)
     //PlayingIndex = index;
 }
 
-void WinPlayer::GDIPaint(HWND DrawHWnd)
+void GDIPlayer::GDIPaint(HWND DrawHWnd)
 {
     PAINTSTRUCT ps;
     HDC hDrawDC = BeginPaint(DrawHWnd, &ps);
@@ -381,7 +382,7 @@ void WinPlayer::GDIPaint(HWND DrawHWnd)
     EndPaint(DrawHWnd, &ps);
 }
 
-void WinPlayer::GDIBMPPaint(HINSTANCE hInstance, HWND DrawHWnd)
+void GDIPlayer::GDIBMPPaint(HINSTANCE hInstance, HWND DrawHWnd)
 {
     PAINTSTRUCT ps;
     //创建DC和内存DC
@@ -404,7 +405,7 @@ void WinPlayer::GDIBMPPaint(HINSTANCE hInstance, HWND DrawHWnd)
     EndPaint(DrawHWnd, &ps);
 }
 
-void WinPlayer::WMOTHER(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMOTHER(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch (uMsg)
     {
@@ -416,22 +417,22 @@ void WinPlayer::WMOTHER(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     }
 }
 
-void WinPlayer::WMINITDIALOG(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMINITDIALOG(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     initGui();
     Initsound();
     InitTitIcon("GDIPlayer");                   //标题
-    SetIcon(MAINICON);                          //界面图标
-    ReadSettingInfo(this->getWnd());            //读取到声音、播放模式、列表歌曲
-    GetMyMenu(this->getWnd());                  //处理菜单
-    DragAcceptFiles(this->getWnd(), TRUE);      //设置支持拖拽文件
+    SetIcon(GDIMAINICON);                          //界面图标
+    ReadSettingInfo(this->GetDlgHWND());            //读取到声音、播放模式、列表歌曲
+    GetMyMenu(this->GetDlgHWND());                  //处理菜单
+    DragAcceptFiles(this->GetDlgHWND(), TRUE);      //设置支持拖拽文件
     SendMessage(hWndList, LB_SETCURSEL, 0, 0);  //设置listbox默认选中项
-    myTrayClass = new CTray(hWnd, MAINICON, NULL);
+    myTrayClass = new CTray(hWnd, GDIMAINICON, NULL);
     //测试listbox
     //addlist(hWnd, uMsg, wParam, lParam);
 }
 
-void WinPlayer::WMCLOSE(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMCLOSE(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     DestroyMenu(hTrayMenu);
     DestroyMenu(hPopMenu);
@@ -441,7 +442,7 @@ void WinPlayer::WMCLOSE(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     PostQuitMessage(0);
 }
 
-void WinPlayer::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     int ctrlID = LOWORD(wParam);
     switch (ctrlID)
@@ -534,7 +535,7 @@ void WinPlayer::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         mciSendCommand(wDeviceID, MCI_PLAY, MCI_WAIT, (DWORD)&mciPlay);
         break;
         RECT tmprect;
-        GetClientRect(this->getWnd(), &tmprect);
+        GetClientRect(this->GetDlgHWND(), &tmprect);
         MoveWindow(hWndShow, 0, 0, tmprect.right, tmprect.bottom, TRUE);
         SetWindowPos(hWndShow, HWND_TOP, 0, 0, 0, 0, TRUE);
     }
@@ -694,7 +695,7 @@ void WinPlayer::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     case IDC_SHOW:
     {
         //模拟拖动窗体 WMLBUTTONDOWN(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-        SendMessage(this->getWnd(), WM_NCLBUTTONDOWN, HTCAPTION, 0);
+        SendMessage(this->GetDlgHWND(), WM_NCLBUTTONDOWN, HTCAPTION, 0);
     }
     break;
 #endif
@@ -703,7 +704,7 @@ void WinPlayer::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     }
 }
 
-void WinPlayer::WMSIZING(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMSIZING(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     //有BUG
     if (LPRECT(lParam)->right - LPRECT(lParam)->left < 326)
@@ -712,7 +713,7 @@ void WinPlayer::WMSIZING(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         LPRECT(lParam)->bottom = LPRECT(lParam)->top + 558;
 }
 
-void WinPlayer::WMHSCROLL(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMHSCROLL(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     //如果现在是停止状态
     if (m_mp3.state == SONG_INIT || m_mp3.state == SONG_STOP)
@@ -734,7 +735,7 @@ void WinPlayer::WMHSCROLL(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     }
 }
 
-void WinPlayer::WMDROPFILES(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMDROPFILES(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     // DragQueryFile原型为：
     //UINT DragQueryFile(HDROP hDrop, UINT iFile, LPTSTR lpszFile, UINT cch)
@@ -763,13 +764,13 @@ void WinPlayer::WMDROPFILES(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     DragFinish(hDropInfo);
 }
 
-void WinPlayer::WMSHOWTASK(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMSHOWTASK(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     //wParam接收的是图标的ID，而lParam接收的是鼠标的行为
     //myTrayClass.ShowTask(hWnd, wParam, lParam);
 }
 
-void WinPlayer::WMCONTEXTMENU(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMCONTEXTMENU(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     if ((HWND)wParam == GetDlgItem(hWnd, IDC_LIST))
     {
@@ -790,15 +791,15 @@ void WinPlayer::WMCONTEXTMENU(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam
     }
 }
 
-void WinPlayer::WMPAINT(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+void GDIPlayer::WMPAINT(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch (eDrawMode)
     {
-    case WinPlayer::DGPI:
+    case GDIPlayer::DGPI:
         GDIPaint(hWndShow);
         break;
-    case WinPlayer::DGPIBMP:
-        GDIBMPPaint(this->getInst(), hWndShow);
+    case GDIPlayer::DGPIBMP:
+        GDIBMPPaint(this->GetDlgInst(), hWndShow);
         break;
     default:
         break;

@@ -1,9 +1,10 @@
 
 
 #include "stdafx.h"
-#include "../../../../CppNote/project/GLGPU/src/WinGUI.CPP"
-#include "../../../../CppNote/project/GLGPU/src/GDIView.CPP"
 #include "CVDlg.h"
+//cpp
+#include "WinGUI.CPP"
+//#include "../../../../CppNote/project/GLGPU/src/GDIView.CPP"
 
 
 int CVDlg::WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
@@ -30,8 +31,8 @@ void CVDlg::WMINITDIALOG(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     hWPICOUT = GetDlgItem(hWnd, IDC_PICOUT);
     hWCBOXCMD = GetDlgItem(hWnd, IDC_COMBOXCMD);
 
-    mPicView1.SetGDIHWND(hWPICIN);
-    mPicView2.SetGDIHWND(hWPICOUT);
+    //mPicView1.SetGDIHWND(hWPICIN);
+    //mPicView2.SetGDIHWND(hWPICOUT);
 }
 
 void CVDlg::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -57,8 +58,9 @@ void CVDlg::WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 void CVDlg::WMPAINT(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    mPicView1.GDIBMPFill(pinname1.c_str());
-    mPicView2.GDIBMPFill("../Resource/lena.bmp");
+    //mPicView1.GDIBMPFill(pinname1.c_str());
+    //mPicView2.GDIBMPFill("../Resource/lena.bmp");
+
     //mPicView2.GDIBMPFill("../Resource/lena.bmp");
     //?????
 }

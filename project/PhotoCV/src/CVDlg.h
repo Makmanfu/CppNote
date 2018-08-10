@@ -2,8 +2,8 @@
 #ifndef WINSOCKDLG_H
 #define WINSOCKDLG_H
 
-#include "../../../../CppNote/project/GLGPU/src/WinGUI.h"
-#include "../../../../CppNote/project/GLGPU/src/GDIView.h"
+#include "WinGUI.h"
+//#include "../../../../CppNote/project/GLGPU/src/GDIView.h"
 
 class CVDlg : public XqWindowDlg
 {
@@ -30,7 +30,7 @@ private:
 
     HWND hWPICIN, hWPICOUT, hWCBOXCMD;
     cv::Mat mPicL, mPicR;
-    GDIView mPicView1, mPicView2;
+    //GDIView mPicView1, mPicView2;
 };
 
 

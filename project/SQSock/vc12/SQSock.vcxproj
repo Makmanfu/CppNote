@@ -256,7 +256,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -276,7 +276,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -296,7 +296,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -314,7 +314,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -330,7 +330,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -346,7 +346,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <PrecompiledHeader>Use</PrecompiledHeader>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -364,7 +364,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -388,7 +388,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -412,7 +412,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -434,7 +434,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -454,7 +454,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -474,7 +474,7 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)project\SQCore\src\WinAPI;../SRC/OpenThreads;../SRC/HPSocket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -526,7 +526,6 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
     <ClInclude Include="..\src\Rs232.h" />
     <ClInclude Include="..\src\ThreadPool.h" />
     <ClInclude Include="..\src\coondef.h" />
-    <ClInclude Include="..\src\WinGUI.h" />
     <ClInclude Include="..\src\WinSockDlg.h" />
     <ClInclude Include="..\src\WinSocket.h" />
     <ClInclude Include="..\src\WinThread.h" />
@@ -560,7 +559,6 @@ for /r "..\" %%a in (*.h) do (copy /y "%%a" "$(SolutionDir)Note\Common\SQ\") </C
     <ClCompile Include="..\src\ThreadCookbook.cpp" />
     <ClCompile Include="..\src\Rs232.cpp" />
     <ClCompile Include="..\src\ThreadPool.cpp" />
-    <ClCompile Include="..\src\WinGUI.cpp" />
     <ClCompile Include="..\src\WinSockDlg.cpp" />
     <ClCompile Include="..\src\WinSocket.cpp" />
     <ClCompile Include="..\src\WinThread.cpp" />

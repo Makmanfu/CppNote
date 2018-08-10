@@ -4,7 +4,7 @@ SET CSHELL=B:\Develop\Compiler
 REM 设置生成程序
 SET EXENAME=SQffmpeg
 REM 设置生成平台
-SET PLATFORM=x64
+SET PLATFORM=x86
 REM 设置编译器版本
 SET CCNUM=12
 

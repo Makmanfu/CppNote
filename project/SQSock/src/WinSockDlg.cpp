@@ -2,6 +2,8 @@
 
 #include "stdafx.h"
 #include "WinSockDlg.h"
+//cpp
+#include "WinGUI.cpp"
 
 int WinSockDlg::WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
 {

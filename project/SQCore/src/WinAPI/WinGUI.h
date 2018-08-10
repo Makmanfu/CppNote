@@ -47,6 +47,7 @@ public:
     void InitTitIcon(const char* titname);
     void SetIcon(int iconid /*= MAINICON*/);
     HWND GetDlgHWND(void);
+    HINSTANCE GetDlgInst(void);
 public:
     //其他消息
     virtual void WMOTHER(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
@@ -64,6 +65,12 @@ public:
     virtual void WMCOMMAND(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
     //窗口COPYDATA消息
     virtual void WMCOPYDATA(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    //水平滚动条
+    virtual void WMHSCROLL(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    //拖放文件
+    virtual void WMDROPFILES(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    //listbox右键点击
+    virtual void WMCONTEXTMENU(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 private:
     //获得Instance和其他句柄
     void GethInstance(HWND hWnd);
@@ -162,6 +169,7 @@ public:
     virtual void WMSIZING(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
     virtual void WMTIMER(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
     virtual void WMKEYDOWN(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+    virtual void WMCONTEXTMENU(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 };
 
 

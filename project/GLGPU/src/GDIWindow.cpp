@@ -2,6 +2,7 @@
 
 #include "stdafx.h"
 #include "GDIWindow.h"
+#include "WinGUI.cpp"
 
 
 int GDIDraw::WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
