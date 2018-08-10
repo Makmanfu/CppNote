@@ -19,10 +19,9 @@
 
 int main(int argc, char** argv)
 {
-    CMDProc fp = NULL, CmdMain = NULL, DefaultFun = &StyZMQ::zmq_hwclient;
-    CCMDParam cmds(argv[0]);               //程序名传入
-    cmds.DefaultFunAdd(DefaultFun);
-
+    string strcmd = argc > 1 ? argv[1] : "default";
+    CCMDParam cmds(argv[0], &StyZMQ::zmq_hwclient);
+    cmds.NativeARGC(argc, argv);
     //ZMQ
     cmds.ComandAdd("zmq_hwserverc", &StyZMQ::zmq_hwserverc);
     cmds.ComandAdd("zmq_hwservercpp", &StyZMQ::zmq_hwservercpp);
@@ -55,7 +54,7 @@ int main(int argc, char** argv)
     //cmds.ComandAdd("C11ThreadTest1", &C11ThreadDemo::C11ThreadTest1::main);
     //cmds.ComandAdd("C11ThreadTest2", &C11ThreadDemo::C11ThreadTest2::main);
 
-    string strcmd = argc > 1 ? argv[1] : "default";    //default  help
+    CMDProc fp = NULL;
     cmds.GetCmdFunProc(strcmd, &fp);
     if (fp != NULL)
         fp(argc,argv);

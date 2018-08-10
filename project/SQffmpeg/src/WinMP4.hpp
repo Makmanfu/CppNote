@@ -259,7 +259,7 @@ class WinMP4
 {
 public:
     //测试 主程序入口
-    static int WINMAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
+    static int WIN_MAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
     {
         // 将实例句柄存储在全局变量中
         mp4->InitData(hInstance);

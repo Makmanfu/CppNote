@@ -31,9 +31,7 @@ int BootLoad::WIN32MAIN(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCm
     //运行程序
     mWIN->GetCmdFunProc(string(lpCmdLine), &WINfp);
     if (WINfp != NULL)
-    {
         return WINfp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
-    }
     //消息循环
     MSG msg;
     return MSGLOOP(msg);
@@ -59,15 +57,16 @@ int BootLoad::CMDMAIN(int argc, char** argv)
     FunAddCMDAll();
     //运行程序
     string strcmd = argc > 1 ? argv[1] : "default";
+    mCMD->NativeARGC(argc, argv);
     mCMD->GetCmdFunProc(strcmd, &CMDfp);
     int ret(0);
     if (CMDfp != NULL)
         ret = CMDfp(argc, argv);
     {
         MSG msg;
-    //消息循环
-    if (ret)
-        return MSGLOOP(msg);
+        //消息循环
+        if (ret)
+            return MSGLOOP(msg);
     }
 }
 

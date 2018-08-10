@@ -53,7 +53,7 @@ struct ffmpeg_player_su
         av_register_all();
         avformat_network_init();
         pFormatCtx = avformat_alloc_context();
-        if (avformat_open_input(&pFormatCtx, filepath, NULL, NULL) != 0)
+        if (avformat_open_input(&pFormatCtx, argv[1]/*filepath*/, NULL, NULL) != 0)
         {
             printf("Couldn't open input stream.\n");
             return -1;

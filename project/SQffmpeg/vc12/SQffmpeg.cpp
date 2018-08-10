@@ -17,12 +17,22 @@
 //#include "mpv_streamcb.hpp"
 #include "WinMP4.hpp"
 
+void doargc(int& argc, char** argv_list)
+{
+    if (argc > 1)
+    {
+        for (int i = 1; i < argc; ++i)
+            argv_list[i] = argv_list[i + 1];
+    }
+    argc = argc - 1;
+}
 
 //exe的入口函数
 int main(int argc, char** argv)
 {
-    CMDProc fp = NULL, CmdMain = NULL, DefaultFun = &ffmpeg_player_su::start;
-    CCMDParam cmds(argv[0], DefaultFun);               //程序名传入
+    string strcmd = argc > 1 ? argv[1] : "default";
+    CCMDParam cmds(argv[0], &ffmpeg_player_su::start);               //程序名传入
+    cmds.NativeARGC(argc, argv);
     cmds.ComandAdd("ffmpeg_helloworld", &ffmpeg_helloworld::start);
     cmds.ComandAdd("ffmpeg_player", &ffmpeg_player::start);
     cmds.ComandAdd("ffmpeg_player_su", &ffmpeg_player_su::start);
@@ -36,8 +46,7 @@ int main(int argc, char** argv)
     //cmds.ComandAdd("mpv_hello", &mpv_hello::start);
     //cmds.ComandAdd("mpv_sdl", &mpv_sdl::start);
     //cmds.ComandAdd("mpv_streamcb", &mpv_streamcb::start);
-
-    string strcmd = argc > 1 ? argv[1] : "default";    //default  help
+    CMDProc fp = NULL;
     cmds.GetCmdFunProc(strcmd, &fp);
     if (fp != NULL)
         fp(argc, argv);
@@ -45,17 +54,17 @@ int main(int argc, char** argv)
     return 0;
 }
 
+
 //窗口界面程序
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
+int WINAPI Win_Main(HINSTANCE hInstance, HINSTANCE hPrevInstance, char* lpCmdLine, int nCmdShow)
 {
     WINProc fp = NULL;
     CmdProc<WINProc> cmds;
-    cmds.DefaultFunAdd(&WinMP4::WINMAIN);
-    cmds.ComandAdd(string("WinMP4"), &WinMP4::WINMAIN);
+    cmds.DefaultFunAdd(&WinMP4::WIN_MAIN);
+    cmds.ComandAdd(string("WinMP4"), &WinMP4::WIN_MAIN);
     cmds.GetCmdFunProc(string(lpCmdLine), &fp);
     if (fp != NULL)
         fp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
-    return 0;
     return 0;
 }
 

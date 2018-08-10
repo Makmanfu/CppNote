@@ -150,6 +150,16 @@ public:
                 names.push_back(it->first);
         }
     };
+    //转为原生argc参数 等于消去第一个参数
+    void NativeARGC(int& argc, char** argv_list)
+    {
+        if (argc > 1)
+        {
+            for (int i = 1; i < argc; ++i)
+                argv_list[i] = argv_list[i + 1];
+            argc = argc - 1;
+        }
+    };
     //消息循环(供测试用)
     void Loop(void)
     {

@@ -13,10 +13,11 @@ int main(int argc, char** argv)
 {
     SetConsoleTitleA("VISION");
     system("color 0A");  //0D
-    CMDProc fp = NULL;
-    CmdProc<CMDProc> cmds(argv[0]);
+
+    string strcmd = argc > 1 ? argv[1] : "default";
+    CmdProc<CMDProc> cmds(argv[0], &test_Show);
+    cmds.NativeARGC(argc, argv);
     cmds.CreateToolBat();
-    cmds.DefaultFunAdd(test_Show);
     cmds.ComandAdd(string("testShow"), test_Show);         //²âÊÔopencv
     cmds.ComandAdd(string("testSift"), test_sift);         //siftÌØÕ÷µãÆ¥Åä
     cmds.ComandAdd(string("testLBP"), test_LBP);           //LBPËã×ÓÐ§¹û
@@ -29,7 +30,7 @@ int main(int argc, char** argv)
     cmds.ComandAdd(string("CheckNum"), test_CheckNum);     //·Ö¸îÍ¼Ïñ²âÊÔ
     cmds.ComandAdd(string("ArrowShow"), TestArrowShow);    //HUD
     //cmds.ComandAdd(string("JpegResize"), JpegResize);      //jpeg Compress
-    string strcmd = argc > 1 ? argv[1] : "default";
+    CMDProc fp = NULL;
     cmds.GetCmdFunProc(strcmd, &fp);
     if (fp != NULL)
         fp(argc, argv);

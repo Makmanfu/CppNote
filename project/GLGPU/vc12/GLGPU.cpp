@@ -14,13 +14,13 @@ extern int TrackBallExample(int argc, char** argv);
 
 int main(int argc, char** argv)
 {
-    CMDProc fp = NULL;
-    CmdProc<CMDProc> cmds(argv[0]);
-    cmds.DefaultFunAdd(&TrackBall_Test);
+    string strcmd = argc > 1 ? argv[1] : "default";
+    CmdProc<CMDProc> cmds(argv[0], &TrackBall_Test);
+    cmds.NativeARGC(argc, argv);
     cmds.ComandAdd(string("GLfreeglutdemo"), GL_freeglut_demo);      //freeglut
     cmds.ComandAdd(string("TrackBall_Test"), TrackBall_Test);        //四元数旋转
     cmds.ComandAdd(string("TrackBallExample"), TrackBallExample);    //四元数旋转
-    string strcmd = argc > 1 ? argv[1] : "default";
+    CMDProc fp = NULL;
     cmds.GetCmdFunProc(strcmd, &fp);
     if (fp != NULL)
         fp(argc, argv);

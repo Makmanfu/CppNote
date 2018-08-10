@@ -3,7 +3,7 @@
 #define STDAFX_H
 
 //编译开关----------------------------------------------------------------
-#define GUIRUNC                                 //入口选项 GUIRUNC/CONSOLE/NATIVEC/HIDECMD
+#define CONSOLE                                 //入口选项 GUIRUNC/CONSOLE/NATIVEC/HIDECMD
 //包含文件----------------------------------------------------------------
 #define __STDC_CONSTANT_MACROS
 #include "targetver.h"
